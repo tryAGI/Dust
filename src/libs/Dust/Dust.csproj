@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <PropertyGroup Label="Nuget">
+    <PackageId>tryAGI.Dust</PackageId>
     <Description>C# SDK based on Dust OpenAPI specification.</Description>
     <PackageTags>api;client;sdk;dotnet;swagger;openapi;specification;generated;nswag</PackageTags>
   </PropertyGroup>
