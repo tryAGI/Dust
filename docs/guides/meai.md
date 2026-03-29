@@ -1,6 +1,9 @@
 # Microsoft.Extensions.AI Integration
 
-The Dust SDK provides `AIFunction` tool wrappers for use with any `IChatClient` that supports function/tool calling via [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/api/microsoft.extensions.ai).
+!!! tip "Cross-SDK comparison"
+    See the [centralized MEAI documentation](https://tryagi.github.io/docs/meai/) for feature matrices and comparisons across all tryAGI SDKs.
+
+The Dust SDK provides `AIFunction` tool wrappers compatible with [Microsoft.Extensions.AI](https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai). These tools can be used with any `IChatClient` to give AI models access to Dust's AI agent management, conversation handling, space browsing, and data source listing.
 
 ## Available Tools
 
