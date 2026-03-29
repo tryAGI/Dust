@@ -103,7 +103,7 @@ namespace Dust
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("query", query)
-                .AddRequiredParameter("top_k", topK.ToString())
+                .AddRequiredParameter("top_k", topK.ToString()!)
                 .AddRequiredParameter("full_text", fullText.ToString().ToLowerInvariant())
                 .AddOptionalParameter("target_document_tokens", targetDocumentTokens?.ToString())
                 .AddOptionalParameter("timestamp_gt", timestampGt?.ToString())
