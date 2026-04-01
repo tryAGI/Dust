@@ -234,6 +234,7 @@ namespace Dust
             object assistant,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Dust.CreateWAssistantAgentConfigurationsRequest
             {
                 Assistant = assistant,

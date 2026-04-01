@@ -224,6 +224,7 @@ namespace Dust
             string sessionId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Dust.CreateWorkosRevokeSessionRequest
             {
                 SessionId = sessionId,

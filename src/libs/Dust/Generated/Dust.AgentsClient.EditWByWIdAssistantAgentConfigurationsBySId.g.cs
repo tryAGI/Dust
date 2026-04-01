@@ -372,6 +372,7 @@ namespace Dust
             bool? userFavorite = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Dust.PatchWAssistantAgentConfigurationsRequest
             {
                 UserFavorite = userFavorite,

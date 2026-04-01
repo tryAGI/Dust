@@ -236,6 +236,7 @@ namespace Dust
             string cId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3>
             {
             };
