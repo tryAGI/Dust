@@ -128,6 +128,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("activitySteps")]
+        public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>? ActivitySteps { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reactions")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? Reactions { get; set; }
 
@@ -160,6 +166,7 @@ namespace Dust
         /// <param name="generatedFiles"></param>
         /// <param name="richMentions"></param>
         /// <param name="completionDurationMs"></param>
+        /// <param name="activitySteps"></param>
         /// <param name="reactions"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -183,6 +190,7 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageGeneratedFile>? generatedFiles,
             global::System.Collections.Generic.IList<global::Dust.PrivateRichMentionWithStatus>? richMentions,
             int? completionDurationMs,
+            global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>? activitySteps,
             global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions)
         {
             this.Type = type;
@@ -203,6 +211,7 @@ namespace Dust
             this.GeneratedFiles = generatedFiles;
             this.RichMentions = richMentions;
             this.CompletionDurationMs = completionDurationMs;
+            this.ActivitySteps = activitySteps;
             this.Reactions = reactions;
         }
 
