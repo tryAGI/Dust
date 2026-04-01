@@ -338,6 +338,7 @@ namespace Dust
             bool? searchSourceUrls = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Dust.CreateWSearchRequest
             {
                 Query = query,

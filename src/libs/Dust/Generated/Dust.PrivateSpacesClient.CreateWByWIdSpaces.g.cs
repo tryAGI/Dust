@@ -246,6 +246,7 @@ namespace Dust
             global::System.Collections.Generic.IList<string>? groupIds = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Dust.CreateWSpacesRequest
             {
                 IsRestricted = isRestricted,
