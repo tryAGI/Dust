@@ -252,7 +252,6 @@ namespace Dust
             bool? isConversationShared = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequest2
             {
                 ThumbDirection = thumbDirection,

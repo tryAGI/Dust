@@ -355,7 +355,6 @@ namespace Dust
             string? spaceId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Dust.CreateWAssistantConversationsRequest
             {
                 Message = message,

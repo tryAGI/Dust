@@ -341,7 +341,6 @@ namespace Dust
             global::Dust.Context? context = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Dust.ContentFragment
             {
                 Title = title,

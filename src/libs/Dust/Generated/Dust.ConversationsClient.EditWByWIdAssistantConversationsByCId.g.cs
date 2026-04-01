@@ -372,7 +372,6 @@ namespace Dust
             bool? read = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Dust.PatchWAssistantConversationsRequest
             {
                 Read = read,
