@@ -34,6 +34,12 @@ namespace Dust
         public string? Id { get; set; }
 
         /// <summary>
+        /// Action string identifier (action steps only)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("actionId")]
+        public string? ActionId { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -50,6 +56,9 @@ namespace Dust
         /// Action display label (action steps only)
         /// </param>
         /// <param name="id"></param>
+        /// <param name="actionId">
+        /// Action string identifier (action steps only)
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -57,12 +66,14 @@ namespace Dust
             global::Dust.PrivateLightAgentMessageActivityStepType? type,
             string? content,
             string? label,
-            string? id)
+            string? id,
+            string? actionId)
         {
             this.Type = type;
             this.Content = content;
             this.Label = label;
             this.Id = id;
+            this.ActionId = actionId;
         }
 
         /// <summary>
