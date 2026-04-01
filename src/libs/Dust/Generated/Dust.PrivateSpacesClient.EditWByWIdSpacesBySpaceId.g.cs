@@ -242,7 +242,6 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.PatchWSpacesRequestContentItem>? content = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Dust.PatchWSpacesRequest
             {
                 Name = name,

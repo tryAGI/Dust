@@ -242,7 +242,6 @@ namespace Dust
             global::Dust.CreateWAssistantConversationsCancelRequestAction action = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Dust.CreateWAssistantConversationsCancelRequest2
             {
                 Action = action,

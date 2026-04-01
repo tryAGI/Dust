@@ -273,7 +273,6 @@ namespace Dust
             global::System.Collections.Generic.IList<string> messageIds,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Dust.CreateWAssistantConversationsCancelRequest
             {
                 MessageIds = messageIds,
