@@ -57,6 +57,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateLightAgentMessageStatusNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.PrivateContentFragmentTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateContentFragmentTypeNullableJsonConverter),
@@ -469,6 +473,9 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCitation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageGeneratedFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateLightAgentMessageGeneratedFile))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateLightAgentMessageActivityStep))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateLightAgentMessageActivityStepType), TypeInfoPropertyName = "PrivateLightAgentMessageActivityStepType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateContentFragmentType), TypeInfoPropertyName = "PrivateContentFragmentType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateContentFragmentVisibility), TypeInfoPropertyName = "PrivateContentFragmentVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateContentFragmentContext))]
@@ -823,6 +830,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateAgentMessageContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateLightAgentMessageGeneratedFile>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateLightAgentMessageActivityStep>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateLightAgentConfigurationTag>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateLightAgentConfigurationEditor>))]
