@@ -5,71 +5,53 @@ namespace Dust
 {
     public partial class AgentsClient
     {
-        partial void PrepareGetWByWIdAssistantAgentConfigurationsBySIdExportYamlArguments(
+        partial void PrepareCreateWByWIdAssistantAgentConfigurationsImportArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
-            ref string sId);
-        partial void PrepareGetWByWIdAssistantAgentConfigurationsBySIdExportYamlRequest(
+            global::Dust.CreateWAssistantAgentConfigurationsImportRequest request);
+        partial void PrepareCreateWByWIdAssistantAgentConfigurationsImportRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
-            string sId);
-        partial void ProcessGetWByWIdAssistantAgentConfigurationsBySIdExportYamlResponse(
+            global::Dust.CreateWAssistantAgentConfigurationsImportRequest request);
+        partial void ProcessCreateWByWIdAssistantAgentConfigurationsImportResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetWByWIdAssistantAgentConfigurationsBySIdExportYamlResponseContent(
+        partial void ProcessCreateWByWIdAssistantAgentConfigurationsImportResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Export agent configuration as YAML<br/>
-        /// Download the agent configuration identified by {sId} as a YAML file.
+        /// Import agent configuration<br/>
+        /// Create a new agent configuration from a JSON body matching the agent config schema.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="sId"></param>
+        /// <param name="request"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> GetWByWIdAssistantAgentConfigurationsBySIdExportYamlAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantAgentConfigurationsImportResponse> CreateWByWIdAssistantAgentConfigurationsImportAsync(
             string wId,
-            string sId,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __response = await GetWByWIdAssistantAgentConfigurationsBySIdExportYamlAsResponseAsync(
-                wId: wId,
-                sId: sId,
-                cancellationToken: cancellationToken
-            ).ConfigureAwait(false);
 
-            return __response.Body;
-        }
-        /// <summary>
-        /// Export agent configuration as YAML<br/>
-        /// Download the agent configuration identified by {sId} as a YAML file.
-        /// </summary>
-        /// <param name="wId"></param>
-        /// <param name="sId"></param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<string>> GetWByWIdAssistantAgentConfigurationsBySIdExportYamlAsResponseAsync(
-            string wId,
-            string sId,
+            global::Dust.CreateWAssistantAgentConfigurationsImportRequest request,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetWByWIdAssistantAgentConfigurationsBySIdExportYamlArguments(
+            PrepareCreateWByWIdAssistantAgentConfigurationsImportArguments(
                 httpClient: HttpClient,
                 wId: ref wId,
-                sId: ref sId);
+                request: request);
 
             var __pathBuilder = new global::Dust.PathBuilder(
-                path: $"/api/v1/w/{wId}/assistant/agent_configurations/{sId}/export/yaml",
+                path: $"/api/v1/w/{wId}/assistant/agent_configurations/import",
                 baseUri: HttpClient.BaseAddress); 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                method: global::System.Net.Http.HttpMethod.Get,
+                method: global::System.Net.Http.HttpMethod.Post,
                 requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
             __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -91,15 +73,21 @@ namespace Dust
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
+            var __httpRequestContentBody = request.ToJson(JsonSerializerOptions);
+            var __httpRequestContent = new global::System.Net.Http.StringContent(
+                content: __httpRequestContentBody,
+                encoding: global::System.Text.Encoding.UTF8,
+                mediaType: "application/json");
+            __httpRequest.Content = __httpRequestContent;
 
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareGetWByWIdAssistantAgentConfigurationsBySIdExportYamlRequest(
+            PrepareCreateWByWIdAssistantAgentConfigurationsImportRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 wId: wId,
-                sId: sId);
+                request: request);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -109,7 +97,7 @@ namespace Dust
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessGetWByWIdAssistantAgentConfigurationsBySIdExportYamlResponse(
+            ProcessCreateWByWIdAssistantAgentConfigurationsImportResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
             // 
@@ -172,39 +160,6 @@ namespace Dust
                     statusCode: __response.StatusCode)
                 {
                     ResponseBody = __content_401,
-                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                        __response.Headers,
-                        h => h.Key,
-                        h => h.Value),
-                };
-            }
-            // 
-            if ((int)__response.StatusCode == 404)
-            {
-                string? __content_404 = null;
-                global::System.Exception? __exception_404 = null;
-                try
-                {
-                    if (ReadResponseAsString)
-                    {
-                        __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                    }
-                    else
-                    {
-                        __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                    }
-                }
-                catch (global::System.Exception __ex)
-                {
-                    __exception_404 = __ex;
-                }
-
-                throw new global::Dust.ApiException(
-                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __exception_404,
-                    statusCode: __response.StatusCode)
-                {
-                    ResponseBody = __content_404,
                     ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
                         __response.Headers,
                         h => h.Key,
@@ -290,7 +245,7 @@ namespace Dust
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessGetWByWIdAssistantAgentConfigurationsBySIdExportYamlResponseContent(
+                ProcessCreateWByWIdAssistantAgentConfigurationsImportResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
@@ -299,10 +254,9 @@ namespace Dust
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return new global::Dust.AutoSDKHttpResponse<string>(
-                        statusCode: __response.StatusCode,
-                        headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
-                        body: __content);
+                    return
+                        global::Dust.CreateWAssistantAgentConfigurationsImportResponse.FromJson(__content, JsonSerializerOptions) ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -325,16 +279,15 @@ namespace Dust
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    var __content = await __response.Content.ReadAsStringAsync(
+                    using var __content = await __response.Content.ReadAsStreamAsync(
 #if NET5_0_OR_GREATER
                         cancellationToken
 #endif
                     ).ConfigureAwait(false);
 
-                    return new global::Dust.AutoSDKHttpResponse<string>(
-                        statusCode: __response.StatusCode,
-                        headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
-                        body: __content);
+                    return
+                        await global::Dust.CreateWAssistantAgentConfigurationsImportResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -364,6 +317,44 @@ namespace Dust
                     };
                 }
             }
+        }
+        /// <summary>
+        /// Import agent configuration<br/>
+        /// Create a new agent configuration from a JSON body matching the agent config schema.
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <param name="agent"></param>
+        /// <param name="instructions"></param>
+        /// <param name="generationSettings"></param>
+        /// <param name="tags"></param>
+        /// <param name="editors"></param>
+        /// <param name="toolset"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantAgentConfigurationsImportResponse> CreateWByWIdAssistantAgentConfigurationsImportAsync(
+            string wId,
+            global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgent agent,
+            string instructions,
+            global::Dust.CreateWAssistantAgentConfigurationsImportRequestGenerationSettings generationSettings,
+            global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestTag> tags,
+            global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestEditor> editors,
+            global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItem> toolset,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
+            var __request = new global::Dust.CreateWAssistantAgentConfigurationsImportRequest
+            {
+                Agent = agent,
+                Instructions = instructions,
+                GenerationSettings = generationSettings,
+                Tags = tags,
+                Editors = editors,
+                Toolset = toolset,
+            };
+
+            return await CreateWByWIdAssistantAgentConfigurationsImportAsync(
+                wId: wId,
+                request: __request,
+                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

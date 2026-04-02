@@ -6,7 +6,7 @@ namespace Dust
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class PatchWAssistantAgentConfigurationsResponse
+    public sealed partial class CreateWAssistantAgentConfigurationsImportResponse
     {
         /// <summary>
         /// 
@@ -18,7 +18,7 @@ namespace Dust
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skippedActions")]
-        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsResponseSkippedAction>? SkippedActions { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportResponseSkippedAction>? SkippedActions { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -27,25 +27,25 @@ namespace Dust
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PatchWAssistantAgentConfigurationsResponse" /> class.
+        /// Initializes a new instance of the <see cref="CreateWAssistantAgentConfigurationsImportResponse" /> class.
         /// </summary>
         /// <param name="agentConfiguration"></param>
         /// <param name="skippedActions"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public PatchWAssistantAgentConfigurationsResponse(
+        public CreateWAssistantAgentConfigurationsImportResponse(
             global::Dust.AgentConfiguration? agentConfiguration,
-            global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsResponseSkippedAction>? skippedActions)
+            global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportResponseSkippedAction>? skippedActions)
         {
             this.AgentConfiguration = agentConfiguration;
             this.SkippedActions = skippedActions;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PatchWAssistantAgentConfigurationsResponse" /> class.
+        /// Initializes a new instance of the <see cref="CreateWAssistantAgentConfigurationsImportResponse" /> class.
         /// </summary>
-        public PatchWAssistantAgentConfigurationsResponse()
+        public CreateWAssistantAgentConfigurationsImportResponse()
         {
         }
     }
