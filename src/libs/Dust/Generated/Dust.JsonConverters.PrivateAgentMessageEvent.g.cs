@@ -12,8 +12,7 @@ namespace Dust.JsonConverters
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             using var __jsonDocument = global::System.Text.Json.JsonDocument.ParseValue(ref reader);
             var __rawJson = __jsonDocument.RootElement.GetRawText();
@@ -159,9 +158,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateGenerationTokensEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateGenerationTokensEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateGenerationTokensEvent).Name}");
-                        generationTokens = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        generationTokens = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateGenerationTokensEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -174,9 +171,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentActionSuccessEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentActionSuccessEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentActionSuccessEvent).Name}");
-                        agentActionSuccess = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        agentActionSuccess = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentActionSuccessEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -189,9 +184,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentMessageSuccessEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentMessageSuccessEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentMessageSuccessEvent).Name}");
-                        agentMessageSuccess = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        agentMessageSuccess = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentMessageSuccessEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -204,9 +197,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentErrorEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentErrorEvent).Name}");
-                        agentError = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        agentError = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentErrorEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -219,9 +210,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentGenerationCancelledEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentGenerationCancelledEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentGenerationCancelledEvent).Name}");
-                        agentGenerationCancelled = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        agentGenerationCancelled = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentGenerationCancelledEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -234,9 +223,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolErrorEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolErrorEvent).Name}");
-                        toolError = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        toolError = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolErrorEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -249,9 +236,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolParamsEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolParamsEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolParamsEvent).Name}");
-                        toolParams = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        toolParams = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolParamsEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -264,9 +249,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolApproveExecutionEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolApproveExecutionEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolApproveExecutionEvent).Name}");
-                        toolApproveExecution = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        toolApproveExecution = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolApproveExecutionEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -279,9 +262,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolNotificationEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolNotificationEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolNotificationEvent).Name}");
-                        toolNotification = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        toolNotification = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolNotificationEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -294,9 +275,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolPersonalAuthRequiredEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolPersonalAuthRequiredEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolPersonalAuthRequiredEvent).Name}");
-                        toolPersonalAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        toolPersonalAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolPersonalAuthRequiredEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -309,9 +288,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolFileAuthRequiredEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolFileAuthRequiredEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolFileAuthRequiredEvent).Name}");
-                        toolFileAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        toolFileAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolFileAuthRequiredEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -324,9 +301,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentContextPrunedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentContextPrunedEvent> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentContextPrunedEvent).Name}");
-                        agentContextPruned = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        agentContextPruned = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentContextPrunedEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -341,9 +316,7 @@ namespace Dust.JsonConverters
             {
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateGenerationTokensEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateGenerationTokensEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateGenerationTokensEvent).Name}");
-                    generationTokens = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    generationTokens = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateGenerationTokensEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -354,9 +327,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentActionSuccessEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentActionSuccessEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentActionSuccessEvent).Name}");
-                    agentActionSuccess = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    agentActionSuccess = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentActionSuccessEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -367,9 +338,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentMessageSuccessEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentMessageSuccessEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentMessageSuccessEvent).Name}");
-                    agentMessageSuccess = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    agentMessageSuccess = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentMessageSuccessEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -380,9 +349,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentErrorEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentErrorEvent).Name}");
-                    agentError = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    agentError = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentErrorEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -393,9 +360,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentGenerationCancelledEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentGenerationCancelledEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentGenerationCancelledEvent).Name}");
-                    agentGenerationCancelled = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    agentGenerationCancelled = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentGenerationCancelledEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -406,9 +371,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolErrorEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolErrorEvent).Name}");
-                    toolError = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    toolError = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolErrorEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -419,9 +382,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolParamsEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolParamsEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolParamsEvent).Name}");
-                    toolParams = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    toolParams = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolParamsEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -432,9 +393,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolApproveExecutionEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolApproveExecutionEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolApproveExecutionEvent).Name}");
-                    toolApproveExecution = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    toolApproveExecution = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolApproveExecutionEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -445,9 +404,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolNotificationEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolNotificationEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolNotificationEvent).Name}");
-                    toolNotification = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    toolNotification = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolNotificationEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -458,9 +415,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolPersonalAuthRequiredEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolPersonalAuthRequiredEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolPersonalAuthRequiredEvent).Name}");
-                    toolPersonalAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    toolPersonalAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolPersonalAuthRequiredEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -471,9 +426,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolFileAuthRequiredEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolFileAuthRequiredEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolFileAuthRequiredEvent).Name}");
-                    toolFileAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    toolFileAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolFileAuthRequiredEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -484,9 +437,7 @@ namespace Dust.JsonConverters
 
                 try
                 {
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentContextPrunedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentContextPrunedEvent> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentContextPrunedEvent).Name}");
-                    agentContextPruned = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    agentContextPruned = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentContextPrunedEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -531,80 +482,55 @@ namespace Dust.JsonConverters
             global::Dust.PrivateAgentMessageEvent value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
-            options = options ?? throw new global::System.ArgumentNullException(nameof(options));
-            var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
+            options = options ?? throw new global::System.ArgumentNullException(nameof(options)); 
 
             if (value.IsGenerationTokens)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateGenerationTokensEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateGenerationTokensEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateGenerationTokensEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GenerationTokens!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.GenerationTokens, typeof(global::Dust.PrivateGenerationTokensEvent), options);
             }
             else if (value.IsAgentActionSuccess)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentActionSuccessEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentActionSuccessEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentActionSuccessEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentActionSuccess!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentActionSuccess, typeof(global::Dust.PrivateAgentActionSuccessEvent), options);
             }
             else if (value.IsAgentMessageSuccess)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentMessageSuccessEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentMessageSuccessEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentMessageSuccessEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentMessageSuccess!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentMessageSuccess, typeof(global::Dust.PrivateAgentMessageSuccessEvent), options);
             }
             else if (value.IsAgentError)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentErrorEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentErrorEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentError!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentError, typeof(global::Dust.PrivateAgentErrorEvent), options);
             }
             else if (value.IsAgentGenerationCancelled)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentGenerationCancelledEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentGenerationCancelledEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentGenerationCancelledEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentGenerationCancelled!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentGenerationCancelled, typeof(global::Dust.PrivateAgentGenerationCancelledEvent), options);
             }
             else if (value.IsToolError)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolErrorEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolErrorEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolError!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolError, typeof(global::Dust.PrivateToolErrorEvent), options);
             }
             else if (value.IsToolParams)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolParamsEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolParamsEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolParamsEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolParams!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolParams, typeof(global::Dust.PrivateToolParamsEvent), options);
             }
             else if (value.IsToolApproveExecution)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolApproveExecutionEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolApproveExecutionEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolApproveExecutionEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolApproveExecution!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolApproveExecution, typeof(global::Dust.PrivateToolApproveExecutionEvent), options);
             }
             else if (value.IsToolNotification)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolNotificationEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolNotificationEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolNotificationEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolNotification!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolNotification, typeof(global::Dust.PrivateToolNotificationEvent), options);
             }
             else if (value.IsToolPersonalAuthRequired)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolPersonalAuthRequiredEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolPersonalAuthRequiredEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolPersonalAuthRequiredEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolPersonalAuthRequired!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolPersonalAuthRequired, typeof(global::Dust.PrivateToolPersonalAuthRequiredEvent), options);
             }
             else if (value.IsToolFileAuthRequired)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateToolFileAuthRequiredEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateToolFileAuthRequiredEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateToolFileAuthRequiredEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolFileAuthRequired!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolFileAuthRequired, typeof(global::Dust.PrivateToolFileAuthRequiredEvent), options);
             }
             else if (value.IsAgentContextPruned)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentContextPrunedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentContextPrunedEvent?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentContextPrunedEvent).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentContextPruned!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentContextPruned, typeof(global::Dust.PrivateAgentContextPrunedEvent), options);
             }
         }
     }

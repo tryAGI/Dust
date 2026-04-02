@@ -318,7 +318,7 @@ namespace Dust
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Dust.GetWSpacesDataSourcesCheckUpsertQueueResponse.FromJson(__content, JsonSerializerContext) ??
+                        global::Dust.GetWSpacesDataSourcesCheckUpsertQueueResponse.FromJson(__content, JsonSerializerOptions) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -349,7 +349,7 @@ namespace Dust
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Dust.GetWSpacesDataSourcesCheckUpsertQueueResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        await global::Dust.GetWSpacesDataSourcesCheckUpsertQueueResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
