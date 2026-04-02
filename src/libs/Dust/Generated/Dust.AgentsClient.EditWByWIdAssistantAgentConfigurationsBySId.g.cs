@@ -364,17 +364,35 @@ namespace Dust
         /// <param name="wId"></param>
         /// <param name="sId"></param>
         /// <param name="userFavorite"></param>
+        /// <param name="agent"></param>
+        /// <param name="instructions"></param>
+        /// <param name="generationSettings"></param>
+        /// <param name="tags"></param>
+        /// <param name="editors"></param>
+        /// <param name="toolset"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dust.PatchWAssistantAgentConfigurationsResponse> EditWByWIdAssistantAgentConfigurationsBySIdAsync(
             string wId,
             string sId,
             bool? userFavorite = default,
+            global::Dust.PatchWAssistantAgentConfigurationsRequestAgent? agent = default,
+            string? instructions = default,
+            global::Dust.PatchWAssistantAgentConfigurationsRequestGenerationSettings? generationSettings = default,
+            global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestTag>? tags = default,
+            global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestEditor>? editors = default,
+            global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem>? toolset = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::Dust.PatchWAssistantAgentConfigurationsRequest
             {
                 UserFavorite = userFavorite,
+                Agent = agent,
+                Instructions = instructions,
+                GenerationSettings = generationSettings,
+                Tags = tags,
+                Editors = editors,
+                Toolset = toolset,
             };
 
             return await EditWByWIdAssistantAgentConfigurationsBySIdAsync(
