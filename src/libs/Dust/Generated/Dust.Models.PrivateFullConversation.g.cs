@@ -13,35 +13,35 @@ namespace Dust
         /// Conversation without content, used in list responses.
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dust.PrivateConversation? Value1 { get; init; }
+        public global::Dust.PrivateConversation? PrivateConversation { get; init; }
 #else
-        public global::Dust.PrivateConversation? Value1 { get; }
+        public global::Dust.PrivateConversation? PrivateConversation { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PrivateConversation))]
 #endif
-        public bool IsValue1 => Value1 != null;
+        public bool IsPrivateConversation => PrivateConversation != null;
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Dust.PrivateFullConversationVariant2? Value2 { get; init; }
+        public global::Dust.PrivateFullConversationVariant2? PrivateFullConversationVariant2 { get; init; }
 #else
-        public global::Dust.PrivateFullConversationVariant2? Value2 { get; }
+        public global::Dust.PrivateFullConversationVariant2? PrivateFullConversationVariant2 { get; }
 #endif
 
         /// <summary>
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Value2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PrivateFullConversationVariant2))]
 #endif
-        public bool IsValue2 => Value2 != null;
+        public bool IsPrivateFullConversationVariant2 => PrivateFullConversationVariant2 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -50,14 +50,14 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dust.PrivateConversation?(PrivateFullConversation @this) => @this.Value1;
+        public static implicit operator global::Dust.PrivateConversation?(PrivateFullConversation @this) => @this.PrivateConversation;
 
         /// <summary>
         /// 
         /// </summary>
         public PrivateFullConversation(global::Dust.PrivateConversation? value)
         {
-            Value1 = value;
+            PrivateConversation = value;
         }
 
         /// <summary>
@@ -68,42 +68,42 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator global::Dust.PrivateFullConversationVariant2?(PrivateFullConversation @this) => @this.Value2;
+        public static implicit operator global::Dust.PrivateFullConversationVariant2?(PrivateFullConversation @this) => @this.PrivateFullConversationVariant2;
 
         /// <summary>
         /// 
         /// </summary>
         public PrivateFullConversation(global::Dust.PrivateFullConversationVariant2? value)
         {
-            Value2 = value;
+            PrivateFullConversationVariant2 = value;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public PrivateFullConversation(
-            global::Dust.PrivateConversation? value1,
-            global::Dust.PrivateFullConversationVariant2? value2
+            global::Dust.PrivateConversation? privateConversation,
+            global::Dust.PrivateFullConversationVariant2? privateFullConversationVariant2
             )
         {
-            Value1 = value1;
-            Value2 = value2;
+            PrivateConversation = privateConversation;
+            PrivateFullConversationVariant2 = privateFullConversationVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            Value2 as object ??
-            Value1 as object 
+            PrivateFullConversationVariant2 as object ??
+            PrivateConversation as object 
             ;
 
         /// <summary>
         /// 
         /// </summary>
         public override string? ToString() =>
-            Value1?.ToString() ??
-            Value2?.ToString() 
+            PrivateConversation?.ToString() ??
+            PrivateFullConversationVariant2?.ToString() 
             ;
 
         /// <summary>
@@ -111,15 +111,15 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsValue1 && IsValue2;
+            return IsPrivateConversation && IsPrivateFullConversationVariant2;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dust.PrivateConversation?, TResult>? value1 = null,
-            global::System.Func<global::Dust.PrivateFullConversationVariant2?, TResult>? value2 = null,
+            global::System.Func<global::Dust.PrivateConversation?, TResult>? privateConversation = null,
+            global::System.Func<global::Dust.PrivateFullConversationVariant2?, TResult>? privateFullConversationVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -127,13 +127,13 @@ namespace Dust
                 Validate();
             }
 
-            if (IsValue1 && value1 != null)
+            if (IsPrivateConversation && privateConversation != null)
             {
-                return value1(Value1!);
+                return privateConversation(PrivateConversation!);
             }
-            else if (IsValue2 && value2 != null)
+            else if (IsPrivateFullConversationVariant2 && privateFullConversationVariant2 != null)
             {
-                return value2(Value2!);
+                return privateFullConversationVariant2(PrivateFullConversationVariant2!);
             }
 
             return default(TResult);
@@ -143,8 +143,8 @@ namespace Dust
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dust.PrivateConversation?>? value1 = null,
-            global::System.Action<global::Dust.PrivateFullConversationVariant2?>? value2 = null,
+            global::System.Action<global::Dust.PrivateConversation?>? privateConversation = null,
+            global::System.Action<global::Dust.PrivateFullConversationVariant2?>? privateFullConversationVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -152,13 +152,13 @@ namespace Dust
                 Validate();
             }
 
-            if (IsValue1)
+            if (IsPrivateConversation)
             {
-                value1?.Invoke(Value1!);
+                privateConversation?.Invoke(PrivateConversation!);
             }
-            else if (IsValue2)
+            else if (IsPrivateFullConversationVariant2)
             {
-                value2?.Invoke(Value2!);
+                privateFullConversationVariant2?.Invoke(PrivateFullConversationVariant2!);
             }
         }
 
@@ -169,9 +169,9 @@ namespace Dust
         {
             var fields = new object?[]
             {
-                Value1,
+                PrivateConversation,
                 typeof(global::Dust.PrivateConversation),
-                Value2,
+                PrivateFullConversationVariant2,
                 typeof(global::Dust.PrivateFullConversationVariant2),
             };
             const int offset = unchecked((int)2166136261);
@@ -189,8 +189,8 @@ namespace Dust
         public bool Equals(PrivateFullConversation other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversation?>.Default.Equals(Value1, other.Value1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateFullConversationVariant2?>.Default.Equals(Value2, other.Value2) 
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversation?>.Default.Equals(PrivateConversation, other.PrivateConversation) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateFullConversationVariant2?>.Default.Equals(PrivateFullConversationVariant2, other.PrivateFullConversationVariant2) 
                 ;
         }
 

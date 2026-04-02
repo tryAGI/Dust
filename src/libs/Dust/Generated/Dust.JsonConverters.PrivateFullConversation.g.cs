@@ -51,8 +51,8 @@ namespace Dust.JsonConverters
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
-            global::Dust.PrivateConversation? value1 = default;
-            global::Dust.PrivateFullConversationVariant2? value2 = default;
+            global::Dust.PrivateConversation? privateConversation = default;
+            global::Dust.PrivateFullConversationVariant2? privateFullConversationVariant2 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -61,7 +61,7 @@ namespace Dust.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversation> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateConversation).Name}");
-                        value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        privateConversation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -76,7 +76,7 @@ namespace Dust.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateFullConversationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateFullConversationVariant2> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateFullConversationVariant2).Name}");
-                        value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        privateFullConversationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -87,13 +87,13 @@ namespace Dust.JsonConverters
                 }
             }
 
-            if (value1 == null && value2 == null)
+            if (privateConversation == null && privateFullConversationVariant2 == null)
             {
                 try
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversation> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateConversation).Name}");
-                    value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    privateConversation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -106,7 +106,7 @@ namespace Dust.JsonConverters
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateFullConversationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateFullConversationVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateFullConversationVariant2).Name}");
-                    value2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    privateFullConversationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -117,9 +117,9 @@ namespace Dust.JsonConverters
             }
 
             var __value = new global::Dust.PrivateFullConversation(
-                value1,
+                privateConversation,
 
-                value2
+                privateFullConversationVariant2
                 );
 
             return __value;
@@ -134,17 +134,17 @@ namespace Dust.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsValue1)
+            if (value.IsPrivateConversation)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversation?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateConversation).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PrivateConversation!, typeInfo);
             }
-            else if (value.IsValue2)
+            else if (value.IsPrivateFullConversationVariant2)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateFullConversationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateFullConversationVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateFullConversationVariant2).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PrivateFullConversationVariant2!, typeInfo);
             }
         }
     }
