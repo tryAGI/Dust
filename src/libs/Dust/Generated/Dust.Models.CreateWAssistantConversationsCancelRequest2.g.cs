@@ -13,7 +13,8 @@ namespace Dust
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionJsonConverter))]
-        public global::Dust.CreateWAssistantConversationsCancelRequestAction Action { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Dust.CreateWAssistantConversationsCancelRequestAction Action { get; set; }
 
         /// <summary>
         /// 
@@ -31,14 +32,14 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateWAssistantConversationsCancelRequest2" /> class.
         /// </summary>
-        /// <param name="messageIds"></param>
         /// <param name="action"></param>
+        /// <param name="messageIds"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateWAssistantConversationsCancelRequest2(
-            global::System.Collections.Generic.IList<string> messageIds,
-            global::Dust.CreateWAssistantConversationsCancelRequestAction action)
+            global::Dust.CreateWAssistantConversationsCancelRequestAction action,
+            global::System.Collections.Generic.IList<string> messageIds)
         {
             this.Action = action;
             this.MessageIds = messageIds ?? throw new global::System.ArgumentNullException(nameof(messageIds));

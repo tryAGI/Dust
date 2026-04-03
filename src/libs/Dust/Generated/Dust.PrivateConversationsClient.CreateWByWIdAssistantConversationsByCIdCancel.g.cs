@@ -237,8 +237,8 @@ namespace Dust
         public async global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantConversationsCancelResponse2> CreateWByWIdAssistantConversationsByCIdCancelAsync(
             string wId,
             string cId,
+            global::Dust.CreateWAssistantConversationsCancelRequestAction action,
             global::System.Collections.Generic.IList<string> messageIds,
-            global::Dust.CreateWAssistantConversationsCancelRequestAction action = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __request = new global::Dust.CreateWAssistantConversationsCancelRequest2
