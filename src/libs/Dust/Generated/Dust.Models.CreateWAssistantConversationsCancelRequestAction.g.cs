@@ -12,6 +12,10 @@ namespace Dust
         /// 
         /// </summary>
         Cancel,
+        /// <summary>
+        /// 
+        /// </summary>
+        GracefullyStop,
     }
 
     /// <summary>
@@ -27,6 +31,7 @@ namespace Dust
             return value switch
             {
                 CreateWAssistantConversationsCancelRequestAction.Cancel => "cancel",
+                CreateWAssistantConversationsCancelRequestAction.GracefullyStop => "gracefully_stop",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -38,6 +43,7 @@ namespace Dust
             return value switch
             {
                 "cancel" => CreateWAssistantConversationsCancelRequestAction.Cancel,
+                "gracefully_stop" => CreateWAssistantConversationsCancelRequestAction.GracefullyStop,
                 _ => null,
             };
         }
