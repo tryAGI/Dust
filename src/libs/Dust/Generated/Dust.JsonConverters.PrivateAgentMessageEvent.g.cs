@@ -35,24 +35,25 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("text")) __score0++;
             if (__jsonProps.Contains("type")) __score0++;
             var __score1 = 0;
-            if (__jsonProps.Contains("action")) __score1++;
             if (__jsonProps.Contains("configurationId")) __score1++;
             if (__jsonProps.Contains("created")) __score1++;
             if (__jsonProps.Contains("messageId")) __score1++;
             if (__jsonProps.Contains("step")) __score1++;
+            if (__jsonProps.Contains("toolCallId")) __score1++;
+            if (__jsonProps.Contains("toolCallIndex")) __score1++;
+            if (__jsonProps.Contains("toolName")) __score1++;
             if (__jsonProps.Contains("type")) __score1++;
             var __score2 = 0;
+            if (__jsonProps.Contains("action")) __score2++;
             if (__jsonProps.Contains("configurationId")) __score2++;
             if (__jsonProps.Contains("created")) __score2++;
-            if (__jsonProps.Contains("message")) __score2++;
             if (__jsonProps.Contains("messageId")) __score2++;
-            if (__jsonProps.Contains("runIds")) __score2++;
             if (__jsonProps.Contains("step")) __score2++;
             if (__jsonProps.Contains("type")) __score2++;
             var __score3 = 0;
             if (__jsonProps.Contains("configurationId")) __score3++;
             if (__jsonProps.Contains("created")) __score3++;
-            if (__jsonProps.Contains("error")) __score3++;
+            if (__jsonProps.Contains("message")) __score3++;
             if (__jsonProps.Contains("messageId")) __score3++;
             if (__jsonProps.Contains("runIds")) __score3++;
             if (__jsonProps.Contains("step")) __score3++;
@@ -60,71 +61,79 @@ namespace Dust.JsonConverters
             var __score4 = 0;
             if (__jsonProps.Contains("configurationId")) __score4++;
             if (__jsonProps.Contains("created")) __score4++;
+            if (__jsonProps.Contains("error")) __score4++;
             if (__jsonProps.Contains("messageId")) __score4++;
+            if (__jsonProps.Contains("runIds")) __score4++;
             if (__jsonProps.Contains("step")) __score4++;
             if (__jsonProps.Contains("type")) __score4++;
             var __score5 = 0;
             if (__jsonProps.Contains("configurationId")) __score5++;
-            if (__jsonProps.Contains("conversationId")) __score5++;
             if (__jsonProps.Contains("created")) __score5++;
-            if (__jsonProps.Contains("error")) __score5++;
-            if (__jsonProps.Contains("isLastBlockingEventForStep")) __score5++;
             if (__jsonProps.Contains("messageId")) __score5++;
             if (__jsonProps.Contains("step")) __score5++;
             if (__jsonProps.Contains("type")) __score5++;
             var __score6 = 0;
-            if (__jsonProps.Contains("action")) __score6++;
             if (__jsonProps.Contains("configurationId")) __score6++;
+            if (__jsonProps.Contains("conversationId")) __score6++;
             if (__jsonProps.Contains("created")) __score6++;
+            if (__jsonProps.Contains("error")) __score6++;
+            if (__jsonProps.Contains("isLastBlockingEventForStep")) __score6++;
             if (__jsonProps.Contains("messageId")) __score6++;
-            if (__jsonProps.Contains("runIds")) __score6++;
             if (__jsonProps.Contains("step")) __score6++;
             if (__jsonProps.Contains("type")) __score6++;
             var __score7 = 0;
-            if (__jsonProps.Contains("actionId")) __score7++;
+            if (__jsonProps.Contains("action")) __score7++;
             if (__jsonProps.Contains("configurationId")) __score7++;
-            if (__jsonProps.Contains("conversationId")) __score7++;
             if (__jsonProps.Contains("created")) __score7++;
-            if (__jsonProps.Contains("inputs")) __score7++;
-            if (__jsonProps.Contains("isLastBlockingEventForStep")) __score7++;
             if (__jsonProps.Contains("messageId")) __score7++;
-            if (__jsonProps.Contains("metadata")) __score7++;
-            if (__jsonProps.Contains("stake")) __score7++;
+            if (__jsonProps.Contains("runIds")) __score7++;
             if (__jsonProps.Contains("step")) __score7++;
             if (__jsonProps.Contains("type")) __score7++;
             var __score8 = 0;
-            if (__jsonProps.Contains("action")) __score8++;
+            if (__jsonProps.Contains("actionId")) __score8++;
             if (__jsonProps.Contains("configurationId")) __score8++;
             if (__jsonProps.Contains("conversationId")) __score8++;
             if (__jsonProps.Contains("created")) __score8++;
+            if (__jsonProps.Contains("inputs")) __score8++;
+            if (__jsonProps.Contains("isLastBlockingEventForStep")) __score8++;
             if (__jsonProps.Contains("messageId")) __score8++;
-            if (__jsonProps.Contains("notification")) __score8++;
+            if (__jsonProps.Contains("metadata")) __score8++;
+            if (__jsonProps.Contains("stake")) __score8++;
             if (__jsonProps.Contains("step")) __score8++;
             if (__jsonProps.Contains("type")) __score8++;
             var __score9 = 0;
-            if (__jsonProps.Contains("actionId")) __score9++;
-            if (__jsonProps.Contains("authError")) __score9++;
+            if (__jsonProps.Contains("action")) __score9++;
             if (__jsonProps.Contains("configurationId")) __score9++;
             if (__jsonProps.Contains("conversationId")) __score9++;
             if (__jsonProps.Contains("created")) __score9++;
             if (__jsonProps.Contains("messageId")) __score9++;
+            if (__jsonProps.Contains("notification")) __score9++;
             if (__jsonProps.Contains("step")) __score9++;
             if (__jsonProps.Contains("type")) __score9++;
             var __score10 = 0;
             if (__jsonProps.Contains("actionId")) __score10++;
+            if (__jsonProps.Contains("authError")) __score10++;
             if (__jsonProps.Contains("configurationId")) __score10++;
             if (__jsonProps.Contains("conversationId")) __score10++;
             if (__jsonProps.Contains("created")) __score10++;
-            if (__jsonProps.Contains("fileAuthError")) __score10++;
             if (__jsonProps.Contains("messageId")) __score10++;
             if (__jsonProps.Contains("step")) __score10++;
             if (__jsonProps.Contains("type")) __score10++;
             var __score11 = 0;
+            if (__jsonProps.Contains("actionId")) __score11++;
             if (__jsonProps.Contains("configurationId")) __score11++;
+            if (__jsonProps.Contains("conversationId")) __score11++;
             if (__jsonProps.Contains("created")) __score11++;
+            if (__jsonProps.Contains("fileAuthError")) __score11++;
             if (__jsonProps.Contains("messageId")) __score11++;
             if (__jsonProps.Contains("step")) __score11++;
             if (__jsonProps.Contains("type")) __score11++;
+            var __score12 = 0;
+            if (__jsonProps.Contains("configurationId")) __score12++;
+            if (__jsonProps.Contains("created")) __score12++;
+            if (__jsonProps.Contains("messageId")) __score12++;
+            if (__jsonProps.Contains("step")) __score12++;
+            if (__jsonProps.Contains("type")) __score12++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
@@ -139,8 +148,10 @@ namespace Dust.JsonConverters
             if (__score9 > __bestScore) { __bestScore = __score9; __bestIndex = 9; }
             if (__score10 > __bestScore) { __bestScore = __score10; __bestIndex = 10; }
             if (__score11 > __bestScore) { __bestScore = __score11; __bestIndex = 11; }
+            if (__score12 > __bestScore) { __bestScore = __score12; __bestIndex = 12; }
 
             global::Dust.PrivateGenerationTokensEvent? generationTokens = default;
+            global::Dust.PrivateToolCallStartedEvent? toolCallStarted = default;
             global::Dust.PrivateAgentActionSuccessEvent? agentActionSuccess = default;
             global::Dust.PrivateAgentMessageSuccessEvent? agentMessageSuccess = default;
             global::Dust.PrivateAgentErrorEvent? agentError = default;
@@ -171,7 +182,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        agentActionSuccess = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentActionSuccessEvent>(__rawJson, options);
+                        toolCallStarted = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolCallStartedEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -184,7 +195,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        agentMessageSuccess = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentMessageSuccessEvent>(__rawJson, options);
+                        agentActionSuccess = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentActionSuccessEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -197,7 +208,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        agentError = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentErrorEvent>(__rawJson, options);
+                        agentMessageSuccess = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentMessageSuccessEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -210,7 +221,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        agentGenerationCancelled = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentGenerationCancelledEvent>(__rawJson, options);
+                        agentError = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentErrorEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -223,7 +234,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        toolError = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolErrorEvent>(__rawJson, options);
+                        agentGenerationCancelled = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentGenerationCancelledEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -236,7 +247,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        toolParams = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolParamsEvent>(__rawJson, options);
+                        toolError = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolErrorEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -249,7 +260,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        toolApproveExecution = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolApproveExecutionEvent>(__rawJson, options);
+                        toolParams = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolParamsEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -262,7 +273,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        toolNotification = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolNotificationEvent>(__rawJson, options);
+                        toolApproveExecution = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolApproveExecutionEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -275,7 +286,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        toolPersonalAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolPersonalAuthRequiredEvent>(__rawJson, options);
+                        toolNotification = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolNotificationEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -288,7 +299,7 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
-                        toolFileAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolFileAuthRequiredEvent>(__rawJson, options);
+                        toolPersonalAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolPersonalAuthRequiredEvent>(__rawJson, options);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -298,6 +309,19 @@ namespace Dust.JsonConverters
                     }
                 }
                 else if (__bestIndex == 11)
+                {
+                    try
+                    {
+                        toolFileAuthRequired = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolFileAuthRequiredEvent>(__rawJson, options);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                }
+                else if (__bestIndex == 12)
                 {
                     try
                     {
@@ -312,11 +336,22 @@ namespace Dust.JsonConverters
                 }
             }
 
-            if (generationTokens == null && agentActionSuccess == null && agentMessageSuccess == null && agentError == null && agentGenerationCancelled == null && toolError == null && toolParams == null && toolApproveExecution == null && toolNotification == null && toolPersonalAuthRequired == null && toolFileAuthRequired == null && agentContextPruned == null)
+            if (generationTokens == null && toolCallStarted == null && agentActionSuccess == null && agentMessageSuccess == null && agentError == null && agentGenerationCancelled == null && toolError == null && toolParams == null && toolApproveExecution == null && toolNotification == null && toolPersonalAuthRequired == null && toolFileAuthRequired == null && agentContextPruned == null)
             {
                 try
                 {
                     generationTokens = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateGenerationTokensEvent>(__rawJson, options);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+
+                try
+                {
+                    toolCallStarted = global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateToolCallStartedEvent>(__rawJson, options);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -450,6 +485,8 @@ namespace Dust.JsonConverters
             var __value = new global::Dust.PrivateAgentMessageEvent(
                 generationTokens,
 
+                toolCallStarted,
+
                 agentActionSuccess,
 
                 agentMessageSuccess,
@@ -487,6 +524,10 @@ namespace Dust.JsonConverters
             if (value.IsGenerationTokens)
             {
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.GenerationTokens, typeof(global::Dust.PrivateGenerationTokensEvent), options);
+            }
+            else if (value.IsToolCallStarted)
+            {
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ToolCallStarted, typeof(global::Dust.PrivateToolCallStartedEvent), options);
             }
             else if (value.IsAgentActionSuccess)
             {

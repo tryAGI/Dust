@@ -125,6 +125,8 @@ namespace Dust
                     new global::Dust.JsonConverters.PrivateGenerationTokensEventTypeNullableJsonConverter(),
                     new global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationJsonConverter(),
                     new global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationNullableJsonConverter(),
+                    new global::Dust.JsonConverters.PrivateToolCallStartedEventTypeJsonConverter(),
+                    new global::Dust.JsonConverters.PrivateToolCallStartedEventTypeNullableJsonConverter(),
                     new global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeJsonConverter(),
                     new global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeNullableJsonConverter(),
                     new global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeJsonConverter(),
