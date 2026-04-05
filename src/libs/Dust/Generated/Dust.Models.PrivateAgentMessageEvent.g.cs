@@ -30,6 +30,23 @@ namespace Dust
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
+        public global::Dust.PrivateToolCallStartedEvent? ToolCallStarted { get; init; }
+#else
+        public global::Dust.PrivateToolCallStartedEvent? ToolCallStarted { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolCallStarted))]
+#endif
+        public bool IsToolCallStarted => ToolCallStarted != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentActionSuccessEvent? AgentActionSuccess { get; init; }
 #else
         public global::Dust.PrivateAgentActionSuccessEvent? AgentActionSuccess { get; }
@@ -228,6 +245,24 @@ namespace Dust
         public PrivateAgentMessageEvent(global::Dust.PrivateGenerationTokensEvent? value)
         {
             GenerationTokens = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateToolCallStartedEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateToolCallStartedEvent?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Dust.PrivateToolCallStartedEvent?(PrivateAgentMessageEvent @this) => @this.ToolCallStarted;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PrivateAgentMessageEvent(global::Dust.PrivateToolCallStartedEvent? value)
+        {
+            ToolCallStarted = value;
         }
 
         /// <summary>
@@ -433,6 +468,7 @@ namespace Dust
         /// </summary>
         public PrivateAgentMessageEvent(
             global::Dust.PrivateGenerationTokensEvent? generationTokens,
+            global::Dust.PrivateToolCallStartedEvent? toolCallStarted,
             global::Dust.PrivateAgentActionSuccessEvent? agentActionSuccess,
             global::Dust.PrivateAgentMessageSuccessEvent? agentMessageSuccess,
             global::Dust.PrivateAgentErrorEvent? agentError,
@@ -447,6 +483,7 @@ namespace Dust
             )
         {
             GenerationTokens = generationTokens;
+            ToolCallStarted = toolCallStarted;
             AgentActionSuccess = agentActionSuccess;
             AgentMessageSuccess = agentMessageSuccess;
             AgentError = agentError;
@@ -475,6 +512,7 @@ namespace Dust
             AgentError as object ??
             AgentMessageSuccess as object ??
             AgentActionSuccess as object ??
+            ToolCallStarted as object ??
             GenerationTokens as object 
             ;
 
@@ -483,6 +521,7 @@ namespace Dust
         /// </summary>
         public override string? ToString() =>
             GenerationTokens?.ToString() ??
+            ToolCallStarted?.ToString() ??
             AgentActionSuccess?.ToString() ??
             AgentMessageSuccess?.ToString() ??
             AgentError?.ToString() ??
@@ -501,7 +540,7 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && IsAgentContextPruned;
+            return IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && IsToolPersonalAuthRequired && !IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && IsToolFileAuthRequired && !IsAgentContextPruned || !IsGenerationTokens && !IsToolCallStarted && !IsAgentActionSuccess && !IsAgentMessageSuccess && !IsAgentError && !IsAgentGenerationCancelled && !IsToolError && !IsToolParams && !IsToolApproveExecution && !IsToolNotification && !IsToolPersonalAuthRequired && !IsToolFileAuthRequired && IsAgentContextPruned;
         }
 
         /// <summary>
@@ -509,6 +548,7 @@ namespace Dust
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dust.PrivateGenerationTokensEvent?, TResult>? generationTokens = null,
+            global::System.Func<global::Dust.PrivateToolCallStartedEvent?, TResult>? toolCallStarted = null,
             global::System.Func<global::Dust.PrivateAgentActionSuccessEvent?, TResult>? agentActionSuccess = null,
             global::System.Func<global::Dust.PrivateAgentMessageSuccessEvent?, TResult>? agentMessageSuccess = null,
             global::System.Func<global::Dust.PrivateAgentErrorEvent?, TResult>? agentError = null,
@@ -530,6 +570,10 @@ namespace Dust
             if (IsGenerationTokens && generationTokens != null)
             {
                 return generationTokens(GenerationTokens!);
+            }
+            else if (IsToolCallStarted && toolCallStarted != null)
+            {
+                return toolCallStarted(ToolCallStarted!);
             }
             else if (IsAgentActionSuccess && agentActionSuccess != null)
             {
@@ -584,6 +628,7 @@ namespace Dust
         /// </summary>
         public void Match(
             global::System.Action<global::Dust.PrivateGenerationTokensEvent?>? generationTokens = null,
+            global::System.Action<global::Dust.PrivateToolCallStartedEvent?>? toolCallStarted = null,
             global::System.Action<global::Dust.PrivateAgentActionSuccessEvent?>? agentActionSuccess = null,
             global::System.Action<global::Dust.PrivateAgentMessageSuccessEvent?>? agentMessageSuccess = null,
             global::System.Action<global::Dust.PrivateAgentErrorEvent?>? agentError = null,
@@ -605,6 +650,10 @@ namespace Dust
             if (IsGenerationTokens)
             {
                 generationTokens?.Invoke(GenerationTokens!);
+            }
+            else if (IsToolCallStarted)
+            {
+                toolCallStarted?.Invoke(ToolCallStarted!);
             }
             else if (IsAgentActionSuccess)
             {
@@ -661,6 +710,8 @@ namespace Dust
             {
                 GenerationTokens,
                 typeof(global::Dust.PrivateGenerationTokensEvent),
+                ToolCallStarted,
+                typeof(global::Dust.PrivateToolCallStartedEvent),
                 AgentActionSuccess,
                 typeof(global::Dust.PrivateAgentActionSuccessEvent),
                 AgentMessageSuccess,
@@ -700,6 +751,7 @@ namespace Dust
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateGenerationTokensEvent?>.Default.Equals(GenerationTokens, other.GenerationTokens) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateToolCallStartedEvent?>.Default.Equals(ToolCallStarted, other.ToolCallStarted) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentActionSuccessEvent?>.Default.Equals(AgentActionSuccess, other.AgentActionSuccess) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageSuccessEvent?>.Default.Equals(AgentMessageSuccess, other.AgentMessageSuccess) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentErrorEvent?>.Default.Equals(AgentError, other.AgentError) &&
