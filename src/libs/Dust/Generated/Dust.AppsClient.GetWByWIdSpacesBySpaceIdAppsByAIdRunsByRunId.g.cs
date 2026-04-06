@@ -192,7 +192,7 @@ namespace Dust
                     __response.EnsureSuccessStatusCode();
 
                     return
-                        global::Dust.GetWSpacesAppsRunsResponse.FromJson(__content, JsonSerializerOptions) ??
+                        global::Dust.GetWSpacesAppsRunsResponse.FromJson(__content, JsonSerializerContext) ??
                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
@@ -222,7 +222,7 @@ namespace Dust
                     ).ConfigureAwait(false);
 
                     return
-                        await global::Dust.GetWSpacesAppsRunsResponse.FromJsonStreamAsync(__content, JsonSerializerOptions).ConfigureAwait(false) ??
+                        await global::Dust.GetWSpacesAppsRunsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                         throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
