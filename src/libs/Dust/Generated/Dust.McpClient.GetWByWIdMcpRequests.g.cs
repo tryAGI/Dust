@@ -147,7 +147,7 @@ namespace Dust
                     yield break;
                 }
 
-                var __streamedResponse = global::Dust.GetWMcpRequestsResponse.FromJson(__content, JsonSerializerOptions) ??
+                var __streamedResponse = global::Dust.GetWMcpRequestsResponse.FromJson(__content, JsonSerializerContext) ??
                                        throw new global::Dust.ApiException(
                                            message: $"Response deserialization failed for \"{__content}\" ",
                                            statusCode: __response.StatusCode)

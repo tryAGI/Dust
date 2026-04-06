@@ -186,7 +186,7 @@ namespace Dust
                     yield break;
                 }
 
-                var __streamedResponse = global::System.Text.Json.JsonSerializer.Deserialize<string?>(__content, JsonSerializerOptions) ??
+                var __streamedResponse = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(string), JsonSerializerContext) ??
                                        throw new global::Dust.ApiException(
                                            message: $"Response deserialization failed for \"{__content}\" ",
                                            statusCode: __response.StatusCode)

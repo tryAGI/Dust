@@ -140,7 +140,7 @@ namespace Dust
                     yield break;
                 }
 
-                var __streamedResponse = global::Dust.PrivateAgentMessageEvent.FromJson(__content, JsonSerializerOptions) ??
+                var __streamedResponse = global::Dust.PrivateAgentMessageEvent.FromJson(__content, JsonSerializerContext) ??
                                        throw new global::Dust.ApiException(
                                            message: $"Response deserialization failed for \"{__content}\" ",
                                            statusCode: __response.StatusCode)
