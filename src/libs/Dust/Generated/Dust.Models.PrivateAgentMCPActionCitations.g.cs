@@ -4,9 +4,9 @@
 namespace Dust
 {
     /// <summary>
-    /// The MCP action that completed successfully
+    /// Map of citation key to citation object
     /// </summary>
-    public sealed partial class PrivateAgentActionSuccessEventAction
+    public sealed partial class PrivateAgentMCPActionCitations
     {
 
         /// <summary>
