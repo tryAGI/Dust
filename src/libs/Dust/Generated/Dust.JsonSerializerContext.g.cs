@@ -189,6 +189,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.PrivateAgentMCPActionStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMCPActionStatusNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeNullableJsonConverter),
@@ -425,6 +429,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.PrivateFullConversationJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateProjectJsonConverter),
@@ -585,6 +593,11 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateGenerationTokensEventClassification), TypeInfoPropertyName = "PrivateGenerationTokensEventClassification2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateToolCallStartedEventType), TypeInfoPropertyName = "PrivateToolCallStartedEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentActionSuccessEventType), TypeInfoPropertyName = "PrivateAgentActionSuccessEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMCPAction))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMCPActionStatus), TypeInfoPropertyName = "PrivateAgentMCPActionStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMCPActionDisplayLabels))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateAgentMCPActionGeneratedFile>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMCPActionGeneratedFile))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageSuccessEventType), TypeInfoPropertyName = "PrivateAgentMessageSuccessEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentErrorEventType), TypeInfoPropertyName = "PrivateAgentErrorEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentErrorEventError))]
@@ -834,6 +847,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateFeedback>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus), TypeInfoPropertyName = "GetWAssistantConversationsMessagesActionsResponseMessageStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesEditResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse2))]
@@ -893,6 +908,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<string>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateLightAgentConfigurationEditor>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateReactionUser>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateAgentMCPActionGeneratedFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Section>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::Dust.ConversationConversation1ContentItemItem>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ConversationConversation1ContentItemItem>))]

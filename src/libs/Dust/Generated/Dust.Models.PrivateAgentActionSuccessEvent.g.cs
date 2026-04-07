@@ -37,11 +37,11 @@ namespace Dust
         public required string MessageId { get; set; }
 
         /// <summary>
-        /// The MCP action that completed successfully
+        /// An MCP action with its output.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("action")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Action { get; set; }
+        public required global::Dust.PrivateAgentMCPAction Action { get; set; }
 
         /// <summary>
         /// 
@@ -62,7 +62,7 @@ namespace Dust
         /// <param name="configurationId"></param>
         /// <param name="messageId"></param>
         /// <param name="action">
-        /// The MCP action that completed successfully
+        /// An MCP action with its output.
         /// </param>
         /// <param name="type"></param>
         /// <param name="step"></param>
@@ -73,7 +73,7 @@ namespace Dust
             int created,
             string configurationId,
             string messageId,
-            object action,
+            global::Dust.PrivateAgentMCPAction action,
             global::Dust.PrivateAgentActionSuccessEventType type,
             int? step)
         {
