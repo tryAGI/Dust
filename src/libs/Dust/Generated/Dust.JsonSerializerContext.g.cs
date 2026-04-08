@@ -329,6 +329,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.GetWAnalyticsExportTableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAnalyticsExportTableNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewJsonConverter),
 
             typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewNullableJsonConverter),
@@ -751,6 +755,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWorkosAuthenticateRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType), TypeInfoPropertyName = "CreateWorkosAuthenticateRequestGrantType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWorkosRevokeSessionRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAnalyticsExportTable), TypeInfoPropertyName = "GetWAnalyticsExportTable2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsView), TypeInfoPropertyName = "GetWAssistantAgentConfigurationsView2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors), TypeInfoPropertyName = "GetWAssistantAgentConfigurationsWithAuthors2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsVariant), TypeInfoPropertyName = "GetWAssistantAgentConfigurationsVariant2")]
