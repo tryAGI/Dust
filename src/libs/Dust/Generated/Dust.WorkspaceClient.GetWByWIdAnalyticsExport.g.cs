@@ -5,79 +5,67 @@ namespace Dust
 {
     public partial class WorkspaceClient
     {
-        partial void PrepareGetWByWIdWorkspaceUsageArguments(
+        partial void PrepareGetWByWIdAnalyticsExportArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
-            ref string start,
-            ref string? end,
-            ref global::Dust.GetWWorkspaceUsageMode mode,
-            ref global::Dust.GetWWorkspaceUsageFormat? format,
-            ref global::Dust.GetWWorkspaceUsageTable table,
-            ref bool? includeInactive);
-        partial void PrepareGetWByWIdWorkspaceUsageRequest(
+            ref global::Dust.GetWAnalyticsExportTable table,
+            ref global::System.DateTime startDate,
+            ref global::System.DateTime endDate,
+            ref string? timezone);
+        partial void PrepareGetWByWIdAnalyticsExportRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
-            string start,
-            string? end,
-            global::Dust.GetWWorkspaceUsageMode mode,
-            global::Dust.GetWWorkspaceUsageFormat? format,
-            global::Dust.GetWWorkspaceUsageTable table,
-            bool? includeInactive);
-        partial void ProcessGetWByWIdWorkspaceUsageResponse(
+            global::Dust.GetWAnalyticsExportTable table,
+            global::System.DateTime startDate,
+            global::System.DateTime endDate,
+            string? timezone);
+        partial void ProcessGetWByWIdAnalyticsExportResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetWByWIdWorkspaceUsageResponseContent(
+        partial void ProcessGetWByWIdAnalyticsExportResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get workspace usage data<br/>
-        /// Get usage data for the workspace identified by {wId} in CSV or JSON format.
+        /// Export workspace analytics as CSV<br/>
+        /// Export analytics data for the workspace identified by {wId} in CSV format.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="start"></param>
-        /// <param name="end"></param>
-        /// <param name="mode"></param>
-        /// <param name="format"></param>
         /// <param name="table"></param>
-        /// <param name="includeInactive"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <param name="timezone"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> GetWByWIdWorkspaceUsageAsync(
+        public async global::System.Threading.Tasks.Task<string> GetWByWIdAnalyticsExportAsync(
             string wId,
-            string start,
-            global::Dust.GetWWorkspaceUsageMode mode,
-            global::Dust.GetWWorkspaceUsageTable table,
-            string? end = default,
-            global::Dust.GetWWorkspaceUsageFormat? format = default,
-            bool? includeInactive = default,
+            global::Dust.GetWAnalyticsExportTable table,
+            global::System.DateTime startDate,
+            global::System.DateTime endDate,
+            string? timezone = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetWByWIdWorkspaceUsageArguments(
+            PrepareGetWByWIdAnalyticsExportArguments(
                 httpClient: HttpClient,
                 wId: ref wId,
-                start: ref start,
-                end: ref end,
-                mode: ref mode,
-                format: ref format,
                 table: ref table,
-                includeInactive: ref includeInactive);
+                startDate: ref startDate,
+                endDate: ref endDate,
+                timezone: ref timezone);
 
             var __pathBuilder = new global::Dust.PathBuilder(
-                path: $"/api/v1/w/{wId}/workspace-usage",
+                path: $"/api/v1/w/{wId}/analytics/export",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
-                .AddRequiredParameter("start", start)
-                .AddOptionalParameter("end", end)
-                .AddRequiredParameter("mode", mode.ToValueString())
-                .AddOptionalParameter("format", format?.ToValueString())
                 .AddRequiredParameter("table", table.ToValueString())
-                .AddOptionalParameter("includeInactive", includeInactive?.ToString().ToLowerInvariant()) 
+                .AddRequiredParameter("startDate", startDate.ToString("yyyy-MM-dd"))
+                .AddRequiredParameter("endDate", endDate.ToString("yyyy-MM-dd"))
+                .AddOptionalParameter("timezone", timezone) 
                 ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
@@ -107,16 +95,14 @@ namespace Dust
             PrepareRequest(
                 client: HttpClient,
                 request: __httpRequest);
-            PrepareGetWByWIdWorkspaceUsageRequest(
+            PrepareGetWByWIdAnalyticsExportRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
                 wId: wId,
-                start: start,
-                end: end,
-                mode: mode,
-                format: format,
                 table: table,
-                includeInactive: includeInactive);
+                startDate: startDate,
+                endDate: endDate,
+                timezone: timezone);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
@@ -126,7 +112,7 @@ namespace Dust
             ProcessResponse(
                 client: HttpClient,
                 response: __response);
-            ProcessGetWByWIdWorkspaceUsageResponse(
+            ProcessGetWByWIdAnalyticsExportResponse(
                 httpClient: HttpClient,
                 httpResponseMessage: __response);
             // 
@@ -196,39 +182,6 @@ namespace Dust
                 };
             }
             // 
-            if ((int)__response.StatusCode == 404)
-            {
-                string? __content_404 = null;
-                global::System.Exception? __exception_404 = null;
-                try
-                {
-                    if (ReadResponseAsString)
-                    {
-                        __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                    }
-                    else
-                    {
-                        __content_404 = await __response.Content.ReadAsStringAsync(cancellationToken).ConfigureAwait(false);
-                    }
-                }
-                catch (global::System.Exception __ex)
-                {
-                    __exception_404 = __ex;
-                }
-
-                throw new global::Dust.ApiException(
-                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
-                    innerException: __exception_404,
-                    statusCode: __response.StatusCode)
-                {
-                    ResponseBody = __content_404,
-                    ResponseHeaders = global::System.Linq.Enumerable.ToDictionary(
-                        __response.Headers,
-                        h => h.Key,
-                        h => h.Value),
-                };
-            }
-            // 
             if ((int)__response.StatusCode == 405)
             {
                 string? __content_405 = null;
@@ -274,7 +227,7 @@ namespace Dust
                     client: HttpClient,
                     response: __response,
                     content: ref __content);
-                ProcessGetWByWIdWorkspaceUsageResponseContent(
+                ProcessGetWByWIdAnalyticsExportResponseContent(
                     httpClient: HttpClient,
                     httpResponseMessage: __response,
                     content: ref __content);
