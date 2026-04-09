@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class PrivateUserClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_EditUserSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_EditUserSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_EditUserSecurityRequirement0,
+            };
         partial void PrepareEditUserArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Dust.PatchUserRequest request);
@@ -41,9 +60,15 @@ namespace Dust
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EditUserSecurityRequirements,
+                operationName: "EditUserAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: "/api/user",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
@@ -53,7 +78,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

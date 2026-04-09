@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class MentionsClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_CreateWByWIdAssistantMentionsParseSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_CreateWByWIdAssistantMentionsParseSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_CreateWByWIdAssistantMentionsParseSecurityRequirement0,
+            };
         partial void PrepareCreateWByWIdAssistantMentionsParseArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -47,9 +66,15 @@ namespace Dust
                 wId: ref wId,
                 request: request);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateWByWIdAssistantMentionsParseSecurityRequirements,
+                operationName: "CreateWByWIdAssistantMentionsParseAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/v1/w/{wId}/assistant/mentions/parse",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -59,7 +84,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class PrivateSpacesClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdSpacesBySpaceIdDataSourceViewsSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdSpacesBySpaceIdDataSourceViewsSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_GetWByWIdSpacesBySpaceIdDataSourceViewsSecurityRequirement0,
+            };
         partial void PrepareGetWByWIdSpacesBySpaceIdDataSourceViewsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -58,6 +77,12 @@ namespace Dust
                 withDetails: ref withDetails,
                 includeEditedBy: ref includeEditedBy);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetWByWIdSpacesBySpaceIdDataSourceViewsSecurityRequirements,
+                operationName: "GetWByWIdSpacesBySpaceIdDataSourceViewsAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/w/{wId}/spaces/{spaceId}/data_source_views",
                 baseUri: HttpClient.BaseAddress); 
@@ -65,7 +90,7 @@ namespace Dust
                 .AddOptionalParameter("category", category?.ToValueString())
                 .AddOptionalParameter("withDetails", withDetails?.ToValueString())
                 .AddOptionalParameter("includeEditedBy", includeEditedBy?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -75,7 +100,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

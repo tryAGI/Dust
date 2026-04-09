@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class DatasourceViewsClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_EditWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_EditWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_EditWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirement0,
+            };
         partial void PrepareEditWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -53,9 +72,15 @@ namespace Dust
                 dsvId: ref dsvId,
                 request: request);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_EditWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirements,
+                operationName: "EditWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
@@ -65,7 +90,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

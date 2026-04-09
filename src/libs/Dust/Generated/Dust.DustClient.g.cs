@@ -13,7 +13,7 @@ namespace Dust
         /// <summary>
         /// Dust.tt API (us-central1)
         /// </summary>
-        public const string DefaultBaseUrl = "https://dust.tt";
+        public const string DefaultBaseUrl = "https://dust.tt/";
 
         private bool _disposeHttpClient = true;
 
@@ -38,7 +38,7 @@ namespace Dust
 
 
         /// <summary>
-        /// Agent configurations
+        /// Agent configurations.
         /// </summary>
         public AgentsClient Agents => new AgentsClient(HttpClient, authorizations: Authorizations)
         {
@@ -47,7 +47,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Dust apps
+        /// Dust apps.
         /// </summary>
         public AppsClient Apps => new AppsClient(HttpClient, authorizations: Authorizations)
         {
@@ -56,7 +56,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Conversations
+        /// Conversations.
         /// </summary>
         public ConversationsClient Conversations => new ConversationsClient(HttpClient, authorizations: Authorizations)
         {
@@ -65,7 +65,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Data source views
+        /// Data source views.
         /// </summary>
         public DatasourceViewsClient DatasourceViews => new DatasourceViewsClient(HttpClient, authorizations: Authorizations)
         {
@@ -74,7 +74,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Data sources
+        /// Data sources.
         /// </summary>
         public DatasourcesClient Datasources => new DatasourcesClient(HttpClient, authorizations: Authorizations)
         {
@@ -83,7 +83,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Message feedbacks
+        /// Message feedbacks.
         /// </summary>
         public FeedbacksClient Feedbacks => new FeedbacksClient(HttpClient, authorizations: Authorizations)
         {
@@ -92,7 +92,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// MCP servers
+        /// MCP servers.
         /// </summary>
         public McpClient Mcp => new McpClient(HttpClient, authorizations: Authorizations)
         {
@@ -101,7 +101,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Mentions
+        /// Mentions.
         /// </summary>
         public MentionsClient Mentions => new MentionsClient(HttpClient, authorizations: Authorizations)
         {
@@ -110,7 +110,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - Agent configurations
+        /// Private API - Agent configurations.
         /// </summary>
         public PrivateAgentsClient PrivateAgents => new PrivateAgentsClient(HttpClient, authorizations: Authorizations)
         {
@@ -119,7 +119,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - Authentication (WorkOS)
+        /// Private API - Authentication (WorkOS).
         /// </summary>
         public PrivateAuthenticationClient PrivateAuthentication => new PrivateAuthenticationClient(HttpClient, authorizations: Authorizations)
         {
@@ -128,7 +128,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - Conversations
+        /// Private API - Conversations.
         /// </summary>
         public PrivateConversationsClient PrivateConversations => new PrivateConversationsClient(HttpClient, authorizations: Authorizations)
         {
@@ -137,7 +137,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - SSE event streams
+        /// Private API - SSE event streams.
         /// </summary>
         public PrivateEventsClient PrivateEvents => new PrivateEventsClient(HttpClient, authorizations: Authorizations)
         {
@@ -146,7 +146,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - Extension configuration
+        /// Private API - Extension configuration.
         /// </summary>
         public PrivateExtensionClient PrivateExtension => new PrivateExtensionClient(HttpClient, authorizations: Authorizations)
         {
@@ -155,7 +155,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - File uploads
+        /// Private API - File uploads.
         /// </summary>
         public PrivateFilesClient PrivateFiles => new PrivateFilesClient(HttpClient, authorizations: Authorizations)
         {
@@ -164,7 +164,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - Mention suggestions
+        /// Private API - Mention suggestions.
         /// </summary>
         public PrivateMentionsClient PrivateMentions => new PrivateMentionsClient(HttpClient, authorizations: Authorizations)
         {
@@ -173,7 +173,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - Messages
+        /// Private API - Messages.
         /// </summary>
         public PrivateMessagesClient PrivateMessages => new PrivateMessagesClient(HttpClient, authorizations: Authorizations)
         {
@@ -182,7 +182,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - Spaces and data source views
+        /// Private API - Spaces and data source views.
         /// </summary>
         public PrivateSpacesClient PrivateSpaces => new PrivateSpacesClient(HttpClient, authorizations: Authorizations)
         {
@@ -191,7 +191,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - User
+        /// Private API - User.
         /// </summary>
         public PrivateUserClient PrivateUser => new PrivateUserClient(HttpClient, authorizations: Authorizations)
         {
@@ -200,7 +200,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Private API - Workspace settings
+        /// Private API - Workspace settings.
         /// </summary>
         public PrivateWorkspaceClient PrivateWorkspace => new PrivateWorkspaceClient(HttpClient, authorizations: Authorizations)
         {
@@ -209,7 +209,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Search
+        /// Search.
         /// </summary>
         public SearchClient Search => new SearchClient(HttpClient, authorizations: Authorizations)
         {
@@ -218,7 +218,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Spaces
+        /// Spaces.
         /// </summary>
         public SpacesClient Spaces => new SpacesClient(HttpClient, authorizations: Authorizations)
         {
@@ -227,7 +227,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Tools
+        /// Tools.
         /// </summary>
         public ToolsClient Tools => new ToolsClient(HttpClient, authorizations: Authorizations)
         {
@@ -236,7 +236,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Triggers
+        /// Triggers.
         /// </summary>
         public TriggersClient Triggers => new TriggersClient(HttpClient, authorizations: Authorizations)
         {
@@ -245,7 +245,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// Workspace
+        /// Workspace.
         /// </summary>
         public WorkspaceClient Workspace => new WorkspaceClient(HttpClient, authorizations: Authorizations)
         {

@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class AppsClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_CreateWByWIdSpacesBySpaceIdAppsByAIdRunsSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_CreateWByWIdSpacesBySpaceIdAppsByAIdRunsSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_CreateWByWIdSpacesBySpaceIdAppsByAIdRunsSecurityRequirement0,
+            };
         partial void PrepareCreateWByWIdSpacesBySpaceIdAppsByAIdRunsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -56,9 +75,15 @@ namespace Dust
                 aId: ref aId,
                 request: request);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_CreateWByWIdSpacesBySpaceIdAppsByAIdRunsSecurityRequirements,
+                operationName: "CreateWByWIdSpacesBySpaceIdAppsByAIdRunsAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/v1/w/{wId}/spaces/{spaceId}/apps/{aId}/runs",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -68,7 +93,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

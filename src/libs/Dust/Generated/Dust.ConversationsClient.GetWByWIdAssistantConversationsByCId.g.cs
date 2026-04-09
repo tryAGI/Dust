@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class ConversationsClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdAssistantConversationsByCIdSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdAssistantConversationsByCIdSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_GetWByWIdAssistantConversationsByCIdSecurityRequirement0,
+            };
         partial void PrepareGetWByWIdAssistantConversationsByCIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -53,13 +72,19 @@ namespace Dust
                 limit: ref limit,
                 lastValue: ref lastValue);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetWByWIdAssistantConversationsByCIdSecurityRequirements,
+                operationName: "GetWByWIdAssistantConversationsByCIdAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/v1/w/{wId}/assistant/conversations/{cId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("lastValue", lastValue) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -69,7 +94,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

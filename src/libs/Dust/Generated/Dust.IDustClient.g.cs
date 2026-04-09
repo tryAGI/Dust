@@ -41,122 +41,122 @@ namespace Dust
 
 
         /// <summary>
-        /// Agent configurations
+        /// Agent configurations.
         /// </summary>
         public AgentsClient Agents { get; }
 
         /// <summary>
-        /// Dust apps
+        /// Dust apps.
         /// </summary>
         public AppsClient Apps { get; }
 
         /// <summary>
-        /// Conversations
+        /// Conversations.
         /// </summary>
         public ConversationsClient Conversations { get; }
 
         /// <summary>
-        /// Data source views
+        /// Data source views.
         /// </summary>
         public DatasourceViewsClient DatasourceViews { get; }
 
         /// <summary>
-        /// Data sources
+        /// Data sources.
         /// </summary>
         public DatasourcesClient Datasources { get; }
 
         /// <summary>
-        /// Message feedbacks
+        /// Message feedbacks.
         /// </summary>
         public FeedbacksClient Feedbacks { get; }
 
         /// <summary>
-        /// MCP servers
+        /// MCP servers.
         /// </summary>
         public McpClient Mcp { get; }
 
         /// <summary>
-        /// Mentions
+        /// Mentions.
         /// </summary>
         public MentionsClient Mentions { get; }
 
         /// <summary>
-        /// Private API - Agent configurations
+        /// Private API - Agent configurations.
         /// </summary>
         public PrivateAgentsClient PrivateAgents { get; }
 
         /// <summary>
-        /// Private API - Authentication (WorkOS)
+        /// Private API - Authentication (WorkOS).
         /// </summary>
         public PrivateAuthenticationClient PrivateAuthentication { get; }
 
         /// <summary>
-        /// Private API - Conversations
+        /// Private API - Conversations.
         /// </summary>
         public PrivateConversationsClient PrivateConversations { get; }
 
         /// <summary>
-        /// Private API - SSE event streams
+        /// Private API - SSE event streams.
         /// </summary>
         public PrivateEventsClient PrivateEvents { get; }
 
         /// <summary>
-        /// Private API - Extension configuration
+        /// Private API - Extension configuration.
         /// </summary>
         public PrivateExtensionClient PrivateExtension { get; }
 
         /// <summary>
-        /// Private API - File uploads
+        /// Private API - File uploads.
         /// </summary>
         public PrivateFilesClient PrivateFiles { get; }
 
         /// <summary>
-        /// Private API - Mention suggestions
+        /// Private API - Mention suggestions.
         /// </summary>
         public PrivateMentionsClient PrivateMentions { get; }
 
         /// <summary>
-        /// Private API - Messages
+        /// Private API - Messages.
         /// </summary>
         public PrivateMessagesClient PrivateMessages { get; }
 
         /// <summary>
-        /// Private API - Spaces and data source views
+        /// Private API - Spaces and data source views.
         /// </summary>
         public PrivateSpacesClient PrivateSpaces { get; }
 
         /// <summary>
-        /// Private API - User
+        /// Private API - User.
         /// </summary>
         public PrivateUserClient PrivateUser { get; }
 
         /// <summary>
-        /// Private API - Workspace settings
+        /// Private API - Workspace settings.
         /// </summary>
         public PrivateWorkspaceClient PrivateWorkspace { get; }
 
         /// <summary>
-        /// Search
+        /// Search.
         /// </summary>
         public SearchClient Search { get; }
 
         /// <summary>
-        /// Spaces
+        /// Spaces.
         /// </summary>
         public SpacesClient Spaces { get; }
 
         /// <summary>
-        /// Tools
+        /// Tools.
         /// </summary>
         public ToolsClient Tools { get; }
 
         /// <summary>
-        /// Triggers
+        /// Triggers.
         /// </summary>
         public TriggersClient Triggers { get; }
 
         /// <summary>
-        /// Workspace
+        /// Workspace.
         /// </summary>
         public WorkspaceClient Workspace { get; }
 

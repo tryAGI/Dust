@@ -6,6 +6,7 @@ namespace Dust
     public sealed partial class DustClient
     {
         /// <inheritdoc cref="DustClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Dust.EndPointAuthorization}?, bool)"/>
+
         public DustClient(
             string apiKey,
             global::System.Net.Http.HttpClient? httpClient = null,
