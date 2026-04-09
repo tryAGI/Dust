@@ -161,18 +161,6 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateConversationTitleEventTypeNullableJsonConverter),
 
-            typeof(global::Dust.JsonConverters.PrivateButlerSuggestionCreatedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateButlerSuggestionCreatedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateButlerThinkingEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateButlerThinkingEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateButlerDoneEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateButlerDoneEventTypeNullableJsonConverter),
-
             typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventTypeNullableJsonConverter),
@@ -566,18 +554,12 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageNewEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationTitleEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateButlerSuggestionCreatedEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateButlerThinkingEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateButlerDoneEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationEventDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUserMessageNewEventType), TypeInfoPropertyName = "PrivateUserMessageNewEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageNewEventType), TypeInfoPropertyName = "PrivateAgentMessageNewEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEventType), TypeInfoPropertyName = "PrivateAgentMessageDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEventStatus), TypeInfoPropertyName = "PrivateAgentMessageDoneEventStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationTitleEventType), TypeInfoPropertyName = "PrivateConversationTitleEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateButlerSuggestionCreatedEventType), TypeInfoPropertyName = "PrivateButlerSuggestionCreatedEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateButlerThinkingEventType), TypeInfoPropertyName = "PrivateButlerThinkingEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateButlerDoneEventType), TypeInfoPropertyName = "PrivateButlerDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageEvent), TypeInfoPropertyName = "PrivateAgentMessageEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateGenerationTokensEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateToolCallStartedEvent))]
