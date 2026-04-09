@@ -76,57 +76,6 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ConversationTitle))]
 #endif
         public bool IsConversationTitle => ConversationTitle != null;
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        public global::Dust.PrivateButlerSuggestionCreatedEvent? ButlerSuggestionCreated { get; init; }
-#else
-        public global::Dust.PrivateButlerSuggestionCreatedEvent? ButlerSuggestionCreated { get; }
-#endif
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ButlerSuggestionCreated))]
-#endif
-        public bool IsButlerSuggestionCreated => ButlerSuggestionCreated != null;
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        public global::Dust.PrivateButlerThinkingEvent? ButlerThinking { get; init; }
-#else
-        public global::Dust.PrivateButlerThinkingEvent? ButlerThinking { get; }
-#endif
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ButlerThinking))]
-#endif
-        public bool IsButlerThinking => ButlerThinking != null;
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        public global::Dust.PrivateButlerDoneEvent? ButlerDone { get; init; }
-#else
-        public global::Dust.PrivateButlerDoneEvent? ButlerDone { get; }
-#endif
-
-        /// <summary>
-        /// 
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ButlerDone))]
-#endif
-        public bool IsButlerDone => ButlerDone != null;
         /// <summary>
         /// 
         /// </summary>
@@ -202,86 +151,23 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        public static implicit operator PrivateConversationEvent(global::Dust.PrivateButlerSuggestionCreatedEvent value) => new PrivateConversationEvent((global::Dust.PrivateButlerSuggestionCreatedEvent?)value);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator global::Dust.PrivateButlerSuggestionCreatedEvent?(PrivateConversationEvent @this) => @this.ButlerSuggestionCreated;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public PrivateConversationEvent(global::Dust.PrivateButlerSuggestionCreatedEvent? value)
-        {
-            ButlerSuggestionCreated = value;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator PrivateConversationEvent(global::Dust.PrivateButlerThinkingEvent value) => new PrivateConversationEvent((global::Dust.PrivateButlerThinkingEvent?)value);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator global::Dust.PrivateButlerThinkingEvent?(PrivateConversationEvent @this) => @this.ButlerThinking;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public PrivateConversationEvent(global::Dust.PrivateButlerThinkingEvent? value)
-        {
-            ButlerThinking = value;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator PrivateConversationEvent(global::Dust.PrivateButlerDoneEvent value) => new PrivateConversationEvent((global::Dust.PrivateButlerDoneEvent?)value);
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public static implicit operator global::Dust.PrivateButlerDoneEvent?(PrivateConversationEvent @this) => @this.ButlerDone;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public PrivateConversationEvent(global::Dust.PrivateButlerDoneEvent? value)
-        {
-            ButlerDone = value;
-        }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public PrivateConversationEvent(
             global::Dust.PrivateUserMessageNewEvent? userMessageNew,
             global::Dust.PrivateAgentMessageNewEvent? agentMessageNew,
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone,
-            global::Dust.PrivateConversationTitleEvent? conversationTitle,
-            global::Dust.PrivateButlerSuggestionCreatedEvent? butlerSuggestionCreated,
-            global::Dust.PrivateButlerThinkingEvent? butlerThinking,
-            global::Dust.PrivateButlerDoneEvent? butlerDone
+            global::Dust.PrivateConversationTitleEvent? conversationTitle
             )
         {
             UserMessageNew = userMessageNew;
             AgentMessageNew = agentMessageNew;
             AgentMessageDone = agentMessageDone;
             ConversationTitle = conversationTitle;
-            ButlerSuggestionCreated = butlerSuggestionCreated;
-            ButlerThinking = butlerThinking;
-            ButlerDone = butlerDone;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
-            ButlerDone as object ??
-            ButlerThinking as object ??
-            ButlerSuggestionCreated as object ??
             ConversationTitle as object ??
             AgentMessageDone as object ??
             AgentMessageNew as object ??
@@ -295,10 +181,7 @@ namespace Dust
             UserMessageNew?.ToString() ??
             AgentMessageNew?.ToString() ??
             AgentMessageDone?.ToString() ??
-            ConversationTitle?.ToString() ??
-            ButlerSuggestionCreated?.ToString() ??
-            ButlerThinking?.ToString() ??
-            ButlerDone?.ToString() 
+            ConversationTitle?.ToString() 
             ;
 
         /// <summary>
@@ -306,7 +189,7 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle && !IsButlerSuggestionCreated && !IsButlerThinking && !IsButlerDone || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle && !IsButlerSuggestionCreated && !IsButlerThinking && !IsButlerDone || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsConversationTitle && !IsButlerSuggestionCreated && !IsButlerThinking && !IsButlerDone || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsConversationTitle && !IsButlerSuggestionCreated && !IsButlerThinking && !IsButlerDone || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle && IsButlerSuggestionCreated && !IsButlerThinking && !IsButlerDone || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle && !IsButlerSuggestionCreated && IsButlerThinking && !IsButlerDone || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle && !IsButlerSuggestionCreated && !IsButlerThinking && IsButlerDone;
+            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsConversationTitle;
         }
 
         /// <summary>
@@ -317,9 +200,6 @@ namespace Dust
             global::System.Func<global::Dust.PrivateAgentMessageNewEvent?, TResult>? agentMessageNew = null,
             global::System.Func<global::Dust.PrivateAgentMessageDoneEvent?, TResult>? agentMessageDone = null,
             global::System.Func<global::Dust.PrivateConversationTitleEvent?, TResult>? conversationTitle = null,
-            global::System.Func<global::Dust.PrivateButlerSuggestionCreatedEvent?, TResult>? butlerSuggestionCreated = null,
-            global::System.Func<global::Dust.PrivateButlerThinkingEvent?, TResult>? butlerThinking = null,
-            global::System.Func<global::Dust.PrivateButlerDoneEvent?, TResult>? butlerDone = null,
             bool validate = true)
         {
             if (validate)
@@ -343,18 +223,6 @@ namespace Dust
             {
                 return conversationTitle(ConversationTitle!);
             }
-            else if (IsButlerSuggestionCreated && butlerSuggestionCreated != null)
-            {
-                return butlerSuggestionCreated(ButlerSuggestionCreated!);
-            }
-            else if (IsButlerThinking && butlerThinking != null)
-            {
-                return butlerThinking(ButlerThinking!);
-            }
-            else if (IsButlerDone && butlerDone != null)
-            {
-                return butlerDone(ButlerDone!);
-            }
 
             return default(TResult);
         }
@@ -367,9 +235,6 @@ namespace Dust
             global::System.Action<global::Dust.PrivateAgentMessageNewEvent?>? agentMessageNew = null,
             global::System.Action<global::Dust.PrivateAgentMessageDoneEvent?>? agentMessageDone = null,
             global::System.Action<global::Dust.PrivateConversationTitleEvent?>? conversationTitle = null,
-            global::System.Action<global::Dust.PrivateButlerSuggestionCreatedEvent?>? butlerSuggestionCreated = null,
-            global::System.Action<global::Dust.PrivateButlerThinkingEvent?>? butlerThinking = null,
-            global::System.Action<global::Dust.PrivateButlerDoneEvent?>? butlerDone = null,
             bool validate = true)
         {
             if (validate)
@@ -393,18 +258,6 @@ namespace Dust
             {
                 conversationTitle?.Invoke(ConversationTitle!);
             }
-            else if (IsButlerSuggestionCreated)
-            {
-                butlerSuggestionCreated?.Invoke(ButlerSuggestionCreated!);
-            }
-            else if (IsButlerThinking)
-            {
-                butlerThinking?.Invoke(ButlerThinking!);
-            }
-            else if (IsButlerDone)
-            {
-                butlerDone?.Invoke(ButlerDone!);
-            }
         }
 
         /// <summary>
@@ -422,12 +275,6 @@ namespace Dust
                 typeof(global::Dust.PrivateAgentMessageDoneEvent),
                 ConversationTitle,
                 typeof(global::Dust.PrivateConversationTitleEvent),
-                ButlerSuggestionCreated,
-                typeof(global::Dust.PrivateButlerSuggestionCreatedEvent),
-                ButlerThinking,
-                typeof(global::Dust.PrivateButlerThinkingEvent),
-                ButlerDone,
-                typeof(global::Dust.PrivateButlerDoneEvent),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -447,10 +294,7 @@ namespace Dust
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateUserMessageNewEvent?>.Default.Equals(UserMessageNew, other.UserMessageNew) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageNewEvent?>.Default.Equals(AgentMessageNew, other.AgentMessageNew) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageDoneEvent?>.Default.Equals(AgentMessageDone, other.AgentMessageDone) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversationTitleEvent?>.Default.Equals(ConversationTitle, other.ConversationTitle) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateButlerSuggestionCreatedEvent?>.Default.Equals(ButlerSuggestionCreated, other.ButlerSuggestionCreated) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateButlerThinkingEvent?>.Default.Equals(ButlerThinking, other.ButlerThinking) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateButlerDoneEvent?>.Default.Equals(ButlerDone, other.ButlerDone) 
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversationTitleEvent?>.Default.Equals(ConversationTitle, other.ConversationTitle) 
                 ;
         }
 

@@ -59,10 +59,6 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        ProjectButler,
-        /// <summary>
-        /// 
-        /// </summary>
         ProjectKickoff,
         /// <summary>
         /// 
@@ -130,7 +126,6 @@ namespace Dust
                 PrivateUserMessageContextOrigin.N8n => "n8n",
                 PrivateUserMessageContextOrigin.OnboardingConversation => "onboarding_conversation",
                 PrivateUserMessageContextOrigin.Powerpoint => "powerpoint",
-                PrivateUserMessageContextOrigin.ProjectButler => "project_butler",
                 PrivateUserMessageContextOrigin.ProjectKickoff => "project_kickoff",
                 PrivateUserMessageContextOrigin.Raycast => "raycast",
                 PrivateUserMessageContextOrigin.Slack => "slack",
@@ -164,7 +159,6 @@ namespace Dust
                 "n8n" => PrivateUserMessageContextOrigin.N8n,
                 "onboarding_conversation" => PrivateUserMessageContextOrigin.OnboardingConversation,
                 "powerpoint" => PrivateUserMessageContextOrigin.Powerpoint,
-                "project_butler" => PrivateUserMessageContextOrigin.ProjectButler,
                 "project_kickoff" => PrivateUserMessageContextOrigin.ProjectKickoff,
                 "raycast" => PrivateUserMessageContextOrigin.Raycast,
                 "slack" => PrivateUserMessageContextOrigin.Slack,
