@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// Private API - Spaces and data source views<br/>
+    /// Private API - Spaces and data source views.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>

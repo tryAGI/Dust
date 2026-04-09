@@ -5,8 +5,8 @@ namespace Dust
     public partial interface IConversationsClient
     {
         /// <summary>
-        /// Mark a conversation as read<br/>
-        /// Mark a conversation as read in the workspace identified by {wId}.
+        /// Update conversation read status<br/>
+        /// Mark a conversation as read or unread in the workspace identified by {wId}.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -20,8 +20,8 @@ namespace Dust
             global::Dust.PatchWAssistantConversationsRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Mark a conversation as read<br/>
-        /// Mark a conversation as read in the workspace identified by {wId}.
+        /// Update conversation read status<br/>
+        /// Mark a conversation as read or unread in the workspace identified by {wId}.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>

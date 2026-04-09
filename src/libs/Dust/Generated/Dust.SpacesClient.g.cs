@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// Spaces<br/>
+    /// Spaces.<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
@@ -13,7 +13,7 @@ namespace Dust
         /// <summary>
         /// Dust.tt API (us-central1)
         /// </summary>
-        public const string DefaultBaseUrl = "https://dust.tt";
+        public const string DefaultBaseUrl = "https://dust.tt/";
 
         private bool _disposeHttpClient = true;
 

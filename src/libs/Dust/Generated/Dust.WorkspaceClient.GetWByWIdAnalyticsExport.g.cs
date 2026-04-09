@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class WorkspaceClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdAnalyticsExportSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdAnalyticsExportSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_GetWByWIdAnalyticsExportSecurityRequirement0,
+            };
         partial void PrepareGetWByWIdAnalyticsExportArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -58,6 +77,12 @@ namespace Dust
                 endDate: ref endDate,
                 timezone: ref timezone);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetWByWIdAnalyticsExportSecurityRequirements,
+                operationName: "GetWByWIdAnalyticsExportAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/v1/w/{wId}/analytics/export",
                 baseUri: HttpClient.BaseAddress); 
@@ -66,7 +91,7 @@ namespace Dust
                 .AddRequiredParameter("startDate", startDate.ToString("yyyy-MM-dd"))
                 .AddRequiredParameter("endDate", endDate.ToString("yyyy-MM-dd"))
                 .AddOptionalParameter("timezone", timezone) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -76,7 +101,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

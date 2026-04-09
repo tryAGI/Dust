@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class PrivateSpacesClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdSpacesBySpaceIdSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdSpacesBySpaceIdSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_GetWByWIdSpacesBySpaceIdSecurityRequirement0,
+            };
         partial void PrepareGetWByWIdSpacesBySpaceIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -48,12 +67,18 @@ namespace Dust
                 spaceId: ref spaceId,
                 includeAllMembers: ref includeAllMembers);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetWByWIdSpacesBySpaceIdSecurityRequirements,
+                operationName: "GetWByWIdSpacesBySpaceIdAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/w/{wId}/spaces/{spaceId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("includeAllMembers", includeAllMembers?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -63,7 +88,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class PrivateEventsClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdAssistantConversationsByCIdEventsSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdAssistantConversationsByCIdEventsSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_GetWByWIdAssistantConversationsByCIdEventsSecurityRequirement0,
+            };
         partial void PrepareGetWByWIdAssistantConversationsByCIdEventsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -38,9 +57,15 @@ namespace Dust
                 wId: ref wId,
                 cId: ref cId);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_GetWByWIdAssistantConversationsByCIdEventsSecurityRequirements,
+                operationName: "GetWByWIdAssistantConversationsByCIdEventsAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/w/{wId}/assistant/conversations/{cId}/events",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -50,7 +75,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

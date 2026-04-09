@@ -5,6 +5,25 @@ namespace Dust
 {
     public partial class PrivateSpacesClient
     {
+
+
+        private static readonly global::Dust.EndPointSecurityRequirement s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirement0 =
+            new global::Dust.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
+                {                    new global::Dust.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Bearer",
+                        FriendlyName = "Bearer",
+                    },
+                },
+            };
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirements =
+            new global::Dust.EndPointSecurityRequirement[]
+            {                s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirement0,
+            };
         partial void PrepareDeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
@@ -48,12 +67,18 @@ namespace Dust
                 dsvId: ref dsvId,
                 force: ref force);
 
+
+            var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirements,
+                operationName: "DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync");
+
             var __pathBuilder = new global::Dust.PathBuilder(
                 path: $"/api/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("force", force?.ToValueString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -63,7 +88,7 @@ namespace Dust
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
