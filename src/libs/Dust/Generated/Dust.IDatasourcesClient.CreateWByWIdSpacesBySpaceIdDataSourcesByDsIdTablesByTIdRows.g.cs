@@ -13,6 +13,7 @@ namespace Dust
         /// <param name="dsId"></param>
         /// <param name="tId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.Datasource> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesByTIdRowsAsync(
@@ -22,6 +23,7 @@ namespace Dust
             string tId,
 
             global::Dust.CreateWSpacesDataSourcesTablesRowsRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upsert rows<br/>
@@ -35,6 +37,7 @@ namespace Dust
         /// <param name="truncate">
         /// Whether to truncate existing rows
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.Datasource> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesByTIdRowsAsync(
@@ -44,6 +47,7 @@ namespace Dust
             string tId,
             global::System.Collections.Generic.IList<global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRow>? rows = default,
             bool? truncate = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

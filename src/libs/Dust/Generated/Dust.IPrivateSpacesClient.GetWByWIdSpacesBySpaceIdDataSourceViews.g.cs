@@ -13,6 +13,7 @@ namespace Dust
         /// <param name="category"></param>
         /// <param name="withDetails"></param>
         /// <param name="includeEditedBy"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.GetWSpacesDataSourceViewsResponse3> GetWByWIdSpacesBySpaceIdDataSourceViewsAsync(
@@ -21,6 +22,7 @@ namespace Dust
             global::Dust.GetWSpacesDataSourceViewsCategory? category = default,
             global::Dust.GetWSpacesDataSourceViewsWithDetails? withDetails = default,
             global::Dust.GetWSpacesDataSourceViewsIncludeEditedBy? includeEditedBy = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

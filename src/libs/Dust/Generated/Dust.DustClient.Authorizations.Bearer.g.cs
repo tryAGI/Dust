@@ -25,6 +25,7 @@ namespace Dust
             Authorizations.Add(new global::Dust.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "BearerAuth",
                 Location = "Header",
                 Name = "Bearer",
                 Value = apiKey,

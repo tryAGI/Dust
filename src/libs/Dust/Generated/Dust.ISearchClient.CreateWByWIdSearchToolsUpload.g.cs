@@ -10,12 +10,14 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateWByWIdSearchToolsUploadAsync(
             string wId,
 
             global::Dust.CreateWSearchToolsUploadRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Upload a tool file<br/>
@@ -37,6 +39,7 @@ namespace Dust
         /// <param name="serverIcon">
         /// Optional icon identifier for the MCP server
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateWByWIdSearchToolsUploadAsync(
@@ -46,6 +49,7 @@ namespace Dust
             string? conversationId = default,
             string? serverName = default,
             string? serverIcon = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

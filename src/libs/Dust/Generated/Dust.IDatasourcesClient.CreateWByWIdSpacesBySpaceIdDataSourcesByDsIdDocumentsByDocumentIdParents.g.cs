@@ -13,6 +13,7 @@ namespace Dust
         /// <param name="dsId"></param>
         /// <param name="documentId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsByDocumentIdParentsAsync(
@@ -22,6 +23,7 @@ namespace Dust
             string documentId,
 
             global::Dust.CreateWSpacesDataSourcesDocumentsParentsRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update the parents of a document<br/>
@@ -37,6 +39,7 @@ namespace Dust
         /// <param name="parents">
         /// Document and ancestor ids, with the following convention: parents[0] === documentId, parents[1] === parentId, and then ancestors ids in order
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsByDocumentIdParentsAsync(
@@ -46,6 +49,7 @@ namespace Dust
             string documentId,
             string? parentId = default,
             global::System.Collections.Generic.IList<string>? parents = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

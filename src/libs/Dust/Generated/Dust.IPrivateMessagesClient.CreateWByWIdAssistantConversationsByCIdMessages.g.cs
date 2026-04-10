@@ -11,6 +11,7 @@ namespace Dust
         /// <param name="wId"></param>
         /// <param name="cId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantConversationsMessagesResponse> CreateWByWIdAssistantConversationsByCIdMessagesAsync(
@@ -18,6 +19,7 @@ namespace Dust
             string cId,
 
             global::Dust.CreateWAssistantConversationsMessagesRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Post a message to a conversation<br/>
@@ -29,6 +31,7 @@ namespace Dust
         /// <param name="mentions"></param>
         /// <param name="context"></param>
         /// <param name="skipToolsValidation"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantConversationsMessagesResponse> CreateWByWIdAssistantConversationsByCIdMessagesAsync(
@@ -38,6 +41,7 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.PrivateMention> mentions,
             global::Dust.CreateWAssistantConversationsMessagesRequestContext context,
             bool? skipToolsValidation = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

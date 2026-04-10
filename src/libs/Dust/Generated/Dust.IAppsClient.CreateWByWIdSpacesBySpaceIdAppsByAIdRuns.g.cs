@@ -12,6 +12,7 @@ namespace Dust
         /// <param name="spaceId"></param>
         /// <param name="aId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.CreateWSpacesAppsRunsResponse> CreateWByWIdSpacesBySpaceIdAppsByAIdRunsAsync(
@@ -20,6 +21,7 @@ namespace Dust
             string aId,
 
             global::Dust.CreateWSpacesAppsRunsRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create an app run<br/>
@@ -46,6 +48,7 @@ namespace Dust
         /// <param name="blockFilter">
         /// Array of block names to filter the response
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.CreateWSpacesAppsRunsResponse> CreateWByWIdSpacesBySpaceIdAppsByAIdRunsAsync(
@@ -58,6 +61,7 @@ namespace Dust
             bool? stream = default,
             bool? blocking = default,
             global::System.Collections.Generic.IList<string>? blockFilter = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

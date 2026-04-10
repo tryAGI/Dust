@@ -12,12 +12,14 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateWByWIdMcpResultsAsync(
             string wId,
 
             global::Dust.CreateWMcpResultsRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Submit MCP tool execution results<br/>
@@ -32,12 +34,14 @@ namespace Dust
         /// <param name="serverId">
         /// ID of the MCP server submitting the results
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateWByWIdMcpResultsAsync(
             string wId,
             object result,
             string serverId,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
