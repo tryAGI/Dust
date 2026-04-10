@@ -17,6 +17,7 @@ namespace Dust
         /// <param name="includeDataSources"></param>
         /// <param name="searchSourceUrls"></param>
         /// <param name="includeTools"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Collections.Generic.IAsyncEnumerable<string> GetWByWIdSearchAsync(
@@ -29,6 +30,7 @@ namespace Dust
             bool? includeDataSources = default,
             bool? searchSourceUrls = default,
             bool? includeTools = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

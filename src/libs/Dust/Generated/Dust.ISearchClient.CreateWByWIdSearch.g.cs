@@ -10,12 +10,14 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task CreateWByWIdSearchAsync(
             string wId,
 
             global::Dust.CreateWSearchRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Search for nodes in the workspace<br/>
@@ -40,6 +42,7 @@ namespace Dust
         /// <param name="searchSourceUrls">
         /// Whether to search source URLs
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task CreateWByWIdSearchAsync(
@@ -50,6 +53,7 @@ namespace Dust
             global::System.Collections.Generic.IList<string>? spaceIds = default,
             global::System.Collections.Generic.IList<string>? nodeIds = default,
             bool? searchSourceUrls = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

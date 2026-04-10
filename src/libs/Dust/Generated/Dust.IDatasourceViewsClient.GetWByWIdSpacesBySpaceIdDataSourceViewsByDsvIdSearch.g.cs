@@ -21,6 +21,7 @@ namespace Dust
         /// <param name="tagsNot"></param>
         /// <param name="parentsIn"></param>
         /// <param name="parentsNot"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.GetWSpacesDataSourceViewsSearchResponse> GetWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSearchAsync(
@@ -37,6 +38,7 @@ namespace Dust
             string? tagsNot = default,
             string? parentsIn = default,
             string? parentsNot = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

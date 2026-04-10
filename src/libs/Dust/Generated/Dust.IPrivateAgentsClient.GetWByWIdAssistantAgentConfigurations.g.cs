@@ -16,6 +16,7 @@ namespace Dust
         /// <param name="withFeedbacks"></param>
         /// <param name="withEditors"></param>
         /// <param name="sort"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Dust.GetWAssistantAgentConfigurationsResponse3> GetWByWIdAssistantAgentConfigurationsAsync(
@@ -27,6 +28,7 @@ namespace Dust
             global::Dust.GetWAssistantAgentConfigurationsWithFeedbacks? withFeedbacks = default,
             global::Dust.GetWAssistantAgentConfigurationsWithEditors? withEditors = default,
             string? sort = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
