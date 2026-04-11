@@ -6,6 +6,19 @@ namespace Dust
     public partial class PrivateAgentsClient
     {
 
+        private static readonly global::Dust.AutoSDKServer[] s_CreateWByWIdAssistantAgentConfigurationsServers = new global::Dust.AutoSDKServer[]
+        {            new global::Dust.AutoSDKServer(
+                id: "https-dust-tt",
+                name: "Dust.tt API (us-central1)",
+                url: "https://dust.tt/",
+                description: "Dust.tt API (us-central1)"),
+            new global::Dust.AutoSDKServer(
+                id: "https-eu-dust-tt",
+                name: "Dust.tt API (europe-west1)",
+                url: "https://eu.dust.tt/",
+                description: "Dust.tt API (europe-west1)"),
+        };
+
 
         private static readonly global::Dust.EndPointSecurityRequirement s_CreateWByWIdAssistantAgentConfigurationsSecurityRequirement0 =
             new global::Dust.EndPointSecurityRequirement
@@ -92,7 +105,9 @@ namespace Dust
             {
                             var __pathBuilder = new global::Dust.PathBuilder(
                                 path: $"/api/w/{wId}/assistant/agent_configurations",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_CreateWByWIdAssistantAgentConfigurationsServers,
+                                defaultBaseUrl: "https://dust.tt/"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,

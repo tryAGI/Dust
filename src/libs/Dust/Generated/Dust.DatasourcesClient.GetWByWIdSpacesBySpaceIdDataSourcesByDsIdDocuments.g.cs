@@ -6,6 +6,19 @@ namespace Dust
     public partial class DatasourcesClient
     {
 
+        private static readonly global::Dust.AutoSDKServer[] s_GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsServers = new global::Dust.AutoSDKServer[]
+        {            new global::Dust.AutoSDKServer(
+                id: "https-dust-tt",
+                name: "Dust.tt API (us-central1)",
+                url: "https://dust.tt/",
+                description: "Dust.tt API (us-central1)"),
+            new global::Dust.AutoSDKServer(
+                id: "https-eu-dust-tt",
+                name: "Dust.tt API (europe-west1)",
+                url: "https://eu.dust.tt/",
+                description: "Dust.tt API (europe-west1)"),
+        };
+
 
         private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsSecurityRequirement0 =
             new global::Dust.EndPointSecurityRequirement
@@ -109,7 +122,9 @@ namespace Dust
             {
                             var __pathBuilder = new global::Dust.PathBuilder(
                                 path: $"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/documents",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsServers,
+                                defaultBaseUrl: "https://dust.tt/")); 
                             __pathBuilder
                                 .AddOptionalParameter("document_ids", documentIds, delimiter: ",", explode: true)
                                 .AddOptionalParameter("limit", limit?.ToString())

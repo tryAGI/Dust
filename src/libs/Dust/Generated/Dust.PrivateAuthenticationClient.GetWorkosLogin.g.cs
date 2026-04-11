@@ -5,6 +5,19 @@ namespace Dust
 {
     public partial class PrivateAuthenticationClient
     {
+
+        private static readonly global::Dust.AutoSDKServer[] s_GetWorkosLoginServers = new global::Dust.AutoSDKServer[]
+        {            new global::Dust.AutoSDKServer(
+                id: "https-dust-tt",
+                name: "Dust.tt API (us-central1)",
+                url: "https://dust.tt/",
+                description: "Dust.tt API (us-central1)"),
+            new global::Dust.AutoSDKServer(
+                id: "https-eu-dust-tt",
+                name: "Dust.tt API (europe-west1)",
+                url: "https://eu.dust.tt/",
+                description: "Dust.tt API (europe-west1)"),
+        };
         partial void PrepareGetWorkosLoginArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? redirectUri,
@@ -63,7 +76,9 @@ namespace Dust
             {
                             var __pathBuilder = new global::Dust.PathBuilder(
                                 path: "/api/workos/login",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: ResolveBaseUri(
+                                servers: s_GetWorkosLoginServers,
+                                defaultBaseUrl: "https://dust.tt/")); 
                             __pathBuilder
                                 .AddOptionalParameter("redirect_uri", redirectUri)
                                 .AddOptionalParameter("code_challenge", codeChallenge)

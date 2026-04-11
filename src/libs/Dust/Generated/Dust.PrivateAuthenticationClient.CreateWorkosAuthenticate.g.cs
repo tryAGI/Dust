@@ -5,6 +5,19 @@ namespace Dust
 {
     public partial class PrivateAuthenticationClient
     {
+
+        private static readonly global::Dust.AutoSDKServer[] s_CreateWorkosAuthenticateServers = new global::Dust.AutoSDKServer[]
+        {            new global::Dust.AutoSDKServer(
+                id: "https-dust-tt",
+                name: "Dust.tt API (us-central1)",
+                url: "https://dust.tt/",
+                description: "Dust.tt API (us-central1)"),
+            new global::Dust.AutoSDKServer(
+                id: "https-eu-dust-tt",
+                name: "Dust.tt API (europe-west1)",
+                url: "https://eu.dust.tt/",
+                description: "Dust.tt API (europe-west1)"),
+        };
         partial void PrepareCreateWorkosAuthenticateArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Dust.CreateWorkosAuthenticateRequest request);
@@ -61,7 +74,9 @@ namespace Dust
             {
                             var __pathBuilder = new global::Dust.PathBuilder(
                                 path: "/api/workos/authenticate",
-                                baseUri: HttpClient.BaseAddress);
+                                baseUri: ResolveBaseUri(
+                                servers: s_CreateWorkosAuthenticateServers,
+                                defaultBaseUrl: "https://dust.tt/"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
