@@ -64,6 +64,40 @@ namespace Dust
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
+        public global::Dust.PrivateCompactionMessageNewEvent? CompactionMessageNew { get; init; }
+#else
+        public global::Dust.PrivateCompactionMessageNewEvent? CompactionMessageNew { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompactionMessageNew))]
+#endif
+        public bool IsCompactionMessageNew => CompactionMessageNew != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Dust.PrivateCompactionMessageDoneEvent? CompactionMessageDone { get; init; }
+#else
+        public global::Dust.PrivateCompactionMessageDoneEvent? CompactionMessageDone { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CompactionMessageDone))]
+#endif
+        public bool IsCompactionMessageDone => CompactionMessageDone != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
         public global::Dust.PrivateConversationTitleEvent? ConversationTitle { get; init; }
 #else
         public global::Dust.PrivateConversationTitleEvent? ConversationTitle { get; }
@@ -133,6 +167,42 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static implicit operator PrivateConversationEvent(global::Dust.PrivateCompactionMessageNewEvent value) => new PrivateConversationEvent((global::Dust.PrivateCompactionMessageNewEvent?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Dust.PrivateCompactionMessageNewEvent?(PrivateConversationEvent @this) => @this.CompactionMessageNew;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PrivateConversationEvent(global::Dust.PrivateCompactionMessageNewEvent? value)
+        {
+            CompactionMessageNew = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator PrivateConversationEvent(global::Dust.PrivateCompactionMessageDoneEvent value) => new PrivateConversationEvent((global::Dust.PrivateCompactionMessageDoneEvent?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Dust.PrivateCompactionMessageDoneEvent?(PrivateConversationEvent @this) => @this.CompactionMessageDone;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PrivateConversationEvent(global::Dust.PrivateCompactionMessageDoneEvent? value)
+        {
+            CompactionMessageDone = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateConversationEvent(global::Dust.PrivateConversationTitleEvent value) => new PrivateConversationEvent((global::Dust.PrivateConversationTitleEvent?)value);
 
         /// <summary>
@@ -155,12 +225,16 @@ namespace Dust
             global::Dust.PrivateUserMessageNewEvent? userMessageNew,
             global::Dust.PrivateAgentMessageNewEvent? agentMessageNew,
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone,
+            global::Dust.PrivateCompactionMessageNewEvent? compactionMessageNew,
+            global::Dust.PrivateCompactionMessageDoneEvent? compactionMessageDone,
             global::Dust.PrivateConversationTitleEvent? conversationTitle
             )
         {
             UserMessageNew = userMessageNew;
             AgentMessageNew = agentMessageNew;
             AgentMessageDone = agentMessageDone;
+            CompactionMessageNew = compactionMessageNew;
+            CompactionMessageDone = compactionMessageDone;
             ConversationTitle = conversationTitle;
         }
 
@@ -169,6 +243,8 @@ namespace Dust
         /// </summary>
         public object? Object =>
             ConversationTitle as object ??
+            CompactionMessageDone as object ??
+            CompactionMessageNew as object ??
             AgentMessageDone as object ??
             AgentMessageNew as object ??
             UserMessageNew as object 
@@ -181,6 +257,8 @@ namespace Dust
             UserMessageNew?.ToString() ??
             AgentMessageNew?.ToString() ??
             AgentMessageDone?.ToString() ??
+            CompactionMessageNew?.ToString() ??
+            CompactionMessageDone?.ToString() ??
             ConversationTitle?.ToString() 
             ;
 
@@ -189,7 +267,7 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsConversationTitle;
+            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && IsConversationTitle;
         }
 
         /// <summary>
@@ -199,6 +277,8 @@ namespace Dust
             global::System.Func<global::Dust.PrivateUserMessageNewEvent?, TResult>? userMessageNew = null,
             global::System.Func<global::Dust.PrivateAgentMessageNewEvent?, TResult>? agentMessageNew = null,
             global::System.Func<global::Dust.PrivateAgentMessageDoneEvent?, TResult>? agentMessageDone = null,
+            global::System.Func<global::Dust.PrivateCompactionMessageNewEvent?, TResult>? compactionMessageNew = null,
+            global::System.Func<global::Dust.PrivateCompactionMessageDoneEvent?, TResult>? compactionMessageDone = null,
             global::System.Func<global::Dust.PrivateConversationTitleEvent?, TResult>? conversationTitle = null,
             bool validate = true)
         {
@@ -219,6 +299,14 @@ namespace Dust
             {
                 return agentMessageDone(AgentMessageDone!);
             }
+            else if (IsCompactionMessageNew && compactionMessageNew != null)
+            {
+                return compactionMessageNew(CompactionMessageNew!);
+            }
+            else if (IsCompactionMessageDone && compactionMessageDone != null)
+            {
+                return compactionMessageDone(CompactionMessageDone!);
+            }
             else if (IsConversationTitle && conversationTitle != null)
             {
                 return conversationTitle(ConversationTitle!);
@@ -234,6 +322,8 @@ namespace Dust
             global::System.Action<global::Dust.PrivateUserMessageNewEvent?>? userMessageNew = null,
             global::System.Action<global::Dust.PrivateAgentMessageNewEvent?>? agentMessageNew = null,
             global::System.Action<global::Dust.PrivateAgentMessageDoneEvent?>? agentMessageDone = null,
+            global::System.Action<global::Dust.PrivateCompactionMessageNewEvent?>? compactionMessageNew = null,
+            global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent?>? compactionMessageDone = null,
             global::System.Action<global::Dust.PrivateConversationTitleEvent?>? conversationTitle = null,
             bool validate = true)
         {
@@ -254,6 +344,14 @@ namespace Dust
             {
                 agentMessageDone?.Invoke(AgentMessageDone!);
             }
+            else if (IsCompactionMessageNew)
+            {
+                compactionMessageNew?.Invoke(CompactionMessageNew!);
+            }
+            else if (IsCompactionMessageDone)
+            {
+                compactionMessageDone?.Invoke(CompactionMessageDone!);
+            }
             else if (IsConversationTitle)
             {
                 conversationTitle?.Invoke(ConversationTitle!);
@@ -273,6 +371,10 @@ namespace Dust
                 typeof(global::Dust.PrivateAgentMessageNewEvent),
                 AgentMessageDone,
                 typeof(global::Dust.PrivateAgentMessageDoneEvent),
+                CompactionMessageNew,
+                typeof(global::Dust.PrivateCompactionMessageNewEvent),
+                CompactionMessageDone,
+                typeof(global::Dust.PrivateCompactionMessageDoneEvent),
                 ConversationTitle,
                 typeof(global::Dust.PrivateConversationTitleEvent),
             };
@@ -294,6 +396,8 @@ namespace Dust
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateUserMessageNewEvent?>.Default.Equals(UserMessageNew, other.UserMessageNew) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageNewEvent?>.Default.Equals(AgentMessageNew, other.AgentMessageNew) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageDoneEvent?>.Default.Equals(AgentMessageDone, other.AgentMessageDone) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateCompactionMessageNewEvent?>.Default.Equals(CompactionMessageNew, other.CompactionMessageNew) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateCompactionMessageDoneEvent?>.Default.Equals(CompactionMessageDone, other.CompactionMessageDone) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversationTitleEvent?>.Default.Equals(ConversationTitle, other.ConversationTitle) 
                 ;
         }

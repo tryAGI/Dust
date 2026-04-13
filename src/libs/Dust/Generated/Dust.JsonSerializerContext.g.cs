@@ -81,6 +81,18 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageVisibilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageVisibilityNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusNullableJsonConverter),
@@ -156,6 +168,14 @@ namespace Dust
             typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeNullableJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateConversationTitleEventTypeJsonConverter),
 
@@ -433,7 +453,7 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateAgentMessageEventJsonConverter),
 
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>),
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>),
 
             typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>),
 
@@ -467,12 +487,13 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFullConversation), TypeInfoPropertyName = "PrivateFullConversation2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFullConversationVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFullConversationVariant2Visibility), TypeInfoPropertyName = "PrivateFullConversationVariant2Visibility2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>), TypeInfoPropertyName = "OneOfPrivateUserMessagePrivateAgentMessagePrivateContentFragment2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>), TypeInfoPropertyName = "OneOfPrivateUserMessagePrivateAgentMessagePrivateContentFragmentPrivateCompactionMessage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUserMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateContentFragment))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUserMessageType), TypeInfoPropertyName = "PrivateUserMessageType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUserMessageVisibility), TypeInfoPropertyName = "PrivateUserMessageVisibility2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUserMessageUser))]
@@ -511,6 +532,9 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateContentFragmentContentFragmentType), TypeInfoPropertyName = "PrivateContentFragmentContentFragmentType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateContentFragmentExpiredReason), TypeInfoPropertyName = "PrivateContentFragmentExpiredReason2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageType), TypeInfoPropertyName = "PrivateCompactionMessageType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageVisibility), TypeInfoPropertyName = "PrivateCompactionMessageVisibility2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageStatus), TypeInfoPropertyName = "PrivateCompactionMessageStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateLightAgentConfigurationStatus), TypeInfoPropertyName = "PrivateLightAgentConfigurationStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateLightAgentConfigurationScope), TypeInfoPropertyName = "PrivateLightAgentConfigurationScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateLightAgentConfigurationModel))]
@@ -553,12 +577,16 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUserMessageNewEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageNewEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEvent))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageNewEvent))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageDoneEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationTitleEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationEventDiscriminator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUserMessageNewEventType), TypeInfoPropertyName = "PrivateUserMessageNewEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageNewEventType), TypeInfoPropertyName = "PrivateAgentMessageNewEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEventType), TypeInfoPropertyName = "PrivateAgentMessageDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEventStatus), TypeInfoPropertyName = "PrivateAgentMessageDoneEventStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageNewEventType), TypeInfoPropertyName = "PrivateCompactionMessageNewEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageDoneEventType), TypeInfoPropertyName = "PrivateCompactionMessageDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationTitleEventType), TypeInfoPropertyName = "PrivateConversationTitleEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageEvent), TypeInfoPropertyName = "PrivateAgentMessageEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateGenerationTokensEvent))]
@@ -844,6 +872,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsMessagesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>), TypeInfoPropertyName = "OneOfPrivateUserMessagePrivateAgentMessagePrivateContentFragment2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWAssistantConversationsMessagesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesRetryResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsMessagesResponse2))]
@@ -886,8 +915,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWorkosRevokeSessionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateWorkspace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>>>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateMention>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateRichMentionWithStatus>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateReaction>))]
