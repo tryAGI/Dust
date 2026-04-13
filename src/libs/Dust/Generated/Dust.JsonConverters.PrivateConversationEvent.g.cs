@@ -46,18 +46,32 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("type")) __score2++;
             var __score3 = 0;
             if (__jsonProps.Contains("created")) __score3++;
-            if (__jsonProps.Contains("title")) __score3++;
+            if (__jsonProps.Contains("message")) __score3++;
+            if (__jsonProps.Contains("messageId")) __score3++;
             if (__jsonProps.Contains("type")) __score3++;
+            var __score4 = 0;
+            if (__jsonProps.Contains("created")) __score4++;
+            if (__jsonProps.Contains("message")) __score4++;
+            if (__jsonProps.Contains("messageId")) __score4++;
+            if (__jsonProps.Contains("type")) __score4++;
+            var __score5 = 0;
+            if (__jsonProps.Contains("created")) __score5++;
+            if (__jsonProps.Contains("title")) __score5++;
+            if (__jsonProps.Contains("type")) __score5++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
             if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
             if (__score3 > __bestScore) { __bestScore = __score3; __bestIndex = 3; }
+            if (__score4 > __bestScore) { __bestScore = __score4; __bestIndex = 4; }
+            if (__score5 > __bestScore) { __bestScore = __score5; __bestIndex = 5; }
 
             global::Dust.PrivateUserMessageNewEvent? userMessageNew = default;
             global::Dust.PrivateAgentMessageNewEvent? agentMessageNew = default;
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone = default;
+            global::Dust.PrivateCompactionMessageNewEvent? compactionMessageNew = default;
+            global::Dust.PrivateCompactionMessageDoneEvent? compactionMessageDone = default;
             global::Dust.PrivateConversationTitleEvent? conversationTitle = default;
             if (__bestIndex >= 0)
             {
@@ -110,6 +124,36 @@ namespace Dust.JsonConverters
                 {
                     try
                     {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateCompactionMessageNewEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateCompactionMessageNewEvent> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateCompactionMessageNewEvent).Name}");
+                        compactionMessageNew = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                }
+                else if (__bestIndex == 4)
+                {
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateCompactionMessageDoneEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateCompactionMessageDoneEvent> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateCompactionMessageDoneEvent).Name}");
+                        compactionMessageDone = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                }
+                else if (__bestIndex == 5)
+                {
+                    try
+                    {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversationTitleEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversationTitleEvent> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateConversationTitleEvent).Name}");
                         conversationTitle = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -123,7 +167,7 @@ namespace Dust.JsonConverters
                 }
             }
 
-            if (userMessageNew == null && agentMessageNew == null && agentMessageDone == null && conversationTitle == null)
+            if (userMessageNew == null && agentMessageNew == null && agentMessageDone == null && compactionMessageNew == null && compactionMessageDone == null && conversationTitle == null)
             {
                 try
                 {
@@ -166,6 +210,32 @@ namespace Dust.JsonConverters
 
                 try
                 {
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateCompactionMessageNewEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateCompactionMessageNewEvent> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateCompactionMessageNewEvent).Name}");
+                    compactionMessageNew = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+
+                try
+                {
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateCompactionMessageDoneEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateCompactionMessageDoneEvent> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateCompactionMessageDoneEvent).Name}");
+                    compactionMessageDone = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+
+                try
+                {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversationTitleEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversationTitleEvent> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateConversationTitleEvent).Name}");
                     conversationTitle = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -184,6 +254,10 @@ namespace Dust.JsonConverters
                 agentMessageNew,
 
                 agentMessageDone,
+
+                compactionMessageNew,
+
+                compactionMessageDone,
 
                 conversationTitle
                 );
@@ -217,6 +291,18 @@ namespace Dust.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentMessageDoneEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentMessageDoneEvent?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentMessageDoneEvent).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentMessageDone!, typeInfo);
+            }
+            else if (value.IsCompactionMessageNew)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateCompactionMessageNewEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateCompactionMessageNewEvent?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateCompactionMessageNewEvent).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CompactionMessageNew!, typeInfo);
+            }
+            else if (value.IsCompactionMessageDone)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateCompactionMessageDoneEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateCompactionMessageDoneEvent?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateCompactionMessageDoneEvent).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CompactionMessageDone!, typeInfo);
             }
             else if (value.IsConversationTitle)
             {
