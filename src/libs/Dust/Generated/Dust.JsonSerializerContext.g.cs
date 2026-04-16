@@ -325,6 +325,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.CreateWFilesRequestUseCaseNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindJsonConverter),
 
             typeof(global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindNullableJsonConverter),
@@ -444,6 +448,14 @@ namespace Dust
             typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter),
 
             typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateFullConversationJsonConverter),
 
@@ -764,6 +776,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PatchWSpacesRequestContentItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesRequestContentItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference), TypeInfoPropertyName = "PatchWSpacesProjectNotificationPreferencesRequestPreference2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesRequestSpaceKind), TypeInfoPropertyName = "CreateWSpacesRequestSpaceKind2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesRequestManagementMode), TypeInfoPropertyName = "CreateWSpacesRequestManagementMode2")]
@@ -910,6 +924,12 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponseSpaceCategoriesUsage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWSpacesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference), TypeInfoPropertyName = "GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference), TypeInfoPropertyName = "PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>), TypeInfoPropertyName = "OneOfPrivateSpacePrivateProject2")]
