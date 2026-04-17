@@ -23,18 +23,61 @@ namespace Dust.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
             var __score0 = 0;
             if (__jsonProps.Contains("created")) __score0++;
             if (__jsonProps.Contains("message")) __score0++;
+            if (__jsonProps.Contains("message.content")) __score0++;
+            if (__jsonProps.Contains("message.context")) __score0++;
+            if (__jsonProps.Contains("message.created")) __score0++;
+            if (__jsonProps.Contains("message.id")) __score0++;
+            if (__jsonProps.Contains("message.mentions")) __score0++;
+            if (__jsonProps.Contains("message.rank")) __score0++;
+            if (__jsonProps.Contains("message.reactions")) __score0++;
+            if (__jsonProps.Contains("message.richMentions")) __score0++;
+            if (__jsonProps.Contains("message.sId")) __score0++;
+            if (__jsonProps.Contains("message.type")) __score0++;
+            if (__jsonProps.Contains("message.user")) __score0++;
+            if (__jsonProps.Contains("message.version")) __score0++;
+            if (__jsonProps.Contains("message.visibility")) __score0++;
             if (__jsonProps.Contains("messageId")) __score0++;
             if (__jsonProps.Contains("type")) __score0++;
             var __score1 = 0;
             if (__jsonProps.Contains("configurationId")) __score1++;
             if (__jsonProps.Contains("created")) __score1++;
             if (__jsonProps.Contains("message")) __score1++;
+            if (__jsonProps.Contains("message.actions")) __score1++;
+            if (__jsonProps.Contains("message.agentMessageId")) __score1++;
+            if (__jsonProps.Contains("message.chainOfThought")) __score1++;
+            if (__jsonProps.Contains("message.completedTs")) __score1++;
+            if (__jsonProps.Contains("message.completionDurationMs")) __score1++;
+            if (__jsonProps.Contains("message.configuration")) __score1++;
+            if (__jsonProps.Contains("message.content")) __score1++;
+            if (__jsonProps.Contains("message.contents")) __score1++;
+            if (__jsonProps.Contains("message.created")) __score1++;
+            if (__jsonProps.Contains("message.error")) __score1++;
+            if (__jsonProps.Contains("message.id")) __score1++;
+            if (__jsonProps.Contains("message.parentAgentMessageId")) __score1++;
+            if (__jsonProps.Contains("message.parentMessageId")) __score1++;
+            if (__jsonProps.Contains("message.rank")) __score1++;
+            if (__jsonProps.Contains("message.reactions")) __score1++;
+            if (__jsonProps.Contains("message.richMentions")) __score1++;
+            if (__jsonProps.Contains("message.sId")) __score1++;
+            if (__jsonProps.Contains("message.skipToolsValidation")) __score1++;
+            if (__jsonProps.Contains("message.status")) __score1++;
+            if (__jsonProps.Contains("message.type")) __score1++;
+            if (__jsonProps.Contains("message.version")) __score1++;
+            if (__jsonProps.Contains("message.visibility")) __score1++;
             if (__jsonProps.Contains("messageId")) __score1++;
             if (__jsonProps.Contains("type")) __score1++;
             var __score2 = 0;
@@ -47,11 +90,33 @@ namespace Dust.JsonConverters
             var __score3 = 0;
             if (__jsonProps.Contains("created")) __score3++;
             if (__jsonProps.Contains("message")) __score3++;
+            if (__jsonProps.Contains("message.branchId")) __score3++;
+            if (__jsonProps.Contains("message.compactionMessageId")) __score3++;
+            if (__jsonProps.Contains("message.content")) __score3++;
+            if (__jsonProps.Contains("message.created")) __score3++;
+            if (__jsonProps.Contains("message.id")) __score3++;
+            if (__jsonProps.Contains("message.rank")) __score3++;
+            if (__jsonProps.Contains("message.sId")) __score3++;
+            if (__jsonProps.Contains("message.status")) __score3++;
+            if (__jsonProps.Contains("message.type")) __score3++;
+            if (__jsonProps.Contains("message.version")) __score3++;
+            if (__jsonProps.Contains("message.visibility")) __score3++;
             if (__jsonProps.Contains("messageId")) __score3++;
             if (__jsonProps.Contains("type")) __score3++;
             var __score4 = 0;
             if (__jsonProps.Contains("created")) __score4++;
             if (__jsonProps.Contains("message")) __score4++;
+            if (__jsonProps.Contains("message.branchId")) __score4++;
+            if (__jsonProps.Contains("message.compactionMessageId")) __score4++;
+            if (__jsonProps.Contains("message.content")) __score4++;
+            if (__jsonProps.Contains("message.created")) __score4++;
+            if (__jsonProps.Contains("message.id")) __score4++;
+            if (__jsonProps.Contains("message.rank")) __score4++;
+            if (__jsonProps.Contains("message.sId")) __score4++;
+            if (__jsonProps.Contains("message.status")) __score4++;
+            if (__jsonProps.Contains("message.type")) __score4++;
+            if (__jsonProps.Contains("message.version")) __score4++;
+            if (__jsonProps.Contains("message.visibility")) __score4++;
             if (__jsonProps.Contains("messageId")) __score4++;
             if (__jsonProps.Contains("type")) __score4++;
             var __score5 = 0;
