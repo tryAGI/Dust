@@ -23,6 +23,14 @@ namespace Dust.JsonConverters
                 foreach (var __jsonProp in __jsonDocument.RootElement.EnumerateObject())
                 {
                     __jsonProps.Add(__jsonProp.Name);
+                    if (__jsonProp.Value.ValueKind == global::System.Text.Json.JsonValueKind.Object)
+                    {
+                        foreach (var __nestedJsonProp in __jsonProp.Value.EnumerateObject())
+                        {
+                            __jsonProps.Add(__jsonProp.Name + "." + __nestedJsonProp.Name);
+                        }
+                    }
+
                 }
             }
 
@@ -46,6 +54,25 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("type")) __score1++;
             var __score2 = 0;
             if (__jsonProps.Contains("action")) __score2++;
+            if (__jsonProps.Contains("action.agentMessageId")) __score2++;
+            if (__jsonProps.Contains("action.citations")) __score2++;
+            if (__jsonProps.Contains("action.citationsAllocated")) __score2++;
+            if (__jsonProps.Contains("action.createdAt")) __score2++;
+            if (__jsonProps.Contains("action.displayLabels")) __score2++;
+            if (__jsonProps.Contains("action.executionDurationMs")) __score2++;
+            if (__jsonProps.Contains("action.functionCallId")) __score2++;
+            if (__jsonProps.Contains("action.functionCallName")) __score2++;
+            if (__jsonProps.Contains("action.generatedFiles")) __score2++;
+            if (__jsonProps.Contains("action.id")) __score2++;
+            if (__jsonProps.Contains("action.internalMCPServerName")) __score2++;
+            if (__jsonProps.Contains("action.mcpServerId")) __score2++;
+            if (__jsonProps.Contains("action.output")) __score2++;
+            if (__jsonProps.Contains("action.params")) __score2++;
+            if (__jsonProps.Contains("action.sId")) __score2++;
+            if (__jsonProps.Contains("action.status")) __score2++;
+            if (__jsonProps.Contains("action.step")) __score2++;
+            if (__jsonProps.Contains("action.toolName")) __score2++;
+            if (__jsonProps.Contains("action.updatedAt")) __score2++;
             if (__jsonProps.Contains("configurationId")) __score2++;
             if (__jsonProps.Contains("created")) __score2++;
             if (__jsonProps.Contains("messageId")) __score2++;
@@ -55,6 +82,28 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("configurationId")) __score3++;
             if (__jsonProps.Contains("created")) __score3++;
             if (__jsonProps.Contains("message")) __score3++;
+            if (__jsonProps.Contains("message.actions")) __score3++;
+            if (__jsonProps.Contains("message.agentMessageId")) __score3++;
+            if (__jsonProps.Contains("message.chainOfThought")) __score3++;
+            if (__jsonProps.Contains("message.completedTs")) __score3++;
+            if (__jsonProps.Contains("message.completionDurationMs")) __score3++;
+            if (__jsonProps.Contains("message.configuration")) __score3++;
+            if (__jsonProps.Contains("message.content")) __score3++;
+            if (__jsonProps.Contains("message.contents")) __score3++;
+            if (__jsonProps.Contains("message.created")) __score3++;
+            if (__jsonProps.Contains("message.error")) __score3++;
+            if (__jsonProps.Contains("message.id")) __score3++;
+            if (__jsonProps.Contains("message.parentAgentMessageId")) __score3++;
+            if (__jsonProps.Contains("message.parentMessageId")) __score3++;
+            if (__jsonProps.Contains("message.rank")) __score3++;
+            if (__jsonProps.Contains("message.reactions")) __score3++;
+            if (__jsonProps.Contains("message.richMentions")) __score3++;
+            if (__jsonProps.Contains("message.sId")) __score3++;
+            if (__jsonProps.Contains("message.skipToolsValidation")) __score3++;
+            if (__jsonProps.Contains("message.status")) __score3++;
+            if (__jsonProps.Contains("message.type")) __score3++;
+            if (__jsonProps.Contains("message.version")) __score3++;
+            if (__jsonProps.Contains("message.visibility")) __score3++;
             if (__jsonProps.Contains("messageId")) __score3++;
             if (__jsonProps.Contains("runIds")) __score3++;
             if (__jsonProps.Contains("step")) __score3++;
@@ -63,6 +112,8 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("configurationId")) __score4++;
             if (__jsonProps.Contains("created")) __score4++;
             if (__jsonProps.Contains("error")) __score4++;
+            if (__jsonProps.Contains("error.code")) __score4++;
+            if (__jsonProps.Contains("error.message")) __score4++;
             if (__jsonProps.Contains("messageId")) __score4++;
             if (__jsonProps.Contains("runIds")) __score4++;
             if (__jsonProps.Contains("step")) __score4++;
@@ -78,6 +129,8 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("conversationId")) __score6++;
             if (__jsonProps.Contains("created")) __score6++;
             if (__jsonProps.Contains("error")) __score6++;
+            if (__jsonProps.Contains("error.code")) __score6++;
+            if (__jsonProps.Contains("error.message")) __score6++;
             if (__jsonProps.Contains("isLastBlockingEventForStep")) __score6++;
             if (__jsonProps.Contains("messageId")) __score6++;
             if (__jsonProps.Contains("step")) __score6++;
@@ -114,6 +167,11 @@ namespace Dust.JsonConverters
             var __score10 = 0;
             if (__jsonProps.Contains("actionId")) __score10++;
             if (__jsonProps.Contains("authError")) __score10++;
+            if (__jsonProps.Contains("authError.mcpServerId")) __score10++;
+            if (__jsonProps.Contains("authError.message")) __score10++;
+            if (__jsonProps.Contains("authError.provider")) __score10++;
+            if (__jsonProps.Contains("authError.scope")) __score10++;
+            if (__jsonProps.Contains("authError.toolName")) __score10++;
             if (__jsonProps.Contains("configurationId")) __score10++;
             if (__jsonProps.Contains("conversationId")) __score10++;
             if (__jsonProps.Contains("created")) __score10++;
@@ -126,6 +184,12 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("conversationId")) __score11++;
             if (__jsonProps.Contains("created")) __score11++;
             if (__jsonProps.Contains("fileAuthError")) __score11++;
+            if (__jsonProps.Contains("fileAuthError.connectionId")) __score11++;
+            if (__jsonProps.Contains("fileAuthError.fileId")) __score11++;
+            if (__jsonProps.Contains("fileAuthError.fileName")) __score11++;
+            if (__jsonProps.Contains("fileAuthError.message")) __score11++;
+            if (__jsonProps.Contains("fileAuthError.mimeType")) __score11++;
+            if (__jsonProps.Contains("fileAuthError.toolName")) __score11++;
             if (__jsonProps.Contains("messageId")) __score11++;
             if (__jsonProps.Contains("step")) __score11++;
             if (__jsonProps.Contains("type")) __score11++;
