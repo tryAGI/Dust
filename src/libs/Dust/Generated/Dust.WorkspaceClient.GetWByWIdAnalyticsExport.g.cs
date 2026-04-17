@@ -44,7 +44,8 @@ namespace Dust
             ref global::Dust.GetWAnalyticsExportTable table,
             ref global::System.DateTime startDate,
             ref global::System.DateTime endDate,
-            ref string? timezone);
+            ref string? timezone,
+            ref global::Dust.GetWAnalyticsExportFormat? format);
         partial void PrepareGetWByWIdAnalyticsExportRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -52,7 +53,8 @@ namespace Dust
             global::Dust.GetWAnalyticsExportTable table,
             global::System.DateTime startDate,
             global::System.DateTime endDate,
-            string? timezone);
+            string? timezone,
+            global::Dust.GetWAnalyticsExportFormat? format);
         partial void ProcessGetWByWIdAnalyticsExportResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -63,23 +65,25 @@ namespace Dust
             ref string content);
 
         /// <summary>
-        /// Export workspace analytics as CSV<br/>
-        /// Export analytics data for the workspace identified by {wId} in CSV format.
+        /// Export workspace analytics<br/>
+        /// Export analytics data for the workspace identified by {wId} in CSV or JSON format.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="table"></param>
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="timezone"></param>
+        /// <param name="format"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> GetWByWIdAnalyticsExportAsync(
+        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<object>> GetWByWIdAnalyticsExportAsync(
             string wId,
             global::Dust.GetWAnalyticsExportTable table,
             global::System.DateTime startDate,
             global::System.DateTime endDate,
             string? timezone = default,
+            global::Dust.GetWAnalyticsExportFormat? format = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -91,7 +95,8 @@ namespace Dust
                 table: ref table,
                 startDate: ref startDate,
                 endDate: ref endDate,
-                timezone: ref timezone);
+                timezone: ref timezone,
+                format: ref format);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
@@ -124,7 +129,8 @@ namespace Dust
                                 .AddRequiredParameter("table", table.ToValueString())
                                 .AddRequiredParameter("startDate", startDate.ToString("yyyy-MM-dd"))
                                 .AddRequiredParameter("endDate", endDate.ToString("yyyy-MM-dd"))
-                                .AddOptionalParameter("timezone", timezone) 
+                                .AddOptionalParameter("timezone", timezone)
+                                .AddOptionalParameter("format", format?.ToValueString()) 
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -170,7 +176,8 @@ namespace Dust
                     table: table,
                     startDate: startDate,
                     endDate: endDate,
-                    timezone: timezone);
+                    timezone: timezone,
+                    format: format);
 
                 return __httpRequest;
             }
@@ -452,7 +459,9 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return __content;
+                                    return
+                                        (global::System.Collections.Generic.IList<object>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<object>), JsonSerializerContext) ??
+                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -474,13 +483,15 @@ namespace Dust
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    var __content = await __response.Content.ReadAsStringAsync(
+                                    using var __content = await __response.Content.ReadAsStreamAsync(
                 #if NET5_0_OR_GREATER
                                         __effectiveCancellationToken
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return __content;
+                                    return
+                                        (global::System.Collections.Generic.IList<object>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<object>), JsonSerializerContext).ConfigureAwait(false) ??
+                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                                 }
                                 catch (global::System.Exception __ex)
                                 {
