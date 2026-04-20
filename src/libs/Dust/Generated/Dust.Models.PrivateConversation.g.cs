@@ -100,6 +100,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? RequestedSpaceIds { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("forkedChildren")]
+        public global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>? ForkedChildren { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -132,6 +138,7 @@ namespace Dust
         /// <param name="triggerId"></param>
         /// <param name="metadata"></param>
         /// <param name="requestedSpaceIds"></param>
+        /// <param name="forkedChildren"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -149,7 +156,8 @@ namespace Dust
             string? spaceId,
             string? triggerId,
             object? metadata,
-            global::System.Collections.Generic.IList<string>? requestedSpaceIds)
+            global::System.Collections.Generic.IList<string>? requestedSpaceIds,
+            global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>? forkedChildren)
         {
             this.Id = id;
             this.Created = created;
@@ -165,6 +173,7 @@ namespace Dust
             this.Depth = depth;
             this.Metadata = metadata;
             this.RequestedSpaceIds = requestedSpaceIds;
+            this.ForkedChildren = forkedChildren;
         }
 
         /// <summary>
