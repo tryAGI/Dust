@@ -38,6 +38,7 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("actionRequired")) __score0++;
             if (__jsonProps.Contains("created")) __score0++;
             if (__jsonProps.Contains("depth")) __score0++;
+            if (__jsonProps.Contains("forkedChildren")) __score0++;
             if (__jsonProps.Contains("hasError")) __score0++;
             if (__jsonProps.Contains("id")) __score0++;
             if (__jsonProps.Contains("lastReadMs")) __score0++;
