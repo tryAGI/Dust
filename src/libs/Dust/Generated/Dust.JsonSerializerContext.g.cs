@@ -508,6 +508,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversation))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkedFrom))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkedChild))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkUser))]

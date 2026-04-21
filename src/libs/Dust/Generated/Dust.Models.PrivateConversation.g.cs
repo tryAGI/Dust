@@ -102,6 +102,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("forkedFrom")]
+        public global::Dust.PrivateConversationForkedFrom? ForkedFrom { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forkedChildren")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>? ForkedChildren { get; set; }
 
@@ -138,6 +144,7 @@ namespace Dust
         /// <param name="triggerId"></param>
         /// <param name="metadata"></param>
         /// <param name="requestedSpaceIds"></param>
+        /// <param name="forkedFrom"></param>
         /// <param name="forkedChildren"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -157,6 +164,7 @@ namespace Dust
             string? triggerId,
             object? metadata,
             global::System.Collections.Generic.IList<string>? requestedSpaceIds,
+            global::Dust.PrivateConversationForkedFrom? forkedFrom,
             global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>? forkedChildren)
         {
             this.Id = id;
@@ -173,6 +181,7 @@ namespace Dust
             this.Depth = depth;
             this.Metadata = metadata;
             this.RequestedSpaceIds = requestedSpaceIds;
+            this.ForkedFrom = forkedFrom;
             this.ForkedChildren = forkedChildren;
         }
 

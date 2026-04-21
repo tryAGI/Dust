@@ -39,6 +39,12 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("created")) __score0++;
             if (__jsonProps.Contains("depth")) __score0++;
             if (__jsonProps.Contains("forkedChildren")) __score0++;
+            if (__jsonProps.Contains("forkedFrom")) __score0++;
+            if (__jsonProps.Contains("forkedFrom.branchedAt")) __score0++;
+            if (__jsonProps.Contains("forkedFrom.parentConversationId")) __score0++;
+            if (__jsonProps.Contains("forkedFrom.parentConversationTitle")) __score0++;
+            if (__jsonProps.Contains("forkedFrom.sourceMessageId")) __score0++;
+            if (__jsonProps.Contains("forkedFrom.user")) __score0++;
             if (__jsonProps.Contains("hasError")) __score0++;
             if (__jsonProps.Contains("id")) __score0++;
             if (__jsonProps.Contains("lastReadMs")) __score0++;
