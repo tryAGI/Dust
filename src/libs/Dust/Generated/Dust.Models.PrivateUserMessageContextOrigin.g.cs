@@ -91,6 +91,10 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        Wakeup,
+        /// <summary>
+        /// 
+        /// </summary>
         Web,
         /// <summary>
         /// 
@@ -134,6 +138,7 @@ namespace Dust
                 PrivateUserMessageContextOrigin.Transcript => "transcript",
                 PrivateUserMessageContextOrigin.Triggered => "triggered",
                 PrivateUserMessageContextOrigin.TriggeredProgrammatic => "triggered_programmatic",
+                PrivateUserMessageContextOrigin.Wakeup => "wakeup",
                 PrivateUserMessageContextOrigin.Web => "web",
                 PrivateUserMessageContextOrigin.Zapier => "zapier",
                 PrivateUserMessageContextOrigin.Zendesk => "zendesk",
@@ -167,6 +172,7 @@ namespace Dust
                 "transcript" => PrivateUserMessageContextOrigin.Transcript,
                 "triggered" => PrivateUserMessageContextOrigin.Triggered,
                 "triggered_programmatic" => PrivateUserMessageContextOrigin.TriggeredProgrammatic,
+                "wakeup" => PrivateUserMessageContextOrigin.Wakeup,
                 "web" => PrivateUserMessageContextOrigin.Web,
                 "zapier" => PrivateUserMessageContextOrigin.Zapier,
                 "zendesk" => PrivateUserMessageContextOrigin.Zendesk,
