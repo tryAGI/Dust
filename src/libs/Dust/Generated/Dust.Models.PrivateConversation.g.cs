@@ -102,14 +102,8 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("forkedFrom")]
-        public global::Dust.PrivateConversationForkedFrom? ForkedFrom { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("forkedChildren")]
-        public global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>? ForkedChildren { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("forkingData")]
+        public global::Dust.PrivateConversationForkingData? ForkingData { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -144,8 +138,7 @@ namespace Dust
         /// <param name="triggerId"></param>
         /// <param name="metadata"></param>
         /// <param name="requestedSpaceIds"></param>
-        /// <param name="forkedFrom"></param>
-        /// <param name="forkedChildren"></param>
+        /// <param name="forkingData"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -164,8 +157,7 @@ namespace Dust
             string? triggerId,
             object? metadata,
             global::System.Collections.Generic.IList<string>? requestedSpaceIds,
-            global::Dust.PrivateConversationForkedFrom? forkedFrom,
-            global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>? forkedChildren)
+            global::Dust.PrivateConversationForkingData? forkingData)
         {
             this.Id = id;
             this.Created = created;
@@ -181,8 +173,7 @@ namespace Dust
             this.Depth = depth;
             this.Metadata = metadata;
             this.RequestedSpaceIds = requestedSpaceIds;
-            this.ForkedFrom = forkedFrom;
-            this.ForkedChildren = forkedChildren;
+            this.ForkingData = forkingData;
         }
 
         /// <summary>
