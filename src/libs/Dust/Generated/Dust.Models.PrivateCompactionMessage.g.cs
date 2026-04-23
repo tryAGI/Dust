@@ -71,6 +71,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sourceConversationId")]
+        public string? SourceConversationId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -101,6 +107,7 @@ namespace Dust
         /// <param name="compactionMessageId"></param>
         /// <param name="visibility"></param>
         /// <param name="branchId"></param>
+        /// <param name="sourceConversationId"></param>
         /// <param name="content">
         /// Compacted summary. Null while status is "created".
         /// </param>
@@ -118,6 +125,7 @@ namespace Dust
             int? compactionMessageId,
             global::Dust.PrivateCompactionMessageVisibility? visibility,
             string? branchId,
+            string? sourceConversationId,
             string? content)
         {
             this.Type = type;
@@ -129,6 +137,7 @@ namespace Dust
             this.Version = version;
             this.Rank = rank;
             this.BranchId = branchId;
+            this.SourceConversationId = sourceConversationId;
             this.Status = status;
             this.Content = content;
         }
