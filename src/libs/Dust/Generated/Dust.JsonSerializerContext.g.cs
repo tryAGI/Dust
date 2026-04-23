@@ -141,6 +141,18 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateFeedbackThumbDirectionNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpStatusNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.PrivateMentionTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateMentionTypeNullableJsonConverter),
@@ -479,6 +491,8 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>),
 
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateWakeUpScheduleConfigVariant1, global::Dust.PrivateWakeUpScheduleConfigVariant2>),
+
             typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>),
 
             typeof(global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>),
@@ -597,6 +611,13 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFeedback))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFeedbackThumbDirection), TypeInfoPropertyName = "PrivateFeedbackThumbDirection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateWakeUp))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateWakeUpScheduleConfigVariant1, global::Dust.PrivateWakeUpScheduleConfigVariant2>), TypeInfoPropertyName = "OneOfPrivateWakeUpScheduleConfigVariant1PrivateWakeUpScheduleConfigVariant22")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateWakeUpScheduleConfigVariant1))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateWakeUpScheduleConfigVariant1Type), TypeInfoPropertyName = "PrivateWakeUpScheduleConfigVariant1Type2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateWakeUpScheduleConfigVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateWakeUpScheduleConfigVariant2Type), TypeInfoPropertyName = "PrivateWakeUpScheduleConfigVariant2Type2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateWakeUpStatus), TypeInfoPropertyName = "PrivateWakeUpStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateMentionType), TypeInfoPropertyName = "PrivateMentionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateRichMentionWithStatusType), TypeInfoPropertyName = "PrivateRichMentionWithStatusType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateRichMentionWithStatusStatus), TypeInfoPropertyName = "PrivateRichMentionWithStatusStatus2")]
@@ -925,6 +946,9 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWAssistantConversationsWakeupsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsWakeupsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateWakeUp>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateConversation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsResponse))]
@@ -1019,6 +1043,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateAgentMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateWakeUp>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateConversation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateMentionSuggestion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateDataSourceView>))]
