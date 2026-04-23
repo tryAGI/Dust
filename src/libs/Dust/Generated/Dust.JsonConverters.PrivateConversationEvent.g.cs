@@ -97,6 +97,7 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("message.id")) __score3++;
             if (__jsonProps.Contains("message.rank")) __score3++;
             if (__jsonProps.Contains("message.sId")) __score3++;
+            if (__jsonProps.Contains("message.sourceConversationId")) __score3++;
             if (__jsonProps.Contains("message.status")) __score3++;
             if (__jsonProps.Contains("message.type")) __score3++;
             if (__jsonProps.Contains("message.version")) __score3++;
@@ -113,6 +114,7 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("message.id")) __score4++;
             if (__jsonProps.Contains("message.rank")) __score4++;
             if (__jsonProps.Contains("message.sId")) __score4++;
+            if (__jsonProps.Contains("message.sourceConversationId")) __score4++;
             if (__jsonProps.Contains("message.status")) __score4++;
             if (__jsonProps.Contains("message.type")) __score4++;
             if (__jsonProps.Contains("message.version")) __score4++;
