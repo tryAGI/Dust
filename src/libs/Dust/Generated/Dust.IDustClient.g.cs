@@ -167,6 +167,11 @@ namespace Dust
         public SearchClient Search { get; }
 
         /// <summary>
+        /// Skills.
+        /// </summary>
+        public SkillsClient Skills { get; }
+
+        /// <summary>
         /// Spaces.
         /// </summary>
         public SpacesClient Spaces { get; }

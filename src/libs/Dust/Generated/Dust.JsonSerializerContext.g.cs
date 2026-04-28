@@ -281,6 +281,18 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.DatasourceViewKindNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.SkillStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillSourceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillSourceNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillReinforcementJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter),
@@ -320,6 +332,10 @@ namespace Dust
             typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionJsonConverter),
 
             typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter),
 
             typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter),
 
@@ -392,6 +408,10 @@ namespace Dust
             typeof(global::Dust.JsonConverters.GetWSearchViewTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.GetWSearchViewTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSkillsStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSkillsStatusNullableJsonConverter),
 
             typeof(global::Dust.JsonConverters.GetWWorkspaceUsageModeJsonConverter),
 
@@ -711,13 +731,21 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DatasourceViewCategory), TypeInfoPropertyName = "DatasourceViewCategory2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DatasourceViewEditedByUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DatasourceViewKind), TypeInfoPropertyName = "DatasourceViewKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillSourceMetadata))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Skill))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillStatus), TypeInfoPropertyName = "SkillStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillSource), TypeInfoPropertyName = "SkillSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillReinforcement), TypeInfoPropertyName = "SkillReinforcement2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillFileAttachment))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.MCPServerView>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerView))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Run))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.RunStatus))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dust.RunTraceItem>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.RunTraceItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.RunTraceItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Document))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerView))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewServerType), TypeInfoPropertyName = "MCPServerViewServerType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewServer))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewServerAuthorization))]
@@ -772,6 +800,9 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWMcpResultsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSearchRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSearchToolsUploadRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<byte[]>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsRequestOnConflict), TypeInfoPropertyName = "CreateWSkillsRequestOnConflict2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesAppsRunsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesAppsRunsRequestConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesAppsRunsRequestConfigModel))]
@@ -835,6 +866,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWAssistantMentionsSuggestionsSelectItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantMentionsSuggestionsSelectItem), TypeInfoPropertyName = "GetWAssistantMentionsSuggestionsSelectItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSearchViewType), TypeInfoPropertyName = "GetWSearchViewType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsStatus), TypeInfoPropertyName = "GetWSkillsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWWorkspaceUsageMode), TypeInfoPropertyName = "GetWWorkspaceUsageMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWWorkspaceUsageFormat), TypeInfoPropertyName = "GetWWorkspaceUsageFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWWorkspaceUsageTable), TypeInfoPropertyName = "GetWWorkspaceUsageTable2")]
@@ -889,6 +921,11 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWMcpHeartbeatResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWMcpRegisterResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWMcpRequestsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Skill>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsResponseSkippedItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesAppsRunsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesAppsRunsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesAppsResponse))]
@@ -913,7 +950,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Table>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesMcpServerViewsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.MCPServerView>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Space>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsResponse3))]
@@ -1005,6 +1041,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Mention>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ConversationConversation1ContentItemItemRawContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.TableSchemaItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.SkillFileAttachment>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.MCPServerView>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::Dust.RunTraceItem>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.RunTraceItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.MCPServerViewServerAuthorizationSupportedUseCase>))]
@@ -1018,6 +1056,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<int>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWAssistantConversationsMessagesEditRequestMention>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ContentFragment>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<byte[]>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRow>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PatchWSpacesRequestContentItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem>))]
@@ -1028,6 +1067,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWAssistantConversationsFeedbacksResponseFeedback>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.RichMention>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWAssistantConversationsMessagesEventsResponseEvent>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Skill>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWSkillsResponseSkippedItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWSpacesAppsResponseApp>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWSpacesDataSourceViewsSearchResponseDocument>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.DatasourceView>))]
@@ -1035,7 +1076,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWSpacesDataSourcesSearchResponseDocument>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Datasource>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Table>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.MCPServerView>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Space>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateLightAgentConfiguration>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateFeedback>))]
