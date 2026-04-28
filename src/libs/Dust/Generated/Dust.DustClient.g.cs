@@ -244,6 +244,16 @@ namespace Dust
         };
 
         /// <summary>
+        /// Skills.
+        /// </summary>
+        public SkillsClient Skills => new SkillsClient(HttpClient, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Spaces.
         /// </summary>
         public SpacesClient Spaces => new SpacesClient(HttpClient, authorizations: Authorizations, options: Options)
