@@ -145,8 +145,8 @@ namespace Dust
                 PrepareDeleteWByWIdAssistantAgentConfigurationsBySIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    sId: sId);
+                    wId: wId!,
+                    sId: sId!);
 
                 return __httpRequest;
             }

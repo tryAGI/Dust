@@ -150,9 +150,9 @@ namespace Dust
                 PrepareGetWByWIdSpacesBySpaceIdDataSourcesByDsIdCheckUpsertQueueRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    spaceId: spaceId,
-                    dsId: dsId);
+                    wId: wId!,
+                    spaceId: spaceId!,
+                    dsId: dsId!);
 
                 return __httpRequest;
             }

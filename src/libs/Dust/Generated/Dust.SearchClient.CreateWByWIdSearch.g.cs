@@ -149,7 +149,7 @@ namespace Dust
                 PrepareCreateWByWIdSearchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
+                    wId: wId!,
                     request: request);
 
                 return __httpRequest;

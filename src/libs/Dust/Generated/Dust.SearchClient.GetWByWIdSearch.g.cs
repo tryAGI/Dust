@@ -185,8 +185,8 @@ namespace Dust
                 PrepareGetWByWIdSearchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    query: query,
+                    wId: wId!,
+                    query: query!,
                     limit: limit,
                     cursor: cursor,
                     viewType: viewType,

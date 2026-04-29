@@ -140,7 +140,7 @@ namespace Dust
                 PrepareGetWByWIdFeatureFlagsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId);
+                    wId: wId!);
 
                 return __httpRequest;
             }

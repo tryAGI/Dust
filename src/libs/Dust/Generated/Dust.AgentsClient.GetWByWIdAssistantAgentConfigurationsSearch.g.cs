@@ -148,8 +148,8 @@ namespace Dust
                 PrepareGetWByWIdAssistantAgentConfigurationsSearchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    q: q);
+                    wId: wId!,
+                    q: q!);
 
                 return __httpRequest;
             }

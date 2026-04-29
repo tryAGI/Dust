@@ -155,8 +155,8 @@ namespace Dust
                 PrepareGetWByWIdAssistantAgentConfigurationsBySIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    sId: sId,
+                    wId: wId!,
+                    sId: sId!,
                     variant: variant);
 
                 return __httpRequest;

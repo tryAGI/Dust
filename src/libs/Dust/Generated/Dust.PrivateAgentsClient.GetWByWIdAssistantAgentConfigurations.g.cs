@@ -184,7 +184,7 @@ namespace Dust
                 PrepareGetWByWIdAssistantAgentConfigurationsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
+                    wId: wId!,
                     view: view,
                     limit: limit,
                     withUsage: withUsage,

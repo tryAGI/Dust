@@ -154,7 +154,7 @@ namespace Dust
                 PrepareGetWByWIdSpacesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
+                    wId: wId!,
                     role: role,
                     kind: kind);
 

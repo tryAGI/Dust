@@ -165,9 +165,9 @@ namespace Dust
                 PrepareGetWByWIdAssistantConversationsByCIdMentionsSuggestionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    cId: cId,
-                    query: query,
+                    wId: wId!,
+                    cId: cId!,
+                    query: query!,
                     select: select,
                     current: current);
 

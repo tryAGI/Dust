@@ -145,8 +145,8 @@ namespace Dust
                 PrepareGetWByWIdSpacesBySpaceIdDataSourcesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    spaceId: spaceId);
+                    wId: wId!,
+                    spaceId: spaceId!);
 
                 return __httpRequest;
             }

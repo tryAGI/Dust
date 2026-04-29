@@ -152,8 +152,8 @@ namespace Dust
                 PrepareGetWByWIdMcpRequestsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    serverId: serverId,
+                    wId: wId!,
+                    serverId: serverId!,
                     lastEventId: lastEventId);
 
                 return __httpRequest;

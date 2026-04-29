@@ -155,10 +155,10 @@ namespace Dust
                 PrepareGetWByWIdSpacesBySpaceIdAppsByAIdRunsByRunIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    spaceId: spaceId,
-                    aId: aId,
-                    runId: runId);
+                    wId: wId!,
+                    spaceId: spaceId!,
+                    aId: aId!,
+                    runId: runId!);
 
                 return __httpRequest;
             }

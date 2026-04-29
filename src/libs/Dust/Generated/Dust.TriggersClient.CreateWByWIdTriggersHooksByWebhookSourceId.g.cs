@@ -154,8 +154,8 @@ namespace Dust
                 PrepareCreateWByWIdTriggersHooksByWebhookSourceIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    webhookSourceId: webhookSourceId,
+                    wId: wId!,
+                    webhookSourceId: webhookSourceId!,
                     request: request);
 
                 return __httpRequest;

@@ -145,8 +145,8 @@ namespace Dust
                 PrepareGetWByWIdAssistantConversationsByCIdFeedbacksRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    cId: cId);
+                    wId: wId!,
+                    cId: cId!);
 
                 return __httpRequest;
             }

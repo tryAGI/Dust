@@ -172,10 +172,10 @@ namespace Dust
                 PrepareGetWByWIdAnalyticsExportRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    table: table,
-                    startDate: startDate,
-                    endDate: endDate,
+                    wId: wId!,
+                    table: table!,
+                    startDate: startDate!,
+                    endDate: endDate!,
                     timezone: timezone,
                     format: format);
 

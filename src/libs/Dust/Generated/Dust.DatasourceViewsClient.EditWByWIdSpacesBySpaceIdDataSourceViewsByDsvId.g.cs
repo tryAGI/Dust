@@ -161,9 +161,9 @@ namespace Dust
                 PrepareEditWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    spaceId: spaceId,
-                    dsvId: dsvId,
+                    wId: wId!,
+                    spaceId: spaceId!,
+                    dsvId: dsvId!,
                     request: request);
 
                 return __httpRequest;

@@ -166,7 +166,7 @@ namespace Dust
                 PrepareGetWByWIdAssistantMentionsSuggestionsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
+                    wId: wId!,
                     query: query,
                     select: select,
                     current: current,
