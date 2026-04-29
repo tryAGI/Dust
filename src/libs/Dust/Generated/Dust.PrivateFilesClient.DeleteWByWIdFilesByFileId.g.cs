@@ -140,8 +140,8 @@ namespace Dust
                 PrepareDeleteWByWIdFilesByFileIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    fileId: fileId);
+                    wId: wId!,
+                    fileId: fileId!);
 
                 return __httpRequest;
             }

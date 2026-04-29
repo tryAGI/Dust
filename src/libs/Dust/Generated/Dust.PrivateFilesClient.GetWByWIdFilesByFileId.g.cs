@@ -159,8 +159,8 @@ namespace Dust
                 PrepareGetWByWIdFilesByFileIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    fileId: fileId,
+                    wId: wId!,
+                    fileId: fileId!,
                     version: version,
                     action: action);
 

@@ -164,9 +164,9 @@ namespace Dust
                 PrepareCreateWByWIdAssistantConversationsByCIdMessagesByMIdAnswerQuestionRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    cId: cId,
-                    mId: mId,
+                    wId: wId!,
+                    cId: cId!,
+                    mId: mId!,
                     request: request);
 
                 return __httpRequest;

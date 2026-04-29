@@ -169,10 +169,10 @@ namespace Dust
                 PrepareCreateWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsByDocumentIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    spaceId: spaceId,
-                    dsId: dsId,
-                    documentId: documentId,
+                    wId: wId!,
+                    spaceId: spaceId!,
+                    dsId: dsId!,
+                    documentId: documentId!,
                     request: request);
 
                 return __httpRequest;

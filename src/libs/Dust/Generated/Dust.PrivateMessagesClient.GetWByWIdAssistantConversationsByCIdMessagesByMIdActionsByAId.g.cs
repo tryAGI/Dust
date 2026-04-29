@@ -155,10 +155,10 @@ namespace Dust
                 PrepareGetWByWIdAssistantConversationsByCIdMessagesByMIdActionsByAIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    cId: cId,
-                    mId: mId,
-                    aId: aId);
+                    wId: wId!,
+                    cId: cId!,
+                    mId: mId!,
+                    aId: aId!);
 
                 return __httpRequest;
             }

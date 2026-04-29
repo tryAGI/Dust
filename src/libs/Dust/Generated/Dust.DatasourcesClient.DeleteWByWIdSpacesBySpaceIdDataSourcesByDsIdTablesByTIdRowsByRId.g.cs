@@ -155,11 +155,11 @@ namespace Dust
                 PrepareDeleteWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesByTIdRowsByRIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    spaceId: spaceId,
-                    dsId: dsId,
-                    tId: tId,
-                    rId: rId);
+                    wId: wId!,
+                    spaceId: spaceId!,
+                    dsId: dsId!,
+                    tId: tId!,
+                    rId: rId!);
 
                 return __httpRequest;
             }

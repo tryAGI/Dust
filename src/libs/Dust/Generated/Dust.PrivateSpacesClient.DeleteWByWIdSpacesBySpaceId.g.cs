@@ -153,8 +153,8 @@ namespace Dust
                 PrepareDeleteWByWIdSpacesBySpaceIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    spaceId: spaceId,
+                    wId: wId!,
+                    spaceId: spaceId!,
                     force: force);
 
                 return __httpRequest;

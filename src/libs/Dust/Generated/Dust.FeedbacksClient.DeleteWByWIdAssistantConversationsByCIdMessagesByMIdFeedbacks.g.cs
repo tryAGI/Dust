@@ -151,9 +151,9 @@ namespace Dust
                 PrepareDeleteWByWIdAssistantConversationsByCIdMessagesByMIdFeedbacksRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    cId: cId,
-                    mId: mId);
+                    wId: wId!,
+                    cId: cId!,
+                    mId: mId!);
 
                 return __httpRequest;
             }

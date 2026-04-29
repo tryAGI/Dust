@@ -150,9 +150,9 @@ namespace Dust
                 PrepareDeleteWByWIdAssistantConversationsByCIdWakeupsByWuIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    cId: cId,
-                    wuId: wuId);
+                    wId: wId!,
+                    cId: cId!,
+                    wuId: wuId!);
 
                 return __httpRequest;
             }

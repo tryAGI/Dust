@@ -158,8 +158,8 @@ namespace Dust
                 PrepareCreateWByWIdAssistantConversationsByCIdCancelRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    cId: cId,
+                    wId: wId!,
+                    cId: cId!,
                     request: request);
 
                 return __httpRequest;

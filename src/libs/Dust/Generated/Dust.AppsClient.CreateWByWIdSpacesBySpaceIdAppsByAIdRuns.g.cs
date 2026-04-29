@@ -164,9 +164,9 @@ namespace Dust
                 PrepareCreateWByWIdSpacesBySpaceIdAppsByAIdRunsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
-                    spaceId: spaceId,
-                    aId: aId,
+                    wId: wId!,
+                    spaceId: spaceId!,
+                    aId: aId!,
                     request: request);
 
                 return __httpRequest;

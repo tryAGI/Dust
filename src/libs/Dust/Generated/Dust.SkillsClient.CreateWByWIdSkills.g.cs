@@ -139,11 +139,12 @@ namespace Dust
             }
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
                             __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent($"{wId}"),
+                                content: new global::System.Net.Http.StringContent(wId ?? string.Empty),
                                 name: "\"wId\"");
                             for (var __iFiles = 0; __iFiles < request.Files.Count; __iFiles++)
                             {
                                 var __contentFiles = new global::System.Net.Http.ByteArrayContent(request.Files[__iFiles]);
+                            __contentFiles.Headers.ContentType = new global::System.Net.Http.Headers.MediaTypeHeaderValue("application/octet-stream");
                                 __httpRequestContent.Add(
                                     content: __contentFiles,
                                     name: "\"files\"",
@@ -164,7 +165,7 @@ namespace Dust
                             {
 
                                 __httpRequestContent.Add(
-                                    content: new global::System.Net.Http.StringContent($"{request.OnConflict?.ToValueString()}"),
+                                    content: new global::System.Net.Http.StringContent((request.OnConflict).HasValue ? (request.OnConflict).GetValueOrDefault().ToValueString() : string.Empty),
                                     name: "\"onConflict\"");
                             }
                             __httpRequest.Content = __httpRequestContent;
@@ -179,7 +180,7 @@ namespace Dust
                 PrepareCreateWByWIdSkillsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
+                    wId: wId!,
                     request: request);
 
                 return __httpRequest;

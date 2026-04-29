@@ -148,7 +148,7 @@ namespace Dust
                 PrepareGetWByWIdSkillsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId,
+                    wId: wId!,
                     status: status);
 
                 return __httpRequest;
