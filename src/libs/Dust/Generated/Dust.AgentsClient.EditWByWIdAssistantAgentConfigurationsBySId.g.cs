@@ -591,6 +591,9 @@ namespace Dust
         /// <param name="generationSettings"></param>
         /// <param name="tags"></param>
         /// <param name="editors"></param>
+        /// <param name="skills">
+        /// Replaces the skills enabled on the agent configuration.
+        /// </param>
         /// <param name="toolset"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -604,6 +607,7 @@ namespace Dust
             global::Dust.PatchWAssistantAgentConfigurationsRequestGenerationSettings? generationSettings = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestTag>? tags = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestEditor>? editors = default,
+            global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestSkill>? skills = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem>? toolset = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -616,6 +620,7 @@ namespace Dust
                 GenerationSettings = generationSettings,
                 Tags = tags,
                 Editors = editors,
+                Skills = skills,
                 Toolset = toolset,
             };
 
