@@ -130,11 +130,12 @@ namespace Dust
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Dust.PathBuilder(
                                 path: $"/api/v1/w/{wId}/search",
                                 baseUri: ResolveBaseUri(
                                 servers: s_GetWByWIdSearchServers,
-                                defaultBaseUrl: "https://dust.tt/")); 
+                                defaultBaseUrl: "https://dust.tt/"));
                             __pathBuilder
                                 .AddRequiredParameter("query", query)
                                 .AddOptionalParameter("limit", limit?.ToString())
@@ -143,7 +144,7 @@ namespace Dust
                                 .AddOptionalParameter("spaceIds", spaceIds)
                                 .AddOptionalParameter("includeDataSources", includeDataSources?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("searchSourceUrls", searchSourceUrls?.ToString().ToLowerInvariant())
-                                .AddOptionalParameter("includeTools", includeTools?.ToString().ToLowerInvariant()) 
+                                .AddOptionalParameter("includeTools", includeTools?.ToString().ToLowerInvariant())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -223,6 +224,8 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -233,6 +236,11 @@ namespace Dust
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Dust.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -250,6 +258,8 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -259,8 +269,7 @@ namespace Dust
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dust.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -269,6 +278,11 @@ namespace Dust
                         __attempt < __maxAttempts &&
                         global::Dust.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Dust.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -285,14 +299,15 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dust.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -332,6 +347,8 @@ namespace Dust
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -352,6 +369,8 @@ namespace Dust
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
 

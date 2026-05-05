@@ -30,6 +30,25 @@ namespace Dust
         /// <param name="wId"></param>
         /// <param name="spaceId"></param>
         /// <param name="aId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWSpacesAppsRunsResponse>> CreateWByWIdSpacesBySpaceIdAppsByAIdRunsAsResponseAsync(
+            string wId,
+            string spaceId,
+            string aId,
+
+            global::Dust.CreateWSpacesAppsRunsRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create an app run<br/>
+        /// Create and execute a run for an app in the space specified by {spaceId}.
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <param name="spaceId"></param>
+        /// <param name="aId"></param>
         /// <param name="specificationHash">
         /// Hash of the app specification. Ensures API compatibility across app iterations.
         /// </param>

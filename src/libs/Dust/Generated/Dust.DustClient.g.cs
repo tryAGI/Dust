@@ -46,7 +46,7 @@ namespace Dust
         /// <summary>
         /// Agent configurations.
         /// </summary>
-        public AgentsClient Agents => new AgentsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AgentsClient Agents => new AgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -56,7 +56,7 @@ namespace Dust
         /// <summary>
         /// Dust apps.
         /// </summary>
-        public AppsClient Apps => new AppsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public AppsClient Apps => new AppsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -66,7 +66,7 @@ namespace Dust
         /// <summary>
         /// Conversations.
         /// </summary>
-        public ConversationsClient Conversations => new ConversationsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ConversationsClient Conversations => new ConversationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -76,7 +76,7 @@ namespace Dust
         /// <summary>
         /// Data source views.
         /// </summary>
-        public DatasourceViewsClient DatasourceViews => new DatasourceViewsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public DatasourceViewsClient DatasourceViews => new DatasourceViewsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -86,7 +86,7 @@ namespace Dust
         /// <summary>
         /// Data sources.
         /// </summary>
-        public DatasourcesClient Datasources => new DatasourcesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public DatasourcesClient Datasources => new DatasourcesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -96,7 +96,7 @@ namespace Dust
         /// <summary>
         /// Message feedbacks.
         /// </summary>
-        public FeedbacksClient Feedbacks => new FeedbacksClient(HttpClient, authorizations: Authorizations, options: Options)
+        public FeedbacksClient Feedbacks => new FeedbacksClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -106,7 +106,7 @@ namespace Dust
         /// <summary>
         /// MCP servers.
         /// </summary>
-        public McpClient Mcp => new McpClient(HttpClient, authorizations: Authorizations, options: Options)
+        public McpClient Mcp => new McpClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -116,7 +116,7 @@ namespace Dust
         /// <summary>
         /// Mentions.
         /// </summary>
-        public MentionsClient Mentions => new MentionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public MentionsClient Mentions => new MentionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -126,7 +126,7 @@ namespace Dust
         /// <summary>
         /// Private API - Agent configurations.
         /// </summary>
-        public PrivateAgentsClient PrivateAgents => new PrivateAgentsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateAgentsClient PrivateAgents => new PrivateAgentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -136,7 +136,7 @@ namespace Dust
         /// <summary>
         /// Private API - Authentication (WorkOS).
         /// </summary>
-        public PrivateAuthenticationClient PrivateAuthentication => new PrivateAuthenticationClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateAuthenticationClient PrivateAuthentication => new PrivateAuthenticationClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -146,7 +146,7 @@ namespace Dust
         /// <summary>
         /// Private API - Conversations.
         /// </summary>
-        public PrivateConversationsClient PrivateConversations => new PrivateConversationsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateConversationsClient PrivateConversations => new PrivateConversationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -156,7 +156,7 @@ namespace Dust
         /// <summary>
         /// Private API - SSE event streams.
         /// </summary>
-        public PrivateEventsClient PrivateEvents => new PrivateEventsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateEventsClient PrivateEvents => new PrivateEventsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -166,7 +166,7 @@ namespace Dust
         /// <summary>
         /// Private API - Extension configuration.
         /// </summary>
-        public PrivateExtensionClient PrivateExtension => new PrivateExtensionClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateExtensionClient PrivateExtension => new PrivateExtensionClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -176,7 +176,7 @@ namespace Dust
         /// <summary>
         /// Private API - File uploads.
         /// </summary>
-        public PrivateFilesClient PrivateFiles => new PrivateFilesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateFilesClient PrivateFiles => new PrivateFilesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -186,7 +186,7 @@ namespace Dust
         /// <summary>
         /// Private API - Mention suggestions.
         /// </summary>
-        public PrivateMentionsClient PrivateMentions => new PrivateMentionsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateMentionsClient PrivateMentions => new PrivateMentionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -196,7 +196,7 @@ namespace Dust
         /// <summary>
         /// Private API - Messages.
         /// </summary>
-        public PrivateMessagesClient PrivateMessages => new PrivateMessagesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateMessagesClient PrivateMessages => new PrivateMessagesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -206,7 +206,7 @@ namespace Dust
         /// <summary>
         /// Private API - Spaces and data source views.
         /// </summary>
-        public PrivateSpacesClient PrivateSpaces => new PrivateSpacesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateSpacesClient PrivateSpaces => new PrivateSpacesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -216,7 +216,7 @@ namespace Dust
         /// <summary>
         /// Private API - User.
         /// </summary>
-        public PrivateUserClient PrivateUser => new PrivateUserClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateUserClient PrivateUser => new PrivateUserClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -226,7 +226,7 @@ namespace Dust
         /// <summary>
         /// Private API - Workspace settings.
         /// </summary>
-        public PrivateWorkspaceClient PrivateWorkspace => new PrivateWorkspaceClient(HttpClient, authorizations: Authorizations, options: Options)
+        public PrivateWorkspaceClient PrivateWorkspace => new PrivateWorkspaceClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -236,7 +236,7 @@ namespace Dust
         /// <summary>
         /// Search.
         /// </summary>
-        public SearchClient Search => new SearchClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SearchClient Search => new SearchClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -246,7 +246,7 @@ namespace Dust
         /// <summary>
         /// Skills.
         /// </summary>
-        public SkillsClient Skills => new SkillsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SkillsClient Skills => new SkillsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -256,7 +256,7 @@ namespace Dust
         /// <summary>
         /// Spaces.
         /// </summary>
-        public SpacesClient Spaces => new SpacesClient(HttpClient, authorizations: Authorizations, options: Options)
+        public SpacesClient Spaces => new SpacesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -266,7 +266,7 @@ namespace Dust
         /// <summary>
         /// Tools.
         /// </summary>
-        public ToolsClient Tools => new ToolsClient(HttpClient, authorizations: Authorizations, options: Options)
+        public ToolsClient Tools => new ToolsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -276,7 +276,7 @@ namespace Dust
         /// <summary>
         /// Triggers.
         /// </summary>
-        public TriggersClient Triggers => new TriggersClient(HttpClient, authorizations: Authorizations, options: Options)
+        public TriggersClient Triggers => new TriggersClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -286,7 +286,7 @@ namespace Dust
         /// <summary>
         /// Workspace.
         /// </summary>
-        public WorkspaceClient Workspace => new WorkspaceClient(HttpClient, authorizations: Authorizations, options: Options)
+        public WorkspaceClient Workspace => new WorkspaceClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContext = JsonSerializerContext,
@@ -354,10 +354,10 @@ namespace Dust
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
         public DustClient(
-            global::System.Net.Http.HttpClient? httpClient = null,
-            global::System.Uri? baseUri = null,
-            global::System.Collections.Generic.List<global::Dust.EndPointAuthorization>? authorizations = null,
-            global::Dust.AutoSDKClientOptions? options = null,
+            global::System.Net.Http.HttpClient? httpClient,
+            global::System.Uri? baseUri,
+            global::System.Collections.Generic.List<global::Dust.EndPointAuthorization>? authorizations,
+            global::Dust.AutoSDKClientOptions? options,
             bool disposeHttpClient = true)
         {
 

@@ -24,6 +24,21 @@ namespace Dust
         /// Creates a file record and returns a pre-signed upload URL. The file content should then be uploaded to the returned URL.
         /// </summary>
         /// <param name="wId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWFilesResponse3>> CreateWByWIdFilesAsResponseAsync(
+            string wId,
+
+            global::Dust.CreateWFilesRequest3 request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create a file upload<br/>
+        /// Creates a file record and returns a pre-signed upload URL. The file content should then be uploaded to the returned URL.
+        /// </summary>
+        /// <param name="wId"></param>
         /// <param name="contentType"></param>
         /// <param name="fileName"></param>
         /// <param name="fileSize"></param>

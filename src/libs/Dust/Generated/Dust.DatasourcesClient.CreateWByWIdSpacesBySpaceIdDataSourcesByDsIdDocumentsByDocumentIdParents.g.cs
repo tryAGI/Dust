@@ -79,6 +79,39 @@ namespace Dust
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            await CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsByDocumentIdParentsAsResponseAsync(
+                wId: wId,
+                spaceId: spaceId,
+                dsId: dsId,
+                documentId: documentId,
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Update the parents of a document<br/>
+        /// Update the parents of a document in the data source identified by {dsId} in the workspace identified by {wId}.
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <param name="spaceId"></param>
+        /// <param name="dsId"></param>
+        /// <param name="documentId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsByDocumentIdParentsAsResponseAsync(
+            string wId,
+            string spaceId,
+            string dsId,
+            string documentId,
+
+            global::Dust.CreateWSpacesDataSourcesDocumentsParentsRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -113,6 +146,7 @@ namespace Dust
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Dust.PathBuilder(
                                 path: $"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/documents/{documentId}/parents",
                                 baseUri: ResolveBaseUri(
@@ -198,6 +232,8 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -208,6 +244,11 @@ namespace Dust
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Dust.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -225,6 +266,8 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -234,8 +277,7 @@ namespace Dust
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dust.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -244,6 +286,11 @@ namespace Dust
                         __attempt < __maxAttempts &&
                         global::Dust.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Dust.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -260,14 +307,15 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dust.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -307,6 +355,8 @@ namespace Dust
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -327,6 +377,8 @@ namespace Dust
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
@@ -512,6 +564,10 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
+                return new global::Dust.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -533,6 +589,10 @@ namespace Dust
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
+                                    return new global::Dust.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

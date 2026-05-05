@@ -30,6 +30,25 @@ namespace Dust
         /// <param name="wId"></param>
         /// <param name="spaceId"></param>
         /// <param name="dsId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.Table>> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsResponseAsync(
+            string wId,
+            string spaceId,
+            string dsId,
+
+            global::Dust.CreateWSpacesDataSourcesTablesRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Upsert a table<br/>
+        /// Upsert a table in the data source identified by {dsId} in the workspace identified by {wId}.
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <param name="spaceId"></param>
+        /// <param name="dsId"></param>
         /// <param name="name">
         /// Name of the table
         /// </param>

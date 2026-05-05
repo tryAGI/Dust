@@ -27,6 +27,23 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWAssistantConversationsMessagesResponse>> CreateWByWIdAssistantConversationsByCIdMessagesAsResponseAsync(
+            string wId,
+            string cId,
+
+            global::Dust.CreateWAssistantConversationsMessagesRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Post a message to a conversation<br/>
+        /// Post a new user message to an existing conversation, triggering agent responses.
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <param name="cId"></param>
         /// <param name="content"></param>
         /// <param name="mentions"></param>
         /// <param name="context"></param>
