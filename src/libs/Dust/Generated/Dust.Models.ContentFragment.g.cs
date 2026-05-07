@@ -50,6 +50,20 @@ namespace Dust
         public string? FileId { get; set; }
 
         /// <summary>
+        /// Path of this file inside the sandbox conversation mount.<br/>
+        /// Example: conversation/report.csv
+        /// </summary>
+        /// <example>conversation/report.csv</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
+        public string? Path { get; set; }
+
+        /// <summary>
+        /// Whether upload-time file processing was skipped.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skipFileProcessing")]
+        public bool? SkipFileProcessing { get; set; }
+
+        /// <summary>
         /// The id of the content node (optional if `content` and `contentType` are set)<br/>
         /// Example: node_123456
         /// </summary>
@@ -100,6 +114,13 @@ namespace Dust
         /// The id of the previously uploaded file (optional if `content` and `contentType` are set)<br/>
         /// Example: fil_123456
         /// </param>
+        /// <param name="path">
+        /// Path of this file inside the sandbox conversation mount.<br/>
+        /// Example: conversation/report.csv
+        /// </param>
+        /// <param name="skipFileProcessing">
+        /// Whether upload-time file processing was skipped.
+        /// </param>
         /// <param name="nodeId">
         /// The id of the content node (optional if `content` and `contentType` are set)<br/>
         /// Example: node_123456
@@ -118,6 +139,8 @@ namespace Dust
             string? contentType,
             string? url,
             string? fileId,
+            string? path,
+            bool? skipFileProcessing,
             string? nodeId,
             string? nodeDataSourceViewId,
             global::Dust.Context? context)
@@ -127,6 +150,8 @@ namespace Dust
             this.ContentType = contentType;
             this.Url = url;
             this.FileId = fileId;
+            this.Path = path;
+            this.SkipFileProcessing = skipFileProcessing;
             this.NodeId = nodeId;
             this.NodeDataSourceViewId = nodeDataSourceViewId;
             this.Context = context;
