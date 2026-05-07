@@ -64,6 +64,13 @@ namespace Dust
         /// The id of the previously uploaded file (optional if `content` and `contentType` are set)<br/>
         /// Example: fil_123456
         /// </param>
+        /// <param name="path">
+        /// Path of this file inside the sandbox conversation mount.<br/>
+        /// Example: conversation/report.csv
+        /// </param>
+        /// <param name="skipFileProcessing">
+        /// Whether upload-time file processing was skipped.
+        /// </param>
         /// <param name="nodeId">
         /// The id of the content node (optional if `content` and `contentType` are set)<br/>
         /// Example: node_123456
@@ -84,6 +91,8 @@ namespace Dust
             string? contentType = default,
             string? url = default,
             string? fileId = default,
+            string? path = default,
+            bool? skipFileProcessing = default,
             string? nodeId = default,
             string? nodeDataSourceViewId = default,
             global::Dust.Context? context = default,
