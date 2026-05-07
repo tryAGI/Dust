@@ -529,6 +529,8 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_462926e2d55e1e51")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_a8800edcc116e46c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.JsonSerializerContextTypes))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
@@ -827,7 +829,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsCompactionsRequestModel))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsContentFragmentRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsContentFragmentRequestContext))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_462926e2d55e1e51")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsRequestVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsRequestVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsRequestVariant3))]
@@ -1028,6 +1029,535 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateMention>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateRichMentionWithStatus>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateReaction>))]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Dust.JsonConverters.PrivateUserProviderJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserProviderNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWorkspaceRoleJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWorkspaceRoleNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserMessageTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserMessageTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserMessageVisibilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserMessageVisibilityNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageVisibilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageVisibilityNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentVisibilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentVisibilityNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageVisibilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageVisibilityNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateSpaceKindJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateSpaceKindNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateSpaceManagementModeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateDataSourceViewCategoryJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateDataSourceViewCategoryNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateDataSourceViewKindJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateDataSourceViewKindNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateMentionSuggestionTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateMentionSuggestionTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFeedbackThumbDirectionJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFeedbackThumbDirectionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateWakeUpStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateMentionTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateMentionTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserMessageContextOriginJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserMessageContextOriginNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserMessageNewEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateUserMessageNewEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateConversationTitleEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateConversationTitleEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolCallStartedEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolCallStartedEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMCPActionStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMCPActionStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentErrorEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentErrorEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolErrorEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolErrorEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolParamsEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolParamsEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolNotificationEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolNotificationEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.ContextAgenticMessageDataTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.ContextAgenticMessageDataTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.RichMentionTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SpaceKindJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SpaceKindNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.TableSchemaItemValueTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.TableSchemaItemValueTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.DatasourceViewCategoryJsonConverter),
+
+            typeof(global::Dust.JsonConverters.DatasourceViewCategoryNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.DatasourceViewKindJsonConverter),
+
+            typeof(global::Dust.JsonConverters.DatasourceViewKindNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillSourceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillSourceNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillReinforcementJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseJsonConverter),
+
+            typeof(global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.MCPServerViewOAuthUseCaseJsonConverter),
+
+            typeof(global::Dust.JsonConverters.MCPServerViewOAuthUseCaseNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2JsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2NullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWFilesRequestUseCaseJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWFilesRequestUseCaseNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAnalyticsExportTableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAnalyticsExportTableNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAnalyticsExportFormatJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAnalyticsExportFormatNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSearchViewTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSearchViewTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSkillsStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSkillsStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWWorkspaceUsageModeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWWorkspaceUsageModeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWWorkspaceUsageFormatJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWWorkspaceUsageFormatNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWWorkspaceUsageTableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWWorkspaceUsageTableNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2JsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2NullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2JsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2NullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWFilesVersionJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWFilesVersionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWFilesActionJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWFilesActionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesIncludeAllMembersJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesIncludeAllMembersNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.DeleteWSpacesForceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.DeleteWSpacesForceNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateFullConversationJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateProjectJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateConversationEventJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageEventJsonConverter),
+
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>),
+
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateWakeUpScheduleConfigVariant1, global::Dust.PrivateWakeUpScheduleConfigVariant2>),
+
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>),
+
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>),
+
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>),
+
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>),
+
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateLightAgentMessage, global::Dust.PrivateContentFragment>),
+
+            typeof(global::Dust.JsonConverters.AllOfJsonConverter<global::Dust.PrivateSpace, global::Dust.GetWSpacesResponseSpace>),
+
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateSpace, global::Dust.PrivateProject?>),
+
+            typeof(global::Dust.JsonConverters.UnixTimestampJsonConverter),
+        })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_462926e2d55e1e51")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_a8800edcc116e46c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateAgentMessageContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateLightAgentMessageGeneratedFile>))]
@@ -1092,7 +1622,308 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateMentionSuggestion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateDataSourceView>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>>))]
+    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = global::System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
+            SourceGenerationContextChunk0.Default,
+
+            SourceGenerationContextChunk1.Default
+            );
+
+        private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SourceGenerationContext Default { get; } = new(DefaultOptions);
+
+        private SourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+            : base(options)
+        {
+        }
+
+        /// <inheritdoc />
+        protected override global::System.Text.Json.JsonSerializerOptions? GeneratedSerializerOptions => DefaultOptions;
+
+        /// <inheritdoc />
+        public override global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(global::System.Type type)
+        {
+            return Resolver.GetTypeInfo(type, Options);
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserProviderJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserProviderNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateWorkspaceRoleJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateWorkspaceRoleNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkUserProviderJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageVisibilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageVisibilityNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageVisibilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageVisibilityNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentVisibilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentVisibilityNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageVisibilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageVisibilityNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateSpaceKindJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateSpaceKindNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateSpaceManagementModeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateDataSourceViewCategoryJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateDataSourceViewCategoryNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateDataSourceViewKindJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateDataSourceViewKindNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateMentionSuggestionTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateMentionSuggestionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFeedbackThumbDirectionJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFeedbackThumbDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateMentionTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateMentionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageContextOriginJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageContextOriginNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageNewEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageNewEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationTitleEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationTitleEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolCallStartedEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolCallStartedEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMCPActionStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMCPActionStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentErrorEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentErrorEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolErrorEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolErrorEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolParamsEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolParamsEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolNotificationEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolNotificationEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.ContextAgenticMessageDataTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.ContextAgenticMessageDataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.RichMentionTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SpaceKindJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SpaceKindNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.TableSchemaItemValueTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.TableSchemaItemValueTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.DatasourceViewCategoryJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.DatasourceViewCategoryNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.DatasourceViewKindJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.DatasourceViewKindNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SkillStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SkillStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SkillSourceJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SkillSourceNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SkillReinforcementJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewOAuthUseCaseJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewOAuthUseCaseNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestOnConflictJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2JsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2NullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWFilesRequestUseCaseJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWFilesRequestUseCaseNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesRequestManagementModeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAnalyticsExportTableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAnalyticsExportTableNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAnalyticsExportFormatJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAnalyticsExportFormatNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSearchViewTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSearchViewTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSkillsStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSkillsStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWWorkspaceUsageModeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWWorkspaceUsageModeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWWorkspaceUsageFormatJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWWorkspaceUsageFormatNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWWorkspaceUsageTableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWWorkspaceUsageTableNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2JsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2NullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2JsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2NullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWFilesVersionJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWFilesVersionNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWFilesActionJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWFilesActionNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesIncludeAllMembersJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesIncludeAllMembersNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.DeleteWSpacesForceJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.DeleteWSpacesForceNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateFullConversationJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateProjectJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationEventJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageEventJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateWakeUpScheduleConfigVariant1, global::Dust.PrivateWakeUpScheduleConfigVariant2>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateLightAgentMessage, global::Dust.PrivateContentFragment>());
+            options.Converters.Add(new global::Dust.JsonConverters.AllOfJsonConverter<global::Dust.PrivateSpace, global::Dust.GetWSpacesResponseSpace>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateSpace, global::Dust.PrivateProject?>());
+            options.Converters.Add(new global::Dust.JsonConverters.UnixTimestampJsonConverter());
+
+            return options;
+        }
     }
 }
