@@ -29,6 +29,19 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickSpace(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateSpace? value)
+        {
+            value = Space;
+            return IsSpace;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateProjectVariant2? PrivateProjectVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PrivateProjectVariant2))]
 #endif
         public bool IsPrivateProjectVariant2 => PrivateProjectVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPrivateProjectVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateProjectVariant2? value)
+        {
+            value = PrivateProjectVariant2;
+            return IsPrivateProjectVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Dust
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dust.PrivateSpace?, TResult>? space = null,
-            global::System.Func<global::Dust.PrivateProjectVariant2?, TResult>? privateProjectVariant2 = null,
+            global::System.Func<global::Dust.PrivateSpace, TResult>? space = null,
+            global::System.Func<global::Dust.PrivateProjectVariant2, TResult>? privateProjectVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Dust
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dust.PrivateSpace?>? space = null,
-            global::System.Action<global::Dust.PrivateProjectVariant2?>? privateProjectVariant2 = null,
+            global::System.Action<global::Dust.PrivateSpace>? space = null,
+
+            global::System.Action<global::Dust.PrivateProjectVariant2>? privateProjectVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsSpace)
+            {
+                space?.Invoke(Space!);
+            }
+            else if (IsPrivateProjectVariant2)
+            {
+                privateProjectVariant2?.Invoke(PrivateProjectVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dust.PrivateSpace>? space = null,
+            global::System.Action<global::Dust.PrivateProjectVariant2>? privateProjectVariant2 = null,
             bool validate = true)
         {
             if (validate)
