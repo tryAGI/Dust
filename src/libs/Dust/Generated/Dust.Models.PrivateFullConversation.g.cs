@@ -29,6 +29,19 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickPrivateConversation(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateConversation? value)
+        {
+            value = PrivateConversation;
+            return IsPrivateConversation;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateFullConversationVariant2? PrivateFullConversationVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PrivateFullConversationVariant2))]
 #endif
         public bool IsPrivateFullConversationVariant2 => PrivateFullConversationVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPrivateFullConversationVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateFullConversationVariant2? value)
+        {
+            value = PrivateFullConversationVariant2;
+            return IsPrivateFullConversationVariant2;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Dust
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dust.PrivateConversation?, TResult>? privateConversation = null,
-            global::System.Func<global::Dust.PrivateFullConversationVariant2?, TResult>? privateFullConversationVariant2 = null,
+            global::System.Func<global::Dust.PrivateConversation, TResult>? privateConversation = null,
+            global::System.Func<global::Dust.PrivateFullConversationVariant2, TResult>? privateFullConversationVariant2 = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Dust
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dust.PrivateConversation?>? privateConversation = null,
-            global::System.Action<global::Dust.PrivateFullConversationVariant2?>? privateFullConversationVariant2 = null,
+            global::System.Action<global::Dust.PrivateConversation>? privateConversation = null,
+
+            global::System.Action<global::Dust.PrivateFullConversationVariant2>? privateFullConversationVariant2 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPrivateConversation)
+            {
+                privateConversation?.Invoke(PrivateConversation!);
+            }
+            else if (IsPrivateFullConversationVariant2)
+            {
+                privateFullConversationVariant2?.Invoke(PrivateFullConversationVariant2!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dust.PrivateConversation>? privateConversation = null,
+            global::System.Action<global::Dust.PrivateFullConversationVariant2>? privateFullConversationVariant2 = null,
             bool validate = true)
         {
             if (validate)
