@@ -214,6 +214,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateConversationEvent FromUserMessageNew(global::Dust.PrivateUserMessageNewEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateConversationEvent(global::Dust.PrivateAgentMessageNewEvent value) => new PrivateConversationEvent((global::Dust.PrivateAgentMessageNewEvent?)value);
 
         /// <summary>
@@ -228,6 +233,11 @@ namespace Dust
         {
             AgentMessageNew = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromAgentMessageNew(global::Dust.PrivateAgentMessageNewEvent? value) => new PrivateConversationEvent(value);
 
         /// <summary>
         /// 
@@ -250,6 +260,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateConversationEvent FromAgentMessageDone(global::Dust.PrivateAgentMessageDoneEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateConversationEvent(global::Dust.PrivateCompactionMessageNewEvent value) => new PrivateConversationEvent((global::Dust.PrivateCompactionMessageNewEvent?)value);
 
         /// <summary>
@@ -264,6 +279,11 @@ namespace Dust
         {
             CompactionMessageNew = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromCompactionMessageNew(global::Dust.PrivateCompactionMessageNewEvent? value) => new PrivateConversationEvent(value);
 
         /// <summary>
         /// 
@@ -286,6 +306,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateConversationEvent FromCompactionMessageDone(global::Dust.PrivateCompactionMessageDoneEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateConversationEvent(global::Dust.PrivateConversationTitleEvent value) => new PrivateConversationEvent((global::Dust.PrivateConversationTitleEvent?)value);
 
         /// <summary>
@@ -300,6 +325,11 @@ namespace Dust
         {
             ConversationTitle = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromConversationTitle(global::Dust.PrivateConversationTitleEvent? value) => new PrivateConversationEvent(value);
 
         /// <summary>
         /// 

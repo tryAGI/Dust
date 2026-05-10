@@ -89,6 +89,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateFullConversation FromPrivateConversation(global::Dust.PrivateConversation? value) => new PrivateFullConversation(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateFullConversation(global::Dust.PrivateFullConversationVariant2 value) => new PrivateFullConversation((global::Dust.PrivateFullConversationVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Dust
         {
             PrivateFullConversationVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateFullConversation FromPrivateFullConversationVariant2(global::Dust.PrivateFullConversationVariant2? value) => new PrivateFullConversation(value);
 
         /// <summary>
         /// 
