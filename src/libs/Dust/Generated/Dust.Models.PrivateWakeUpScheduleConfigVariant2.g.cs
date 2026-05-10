@@ -64,5 +64,6 @@ namespace Dust
         public PrivateWakeUpScheduleConfigVariant2()
         {
         }
+
     }
 }

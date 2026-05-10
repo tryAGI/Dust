@@ -118,5 +118,6 @@ namespace Dust
         public GetWSpacesDataSourceViewsSearchResponseDocument()
         {
         }
+
     }
 }

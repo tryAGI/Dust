@@ -73,5 +73,6 @@ namespace Dust
         public TableSchemaItem()
         {
         }
+
     }
 }

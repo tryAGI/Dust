@@ -79,5 +79,6 @@ namespace Dust
         public PrivateAgentGenerationCancelledEvent()
         {
         }
+
     }
 }

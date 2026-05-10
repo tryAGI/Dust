@@ -98,5 +98,6 @@ namespace Dust
         public PrivateMentionSuggestion()
         {
         }
+
     }
 }

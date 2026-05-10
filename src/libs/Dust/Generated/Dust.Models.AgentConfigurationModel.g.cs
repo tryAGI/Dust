@@ -70,5 +70,6 @@ namespace Dust
         public AgentConfigurationModel()
         {
         }
+
     }
 }

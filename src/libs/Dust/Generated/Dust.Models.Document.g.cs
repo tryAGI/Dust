@@ -228,5 +228,6 @@ namespace Dust
         public Document()
         {
         }
+
     }
 }

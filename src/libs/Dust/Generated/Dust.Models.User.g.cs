@@ -166,5 +166,6 @@ namespace Dust
         public User()
         {
         }
+
     }
 }

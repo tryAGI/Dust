@@ -62,5 +62,6 @@ namespace Dust
         public CreateWAssistantConversationsResponse()
         {
         }
+
     }
 }

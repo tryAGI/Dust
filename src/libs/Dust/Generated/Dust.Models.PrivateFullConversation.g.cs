@@ -42,6 +42,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateConversation PickPrivateConversation() => IsPrivateConversation
+            ? PrivateConversation!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PrivateConversation' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateFullConversationVariant2? PrivateFullConversationVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dust
             value = PrivateFullConversationVariant2;
             return IsPrivateFullConversationVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateFullConversationVariant2 PickPrivateFullConversationVariant2() => IsPrivateFullConversationVariant2
+            ? PrivateFullConversationVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PrivateFullConversationVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

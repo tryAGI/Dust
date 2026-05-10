@@ -40,5 +40,6 @@ namespace Dust
         public GetWSpacesResponse2()
         {
         }
+
     }
 }

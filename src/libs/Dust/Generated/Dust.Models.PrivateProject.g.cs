@@ -42,6 +42,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateSpace PickSpace() => IsSpace
+            ? Space!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Space' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateProjectVariant2? PrivateProjectVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Dust
             value = PrivateProjectVariant2;
             return IsPrivateProjectVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateProjectVariant2 PickPrivateProjectVariant2() => IsPrivateProjectVariant2
+            ? PrivateProjectVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PrivateProjectVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

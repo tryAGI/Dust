@@ -120,5 +120,6 @@ namespace Dust
         public RichMention()
         {
         }
+
     }
 }

@@ -65,5 +65,6 @@ namespace Dust
         public CreateWSkillsRequest()
         {
         }
+
     }
 }

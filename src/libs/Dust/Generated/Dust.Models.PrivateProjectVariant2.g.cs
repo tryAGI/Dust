@@ -80,5 +80,6 @@ namespace Dust
         public PrivateProjectVariant2()
         {
         }
+
     }
 }
