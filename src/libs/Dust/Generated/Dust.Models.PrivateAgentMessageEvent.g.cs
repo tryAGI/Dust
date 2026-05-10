@@ -424,6 +424,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromGenerationTokens(global::Dust.PrivateGenerationTokensEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateToolCallStartedEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateToolCallStartedEvent?)value);
 
         /// <summary>
@@ -438,6 +443,11 @@ namespace Dust
         {
             ToolCallStarted = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromToolCallStarted(global::Dust.PrivateToolCallStartedEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -460,6 +470,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromAgentActionSuccess(global::Dust.PrivateAgentActionSuccessEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateAgentMessageSuccessEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateAgentMessageSuccessEvent?)value);
 
         /// <summary>
@@ -474,6 +489,11 @@ namespace Dust
         {
             AgentMessageSuccess = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromAgentMessageSuccess(global::Dust.PrivateAgentMessageSuccessEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -496,6 +516,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromAgentError(global::Dust.PrivateAgentErrorEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateAgentGenerationCancelledEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateAgentGenerationCancelledEvent?)value);
 
         /// <summary>
@@ -510,6 +535,11 @@ namespace Dust
         {
             AgentGenerationCancelled = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromAgentGenerationCancelled(global::Dust.PrivateAgentGenerationCancelledEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -532,6 +562,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromToolError(global::Dust.PrivateToolErrorEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateToolParamsEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateToolParamsEvent?)value);
 
         /// <summary>
@@ -546,6 +581,11 @@ namespace Dust
         {
             ToolParams = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromToolParams(global::Dust.PrivateToolParamsEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -568,6 +608,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromToolApproveExecution(global::Dust.PrivateToolApproveExecutionEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateToolNotificationEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateToolNotificationEvent?)value);
 
         /// <summary>
@@ -582,6 +627,11 @@ namespace Dust
         {
             ToolNotification = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromToolNotification(global::Dust.PrivateToolNotificationEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -604,6 +654,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromToolPersonalAuthRequired(global::Dust.PrivateToolPersonalAuthRequiredEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateToolFileAuthRequiredEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateToolFileAuthRequiredEvent?)value);
 
         /// <summary>
@@ -622,6 +677,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromToolFileAuthRequired(global::Dust.PrivateToolFileAuthRequiredEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateAgentContextPrunedEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateAgentContextPrunedEvent?)value);
 
         /// <summary>
@@ -636,6 +696,11 @@ namespace Dust
         {
             AgentContextPruned = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromAgentContextPruned(global::Dust.PrivateAgentContextPrunedEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 

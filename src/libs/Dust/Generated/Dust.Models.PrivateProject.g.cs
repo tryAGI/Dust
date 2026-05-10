@@ -89,6 +89,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateProject FromSpace(global::Dust.PrivateSpace? value) => new PrivateProject(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateProject(global::Dust.PrivateProjectVariant2 value) => new PrivateProject((global::Dust.PrivateProjectVariant2?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Dust
         {
             PrivateProjectVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateProject FromPrivateProjectVariant2(global::Dust.PrivateProjectVariant2? value) => new PrivateProject(value);
 
         /// <summary>
         /// 
