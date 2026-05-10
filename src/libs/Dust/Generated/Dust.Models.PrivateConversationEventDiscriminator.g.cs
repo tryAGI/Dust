@@ -12,7 +12,8 @@ namespace Dust
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        public string? Type { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeJsonConverter))]
+        public global::Dust.PrivateConversationEventDiscriminatorType? Type { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -28,7 +29,7 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PrivateConversationEventDiscriminator(
-            string? type)
+            global::Dust.PrivateConversationEventDiscriminatorType? type)
         {
             this.Type = type;
         }

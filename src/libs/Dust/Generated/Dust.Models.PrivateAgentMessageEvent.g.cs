@@ -12,6 +12,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateAgentMessageEventDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateGenerationTokensEvent? GenerationTokens { get; init; }
 #else
@@ -636,6 +641,7 @@ namespace Dust
         /// 
         /// </summary>
         public PrivateAgentMessageEvent(
+            global::Dust.PrivateAgentMessageEventDiscriminatorType? type,
             global::Dust.PrivateGenerationTokensEvent? generationTokens,
             global::Dust.PrivateToolCallStartedEvent? toolCallStarted,
             global::Dust.PrivateAgentActionSuccessEvent? agentActionSuccess,
@@ -651,6 +657,8 @@ namespace Dust
             global::Dust.PrivateAgentContextPrunedEvent? agentContextPruned
             )
         {
+            Type = type;
+
             GenerationTokens = generationTokens;
             ToolCallStarted = toolCallStarted;
             AgentActionSuccess = agentActionSuccess;
