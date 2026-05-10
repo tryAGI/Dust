@@ -87,6 +87,7 @@ namespace Dust.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateSpace), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateSpace> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateSpace).Name}");
                     space = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -97,9 +98,13 @@ namespace Dust.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (space == null && privateProjectVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateProjectVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateProjectVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateProjectVariant2).Name}");
                     privateProjectVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

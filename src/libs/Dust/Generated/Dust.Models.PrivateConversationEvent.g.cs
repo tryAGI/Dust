@@ -12,6 +12,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateConversationEventDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateUserMessageNewEvent? UserMessageNew { get; init; }
 #else
@@ -300,6 +305,7 @@ namespace Dust
         /// 
         /// </summary>
         public PrivateConversationEvent(
+            global::Dust.PrivateConversationEventDiscriminatorType? type,
             global::Dust.PrivateUserMessageNewEvent? userMessageNew,
             global::Dust.PrivateAgentMessageNewEvent? agentMessageNew,
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone,
@@ -308,6 +314,8 @@ namespace Dust
             global::Dust.PrivateConversationTitleEvent? conversationTitle
             )
         {
+            Type = type;
+
             UserMessageNew = userMessageNew;
             AgentMessageNew = agentMessageNew;
             AgentMessageDone = agentMessageDone;
