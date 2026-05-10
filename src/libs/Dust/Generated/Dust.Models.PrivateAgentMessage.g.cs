@@ -242,5 +242,6 @@ namespace Dust
         public PrivateAgentMessage()
         {
         }
+
     }
 }

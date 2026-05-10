@@ -241,5 +241,6 @@ namespace Dust
         public AgentConfiguration()
         {
         }
+
     }
 }

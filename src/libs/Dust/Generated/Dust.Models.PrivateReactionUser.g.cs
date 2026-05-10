@@ -57,5 +57,6 @@ namespace Dust
         public PrivateReactionUser()
         {
         }
+
     }
 }

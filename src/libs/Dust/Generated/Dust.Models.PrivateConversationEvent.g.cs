@@ -47,6 +47,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateUserMessageNewEvent PickUserMessageNew() => IsUserMessageNew
+            ? UserMessageNew!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UserMessageNew' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentMessageNewEvent? AgentMessageNew { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Dust
             value = AgentMessageNew;
             return IsAgentMessageNew;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentMessageNewEvent PickAgentMessageNew() => IsAgentMessageNew
+            ? AgentMessageNew!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentMessageNew' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -107,6 +121,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateAgentMessageDoneEvent PickAgentMessageDone() => IsAgentMessageDone
+            ? AgentMessageDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentMessageDone' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateCompactionMessageNewEvent? CompactionMessageNew { get; init; }
 #else
@@ -133,6 +154,13 @@ namespace Dust
             value = CompactionMessageNew;
             return IsCompactionMessageNew;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateCompactionMessageNewEvent PickCompactionMessageNew() => IsCompactionMessageNew
+            ? CompactionMessageNew!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompactionMessageNew' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -167,6 +195,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateCompactionMessageDoneEvent PickCompactionMessageDone() => IsCompactionMessageDone
+            ? CompactionMessageDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompactionMessageDone' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateConversationTitleEvent? ConversationTitle { get; init; }
 #else
@@ -193,6 +228,13 @@ namespace Dust
             value = ConversationTitle;
             return IsConversationTitle;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateConversationTitleEvent PickConversationTitle() => IsConversationTitle
+            ? ConversationTitle!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ConversationTitle' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

@@ -48,5 +48,6 @@ namespace Dust
         public PatchWSpacesDataSourceViewsRequestVariant2()
         {
         }
+
     }
 }

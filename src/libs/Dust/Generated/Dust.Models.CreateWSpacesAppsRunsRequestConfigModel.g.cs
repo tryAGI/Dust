@@ -74,5 +74,6 @@ namespace Dust
         public CreateWSpacesAppsRunsRequestConfigModel()
         {
         }
+
     }
 }

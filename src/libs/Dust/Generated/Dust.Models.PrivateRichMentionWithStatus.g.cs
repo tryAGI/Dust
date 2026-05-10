@@ -111,5 +111,6 @@ namespace Dust
         public PrivateRichMentionWithStatus()
         {
         }
+
     }
 }

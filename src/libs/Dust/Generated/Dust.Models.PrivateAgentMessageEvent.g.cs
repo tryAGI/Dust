@@ -47,6 +47,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateGenerationTokensEvent PickGenerationTokens() => IsGenerationTokens
+            ? GenerationTokens!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GenerationTokens' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateToolCallStartedEvent? ToolCallStarted { get; init; }
 #else
@@ -73,6 +80,13 @@ namespace Dust
             value = ToolCallStarted;
             return IsToolCallStarted;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolCallStartedEvent PickToolCallStarted() => IsToolCallStarted
+            ? ToolCallStarted!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCallStarted' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -107,6 +121,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateAgentActionSuccessEvent PickAgentActionSuccess() => IsAgentActionSuccess
+            ? AgentActionSuccess!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentActionSuccess' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentMessageSuccessEvent? AgentMessageSuccess { get; init; }
 #else
@@ -133,6 +154,13 @@ namespace Dust
             value = AgentMessageSuccess;
             return IsAgentMessageSuccess;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentMessageSuccessEvent PickAgentMessageSuccess() => IsAgentMessageSuccess
+            ? AgentMessageSuccess!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentMessageSuccess' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -167,6 +195,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateAgentErrorEvent PickAgentError() => IsAgentError
+            ? AgentError!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentError' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentGenerationCancelledEvent? AgentGenerationCancelled { get; init; }
 #else
@@ -193,6 +228,13 @@ namespace Dust
             value = AgentGenerationCancelled;
             return IsAgentGenerationCancelled;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentGenerationCancelledEvent PickAgentGenerationCancelled() => IsAgentGenerationCancelled
+            ? AgentGenerationCancelled!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentGenerationCancelled' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -227,6 +269,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateToolErrorEvent PickToolError() => IsToolError
+            ? ToolError!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolError' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateToolParamsEvent? ToolParams { get; init; }
 #else
@@ -253,6 +302,13 @@ namespace Dust
             value = ToolParams;
             return IsToolParams;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolParamsEvent PickToolParams() => IsToolParams
+            ? ToolParams!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolParams' but the value was {ToString()}.");
 
         /// <summary>
         /// Sent when a tool requires user approval before execution.
@@ -285,6 +341,13 @@ namespace Dust
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolApproveExecutionEvent PickToolApproveExecution() => IsToolApproveExecution
+            ? ToolApproveExecution!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolApproveExecution' but the value was {ToString()}.");
+
+        /// <summary>
         /// Progress notification from a running tool.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -315,6 +378,13 @@ namespace Dust
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolNotificationEvent PickToolNotification() => IsToolNotification
+            ? ToolNotification!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolNotification' but the value was {ToString()}.");
+
+        /// <summary>
         /// Sent when a tool requires personal OAuth authentication.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -343,6 +413,13 @@ namespace Dust
             value = ToolPersonalAuthRequired;
             return IsToolPersonalAuthRequired;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolPersonalAuthRequiredEvent PickToolPersonalAuthRequired() => IsToolPersonalAuthRequired
+            ? ToolPersonalAuthRequired!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolPersonalAuthRequired' but the value was {ToString()}.");
 
         /// <summary>
         /// Sent when a tool requires file access authorization (e.g., Google Drive).
@@ -377,6 +454,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateToolFileAuthRequiredEvent PickToolFileAuthRequired() => IsToolFileAuthRequired
+            ? ToolFileAuthRequired!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolFileAuthRequired' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentContextPrunedEvent? AgentContextPruned { get; init; }
 #else
@@ -403,6 +487,13 @@ namespace Dust
             value = AgentContextPruned;
             return IsAgentContextPruned;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentContextPrunedEvent PickAgentContextPruned() => IsAgentContextPruned
+            ? AgentContextPruned!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentContextPruned' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

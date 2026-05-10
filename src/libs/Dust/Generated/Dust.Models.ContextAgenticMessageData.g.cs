@@ -56,5 +56,6 @@ namespace Dust
         public ContextAgenticMessageData()
         {
         }
+
     }
 }

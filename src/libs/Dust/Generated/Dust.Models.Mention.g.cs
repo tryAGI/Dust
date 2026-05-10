@@ -44,5 +44,6 @@ namespace Dust
         public Mention()
         {
         }
+
     }
 }

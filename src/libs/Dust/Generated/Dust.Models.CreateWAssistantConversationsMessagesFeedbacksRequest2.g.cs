@@ -59,5 +59,6 @@ namespace Dust
         public CreateWAssistantConversationsMessagesFeedbacksRequest2()
         {
         }
+
     }
 }

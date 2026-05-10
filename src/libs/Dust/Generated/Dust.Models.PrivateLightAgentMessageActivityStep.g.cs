@@ -82,5 +82,6 @@ namespace Dust
         public PrivateLightAgentMessageActivityStep()
         {
         }
+
     }
 }

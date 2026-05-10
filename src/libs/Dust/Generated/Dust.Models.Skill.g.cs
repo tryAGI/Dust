@@ -287,5 +287,6 @@ namespace Dust
         public Skill()
         {
         }
+
     }
 }
