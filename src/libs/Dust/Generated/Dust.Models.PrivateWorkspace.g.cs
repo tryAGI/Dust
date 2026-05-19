@@ -62,6 +62,13 @@ namespace Dust
         public bool? SsoEnforced { get; set; }
 
         /// <summary>
+        /// When true, only models whose regionalAvailability includes the workspace's region are usable.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("regionalModelsOnly")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool RegionalModelsOnly { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
@@ -80,6 +87,9 @@ namespace Dust
         /// <param name="sId"></param>
         /// <param name="name"></param>
         /// <param name="role"></param>
+        /// <param name="regionalModelsOnly">
+        /// When true, only models whose regionalAvailability includes the workspace's region are usable.
+        /// </param>
         /// <param name="segmentation"></param>
         /// <param name="whiteListedProviders">
         /// Allowed model provider IDs
@@ -95,6 +105,7 @@ namespace Dust
             string sId,
             string name,
             global::Dust.PrivateWorkspaceRole role,
+            bool regionalModelsOnly,
             string? segmentation,
             global::System.Collections.Generic.IList<string>? whiteListedProviders,
             string? defaultEmbeddingProvider,
@@ -109,6 +120,7 @@ namespace Dust
             this.WhiteListedProviders = whiteListedProviders;
             this.DefaultEmbeddingProvider = defaultEmbeddingProvider;
             this.SsoEnforced = ssoEnforced;
+            this.RegionalModelsOnly = regionalModelsOnly;
             this.Metadata = metadata;
         }
 

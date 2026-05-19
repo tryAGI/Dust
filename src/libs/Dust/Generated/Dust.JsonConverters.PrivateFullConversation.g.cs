@@ -60,6 +60,7 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("owner.id")) __score1++;
             if (__jsonProps.Contains("owner.metadata")) __score1++;
             if (__jsonProps.Contains("owner.name")) __score1++;
+            if (__jsonProps.Contains("owner.regionalModelsOnly")) __score1++;
             if (__jsonProps.Contains("owner.role")) __score1++;
             if (__jsonProps.Contains("owner.sId")) __score1++;
             if (__jsonProps.Contains("owner.segmentation")) __score1++;
