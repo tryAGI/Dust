@@ -62,6 +62,15 @@ namespace Dust
         public bool? SsoEnforced { get; set; }
 
         /// <summary>
+        /// When true, only models whose regionalAvailability includes the workspace's region are usable.<br/>
+        /// Example: false
+        /// </summary>
+        /// <example>false</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("regionalModelsOnly")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool RegionalModelsOnly { get; set; }
+
+        /// <summary>
         /// Example: [google, github]
         /// </summary>
         /// <example>[google, github]</example>
@@ -85,6 +94,10 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="Workspace" /> class.
         /// </summary>
+        /// <param name="regionalModelsOnly">
+        /// When true, only models whose regionalAvailability includes the workspace's region are usable.<br/>
+        /// Example: false
+        /// </param>
         /// <param name="id">
         /// Example: 67890
         /// </param>
@@ -121,6 +134,7 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public Workspace(
+            bool regionalModelsOnly,
             int? id,
             string? sId,
             string? name,
@@ -138,6 +152,7 @@ namespace Dust
             this.Segmentation = segmentation;
             this.Flags = flags;
             this.SsoEnforced = ssoEnforced;
+            this.RegionalModelsOnly = regionalModelsOnly;
             this.WhiteListedProviders = whiteListedProviders;
             this.DefaultEmbeddingProvider = defaultEmbeddingProvider;
         }
