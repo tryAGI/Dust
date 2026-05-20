@@ -45,6 +45,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestEditor>? Editors { get; set; }
 
         /// <summary>
+        /// Replaces the skills enabled on the agent configuration.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skills")]
+        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestSkill>? Skills { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolset")]
@@ -65,6 +71,9 @@ namespace Dust
         /// <param name="generationSettings"></param>
         /// <param name="tags"></param>
         /// <param name="editors"></param>
+        /// <param name="skills">
+        /// Replaces the skills enabled on the agent configuration.
+        /// </param>
         /// <param name="toolset"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -76,6 +85,7 @@ namespace Dust
             global::Dust.PatchWAssistantAgentConfigurationsRequestGenerationSettings? generationSettings,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestTag>? tags,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestEditor>? editors,
+            global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestSkill>? skills,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem>? toolset)
         {
             this.UserFavorite = userFavorite;
@@ -84,6 +94,7 @@ namespace Dust
             this.GenerationSettings = generationSettings;
             this.Tags = tags;
             this.Editors = editors;
+            this.Skills = skills;
             this.Toolset = toolset;
         }
 
@@ -93,5 +104,6 @@ namespace Dust
         public PatchWAssistantAgentConfigurationsRequest()
         {
         }
+
     }
 }

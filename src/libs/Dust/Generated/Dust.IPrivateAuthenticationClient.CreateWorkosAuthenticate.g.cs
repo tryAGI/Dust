@@ -21,6 +21,19 @@ namespace Dust
         /// Exchange code or refresh token<br/>
         /// Exchanges an authorization code or refresh token for access tokens via WorkOS.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWorkosAuthenticateResponse>> CreateWorkosAuthenticateAsResponseAsync(
+
+            global::Dust.CreateWorkosAuthenticateRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Exchange code or refresh token<br/>
+        /// Exchanges an authorization code or refresh token for access tokens via WorkOS.
+        /// </summary>
         /// <param name="code"></param>
         /// <param name="grantType"></param>
         /// <param name="refreshToken"></param>

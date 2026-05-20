@@ -61,5 +61,6 @@ namespace Dust
         public GetWAssistantConversationsMessagesEventsResponseEvent()
         {
         }
+
     }
 }

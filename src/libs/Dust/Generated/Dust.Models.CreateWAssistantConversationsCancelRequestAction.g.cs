@@ -16,6 +16,10 @@ namespace Dust
         /// 
         /// </summary>
         GracefullyStop,
+        /// <summary>
+        /// 
+        /// </summary>
+        Interrupt,
     }
 
     /// <summary>
@@ -32,6 +36,7 @@ namespace Dust
             {
                 CreateWAssistantConversationsCancelRequestAction.Cancel => "cancel",
                 CreateWAssistantConversationsCancelRequestAction.GracefullyStop => "gracefully_stop",
+                CreateWAssistantConversationsCancelRequestAction.Interrupt => "interrupt",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -44,6 +49,7 @@ namespace Dust
             {
                 "cancel" => CreateWAssistantConversationsCancelRequestAction.Cancel,
                 "gracefully_stop" => CreateWAssistantConversationsCancelRequestAction.GracefullyStop,
+                "interrupt" => CreateWAssistantConversationsCancelRequestAction.Interrupt,
                 _ => null,
             };
         }

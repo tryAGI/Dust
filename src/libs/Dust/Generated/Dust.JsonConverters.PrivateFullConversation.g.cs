@@ -60,6 +60,7 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("owner.id")) __score1++;
             if (__jsonProps.Contains("owner.metadata")) __score1++;
             if (__jsonProps.Contains("owner.name")) __score1++;
+            if (__jsonProps.Contains("owner.regionalModelsOnly")) __score1++;
             if (__jsonProps.Contains("owner.role")) __score1++;
             if (__jsonProps.Contains("owner.sId")) __score1++;
             if (__jsonProps.Contains("owner.segmentation")) __score1++;
@@ -111,6 +112,7 @@ namespace Dust.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversation), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversation> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateConversation).Name}");
                     privateConversation = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -121,9 +123,13 @@ namespace Dust.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (privateConversation == null && privateFullConversationVariant2 == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateFullConversationVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateFullConversationVariant2> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateFullConversationVariant2).Name}");
                     privateFullConversationVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

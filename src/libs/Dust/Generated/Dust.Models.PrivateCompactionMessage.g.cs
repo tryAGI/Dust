@@ -148,5 +148,6 @@ namespace Dust
         public PrivateCompactionMessage()
         {
         }
+
     }
 }

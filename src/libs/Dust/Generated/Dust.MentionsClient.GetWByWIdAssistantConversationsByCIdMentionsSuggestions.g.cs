@@ -83,6 +83,39 @@ namespace Dust
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await GetWByWIdAssistantConversationsByCIdMentionsSuggestionsAsResponseAsync(
+                wId: wId,
+                cId: cId,
+                query: query,
+                select: select,
+                current: current,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Get mention suggestions for a conversation<br/>
+        /// Get suggestions for mentions (agents and users) based on a query string, scoped to a specific conversation.
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <param name="cId"></param>
+        /// <param name="query"></param>
+        /// <param name="select"></param>
+        /// <param name="current"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse>> GetWByWIdAssistantConversationsByCIdMentionsSuggestionsAsResponseAsync(
+            string wId,
+            string cId,
+            string query,
+            global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem>? select = default,
+            bool? current = default,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PrepareGetWByWIdAssistantConversationsByCIdMentionsSuggestionsArguments(
@@ -115,15 +148,16 @@ namespace Dust
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Dust.PathBuilder(
                                 path: $"/api/v1/w/{wId}/assistant/conversations/{cId}/mentions/suggestions",
                                 baseUri: ResolveBaseUri(
                                 servers: s_GetWByWIdAssistantConversationsByCIdMentionsSuggestionsServers,
-                                defaultBaseUrl: "https://dust.tt/")); 
+                                defaultBaseUrl: "https://dust.tt/"));
                             __pathBuilder
                                 .AddRequiredParameter("query", query)
                                 .AddOptionalParameter("select", select, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
-                                .AddOptionalParameter("current", current?.ToString().ToLowerInvariant()) 
+                                .AddOptionalParameter("current", current?.ToString().ToLowerInvariant())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -199,6 +233,8 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -209,6 +245,11 @@ namespace Dust
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Dust.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -226,6 +267,8 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -235,8 +278,7 @@ namespace Dust
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dust.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -245,6 +287,11 @@ namespace Dust
                         __attempt < __maxAttempts &&
                         global::Dust.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Dust.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -261,14 +308,15 @@ namespace Dust
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Dust.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -308,6 +356,8 @@ namespace Dust
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -328,6 +378,8 @@ namespace Dust
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
@@ -517,9 +569,13 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -547,9 +603,13 @@ namespace Dust
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

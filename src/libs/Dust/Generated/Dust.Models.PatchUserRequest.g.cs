@@ -95,5 +95,6 @@ namespace Dust
         public PatchUserRequest()
         {
         }
+
     }
 }

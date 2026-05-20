@@ -39,12 +39,6 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? SelectedMCPServerViewIds { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("selectedSkillIds")]
-        public global::System.Collections.Generic.IList<string>? SelectedSkillIds { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -58,7 +52,6 @@ namespace Dust
         /// <param name="origin"></param>
         /// <param name="clientSideMCPServerIds"></param>
         /// <param name="selectedMCPServerViewIds"></param>
-        /// <param name="selectedSkillIds"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -67,15 +60,13 @@ namespace Dust
             string? profilePictureUrl,
             string? origin,
             global::System.Collections.Generic.IList<string>? clientSideMCPServerIds,
-            global::System.Collections.Generic.IList<string>? selectedMCPServerViewIds,
-            global::System.Collections.Generic.IList<string>? selectedSkillIds)
+            global::System.Collections.Generic.IList<string>? selectedMCPServerViewIds)
         {
             this.Timezone = timezone;
             this.ProfilePictureUrl = profilePictureUrl;
             this.Origin = origin;
             this.ClientSideMCPServerIds = clientSideMCPServerIds;
             this.SelectedMCPServerViewIds = selectedMCPServerViewIds;
-            this.SelectedSkillIds = selectedSkillIds;
         }
 
         /// <summary>
@@ -84,5 +75,6 @@ namespace Dust
         public CreateWAssistantConversationsRequestMessageContext()
         {
         }
+
     }
 }

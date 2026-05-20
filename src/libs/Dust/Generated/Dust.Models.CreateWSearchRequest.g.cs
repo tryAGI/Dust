@@ -97,5 +97,6 @@ namespace Dust
         public CreateWSearchRequest()
         {
         }
+
     }
 }

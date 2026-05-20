@@ -85,5 +85,6 @@ namespace Dust
         public PatchWAssistantAgentConfigurationsRequestAgent()
         {
         }
+
     }
 }

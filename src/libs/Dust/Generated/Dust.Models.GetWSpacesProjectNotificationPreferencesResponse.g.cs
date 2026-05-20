@@ -39,5 +39,6 @@ namespace Dust
         public GetWSpacesProjectNotificationPreferencesResponse()
         {
         }
+
     }
 }

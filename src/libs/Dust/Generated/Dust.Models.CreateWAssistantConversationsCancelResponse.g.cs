@@ -41,5 +41,6 @@ namespace Dust
         public CreateWAssistantConversationsCancelResponse()
         {
         }
+
     }
 }

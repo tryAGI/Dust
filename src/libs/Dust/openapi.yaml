@@ -704,6 +704,25 @@
                       }
                     }
                   },
+                  "skills": {
+                    "type": "array",
+                    "description": "Replaces the skills enabled on the agent configuration.",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "sId",
+                        "name"
+                      ],
+                      "properties": {
+                        "sId": {
+                          "type": "string"
+                        },
+                        "name": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
                   "toolset": {
                     "type": "array",
                     "items": {
@@ -1436,6 +1455,74 @@
           },
           "500": {
             "description": "Internal server error"
+          }
+        }
+      }
+    },
+    "/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}": {
+      "get": {
+        "tags": [
+          "Conversations"
+        ],
+        "summary": "Download a conversation-scoped file by path",
+        "description": "Download a file from a conversation's file system by its scoped path. The path must\nbe conversation-scoped, i.e. start with `conversation/` (as surfaced by agent file\nsystem tools). The file content is streamed directly from the conversation mount.\n",
+        "parameters": [
+          {
+            "name": "wId",
+            "in": "path",
+            "required": true,
+            "description": "ID of the workspace",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cId",
+            "in": "path",
+            "required": true,
+            "description": "ID of the conversation",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "rel",
+            "in": "path",
+            "required": true,
+            "description": "Conversation-scoped file path, e.g. `conversation/foo.pdf` or\n`conversation/subdir/foo.pdf`. The `conversation/` prefix is required; any other\nscope prefix is rejected. Path traversal segments (`..`) are rejected.\n",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "File content streamed directly.",
+            "content": {
+              "application/octet-stream": {
+                "schema": {
+                  "type": "string",
+                  "format": "binary"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Missing or invalid path parameters (e.g. missing or wrong scope prefix)."
+          },
+          "403": {
+            "description": "Resolved path is outside the conversation scope."
+          },
+          "404": {
+            "description": "Conversation or file not found."
+          },
+          "405": {
+            "description": "Method not supported."
           }
         }
       }
@@ -2338,6 +2425,9 @@
           },
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "Forbidden. Workspace or usage limits exceeded, or access denied."
           },
           "429": {
             "description": "Rate limit exceeded."
@@ -6357,7 +6447,8 @@
                     "type": "string",
                     "enum": [
                       "cancel",
-                      "gracefully_stop"
+                      "gracefully_stop",
+                      "interrupt"
                     ]
                   },
                   "messageIds": {
@@ -8063,12 +8154,6 @@
                             "items": {
                               "type": "string"
                             }
-                          },
-                          "selectedSkillIds": {
-                            "type": "array",
-                            "items": {
-                              "type": "string"
-                            }
                           }
                         }
                       }
@@ -9074,6 +9159,15 @@
                             "archivedAt": {
                               "type": "integer",
                               "nullable": true
+                            },
+                            "todoGenerationEnabled": {
+                              "type": "boolean",
+                              "description": "Whether automatic todo suggestions from project activity are enabled."
+                            },
+                            "lastTodoAnalysisAt": {
+                              "type": "integer",
+                              "nullable": true,
+                              "description": "Unix timestamp (ms) of the last automatic todo suggestion scan, if any."
                             }
                           }
                         }
@@ -9848,7 +9942,8 @@
           "id",
           "sId",
           "name",
-          "role"
+          "role",
+          "regionalModelsOnly"
         ],
         "properties": {
           "id": {
@@ -9887,6 +9982,10 @@
           },
           "ssoEnforced": {
             "type": "boolean"
+          },
+          "regionalModelsOnly": {
+            "type": "boolean",
+            "description": "When true, only models whose regionalAvailability includes the workspace's region are usable."
           },
           "metadata": {
             "type": "object",
@@ -10648,6 +10747,15 @@
             "nullable": true,
             "description": "Present for file content fragments"
           },
+          "path": {
+            "type": "string",
+            "nullable": true,
+            "description": "Path of this file inside the sandbox conversation mount."
+          },
+          "skipFileProcessing": {
+            "type": "boolean",
+            "description": "Whether upload-time file processing was skipped."
+          },
           "snippet": {
             "type": "string",
             "nullable": true
@@ -11068,6 +11176,15 @@
               "archivedAt": {
                 "type": "integer",
                 "nullable": true
+              },
+              "todoGenerationEnabled": {
+                "type": "boolean",
+                "description": "Whether automatic todo suggestions from project activity are enabled."
+              },
+              "lastTodoAnalysisAt": {
+                "type": "integer",
+                "nullable": true,
+                "description": "Unix timestamp (ms) of the last automatic todo suggestion scan, if any."
               }
             }
           }
@@ -12638,6 +12755,9 @@
       },
       "Workspace": {
         "type": "object",
+        "required": [
+          "regionalModelsOnly"
+        ],
         "properties": {
           "id": {
             "type": "integer",
@@ -12678,6 +12798,11 @@
           "ssoEnforced": {
             "type": "boolean",
             "example": true
+          },
+          "regionalModelsOnly": {
+            "type": "boolean",
+            "description": "When true, only models whose regionalAvailability includes the workspace's region are usable.",
+            "example": false
           },
           "whiteListedProviders": {
             "type": "array",
@@ -13102,6 +13227,16 @@
             "type": "string",
             "description": "The id of the previously uploaded file (optional if `content` and `contentType` are set)",
             "example": "fil_123456"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true,
+            "description": "Path of this file inside the sandbox conversation mount.",
+            "example": "conversation/report.csv"
+          },
+          "skipFileProcessing": {
+            "type": "boolean",
+            "description": "Whether upload-time file processing was skipped."
           },
           "nodeId": {
             "type": "string",

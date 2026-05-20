@@ -94,5 +94,6 @@ namespace Dust
         public CreateWAssistantConversationsRequest2()
         {
         }
+
     }
 }

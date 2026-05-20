@@ -12,6 +12,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateConversationEventDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateUserMessageNewEvent? UserMessageNew { get; init; }
 #else
@@ -25,6 +30,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UserMessageNew))]
 #endif
         public bool IsUserMessageNew => UserMessageNew != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickUserMessageNew(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateUserMessageNewEvent? value)
+        {
+            value = UserMessageNew;
+            return IsUserMessageNew;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateUserMessageNewEvent PickUserMessageNew() => IsUserMessageNew
+            ? UserMessageNew!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UserMessageNew' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -46,6 +71,26 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAgentMessageNew(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateAgentMessageNewEvent? value)
+        {
+            value = AgentMessageNew;
+            return IsAgentMessageNew;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentMessageNewEvent PickAgentMessageNew() => IsAgentMessageNew
+            ? AgentMessageNew!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentMessageNew' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentMessageDoneEvent? AgentMessageDone { get; init; }
 #else
@@ -59,6 +104,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AgentMessageDone))]
 #endif
         public bool IsAgentMessageDone => AgentMessageDone != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAgentMessageDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateAgentMessageDoneEvent? value)
+        {
+            value = AgentMessageDone;
+            return IsAgentMessageDone;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentMessageDoneEvent PickAgentMessageDone() => IsAgentMessageDone
+            ? AgentMessageDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentMessageDone' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -80,6 +145,26 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickCompactionMessageNew(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateCompactionMessageNewEvent? value)
+        {
+            value = CompactionMessageNew;
+            return IsCompactionMessageNew;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateCompactionMessageNewEvent PickCompactionMessageNew() => IsCompactionMessageNew
+            ? CompactionMessageNew!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompactionMessageNew' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateCompactionMessageDoneEvent? CompactionMessageDone { get; init; }
 #else
@@ -97,6 +182,26 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickCompactionMessageDone(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateCompactionMessageDoneEvent? value)
+        {
+            value = CompactionMessageDone;
+            return IsCompactionMessageDone;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateCompactionMessageDoneEvent PickCompactionMessageDone() => IsCompactionMessageDone
+            ? CompactionMessageDone!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CompactionMessageDone' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateConversationTitleEvent? ConversationTitle { get; init; }
 #else
@@ -110,6 +215,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ConversationTitle))]
 #endif
         public bool IsConversationTitle => ConversationTitle != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickConversationTitle(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateConversationTitleEvent? value)
+        {
+            value = ConversationTitle;
+            return IsConversationTitle;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateConversationTitleEvent PickConversationTitle() => IsConversationTitle
+            ? ConversationTitle!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ConversationTitle' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -127,6 +252,11 @@ namespace Dust
         {
             UserMessageNew = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromUserMessageNew(global::Dust.PrivateUserMessageNewEvent? value) => new PrivateConversationEvent(value);
 
         /// <summary>
         /// 
@@ -149,6 +279,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateConversationEvent FromAgentMessageNew(global::Dust.PrivateAgentMessageNewEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateConversationEvent(global::Dust.PrivateAgentMessageDoneEvent value) => new PrivateConversationEvent((global::Dust.PrivateAgentMessageDoneEvent?)value);
 
         /// <summary>
@@ -163,6 +298,11 @@ namespace Dust
         {
             AgentMessageDone = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromAgentMessageDone(global::Dust.PrivateAgentMessageDoneEvent? value) => new PrivateConversationEvent(value);
 
         /// <summary>
         /// 
@@ -185,6 +325,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateConversationEvent FromCompactionMessageNew(global::Dust.PrivateCompactionMessageNewEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateConversationEvent(global::Dust.PrivateCompactionMessageDoneEvent value) => new PrivateConversationEvent((global::Dust.PrivateCompactionMessageDoneEvent?)value);
 
         /// <summary>
@@ -199,6 +344,11 @@ namespace Dust
         {
             CompactionMessageDone = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromCompactionMessageDone(global::Dust.PrivateCompactionMessageDoneEvent? value) => new PrivateConversationEvent(value);
 
         /// <summary>
         /// 
@@ -221,7 +371,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateConversationEvent FromConversationTitle(global::Dust.PrivateConversationTitleEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public PrivateConversationEvent(
+            global::Dust.PrivateConversationEventDiscriminatorType? type,
             global::Dust.PrivateUserMessageNewEvent? userMessageNew,
             global::Dust.PrivateAgentMessageNewEvent? agentMessageNew,
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone,
@@ -230,6 +386,8 @@ namespace Dust
             global::Dust.PrivateConversationTitleEvent? conversationTitle
             )
         {
+            Type = type;
+
             UserMessageNew = userMessageNew;
             AgentMessageNew = agentMessageNew;
             AgentMessageDone = agentMessageDone;
@@ -274,12 +432,12 @@ namespace Dust
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dust.PrivateUserMessageNewEvent?, TResult>? userMessageNew = null,
-            global::System.Func<global::Dust.PrivateAgentMessageNewEvent?, TResult>? agentMessageNew = null,
-            global::System.Func<global::Dust.PrivateAgentMessageDoneEvent?, TResult>? agentMessageDone = null,
-            global::System.Func<global::Dust.PrivateCompactionMessageNewEvent?, TResult>? compactionMessageNew = null,
-            global::System.Func<global::Dust.PrivateCompactionMessageDoneEvent?, TResult>? compactionMessageDone = null,
-            global::System.Func<global::Dust.PrivateConversationTitleEvent?, TResult>? conversationTitle = null,
+            global::System.Func<global::Dust.PrivateUserMessageNewEvent, TResult>? userMessageNew = null,
+            global::System.Func<global::Dust.PrivateAgentMessageNewEvent, TResult>? agentMessageNew = null,
+            global::System.Func<global::Dust.PrivateAgentMessageDoneEvent, TResult>? agentMessageDone = null,
+            global::System.Func<global::Dust.PrivateCompactionMessageNewEvent, TResult>? compactionMessageNew = null,
+            global::System.Func<global::Dust.PrivateCompactionMessageDoneEvent, TResult>? compactionMessageDone = null,
+            global::System.Func<global::Dust.PrivateConversationTitleEvent, TResult>? conversationTitle = null,
             bool validate = true)
         {
             if (validate)
@@ -319,12 +477,60 @@ namespace Dust
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dust.PrivateUserMessageNewEvent?>? userMessageNew = null,
-            global::System.Action<global::Dust.PrivateAgentMessageNewEvent?>? agentMessageNew = null,
-            global::System.Action<global::Dust.PrivateAgentMessageDoneEvent?>? agentMessageDone = null,
-            global::System.Action<global::Dust.PrivateCompactionMessageNewEvent?>? compactionMessageNew = null,
-            global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent?>? compactionMessageDone = null,
-            global::System.Action<global::Dust.PrivateConversationTitleEvent?>? conversationTitle = null,
+            global::System.Action<global::Dust.PrivateUserMessageNewEvent>? userMessageNew = null,
+
+            global::System.Action<global::Dust.PrivateAgentMessageNewEvent>? agentMessageNew = null,
+
+            global::System.Action<global::Dust.PrivateAgentMessageDoneEvent>? agentMessageDone = null,
+
+            global::System.Action<global::Dust.PrivateCompactionMessageNewEvent>? compactionMessageNew = null,
+
+            global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent>? compactionMessageDone = null,
+
+            global::System.Action<global::Dust.PrivateConversationTitleEvent>? conversationTitle = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsUserMessageNew)
+            {
+                userMessageNew?.Invoke(UserMessageNew!);
+            }
+            else if (IsAgentMessageNew)
+            {
+                agentMessageNew?.Invoke(AgentMessageNew!);
+            }
+            else if (IsAgentMessageDone)
+            {
+                agentMessageDone?.Invoke(AgentMessageDone!);
+            }
+            else if (IsCompactionMessageNew)
+            {
+                compactionMessageNew?.Invoke(CompactionMessageNew!);
+            }
+            else if (IsCompactionMessageDone)
+            {
+                compactionMessageDone?.Invoke(CompactionMessageDone!);
+            }
+            else if (IsConversationTitle)
+            {
+                conversationTitle?.Invoke(ConversationTitle!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dust.PrivateUserMessageNewEvent>? userMessageNew = null,
+            global::System.Action<global::Dust.PrivateAgentMessageNewEvent>? agentMessageNew = null,
+            global::System.Action<global::Dust.PrivateAgentMessageDoneEvent>? agentMessageDone = null,
+            global::System.Action<global::Dust.PrivateCompactionMessageNewEvent>? compactionMessageNew = null,
+            global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent>? compactionMessageDone = null,
+            global::System.Action<global::Dust.PrivateConversationTitleEvent>? conversationTitle = null,
             bool validate = true)
         {
             if (validate)

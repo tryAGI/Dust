@@ -24,6 +24,21 @@ namespace Dust
         /// Creates a new space in the workspace.
         /// </summary>
         /// <param name="wId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWSpacesResponse>> CreateWByWIdSpacesAsResponseAsync(
+            string wId,
+
+            global::Dust.CreateWSpacesRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create a space<br/>
+        /// Creates a new space in the workspace.
+        /// </summary>
+        /// <param name="wId"></param>
         /// <param name="isRestricted"></param>
         /// <param name="name"></param>
         /// <param name="spaceKind"></param>

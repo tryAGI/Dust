@@ -130,5 +130,6 @@ namespace Dust
         public PrivateConversationForkUser()
         {
         }
+
     }
 }

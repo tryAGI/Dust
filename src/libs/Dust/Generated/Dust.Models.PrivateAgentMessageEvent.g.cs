@@ -12,6 +12,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public global::Dust.PrivateAgentMessageEventDiscriminatorType? Type { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateGenerationTokensEvent? GenerationTokens { get; init; }
 #else
@@ -25,6 +30,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GenerationTokens))]
 #endif
         public bool IsGenerationTokens => GenerationTokens != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickGenerationTokens(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateGenerationTokensEvent? value)
+        {
+            value = GenerationTokens;
+            return IsGenerationTokens;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateGenerationTokensEvent PickGenerationTokens() => IsGenerationTokens
+            ? GenerationTokens!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GenerationTokens' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -46,6 +71,26 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickToolCallStarted(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateToolCallStartedEvent? value)
+        {
+            value = ToolCallStarted;
+            return IsToolCallStarted;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolCallStartedEvent PickToolCallStarted() => IsToolCallStarted
+            ? ToolCallStarted!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolCallStarted' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentActionSuccessEvent? AgentActionSuccess { get; init; }
 #else
@@ -59,6 +104,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AgentActionSuccess))]
 #endif
         public bool IsAgentActionSuccess => AgentActionSuccess != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAgentActionSuccess(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateAgentActionSuccessEvent? value)
+        {
+            value = AgentActionSuccess;
+            return IsAgentActionSuccess;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentActionSuccessEvent PickAgentActionSuccess() => IsAgentActionSuccess
+            ? AgentActionSuccess!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentActionSuccess' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -80,6 +145,26 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAgentMessageSuccess(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateAgentMessageSuccessEvent? value)
+        {
+            value = AgentMessageSuccess;
+            return IsAgentMessageSuccess;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentMessageSuccessEvent PickAgentMessageSuccess() => IsAgentMessageSuccess
+            ? AgentMessageSuccess!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentMessageSuccess' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentErrorEvent? AgentError { get; init; }
 #else
@@ -93,6 +178,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AgentError))]
 #endif
         public bool IsAgentError => AgentError != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAgentError(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateAgentErrorEvent? value)
+        {
+            value = AgentError;
+            return IsAgentError;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentErrorEvent PickAgentError() => IsAgentError
+            ? AgentError!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentError' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -114,6 +219,26 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickAgentGenerationCancelled(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateAgentGenerationCancelledEvent? value)
+        {
+            value = AgentGenerationCancelled;
+            return IsAgentGenerationCancelled;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentGenerationCancelledEvent PickAgentGenerationCancelled() => IsAgentGenerationCancelled
+            ? AgentGenerationCancelled!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentGenerationCancelled' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateToolErrorEvent? ToolError { get; init; }
 #else
@@ -127,6 +252,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolError))]
 #endif
         public bool IsToolError => ToolError != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolError(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateToolErrorEvent? value)
+        {
+            value = ToolError;
+            return IsToolError;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolErrorEvent PickToolError() => IsToolError
+            ? ToolError!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolError' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -146,6 +291,26 @@ namespace Dust
         public bool IsToolParams => ToolParams != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolParams(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateToolParamsEvent? value)
+        {
+            value = ToolParams;
+            return IsToolParams;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolParamsEvent PickToolParams() => IsToolParams
+            ? ToolParams!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolParams' but the value was {ToString()}.");
+
+        /// <summary>
         /// Sent when a tool requires user approval before execution.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -161,6 +326,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolApproveExecution))]
 #endif
         public bool IsToolApproveExecution => ToolApproveExecution != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolApproveExecution(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateToolApproveExecutionEvent? value)
+        {
+            value = ToolApproveExecution;
+            return IsToolApproveExecution;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolApproveExecutionEvent PickToolApproveExecution() => IsToolApproveExecution
+            ? ToolApproveExecution!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolApproveExecution' but the value was {ToString()}.");
 
         /// <summary>
         /// Progress notification from a running tool.
@@ -180,6 +365,26 @@ namespace Dust
         public bool IsToolNotification => ToolNotification != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolNotification(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateToolNotificationEvent? value)
+        {
+            value = ToolNotification;
+            return IsToolNotification;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolNotificationEvent PickToolNotification() => IsToolNotification
+            ? ToolNotification!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolNotification' but the value was {ToString()}.");
+
+        /// <summary>
         /// Sent when a tool requires personal OAuth authentication.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -195,6 +400,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ToolPersonalAuthRequired))]
 #endif
         public bool IsToolPersonalAuthRequired => ToolPersonalAuthRequired != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickToolPersonalAuthRequired(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateToolPersonalAuthRequiredEvent? value)
+        {
+            value = ToolPersonalAuthRequired;
+            return IsToolPersonalAuthRequired;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolPersonalAuthRequiredEvent PickToolPersonalAuthRequired() => IsToolPersonalAuthRequired
+            ? ToolPersonalAuthRequired!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolPersonalAuthRequired' but the value was {ToString()}.");
 
         /// <summary>
         /// Sent when a tool requires file access authorization (e.g., Google Drive).
@@ -216,6 +441,26 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickToolFileAuthRequired(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateToolFileAuthRequiredEvent? value)
+        {
+            value = ToolFileAuthRequired;
+            return IsToolFileAuthRequired;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateToolFileAuthRequiredEvent PickToolFileAuthRequired() => IsToolFileAuthRequired
+            ? ToolFileAuthRequired!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ToolFileAuthRequired' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentContextPrunedEvent? AgentContextPruned { get; init; }
 #else
@@ -229,6 +474,26 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AgentContextPruned))]
 #endif
         public bool IsAgentContextPruned => AgentContextPruned != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAgentContextPruned(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateAgentContextPrunedEvent? value)
+        {
+            value = AgentContextPruned;
+            return IsAgentContextPruned;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentContextPrunedEvent PickAgentContextPruned() => IsAgentContextPruned
+            ? AgentContextPruned!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentContextPruned' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -246,6 +511,11 @@ namespace Dust
         {
             GenerationTokens = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromGenerationTokens(global::Dust.PrivateGenerationTokensEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -268,6 +538,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromToolCallStarted(global::Dust.PrivateToolCallStartedEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateAgentActionSuccessEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateAgentActionSuccessEvent?)value);
 
         /// <summary>
@@ -282,6 +557,11 @@ namespace Dust
         {
             AgentActionSuccess = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromAgentActionSuccess(global::Dust.PrivateAgentActionSuccessEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -304,6 +584,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromAgentMessageSuccess(global::Dust.PrivateAgentMessageSuccessEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateAgentErrorEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateAgentErrorEvent?)value);
 
         /// <summary>
@@ -318,6 +603,11 @@ namespace Dust
         {
             AgentError = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromAgentError(global::Dust.PrivateAgentErrorEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -340,6 +630,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromAgentGenerationCancelled(global::Dust.PrivateAgentGenerationCancelledEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateToolErrorEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateToolErrorEvent?)value);
 
         /// <summary>
@@ -354,6 +649,11 @@ namespace Dust
         {
             ToolError = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromToolError(global::Dust.PrivateToolErrorEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -376,6 +676,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromToolParams(global::Dust.PrivateToolParamsEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateToolApproveExecutionEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateToolApproveExecutionEvent?)value);
 
         /// <summary>
@@ -390,6 +695,11 @@ namespace Dust
         {
             ToolApproveExecution = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromToolApproveExecution(global::Dust.PrivateToolApproveExecutionEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -412,6 +722,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromToolNotification(global::Dust.PrivateToolNotificationEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateToolPersonalAuthRequiredEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateToolPersonalAuthRequiredEvent?)value);
 
         /// <summary>
@@ -426,6 +741,11 @@ namespace Dust
         {
             ToolPersonalAuthRequired = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateAgentMessageEvent FromToolPersonalAuthRequired(global::Dust.PrivateToolPersonalAuthRequiredEvent? value) => new PrivateAgentMessageEvent(value);
 
         /// <summary>
         /// 
@@ -448,6 +768,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromToolFileAuthRequired(global::Dust.PrivateToolFileAuthRequiredEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateAgentMessageEvent(global::Dust.PrivateAgentContextPrunedEvent value) => new PrivateAgentMessageEvent((global::Dust.PrivateAgentContextPrunedEvent?)value);
 
         /// <summary>
@@ -466,7 +791,13 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static PrivateAgentMessageEvent FromAgentContextPruned(global::Dust.PrivateAgentContextPrunedEvent? value) => new PrivateAgentMessageEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public PrivateAgentMessageEvent(
+            global::Dust.PrivateAgentMessageEventDiscriminatorType? type,
             global::Dust.PrivateGenerationTokensEvent? generationTokens,
             global::Dust.PrivateToolCallStartedEvent? toolCallStarted,
             global::Dust.PrivateAgentActionSuccessEvent? agentActionSuccess,
@@ -482,6 +813,8 @@ namespace Dust
             global::Dust.PrivateAgentContextPrunedEvent? agentContextPruned
             )
         {
+            Type = type;
+
             GenerationTokens = generationTokens;
             ToolCallStarted = toolCallStarted;
             AgentActionSuccess = agentActionSuccess;
@@ -547,19 +880,19 @@ namespace Dust
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Dust.PrivateGenerationTokensEvent?, TResult>? generationTokens = null,
-            global::System.Func<global::Dust.PrivateToolCallStartedEvent?, TResult>? toolCallStarted = null,
-            global::System.Func<global::Dust.PrivateAgentActionSuccessEvent?, TResult>? agentActionSuccess = null,
-            global::System.Func<global::Dust.PrivateAgentMessageSuccessEvent?, TResult>? agentMessageSuccess = null,
-            global::System.Func<global::Dust.PrivateAgentErrorEvent?, TResult>? agentError = null,
-            global::System.Func<global::Dust.PrivateAgentGenerationCancelledEvent?, TResult>? agentGenerationCancelled = null,
-            global::System.Func<global::Dust.PrivateToolErrorEvent?, TResult>? toolError = null,
-            global::System.Func<global::Dust.PrivateToolParamsEvent?, TResult>? toolParams = null,
-            global::System.Func<global::Dust.PrivateToolApproveExecutionEvent?, TResult>? toolApproveExecution = null,
-            global::System.Func<global::Dust.PrivateToolNotificationEvent?, TResult>? toolNotification = null,
-            global::System.Func<global::Dust.PrivateToolPersonalAuthRequiredEvent?, TResult>? toolPersonalAuthRequired = null,
-            global::System.Func<global::Dust.PrivateToolFileAuthRequiredEvent?, TResult>? toolFileAuthRequired = null,
-            global::System.Func<global::Dust.PrivateAgentContextPrunedEvent?, TResult>? agentContextPruned = null,
+            global::System.Func<global::Dust.PrivateGenerationTokensEvent, TResult>? generationTokens = null,
+            global::System.Func<global::Dust.PrivateToolCallStartedEvent, TResult>? toolCallStarted = null,
+            global::System.Func<global::Dust.PrivateAgentActionSuccessEvent, TResult>? agentActionSuccess = null,
+            global::System.Func<global::Dust.PrivateAgentMessageSuccessEvent, TResult>? agentMessageSuccess = null,
+            global::System.Func<global::Dust.PrivateAgentErrorEvent, TResult>? agentError = null,
+            global::System.Func<global::Dust.PrivateAgentGenerationCancelledEvent, TResult>? agentGenerationCancelled = null,
+            global::System.Func<global::Dust.PrivateToolErrorEvent, TResult>? toolError = null,
+            global::System.Func<global::Dust.PrivateToolParamsEvent, TResult>? toolParams = null,
+            global::System.Func<global::Dust.PrivateToolApproveExecutionEvent, TResult>? toolApproveExecution = null,
+            global::System.Func<global::Dust.PrivateToolNotificationEvent, TResult>? toolNotification = null,
+            global::System.Func<global::Dust.PrivateToolPersonalAuthRequiredEvent, TResult>? toolPersonalAuthRequired = null,
+            global::System.Func<global::Dust.PrivateToolFileAuthRequiredEvent, TResult>? toolFileAuthRequired = null,
+            global::System.Func<global::Dust.PrivateAgentContextPrunedEvent, TResult>? agentContextPruned = null,
             bool validate = true)
         {
             if (validate)
@@ -627,19 +960,109 @@ namespace Dust
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Dust.PrivateGenerationTokensEvent?>? generationTokens = null,
-            global::System.Action<global::Dust.PrivateToolCallStartedEvent?>? toolCallStarted = null,
-            global::System.Action<global::Dust.PrivateAgentActionSuccessEvent?>? agentActionSuccess = null,
-            global::System.Action<global::Dust.PrivateAgentMessageSuccessEvent?>? agentMessageSuccess = null,
-            global::System.Action<global::Dust.PrivateAgentErrorEvent?>? agentError = null,
-            global::System.Action<global::Dust.PrivateAgentGenerationCancelledEvent?>? agentGenerationCancelled = null,
-            global::System.Action<global::Dust.PrivateToolErrorEvent?>? toolError = null,
-            global::System.Action<global::Dust.PrivateToolParamsEvent?>? toolParams = null,
-            global::System.Action<global::Dust.PrivateToolApproveExecutionEvent?>? toolApproveExecution = null,
-            global::System.Action<global::Dust.PrivateToolNotificationEvent?>? toolNotification = null,
-            global::System.Action<global::Dust.PrivateToolPersonalAuthRequiredEvent?>? toolPersonalAuthRequired = null,
-            global::System.Action<global::Dust.PrivateToolFileAuthRequiredEvent?>? toolFileAuthRequired = null,
-            global::System.Action<global::Dust.PrivateAgentContextPrunedEvent?>? agentContextPruned = null,
+            global::System.Action<global::Dust.PrivateGenerationTokensEvent>? generationTokens = null,
+
+            global::System.Action<global::Dust.PrivateToolCallStartedEvent>? toolCallStarted = null,
+
+            global::System.Action<global::Dust.PrivateAgentActionSuccessEvent>? agentActionSuccess = null,
+
+            global::System.Action<global::Dust.PrivateAgentMessageSuccessEvent>? agentMessageSuccess = null,
+
+            global::System.Action<global::Dust.PrivateAgentErrorEvent>? agentError = null,
+
+            global::System.Action<global::Dust.PrivateAgentGenerationCancelledEvent>? agentGenerationCancelled = null,
+
+            global::System.Action<global::Dust.PrivateToolErrorEvent>? toolError = null,
+
+            global::System.Action<global::Dust.PrivateToolParamsEvent>? toolParams = null,
+
+            global::System.Action<global::Dust.PrivateToolApproveExecutionEvent>? toolApproveExecution = null,
+
+            global::System.Action<global::Dust.PrivateToolNotificationEvent>? toolNotification = null,
+
+            global::System.Action<global::Dust.PrivateToolPersonalAuthRequiredEvent>? toolPersonalAuthRequired = null,
+
+            global::System.Action<global::Dust.PrivateToolFileAuthRequiredEvent>? toolFileAuthRequired = null,
+
+            global::System.Action<global::Dust.PrivateAgentContextPrunedEvent>? agentContextPruned = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsGenerationTokens)
+            {
+                generationTokens?.Invoke(GenerationTokens!);
+            }
+            else if (IsToolCallStarted)
+            {
+                toolCallStarted?.Invoke(ToolCallStarted!);
+            }
+            else if (IsAgentActionSuccess)
+            {
+                agentActionSuccess?.Invoke(AgentActionSuccess!);
+            }
+            else if (IsAgentMessageSuccess)
+            {
+                agentMessageSuccess?.Invoke(AgentMessageSuccess!);
+            }
+            else if (IsAgentError)
+            {
+                agentError?.Invoke(AgentError!);
+            }
+            else if (IsAgentGenerationCancelled)
+            {
+                agentGenerationCancelled?.Invoke(AgentGenerationCancelled!);
+            }
+            else if (IsToolError)
+            {
+                toolError?.Invoke(ToolError!);
+            }
+            else if (IsToolParams)
+            {
+                toolParams?.Invoke(ToolParams!);
+            }
+            else if (IsToolApproveExecution)
+            {
+                toolApproveExecution?.Invoke(ToolApproveExecution!);
+            }
+            else if (IsToolNotification)
+            {
+                toolNotification?.Invoke(ToolNotification!);
+            }
+            else if (IsToolPersonalAuthRequired)
+            {
+                toolPersonalAuthRequired?.Invoke(ToolPersonalAuthRequired!);
+            }
+            else if (IsToolFileAuthRequired)
+            {
+                toolFileAuthRequired?.Invoke(ToolFileAuthRequired!);
+            }
+            else if (IsAgentContextPruned)
+            {
+                agentContextPruned?.Invoke(AgentContextPruned!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Dust.PrivateGenerationTokensEvent>? generationTokens = null,
+            global::System.Action<global::Dust.PrivateToolCallStartedEvent>? toolCallStarted = null,
+            global::System.Action<global::Dust.PrivateAgentActionSuccessEvent>? agentActionSuccess = null,
+            global::System.Action<global::Dust.PrivateAgentMessageSuccessEvent>? agentMessageSuccess = null,
+            global::System.Action<global::Dust.PrivateAgentErrorEvent>? agentError = null,
+            global::System.Action<global::Dust.PrivateAgentGenerationCancelledEvent>? agentGenerationCancelled = null,
+            global::System.Action<global::Dust.PrivateToolErrorEvent>? toolError = null,
+            global::System.Action<global::Dust.PrivateToolParamsEvent>? toolParams = null,
+            global::System.Action<global::Dust.PrivateToolApproveExecutionEvent>? toolApproveExecution = null,
+            global::System.Action<global::Dust.PrivateToolNotificationEvent>? toolNotification = null,
+            global::System.Action<global::Dust.PrivateToolPersonalAuthRequiredEvent>? toolPersonalAuthRequired = null,
+            global::System.Action<global::Dust.PrivateToolFileAuthRequiredEvent>? toolFileAuthRequired = null,
+            global::System.Action<global::Dust.PrivateAgentContextPrunedEvent>? agentContextPruned = null,
             bool validate = true)
         {
             if (validate)

@@ -27,12 +27,32 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="sId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.PatchWAssistantAgentConfigurationsResponse>> EditWByWIdAssistantAgentConfigurationsBySIdAsResponseAsync(
+            string wId,
+            string sId,
+
+            global::Dust.PatchWAssistantAgentConfigurationsRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Update agent configuration<br/>
+        /// Update the agent configuration identified by {sId} in the workspace identified by {wId}.
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <param name="sId"></param>
         /// <param name="userFavorite"></param>
         /// <param name="agent"></param>
         /// <param name="instructions"></param>
         /// <param name="generationSettings"></param>
         /// <param name="tags"></param>
         /// <param name="editors"></param>
+        /// <param name="skills">
+        /// Replaces the skills enabled on the agent configuration.
+        /// </param>
         /// <param name="toolset"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -46,6 +66,7 @@ namespace Dust
             global::Dust.PatchWAssistantAgentConfigurationsRequestGenerationSettings? generationSettings = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestTag>? tags = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestEditor>? editors = default,
+            global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestSkill>? skills = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem>? toolset = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

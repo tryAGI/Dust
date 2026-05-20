@@ -221,5 +221,6 @@ namespace Dust
         public PrivateLightAgentMessage()
         {
         }
+
     }
 }

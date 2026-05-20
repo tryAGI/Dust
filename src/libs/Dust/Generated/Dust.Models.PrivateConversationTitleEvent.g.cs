@@ -60,5 +60,6 @@ namespace Dust
         public PrivateConversationTitleEvent()
         {
         }
+
     }
 }

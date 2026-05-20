@@ -57,6 +57,19 @@ namespace Dust
         public int? ArchivedAt { get; set; }
 
         /// <summary>
+        /// Whether automatic todo suggestions from project activity are enabled.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("todoGenerationEnabled")]
+        public bool? TodoGenerationEnabled { get; set; }
+
+        /// <summary>
+        /// Unix timestamp (ms) of the last automatic todo suggestion scan, if any.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("lastTodoAnalysisAt")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.UnixTimestampJsonConverter))]
+        public global::System.DateTimeOffset? LastTodoAnalysisAt { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -73,6 +86,12 @@ namespace Dust
         /// <param name="members"></param>
         /// <param name="description"></param>
         /// <param name="archivedAt"></param>
+        /// <param name="todoGenerationEnabled">
+        /// Whether automatic todo suggestions from project activity are enabled.
+        /// </param>
+        /// <param name="lastTodoAnalysisAt">
+        /// Unix timestamp (ms) of the last automatic todo suggestion scan, if any.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -84,7 +103,9 @@ namespace Dust
             bool? isEditor,
             global::System.Collections.Generic.IList<object>? members,
             string? description,
-            int? archivedAt)
+            int? archivedAt,
+            bool? todoGenerationEnabled,
+            global::System.DateTimeOffset? lastTodoAnalysisAt)
         {
             this.Categories = categories;
             this.CanWrite = canWrite;
@@ -94,6 +115,8 @@ namespace Dust
             this.Members = members;
             this.Description = description;
             this.ArchivedAt = archivedAt;
+            this.TodoGenerationEnabled = todoGenerationEnabled;
+            this.LastTodoAnalysisAt = lastTodoAnalysisAt;
         }
 
         /// <summary>
@@ -102,5 +125,6 @@ namespace Dust
         public GetWSpacesResponseSpace()
         {
         }
+
     }
 }

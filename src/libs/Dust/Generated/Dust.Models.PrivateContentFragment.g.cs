@@ -114,6 +114,18 @@ namespace Dust
         public string? FileId { get; set; }
 
         /// <summary>
+        /// Path of this file inside the sandbox conversation mount.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
+        public string? Path { get; set; }
+
+        /// <summary>
+        /// Whether upload-time file processing was skipped.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skipFileProcessing")]
+        public bool? SkipFileProcessing { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("snippet")]
@@ -174,6 +186,12 @@ namespace Dust
         /// <param name="fileId">
         /// Present for file content fragments
         /// </param>
+        /// <param name="path">
+        /// Path of this file inside the sandbox conversation mount.
+        /// </param>
+        /// <param name="skipFileProcessing">
+        /// Whether upload-time file processing was skipped.
+        /// </param>
         /// <param name="snippet"></param>
         /// <param name="textUrl"></param>
         /// <param name="textBytes"></param>
@@ -201,6 +219,8 @@ namespace Dust
             global::Dust.PrivateContentFragmentContentFragmentVersion? contentFragmentVersion,
             global::Dust.PrivateContentFragmentExpiredReason? expiredReason,
             string? fileId,
+            string? path,
+            bool? skipFileProcessing,
             string? snippet,
             string? textUrl,
             long? textBytes,
@@ -223,6 +243,8 @@ namespace Dust
             this.ContentFragmentType = contentFragmentType;
             this.ExpiredReason = expiredReason;
             this.FileId = fileId;
+            this.Path = path;
+            this.SkipFileProcessing = skipFileProcessing;
             this.Snippet = snippet;
             this.TextUrl = textUrl;
             this.TextBytes = textBytes;
@@ -236,5 +258,6 @@ namespace Dust
         public PrivateContentFragment()
         {
         }
+
     }
 }

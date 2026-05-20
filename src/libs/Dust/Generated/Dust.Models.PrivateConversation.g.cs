@@ -182,5 +182,6 @@ namespace Dust
         public PrivateConversation()
         {
         }
+
     }
 }

@@ -27,6 +27,23 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.ContentFragment>> CreateWByWIdAssistantConversationsByCIdContentFragmentsAsResponseAsync(
+            string wId,
+            string cId,
+
+            global::Dust.ContentFragment request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create a content fragment<br/>
+        /// Create a new content fragment in the workspace identified by {wId}.
+        /// </summary>
+        /// <param name="wId"></param>
+        /// <param name="cId"></param>
         /// <param name="title">
         /// The title of the content fragment<br/>
         /// Example: My content fragment
@@ -46,6 +63,13 @@ namespace Dust
         /// <param name="fileId">
         /// The id of the previously uploaded file (optional if `content` and `contentType` are set)<br/>
         /// Example: fil_123456
+        /// </param>
+        /// <param name="path">
+        /// Path of this file inside the sandbox conversation mount.<br/>
+        /// Example: conversation/report.csv
+        /// </param>
+        /// <param name="skipFileProcessing">
+        /// Whether upload-time file processing was skipped.
         /// </param>
         /// <param name="nodeId">
         /// The id of the content node (optional if `content` and `contentType` are set)<br/>
@@ -67,6 +91,8 @@ namespace Dust
             string? contentType = default,
             string? url = default,
             string? fileId = default,
+            string? path = default,
+            bool? skipFileProcessing = default,
             string? nodeId = default,
             string? nodeDataSourceViewId = default,
             global::Dust.Context? context = default,

@@ -24,6 +24,21 @@ namespace Dust
         /// Download and upload a file from a tool (MCP server) to Dust
         /// </summary>
         /// <param name="wId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Dust.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse> CreateWByWIdSearchToolsUploadAsResponseAsync(
+            string wId,
+
+            global::Dust.CreateWSearchToolsUploadRequest request,
+            global::Dust.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Upload a tool file<br/>
+        /// Download and upload a file from a tool (MCP server) to Dust
+        /// </summary>
+        /// <param name="wId"></param>
         /// <param name="serverViewId">
         /// The MCP server view ID
         /// </param>

@@ -66,5 +66,6 @@ namespace Dust
         public PrivateLightAgentConfigurationUsage()
         {
         }
+
     }
 }

@@ -71,5 +71,6 @@ namespace Dust
         public PrivateFullConversationVariant2()
         {
         }
+
     }
 }

@@ -42,5 +42,6 @@ namespace Dust
         public PrivateExtensionConfig()
         {
         }
+
     }
 }
