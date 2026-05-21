@@ -43,6 +43,14 @@ namespace Dust
         public required global::Dust.PrivateConversationForkUser User { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("fileCopyStatus")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Dust.PrivateConversationForkedFromFileCopyStatus FileCopyStatus { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -55,6 +63,7 @@ namespace Dust
         /// <param name="sourceMessageId"></param>
         /// <param name="branchedAt"></param>
         /// <param name="user"></param>
+        /// <param name="fileCopyStatus"></param>
         /// <param name="parentConversationTitle"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -64,6 +73,7 @@ namespace Dust
             string sourceMessageId,
             int branchedAt,
             global::Dust.PrivateConversationForkUser user,
+            global::Dust.PrivateConversationForkedFromFileCopyStatus fileCopyStatus,
             string? parentConversationTitle)
         {
             this.ParentConversationId = parentConversationId ?? throw new global::System.ArgumentNullException(nameof(parentConversationId));
@@ -71,6 +81,7 @@ namespace Dust
             this.SourceMessageId = sourceMessageId ?? throw new global::System.ArgumentNullException(nameof(sourceMessageId));
             this.BranchedAt = branchedAt;
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
+            this.FileCopyStatus = fileCopyStatus;
         }
 
         /// <summary>

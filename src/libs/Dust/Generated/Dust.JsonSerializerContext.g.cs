@@ -25,6 +25,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityNullableJsonConverter),
@@ -556,6 +560,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkUserProvider), TypeInfoPropertyName = "PrivateConversationForkUserProvider2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkedFrom))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkedFromFileCopyStatus), TypeInfoPropertyName = "PrivateConversationForkedFromFileCopyStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkedChild))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFullConversation), TypeInfoPropertyName = "PrivateFullConversation2")]
@@ -1036,7 +1041,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateConversationForkedChild>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateMention>))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1059,6 +1063,10 @@ namespace Dust
             typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusNullableJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter),
 
@@ -1574,6 +1582,7 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_462926e2d55e1e51")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_a8800edcc116e46c")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateMention>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateRichMentionWithStatus>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateReaction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>))]
@@ -1688,6 +1697,8 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.PrivateWorkspaceRoleNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkUserProviderJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageTypeJsonConverter());
