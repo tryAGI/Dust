@@ -9168,6 +9168,11 @@
                               "type": "integer",
                               "nullable": true,
                               "description": "Unix timestamp (ms) of the last automatic todo suggestion scan, if any."
+                            },
+                            "pinnedFramePath": {
+                              "type": "string",
+                              "nullable": true,
+                              "description": "Scoped path to the frame file pinned as the Pod banner."
                             }
                           }
                         }
@@ -11101,6 +11106,11 @@
           },
           "publicUrl": {
             "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "nullable": true,
+            "description": "path when the file is ready on a mount (e.g. `project/report.pdf` or `conversation/chart.png`). Same shape as mount file listing entries."
           }
         }
       },
@@ -11185,6 +11195,11 @@
                 "type": "integer",
                 "nullable": true,
                 "description": "Unix timestamp (ms) of the last automatic todo suggestion scan, if any."
+              },
+              "pinnedFramePath": {
+                "type": "string",
+                "nullable": true,
+                "description": "Scoped path to the frame file pinned as the Pod banner (e.g. project/banner.html)."
               }
             }
           }

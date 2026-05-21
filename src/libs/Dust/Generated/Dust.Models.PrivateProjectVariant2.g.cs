@@ -40,6 +40,12 @@ namespace Dust
         public global::System.DateTimeOffset? LastTodoAnalysisAt { get; set; }
 
         /// <summary>
+        /// Scoped path to the frame file pinned as the Pod banner (e.g. project/banner.html).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pinnedFramePath")]
+        public string? PinnedFramePath { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -57,6 +63,9 @@ namespace Dust
         /// <param name="lastTodoAnalysisAt">
         /// Unix timestamp (ms) of the last automatic todo suggestion scan, if any.
         /// </param>
+        /// <param name="pinnedFramePath">
+        /// Scoped path to the frame file pinned as the Pod banner (e.g. project/banner.html).
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -65,13 +74,15 @@ namespace Dust
             bool? isMember,
             int? archivedAt,
             bool? todoGenerationEnabled,
-            global::System.DateTimeOffset? lastTodoAnalysisAt)
+            global::System.DateTimeOffset? lastTodoAnalysisAt,
+            string? pinnedFramePath)
         {
             this.Description = description;
             this.IsMember = isMember;
             this.ArchivedAt = archivedAt;
             this.TodoGenerationEnabled = todoGenerationEnabled;
             this.LastTodoAnalysisAt = lastTodoAnalysisAt;
+            this.PinnedFramePath = pinnedFramePath;
         }
 
         /// <summary>

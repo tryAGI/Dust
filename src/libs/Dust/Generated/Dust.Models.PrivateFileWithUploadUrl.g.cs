@@ -85,6 +85,12 @@ namespace Dust
         public string? PublicUrl { get; set; }
 
         /// <summary>
+        /// path when the file is ready on a mount (e.g. `project/report.pdf` or `conversation/chart.png`). Same shape as mount file listing entries.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
+        public string? Path { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -106,6 +112,9 @@ namespace Dust
         /// <param name="version"></param>
         /// <param name="downloadUrl"></param>
         /// <param name="publicUrl"></param>
+        /// <param name="path">
+        /// path when the file is ready on a mount (e.g. `project/report.pdf` or `conversation/chart.png`). Same shape as mount file listing entries.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -120,7 +129,8 @@ namespace Dust
             string uploadUrl,
             int? version,
             string? downloadUrl,
-            string? publicUrl)
+            string? publicUrl,
+            string? path)
         {
             this.SId = sId ?? throw new global::System.ArgumentNullException(nameof(sId));
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
@@ -133,6 +143,7 @@ namespace Dust
             this.UploadUrl = uploadUrl ?? throw new global::System.ArgumentNullException(nameof(uploadUrl));
             this.DownloadUrl = downloadUrl;
             this.PublicUrl = publicUrl;
+            this.Path = path;
         }
 
         /// <summary>
