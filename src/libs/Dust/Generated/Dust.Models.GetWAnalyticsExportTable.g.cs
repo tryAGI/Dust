@@ -17,6 +17,10 @@ namespace Dust
         /// </summary>
         Agents,
         /// <summary>
+        /// Detailed message-level feedback (thumbs, content, conversation URL).
+        /// </summary>
+        Feedback,
+        /// <summary>
         /// Detailed message-level logs.
         /// </summary>
         Messages,
@@ -56,6 +60,7 @@ namespace Dust
             {
                 GetWAnalyticsExportTable.ActiveUsers => "active_users",
                 GetWAnalyticsExportTable.Agents => "agents",
+                GetWAnalyticsExportTable.Feedback => "feedback",
                 GetWAnalyticsExportTable.Messages => "messages",
                 GetWAnalyticsExportTable.SkillUsage => "skill_usage",
                 GetWAnalyticsExportTable.Source => "source",
@@ -74,6 +79,7 @@ namespace Dust
             {
                 "active_users" => GetWAnalyticsExportTable.ActiveUsers,
                 "agents" => GetWAnalyticsExportTable.Agents,
+                "feedback" => GetWAnalyticsExportTable.Feedback,
                 "messages" => GetWAnalyticsExportTable.Messages,
                 "skill_usage" => GetWAnalyticsExportTable.SkillUsage,
                 "source" => GetWAnalyticsExportTable.Source,
