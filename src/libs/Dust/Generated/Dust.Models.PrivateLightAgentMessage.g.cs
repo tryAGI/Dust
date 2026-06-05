@@ -126,6 +126,12 @@ namespace Dust
         public int? CompletionDurationMs { get; set; }
 
         /// <summary>
+        /// Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("costCredits")]
+        public int? CostCredits { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("activitySteps")]
@@ -166,6 +172,9 @@ namespace Dust
         /// <param name="generatedFiles"></param>
         /// <param name="richMentions"></param>
         /// <param name="completionDurationMs"></param>
+        /// <param name="costCredits">
+        /// Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
+        /// </param>
         /// <param name="activitySteps"></param>
         /// <param name="reactions"></param>
 #if NET7_0_OR_GREATER
@@ -190,6 +199,7 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageGeneratedFile>? generatedFiles,
             global::System.Collections.Generic.IList<global::Dust.PrivateRichMentionWithStatus>? richMentions,
             int? completionDurationMs,
+            int? costCredits,
             global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>? activitySteps,
             global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions)
         {
@@ -211,6 +221,7 @@ namespace Dust
             this.GeneratedFiles = generatedFiles;
             this.RichMentions = richMentions;
             this.CompletionDurationMs = completionDurationMs;
+            this.CostCredits = costCredits;
             this.ActivitySteps = activitySteps;
             this.Reactions = reactions;
         }

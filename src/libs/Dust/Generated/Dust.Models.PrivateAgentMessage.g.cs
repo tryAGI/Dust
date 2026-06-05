@@ -149,6 +149,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? Reactions { get; set; }
 
         /// <summary>
+        /// Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("costCredits")]
+        public int? CostCredits { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -185,6 +191,9 @@ namespace Dust
         /// <param name="richMentions"></param>
         /// <param name="completionDurationMs"></param>
         /// <param name="reactions"></param>
+        /// <param name="costCredits">
+        /// Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -210,7 +219,8 @@ namespace Dust
             bool? skipToolsValidation,
             global::System.Collections.Generic.IList<global::Dust.PrivateRichMentionWithStatus>? richMentions,
             int? completionDurationMs,
-            global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions)
+            global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions,
+            int? costCredits)
         {
             this.Id = id;
             this.AgentMessageId = agentMessageId;
@@ -234,6 +244,7 @@ namespace Dust
             this.RichMentions = richMentions;
             this.CompletionDurationMs = completionDurationMs;
             this.Reactions = reactions;
+            this.CostCredits = costCredits;
         }
 
         /// <summary>
