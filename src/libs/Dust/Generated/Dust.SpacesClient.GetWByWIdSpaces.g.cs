@@ -438,38 +438,6 @@ namespace Dust
                                         h => h.Value));
                             }
                             // 
-                            if ((int)__response.StatusCode == 405)
-                            {
-                                string? __content_405 = null;
-                                global::System.Exception? __exception_405 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_405 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                    }
-                                    else
-                                    {
-                                        __content_405 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_405 = __ex;
-                                }
-
-
-                                throw global::Dust.ApiException.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_405 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_405,
-                                    responseBody: __content_405,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
-                            // 
                             if ((int)__response.StatusCode == 500)
                             {
                                 string? __content_500 = null;

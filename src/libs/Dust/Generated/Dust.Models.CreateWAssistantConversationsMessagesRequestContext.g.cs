@@ -33,6 +33,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? ClientSideMCPServerIds { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("selectedMCPServerViewIds")]
+        public global::System.Collections.Generic.IList<string>? SelectedMCPServerViewIds { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -45,6 +51,7 @@ namespace Dust
         /// <param name="profilePictureUrl"></param>
         /// <param name="origin"></param>
         /// <param name="clientSideMCPServerIds"></param>
+        /// <param name="selectedMCPServerViewIds"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -52,12 +59,14 @@ namespace Dust
             string? timezone,
             string? profilePictureUrl,
             string? origin,
-            global::System.Collections.Generic.IList<string>? clientSideMCPServerIds)
+            global::System.Collections.Generic.IList<string>? clientSideMCPServerIds,
+            global::System.Collections.Generic.IList<string>? selectedMCPServerViewIds)
         {
             this.Timezone = timezone;
             this.ProfilePictureUrl = profilePictureUrl;
             this.Origin = origin;
             this.ClientSideMCPServerIds = clientSideMCPServerIds;
+            this.SelectedMCPServerViewIds = selectedMCPServerViewIds;
         }
 
         /// <summary>

@@ -258,7 +258,7 @@
             "in": "query",
             "name": "table",
             "required": true,
-            "description": "The analytics table to export:\n- \"usage_metrics\": Messages, conversations, and active users over time.\n- \"active_users\": Daily, weekly, and monthly active user counts.\n- \"source\": Message volume by context origin (web, slack, etc.).\n- \"agents\": Top agents by message count.\n- \"users\": Top users by message count.\n- \"skill_usage\": Skill executions and unique users over time.\n- \"tool_usage\": Tool executions and unique users over time.\n- \"messages\": Detailed message-level logs.\n",
+            "description": "The analytics table to export:\n- \"usage_metrics\": Messages, conversations, and active users over time.\n- \"active_users\": Daily, weekly, and monthly active user counts.\n- \"source\": Message volume by context origin (web, slack, etc.).\n- \"agents\": Top agents by message count.\n- \"users\": Top users by message count.\n- \"skill_usage\": Skill executions and unique users over time.\n- \"tool_usage\": Tool executions and unique users over time.\n- \"messages\": Detailed message-level logs.\n- \"feedback\": Detailed message-level feedback (thumbs, content, conversation URL).\n",
             "schema": {
               "type": "string",
               "enum": [
@@ -269,7 +269,8 @@
                 "users",
                 "skill_usage",
                 "tool_usage",
-                "messages"
+                "messages",
+                "feedback"
               ]
             }
           },
@@ -340,9 +341,6 @@
           },
           "403": {
             "description": "Requires an API key with admin scope"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -429,9 +427,6 @@
           "404": {
             "description": "Workspace not found."
           },
-          "405": {
-            "description": "Method not supported. Only GET is expected."
-          },
           "500": {
             "description": "Internal Server Error."
           }
@@ -497,9 +492,6 @@
           },
           "404": {
             "description": "Agent configuration not found."
-          },
-          "405": {
-            "description": "Method not supported. Only GET is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -577,9 +569,6 @@
           },
           "404": {
             "description": "Agent configuration not found."
-          },
-          "405": {
-            "description": "Method not supported. Only GET or PATCH is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -795,9 +784,6 @@
           "404": {
             "description": "Agent configuration not found."
           },
-          "405": {
-            "description": "Method not supported. Only GET or PATCH is expected."
-          },
           "500": {
             "description": "Internal Server Error."
           }
@@ -861,9 +847,6 @@
           },
           "404": {
             "description": "Agent configuration not found."
-          },
-          "405": {
-            "description": "Method not supported. Only GET, PATCH or DELETE is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -1062,9 +1045,6 @@
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
           },
-          "405": {
-            "description": "Method not supported. Only POST is expected."
-          },
           "500": {
             "description": "Internal Server Error."
           }
@@ -1130,9 +1110,6 @@
           },
           "404": {
             "description": "Workspace not found."
-          },
-          "405": {
-            "description": "Method not supported. Only GET is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -1212,9 +1189,6 @@
           },
           "400": {
             "description": "Invalid request (invalid query parameters or request body)"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -1337,9 +1311,6 @@
           },
           "404": {
             "description": "Conversation not found."
-          },
-          "405": {
-            "description": "Method not supported. Only GET is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -1520,9 +1491,6 @@
           },
           "404": {
             "description": "Conversation or file not found."
-          },
-          "405": {
-            "description": "Method not supported."
           }
         }
       }
@@ -1596,9 +1564,6 @@
           },
           "404": {
             "description": "Conversation not found."
-          },
-          "405": {
-            "description": "Method not supported. Only GET is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -1675,9 +1640,6 @@
           },
           "404": {
             "description": "Conversation not found."
-          },
-          "405": {
-            "description": "Method not supported. Only GET or PATCH is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -1778,9 +1740,6 @@
           },
           "404": {
             "description": "Conversation not found."
-          },
-          "405": {
-            "description": "Method not supported. Only GET is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -1887,9 +1846,6 @@
           },
           "404": {
             "description": "Conversation, message, or action not found"
-          },
-          "405": {
-            "description": "Method not allowed"
           },
           "500": {
             "description": "Internal server error"
@@ -2001,9 +1957,6 @@
           },
           "400": {
             "description": "Invalid request (message not found or not a user message)"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -2353,9 +2306,6 @@
           "404": {
             "description": "Conversation, message, or workspace not found"
           },
-          "405": {
-            "description": "Method not allowed"
-          },
           "500": {
             "description": "Internal server error"
           }
@@ -2598,9 +2548,6 @@
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
           },
-          "405": {
-            "description": "Method not supported. Only POST is expected."
-          },
           "500": {
             "description": "Internal Server Error."
           }
@@ -2688,9 +2635,6 @@
           },
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
-          },
-          "405": {
-            "description": "Method not supported. Only GET is expected."
           },
           "500": {
             "description": "Internal Server Error."
@@ -3210,9 +3154,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "405": {
-            "description": "Method not allowed"
           }
         }
       },
@@ -3295,9 +3236,6 @@
           },
           "404": {
             "description": "Space not found"
-          },
-          "405": {
-            "description": "Method not allowed"
           }
         }
       }
@@ -3371,9 +3309,6 @@
           "401": {
             "description": "Unauthorized"
           },
-          "405": {
-            "description": "Method not allowed"
-          },
           "500": {
             "description": "Internal server error"
           }
@@ -3444,9 +3379,6 @@
           },
           "404": {
             "description": "Workspace not found."
-          },
-          "405": {
-            "description": "Method not supported."
           }
         }
       },
@@ -3558,9 +3490,6 @@
           },
           "404": {
             "description": "Workspace not found."
-          },
-          "405": {
-            "description": "Method not supported."
           }
         }
       }
@@ -3778,9 +3707,6 @@
           "404": {
             "description": "Workspace or app not found."
           },
-          "405": {
-            "description": "Method not supported."
-          },
           "500": {
             "description": "Internal Server Error."
           }
@@ -3881,9 +3807,6 @@
           "404": {
             "description": "Workspace not found."
           },
-          "405": {
-            "description": "Method not supported."
-          },
           "500": {
             "description": "Internal Server Error."
           }
@@ -3940,9 +3863,6 @@
           },
           "404": {
             "description": "Data source view not found"
-          },
-          "405": {
-            "description": "Method not allowed"
           }
         }
       },
@@ -4045,9 +3965,6 @@
           "404": {
             "description": "Data source view not found"
           },
-          "405": {
-            "description": "Method not allowed"
-          },
           "500": {
             "description": "Internal server error - The data source view cannot be updated"
           }
@@ -4101,9 +4018,6 @@
           },
           "404": {
             "description": "Data source view not found"
-          },
-          "405": {
-            "description": "Method not allowed"
           }
         }
       }
@@ -4300,9 +4214,6 @@
           },
           "400": {
             "description": "Invalid request error"
-          },
-          "405": {
-            "description": "Method not supported error"
           }
         }
       }
@@ -4366,9 +4277,6 @@
           },
           "404": {
             "description": "Workspace not found."
-          },
-          "405": {
-            "description": "Method not supported."
           },
           "500": {
             "description": "Internal Server Error."
@@ -4445,9 +4353,6 @@
           },
           "404": {
             "description": "Data source not found."
-          },
-          "405": {
-            "description": "Method not supported."
           },
           "500": {
             "description": "Internal Server Error."
@@ -4529,9 +4434,6 @@
           },
           "404": {
             "description": "Data source or document not found."
-          },
-          "405": {
-            "description": "Method not supported."
           },
           "500": {
             "description": "Internal Server Error."
@@ -4672,9 +4574,6 @@
           "404": {
             "description": "Data source or document not found."
           },
-          "405": {
-            "description": "Method not supported."
-          },
           "429": {
             "description": "Rate limit exceeded."
           },
@@ -4761,9 +4660,6 @@
           },
           "404": {
             "description": "Data source or document not found."
-          },
-          "405": {
-            "description": "Method not supported."
           },
           "500": {
             "description": "Internal Server Error."
@@ -4856,9 +4752,6 @@
           },
           "404": {
             "description": "Data source or workspace not found."
-          },
-          "405": {
-            "description": "Method not supported."
           },
           "500": {
             "description": "Internal Server Error."
@@ -4958,9 +4851,6 @@
           },
           "404": {
             "description": "The data source was not found"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -5157,9 +5047,6 @@
           },
           "400": {
             "description": "Invalid request error"
-          },
-          "405": {
-            "description": "Method not supported error"
           }
         }
       }
@@ -5227,9 +5114,6 @@
           },
           "404": {
             "description": "The table was not found"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       },
@@ -5288,9 +5172,6 @@
           },
           "404": {
             "description": "The table was not found"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -5367,9 +5248,6 @@
           },
           "404": {
             "description": "The row was not found"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       },
@@ -5437,9 +5315,6 @@
           },
           "404": {
             "description": "The row was not found"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -5524,8 +5399,17 @@
               }
             }
           },
-          "405": {
-            "description": "Method not supported"
+          "400": {
+            "description": "Bad Request. Missing or invalid parameters."
+          },
+          "401": {
+            "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "404": {
+            "description": "Table, data source or workspace not found."
+          },
+          "500": {
+            "description": "Internal Server Error."
           }
         }
       },
@@ -5655,9 +5539,6 @@
           },
           "404": {
             "description": "Data source or workspace not found."
-          },
-          "405": {
-            "description": "Method not supported."
           },
           "500": {
             "description": "Internal Server Error."
@@ -5821,9 +5702,6 @@
           },
           "400": {
             "description": "Invalid request"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -5881,9 +5759,6 @@
           },
           "404": {
             "description": "The workspace was not found"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -5948,9 +5823,6 @@
           "404": {
             "description": "Workspace not found."
           },
-          "405": {
-            "description": "Method not supported."
-          },
           "500": {
             "description": "Internal Server Error."
           }
@@ -6007,9 +5879,6 @@
           },
           "404": {
             "description": "Workspace not found."
-          },
-          "405": {
-            "description": "Method not supported."
           },
           "500": {
             "description": "Internal Server Error."
@@ -6068,9 +5937,6 @@
           },
           "404": {
             "description": "Workspace or webhook source not found"
-          },
-          "405": {
-            "description": "Method not allowed"
           }
         }
       }
@@ -6199,9 +6065,6 @@
           },
           "404": {
             "description": "The workspace was not found"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -7068,9 +6931,6 @@
           },
           "404": {
             "description": "Conversation, message, or action not found"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -7717,6 +7577,12 @@
                         "nullable": true
                       },
                       "clientSideMCPServerIds": {
+                        "type": "array",
+                        "items": {
+                          "type": "string"
+                        }
+                      },
+                      "selectedMCPServerViewIds": {
                         "type": "array",
                         "items": {
                           "type": "string"
@@ -9508,9 +9374,6 @@
           },
           "401": {
             "description": "Unauthorized"
-          },
-          "405": {
-            "description": "Method not supported"
           }
         }
       }
@@ -10459,6 +10322,11 @@
             "items": {
               "$ref": "#/components/schemas/PrivateReaction"
             }
+          },
+          "costCredits": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message."
           }
         }
       },
@@ -10600,6 +10468,11 @@
           "completionDurationMs": {
             "type": "integer",
             "nullable": true
+          },
+          "costCredits": {
+            "type": "integer",
+            "nullable": true,
+            "description": "Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message."
           },
           "activitySteps": {
             "type": "array",
