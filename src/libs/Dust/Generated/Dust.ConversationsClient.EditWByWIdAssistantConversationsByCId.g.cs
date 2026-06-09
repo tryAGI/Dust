@@ -42,13 +42,13 @@ namespace Dust
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
             ref string cId,
-            global::Dust.PatchWAssistantConversationsRequest request);
+            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2> request);
         partial void PrepareEditWByWIdAssistantConversationsByCIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
             string cId,
-            global::Dust.PatchWAssistantConversationsRequest request);
+            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2> request);
         partial void ProcessEditWByWIdAssistantConversationsByCIdResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -59,8 +59,8 @@ namespace Dust
             ref string content);
 
         /// <summary>
-        /// Update conversation read status<br/>
-        /// Mark a conversation as read or unread in the workspace identified by {wId}.
+        /// Update a conversation<br/>
+        /// Update a conversation's title or mark it as read or unread in the workspace identified by {wId}.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -72,7 +72,7 @@ namespace Dust
             string wId,
             string cId,
 
-            global::Dust.PatchWAssistantConversationsRequest request,
+            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2> request,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -88,8 +88,8 @@ namespace Dust
             return __response.Body;
         }
         /// <summary>
-        /// Update conversation read status<br/>
-        /// Mark a conversation as read or unread in the workspace identified by {wId}.
+        /// Update a conversation<br/>
+        /// Update a conversation's title or mark it as read or unread in the workspace identified by {wId}.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -101,12 +101,10 @@ namespace Dust
             string wId,
             string cId,
 
-            global::Dust.PatchWAssistantConversationsRequest request,
+            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2> request,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
             PrepareEditWByWIdAssistantConversationsByCIdArguments(
@@ -595,25 +593,22 @@ namespace Dust
             }
         }
         /// <summary>
-        /// Update conversation read status<br/>
-        /// Mark a conversation as read or unread in the workspace identified by {wId}.
+        /// Update a conversation<br/>
+        /// Update a conversation's title or mark it as read or unread in the workspace identified by {wId}.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
-        /// <param name="read"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dust.PatchWAssistantConversationsResponse> EditWByWIdAssistantConversationsByCIdAsync(
             string wId,
             string cId,
-            bool? read = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Dust.PatchWAssistantConversationsRequest
+            var __request = new global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>
             {
-                Read = read,
             };
 
             return await EditWByWIdAssistantConversationsByCIdAsync(
