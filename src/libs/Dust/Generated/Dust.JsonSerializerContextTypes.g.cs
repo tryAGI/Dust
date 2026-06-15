@@ -216,111 +216,111 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessage? Type47 { get; set; }
+        public double? Type47 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessageType? Type48 { get; set; }
+        public global::Dust.PrivateLightAgentMessage? Type48 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessageVisibility? Type49 { get; set; }
+        public global::Dust.PrivateLightAgentMessageType? Type49 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessageStatus? Type50 { get; set; }
+        public global::Dust.PrivateLightAgentMessageVisibility? Type50 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessageError? Type51 { get; set; }
+        public global::Dust.PrivateLightAgentMessageStatus? Type51 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessageConfiguration? Type52 { get; set; }
+        public global::Dust.PrivateLightAgentMessageError? Type52 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dust.PrivateCitation>? Type53 { get; set; }
+        public global::Dust.PrivateLightAgentMessageConfiguration? Type53 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateCitation? Type54 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Dust.PrivateCitation>? Type54 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageGeneratedFile>? Type55 { get; set; }
+        public global::Dust.PrivateCitation? Type55 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessageGeneratedFile? Type56 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageGeneratedFile>? Type56 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>? Type57 { get; set; }
+        public global::Dust.PrivateLightAgentMessageGeneratedFile? Type57 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessageActivityStep? Type58 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>? Type58 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentMessageActivityStepType? Type59 { get; set; }
+        public global::Dust.PrivateLightAgentMessageActivityStep? Type59 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateContentFragmentType? Type60 { get; set; }
+        public global::Dust.PrivateLightAgentMessageActivityStepType? Type60 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateContentFragmentVisibility? Type61 { get; set; }
+        public global::Dust.PrivateContentFragmentType? Type61 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateContentFragmentContext? Type62 { get; set; }
+        public global::Dust.PrivateContentFragmentVisibility? Type62 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateContentFragmentContentFragmentVersion? Type63 { get; set; }
+        public global::Dust.PrivateContentFragmentContext? Type63 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateContentFragmentContentFragmentType? Type64 { get; set; }
+        public global::Dust.PrivateContentFragmentContentFragmentVersion? Type64 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateContentFragmentExpiredReason? Type65 { get; set; }
+        public global::Dust.PrivateContentFragmentContentFragmentType? Type65 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public long? Type66 { get; set; }
+        public global::Dust.PrivateContentFragmentExpiredReason? Type66 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateCompactionMessageType? Type67 { get; set; }
+        public long? Type67 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateCompactionMessageVisibility? Type68 { get; set; }
+        public global::Dust.PrivateCompactionMessageType? Type68 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateCompactionMessageStatus? Type69 { get; set; }
+        public global::Dust.PrivateCompactionMessageVisibility? Type69 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentConfigurationStatus? Type70 { get; set; }
+        public global::Dust.PrivateCompactionMessageStatus? Type70 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentConfigurationScope? Type71 { get; set; }
+        public global::Dust.PrivateLightAgentConfigurationStatus? Type71 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PrivateLightAgentConfigurationModel? Type72 { get; set; }
+        public global::Dust.PrivateLightAgentConfigurationScope? Type72 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public double? Type73 { get; set; }
+        public global::Dust.PrivateLightAgentConfigurationModel? Type73 { get; set; }
         /// <summary>
         /// 
         /// </summary>
