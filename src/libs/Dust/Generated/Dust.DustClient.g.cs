@@ -134,6 +134,16 @@ namespace Dust
         };
 
         /// <summary>
+        /// 
+        /// </summary>
+        public PrivateAssistantClient PrivateAssistant => new PrivateAssistantClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
         /// Private API - Authentication (WorkOS).
         /// </summary>
         public PrivateAuthenticationClient PrivateAuthentication => new PrivateAuthenticationClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)

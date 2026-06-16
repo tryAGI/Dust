@@ -112,6 +112,11 @@ namespace Dust
         public PrivateAgentsClient PrivateAgents { get; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public PrivateAssistantClient PrivateAssistant { get; }
+
+        /// <summary>
         /// Private API - Authentication (WorkOS).
         /// </summary>
         public PrivateAuthenticationClient PrivateAuthentication { get; }
