@@ -592,6 +592,9 @@ namespace Dust
         /// Path of this file inside the sandbox conversation mount.<br/>
         /// Example: conversation/report.csv
         /// </param>
+        /// <param name="skipDataSourceIndexing">
+        /// Whether data source indexing was skipped for this file.
+        /// </param>
         /// <param name="skipFileProcessing">
         /// Whether upload-time file processing was skipped.
         /// </param>
@@ -616,6 +619,7 @@ namespace Dust
             string? url = default,
             string? fileId = default,
             string? path = default,
+            bool? skipDataSourceIndexing = default,
             bool? skipFileProcessing = default,
             string? nodeId = default,
             string? nodeDataSourceViewId = default,
@@ -631,6 +635,7 @@ namespace Dust
                 Url = url,
                 FileId = fileId,
                 Path = path,
+                SkipDataSourceIndexing = skipDataSourceIndexing,
                 SkipFileProcessing = skipFileProcessing,
                 NodeId = nodeId,
                 NodeDataSourceViewId = nodeDataSourceViewId,

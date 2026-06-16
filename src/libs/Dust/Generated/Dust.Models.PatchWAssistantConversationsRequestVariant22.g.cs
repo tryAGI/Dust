@@ -6,13 +6,14 @@ namespace Dust
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class PatchWAssistantConversationsRequest
+    public sealed partial class PatchWAssistantConversationsRequestVariant22
     {
         /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("read")]
-        public bool? Read { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool Read { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -21,22 +22,22 @@ namespace Dust
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PatchWAssistantConversationsRequest" /> class.
+        /// Initializes a new instance of the <see cref="PatchWAssistantConversationsRequestVariant22" /> class.
         /// </summary>
         /// <param name="read"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public PatchWAssistantConversationsRequest(
-            bool? read)
+        public PatchWAssistantConversationsRequestVariant22(
+            bool read)
         {
             this.Read = read;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PatchWAssistantConversationsRequest" /> class.
+        /// Initializes a new instance of the <see cref="PatchWAssistantConversationsRequestVariant22" /> class.
         /// </summary>
-        public PatchWAssistantConversationsRequest()
+        public PatchWAssistantConversationsRequestVariant22()
         {
         }
 

@@ -1571,8 +1571,8 @@
         }
       },
       "patch": {
-        "summary": "Update conversation read status",
-        "description": "Mark a conversation as read or unread in the workspace identified by {wId}.",
+        "summary": "Update a conversation",
+        "description": "Update a conversation's title or mark it as read or unread in the workspace identified by {wId}.",
         "tags": [
           "Conversations"
         ],
@@ -1606,19 +1606,37 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "read": {
-                    "type": "boolean"
+                "oneOf": [
+                  {
+                    "type": "object",
+                    "required": [
+                      "read"
+                    ],
+                    "properties": {
+                      "read": {
+                        "type": "boolean"
+                      }
+                    }
+                  },
+                  {
+                    "type": "object",
+                    "required": [
+                      "title"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      }
+                    }
                   }
-                }
+                ]
               }
             }
           }
         },
         "responses": {
           "200": {
-            "description": "Conversation marked as read successfully.",
+            "description": "Conversation updated successfully.",
             "content": {
               "application/json": {
                 "schema": {
@@ -2737,6 +2755,61 @@
           },
           "429": {
             "description": "Rate limit exceeded"
+          }
+        }
+      }
+    },
+    "/api/v1/w/{wId}/mcp/deregister": {
+      "post": {
+        "summary": "Deregister a client-side MCP server",
+        "description": "[Documentation](https://docs.dust.tt/docs/client-side-mcp-server)\nRemove a previously registered client-side MCP server registration.\n",
+        "tags": [
+          "MCP"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "wId",
+            "required": true,
+            "description": "ID of the workspace",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "serverId"
+                ],
+                "properties": {
+                  "serverId": {
+                    "type": "string",
+                    "description": "The ID of the registered MCP server"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Server deregistered successfully"
+          },
+          "401": {
+            "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "Forbidden. User does not have access to the workspace."
           }
         }
       }
@@ -8074,6 +8147,58 @@
         }
       }
     },
+    "/api/w/{wId}/assistant/go-template": {
+      "get": {
+        "summary": "Resolve a conversation go template draft",
+        "description": "Fetches a Contentful conversation go template by slug and returns a composer-ready draft with optional pre-uploaded attachments.",
+        "tags": [
+          "Private Assistant"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "wId",
+            "required": true,
+            "description": "ID of the workspace",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "query",
+            "name": "slug",
+            "required": true,
+            "description": "Contentful template slug",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Composer draft resolved from the template",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetGoTemplateDraftResponseBody"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Template not found or disabled"
+          },
+          "422": {
+            "description": "Missing slug query parameter"
+          }
+        }
+      }
+    },
     "/api/w/{wId}/assistant/mentions/suggestions": {
       "get": {
         "summary": "Get mention suggestions",
@@ -8388,6 +8513,9 @@
               }
             }
           },
+          "400": {
+            "description": "Invalid file content (e.g. a CSV with an unsupported encoding)"
+          },
           "403": {
             "description": "Permission denied"
           },
@@ -8494,7 +8622,8 @@
                       "upsert_document",
                       "upsert_table",
                       "project_context",
-                      "skill_attachment"
+                      "skill_attachment",
+                      "workspace_branding"
                     ]
                   },
                   "useCaseMetadata": {
@@ -10327,6 +10456,11 @@
             "type": "integer",
             "nullable": true,
             "description": "Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message."
+          },
+          "subAgentCostCredits": {
+            "type": "number",
+            "nullable": true,
+            "description": "Aggregated AWU credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise."
           }
         }
       },
@@ -10473,6 +10607,11 @@
             "type": "integer",
             "nullable": true,
             "description": "Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message."
+          },
+          "subAgentCostCredits": {
+            "type": "number",
+            "nullable": true,
+            "description": "Aggregated AWU credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise."
           },
           "activitySteps": {
             "type": "array",
@@ -10637,6 +10776,10 @@
             "type": "string",
             "nullable": true,
             "description": "Path of this file inside the sandbox conversation mount."
+          },
+          "skipDataSourceIndexing": {
+            "type": "boolean",
+            "description": "Whether data source indexing was skipped for this file."
           },
           "skipFileProcessing": {
             "type": "boolean",
@@ -10920,6 +11063,72 @@
               },
               "down": {
                 "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "GetGoTemplateDraftResponseBody": {
+        "type": "object",
+        "description": "Composer draft resolved from a Contentful conversation go template.",
+        "required": [
+          "title",
+          "prompt",
+          "attachments",
+          "attachmentErrors"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "prompt": {
+            "type": "string"
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "fileId",
+                "name",
+                "contentType",
+                "size",
+                "url"
+              ],
+              "properties": {
+                "fileId": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "contentType": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "integer"
+                },
+                "url": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "attachmentErrors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "url",
+                "message"
+              ],
+              "properties": {
+                "url": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                }
               }
             }
           }
@@ -13129,6 +13338,10 @@
             "nullable": true,
             "description": "Path of this file inside the sandbox conversation mount.",
             "example": "conversation/report.csv"
+          },
+          "skipDataSourceIndexing": {
+            "type": "boolean",
+            "description": "Whether data source indexing was skipped for this file."
           },
           "skipFileProcessing": {
             "type": "boolean",

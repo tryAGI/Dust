@@ -155,6 +155,12 @@ namespace Dust
         public int? CostCredits { get; set; }
 
         /// <summary>
+        /// Aggregated AWU credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subAgentCostCredits")]
+        public double? SubAgentCostCredits { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -194,6 +200,9 @@ namespace Dust
         /// <param name="costCredits">
         /// Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
         /// </param>
+        /// <param name="subAgentCostCredits">
+        /// Aggregated AWU credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -220,7 +229,8 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.PrivateRichMentionWithStatus>? richMentions,
             int? completionDurationMs,
             global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions,
-            int? costCredits)
+            int? costCredits,
+            double? subAgentCostCredits)
         {
             this.Id = id;
             this.AgentMessageId = agentMessageId;
@@ -245,6 +255,7 @@ namespace Dust
             this.CompletionDurationMs = completionDurationMs;
             this.Reactions = reactions;
             this.CostCredits = costCredits;
+            this.SubAgentCostCredits = subAgentCostCredits;
         }
 
         /// <summary>

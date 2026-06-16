@@ -3,10 +3,10 @@
 
 namespace Dust
 {
-    public partial class PrivateConversationsClient
+    public partial class McpClient
     {
 
-        private static readonly global::Dust.AutoSDKServer[] s_EditWByWIdAssistantConversationsByCIdServers = new global::Dust.AutoSDKServer[]
+        private static readonly global::Dust.AutoSDKServer[] s_CreateWByWIdMcpDeregisterServers = new global::Dust.AutoSDKServer[]
         {            new global::Dust.AutoSDKServer(
                 id: "https-dust-tt",
                 name: "Dust.tt API (us-central1)",
@@ -20,7 +20,7 @@ namespace Dust
         };
 
 
-        private static readonly global::Dust.EndPointSecurityRequirement s_EditWByWIdAssistantConversationsByCIdSecurityRequirement0 =
+        private static readonly global::Dust.EndPointSecurityRequirement s_CreateWByWIdMcpDeregisterSecurityRequirement0 =
             new global::Dust.EndPointSecurityRequirement
             {
                 Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
@@ -34,90 +34,79 @@ namespace Dust
                     },
                 },
             };
-        private static readonly global::Dust.EndPointSecurityRequirement[] s_EditWByWIdAssistantConversationsByCIdSecurityRequirements =
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_CreateWByWIdMcpDeregisterSecurityRequirements =
             new global::Dust.EndPointSecurityRequirement[]
-            {                s_EditWByWIdAssistantConversationsByCIdSecurityRequirement0,
+            {                s_CreateWByWIdMcpDeregisterSecurityRequirement0,
             };
-        partial void PrepareEditWByWIdAssistantConversationsByCIdArguments(
+        partial void PrepareCreateWByWIdMcpDeregisterArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
-            ref string cId,
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request);
-        partial void PrepareEditWByWIdAssistantConversationsByCIdRequest(
+            global::Dust.CreateWMcpDeregisterRequest request);
+        partial void PrepareCreateWByWIdMcpDeregisterRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
-            string cId,
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request);
-        partial void ProcessEditWByWIdAssistantConversationsByCIdResponse(
+            global::Dust.CreateWMcpDeregisterRequest request);
+        partial void ProcessCreateWByWIdMcpDeregisterResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessEditWByWIdAssistantConversationsByCIdResponseContent(
-            global::System.Net.Http.HttpClient httpClient,
-            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
-            ref string content);
-
         /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+        /// Deregister a client-side MCP server<br/>
+        /// [Documentation](https://docs.dust.tt/docs/client-side-mcp-server)<br/>
+        /// Remove a previously registered client-side MCP server registration.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="cId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.PatchWAssistantConversationsResponse2> EditWByWIdAssistantConversationsByCIdAsync(
+        public async global::System.Threading.Tasks.Task CreateWByWIdMcpDeregisterAsync(
             string wId,
-            string cId,
 
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request,
+            global::Dust.CreateWMcpDeregisterRequest request,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await EditWByWIdAssistantConversationsByCIdAsResponseAsync(
+            await CreateWByWIdMcpDeregisterAsResponseAsync(
                 wId: wId,
-                cId: cId,
 
                 request: request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
-
-            return __response.Body;
         }
         /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+        /// Deregister a client-side MCP server<br/>
+        /// [Documentation](https://docs.dust.tt/docs/client-side-mcp-server)<br/>
+        /// Remove a previously registered client-side MCP server registration.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="cId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.PatchWAssistantConversationsResponse2>> EditWByWIdAssistantConversationsByCIdAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse> CreateWByWIdMcpDeregisterAsResponseAsync(
             string wId,
-            string cId,
 
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request,
+            global::Dust.CreateWMcpDeregisterRequest request,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
-            PrepareEditWByWIdAssistantConversationsByCIdArguments(
+            PrepareCreateWByWIdMcpDeregisterArguments(
                 httpClient: HttpClient,
                 wId: ref wId,
-                cId: ref cId,
                 request: request);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_EditWByWIdAssistantConversationsByCIdSecurityRequirements,
-                operationName: "EditWByWIdAssistantConversationsByCIdAsync");
+                securityRequirements: s_CreateWByWIdMcpDeregisterSecurityRequirements,
+                operationName: "CreateWByWIdMcpDeregisterAsync");
 
             using var __timeoutCancellationTokenSource = global::Dust.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -137,9 +126,9 @@ namespace Dust
             {
 
                             var __pathBuilder = new global::Dust.PathBuilder(
-                                path: $"/api/w/{wId}/assistant/conversations/{cId}",
+                                path: $"/api/v1/w/{wId}/mcp/deregister",
                                 baseUri: ResolveBaseUri(
-                                servers: s_EditWByWIdAssistantConversationsByCIdServers,
+                                servers: s_CreateWByWIdMcpDeregisterServers,
                                 defaultBaseUrl: "https://dust.tt/"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -147,7 +136,7 @@ namespace Dust
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: new global::System.Net.Http.HttpMethod("PATCH"),
+                    method: global::System.Net.Http.HttpMethod.Post,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -184,11 +173,10 @@ namespace Dust
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareEditWByWIdAssistantConversationsByCIdRequest(
+                PrepareCreateWByWIdMcpDeregisterRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     wId: wId!,
-                    cId: cId!,
                     request: request);
 
                 return __httpRequest;
@@ -206,10 +194,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "createWByWIdMcpDeregister",
+                                methodName: "CreateWByWIdMcpDeregisterAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/mcp/deregister\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -240,10 +228,10 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "createWByWIdMcpDeregister",
+                                methodName: "CreateWByWIdMcpDeregisterAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/mcp/deregister\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -281,10 +269,10 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "createWByWIdMcpDeregister",
+                                methodName: "CreateWByWIdMcpDeregisterAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/mcp/deregister\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -321,7 +309,7 @@ namespace Dust
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessEditWByWIdAssistantConversationsByCIdResponse(
+                ProcessCreateWByWIdMcpDeregisterResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -329,10 +317,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "createWByWIdMcpDeregister",
+                                methodName: "CreateWByWIdMcpDeregisterAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/mcp/deregister\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -351,10 +339,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "createWByWIdMcpDeregister",
+                                methodName: "CreateWByWIdMcpDeregisterAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/mcp/deregister\"",
+                                httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -400,6 +388,38 @@ namespace Dust
                                         h => h.Key,
                                         h => h.Value));
                             }
+                            // 
+                            if ((int)__response.StatusCode == 403)
+                            {
+                                string? __content_403 = null;
+                                global::System.Exception? __exception_403 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_403 = __ex;
+                                }
+
+
+                                throw global::Dust.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_403,
+                                    responseBody: __content_403,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -413,22 +433,15 @@ namespace Dust
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessEditWByWIdAssistantConversationsByCIdResponseContent(
-                                    httpClient: HttpClient,
-                                    httpResponseMessage: __response,
-                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dust.PatchWAssistantConversationsResponse2.FromJson(__content, JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.PatchWAssistantConversationsResponse2>(
+                return new global::Dust.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -448,19 +461,10 @@ namespace Dust
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
-                #if NET5_0_OR_GREATER
-                                        __effectiveCancellationToken
-                #endif
-                                    ).ConfigureAwait(false);
-
-                                    var __value = await global::Dust.PatchWAssistantConversationsResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.PatchWAssistantConversationsResponse2>(
+                                    return new global::Dust.AutoSDKHttpResponse(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -497,27 +501,30 @@ namespace Dust
             }
         }
         /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+        /// Deregister a client-side MCP server<br/>
+        /// [Documentation](https://docs.dust.tt/docs/client-side-mcp-server)<br/>
+        /// Remove a previously registered client-side MCP server registration.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="cId"></param>
+        /// <param name="serverId">
+        /// The ID of the registered MCP server
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.PatchWAssistantConversationsResponse2> EditWByWIdAssistantConversationsByCIdAsync(
+        public async global::System.Threading.Tasks.Task CreateWByWIdMcpDeregisterAsync(
             string wId,
-            string cId,
+            string serverId,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>
+            var __request = new global::Dust.CreateWMcpDeregisterRequest
             {
+                ServerId = serverId,
             };
 
-            return await EditWByWIdAssistantConversationsByCIdAsync(
+            await CreateWByWIdMcpDeregisterAsync(
                 wId: wId,
-                cId: cId,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

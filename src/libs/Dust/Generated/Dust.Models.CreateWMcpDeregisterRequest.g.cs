@@ -6,14 +6,14 @@ namespace Dust
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class PatchWAssistantConversationsRequestVariant2
+    public sealed partial class CreateWMcpDeregisterRequest
     {
         /// <summary>
-        /// 
+        /// The ID of the registered MCP server
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("serverId")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Title { get; set; }
+        public required string ServerId { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -22,22 +22,24 @@ namespace Dust
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PatchWAssistantConversationsRequestVariant2" /> class.
+        /// Initializes a new instance of the <see cref="CreateWMcpDeregisterRequest" /> class.
         /// </summary>
-        /// <param name="title"></param>
+        /// <param name="serverId">
+        /// The ID of the registered MCP server
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public PatchWAssistantConversationsRequestVariant2(
-            string title)
+        public CreateWMcpDeregisterRequest(
+            string serverId)
         {
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.ServerId = serverId ?? throw new global::System.ArgumentNullException(nameof(serverId));
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PatchWAssistantConversationsRequestVariant2" /> class.
+        /// Initializes a new instance of the <see cref="CreateWMcpDeregisterRequest" /> class.
         /// </summary>
-        public PatchWAssistantConversationsRequestVariant2()
+        public CreateWMcpDeregisterRequest()
         {
         }
 

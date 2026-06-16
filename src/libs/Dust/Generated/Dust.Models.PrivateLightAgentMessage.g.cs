@@ -132,6 +132,12 @@ namespace Dust
         public int? CostCredits { get; set; }
 
         /// <summary>
+        /// Aggregated AWU credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subAgentCostCredits")]
+        public double? SubAgentCostCredits { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("activitySteps")]
@@ -175,6 +181,9 @@ namespace Dust
         /// <param name="costCredits">
         /// Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
         /// </param>
+        /// <param name="subAgentCostCredits">
+        /// Aggregated AWU credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
+        /// </param>
         /// <param name="activitySteps"></param>
         /// <param name="reactions"></param>
 #if NET7_0_OR_GREATER
@@ -200,6 +209,7 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.PrivateRichMentionWithStatus>? richMentions,
             int? completionDurationMs,
             int? costCredits,
+            double? subAgentCostCredits,
             global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>? activitySteps,
             global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions)
         {
@@ -222,6 +232,7 @@ namespace Dust
             this.RichMentions = richMentions;
             this.CompletionDurationMs = completionDurationMs;
             this.CostCredits = costCredits;
+            this.SubAgentCostCredits = subAgentCostCredits;
             this.ActivitySteps = activitySteps;
             this.Reactions = reactions;
         }

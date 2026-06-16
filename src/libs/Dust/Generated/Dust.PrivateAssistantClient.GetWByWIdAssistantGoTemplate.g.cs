@@ -3,10 +3,10 @@
 
 namespace Dust
 {
-    public partial class PrivateConversationsClient
+    public partial class PrivateAssistantClient
     {
 
-        private static readonly global::Dust.AutoSDKServer[] s_EditWByWIdAssistantConversationsByCIdServers = new global::Dust.AutoSDKServer[]
+        private static readonly global::Dust.AutoSDKServer[] s_GetWByWIdAssistantGoTemplateServers = new global::Dust.AutoSDKServer[]
         {            new global::Dust.AutoSDKServer(
                 id: "https-dust-tt",
                 name: "Dust.tt API (us-central1)",
@@ -20,7 +20,7 @@ namespace Dust
         };
 
 
-        private static readonly global::Dust.EndPointSecurityRequirement s_EditWByWIdAssistantConversationsByCIdSecurityRequirement0 =
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdAssistantGoTemplateSecurityRequirement0 =
             new global::Dust.EndPointSecurityRequirement
             {
                 Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
@@ -34,53 +34,46 @@ namespace Dust
                     },
                 },
             };
-        private static readonly global::Dust.EndPointSecurityRequirement[] s_EditWByWIdAssistantConversationsByCIdSecurityRequirements =
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdAssistantGoTemplateSecurityRequirements =
             new global::Dust.EndPointSecurityRequirement[]
-            {                s_EditWByWIdAssistantConversationsByCIdSecurityRequirement0,
+            {                s_GetWByWIdAssistantGoTemplateSecurityRequirement0,
             };
-        partial void PrepareEditWByWIdAssistantConversationsByCIdArguments(
+        partial void PrepareGetWByWIdAssistantGoTemplateArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
-            ref string cId,
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request);
-        partial void PrepareEditWByWIdAssistantConversationsByCIdRequest(
+            ref string slug);
+        partial void PrepareGetWByWIdAssistantGoTemplateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
-            string cId,
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request);
-        partial void ProcessEditWByWIdAssistantConversationsByCIdResponse(
+            string slug);
+        partial void ProcessGetWByWIdAssistantGoTemplateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessEditWByWIdAssistantConversationsByCIdResponseContent(
+        partial void ProcessGetWByWIdAssistantGoTemplateResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+        /// Resolve a conversation go template draft<br/>
+        /// Fetches a Contentful conversation go template by slug and returns a composer-ready draft with optional pre-uploaded attachments.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="cId"></param>
-        /// <param name="request"></param>
+        /// <param name="slug"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.PatchWAssistantConversationsResponse2> EditWByWIdAssistantConversationsByCIdAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.GetGoTemplateDraftResponseBody> GetWByWIdAssistantGoTemplateAsync(
             string wId,
-            string cId,
-
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request,
+            string slug,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await EditWByWIdAssistantConversationsByCIdAsResponseAsync(
+            var __response = await GetWByWIdAssistantGoTemplateAsResponseAsync(
                 wId: wId,
-                cId: cId,
-
-                request: request,
+                slug: slug,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -88,36 +81,32 @@ namespace Dust
             return __response.Body;
         }
         /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+        /// Resolve a conversation go template draft<br/>
+        /// Fetches a Contentful conversation go template by slug and returns a composer-ready draft with optional pre-uploaded attachments.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="cId"></param>
-        /// <param name="request"></param>
+        /// <param name="slug"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.PatchWAssistantConversationsResponse2>> EditWByWIdAssistantConversationsByCIdAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetGoTemplateDraftResponseBody>> GetWByWIdAssistantGoTemplateAsResponseAsync(
             string wId,
-            string cId,
-
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request,
+            string slug,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareEditWByWIdAssistantConversationsByCIdArguments(
+            PrepareGetWByWIdAssistantGoTemplateArguments(
                 httpClient: HttpClient,
                 wId: ref wId,
-                cId: ref cId,
-                request: request);
+                slug: ref slug);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_EditWByWIdAssistantConversationsByCIdSecurityRequirements,
-                operationName: "EditWByWIdAssistantConversationsByCIdAsync");
+                securityRequirements: s_GetWByWIdAssistantGoTemplateSecurityRequirements,
+                operationName: "GetWByWIdAssistantGoTemplateAsync");
 
             using var __timeoutCancellationTokenSource = global::Dust.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -137,17 +126,20 @@ namespace Dust
             {
 
                             var __pathBuilder = new global::Dust.PathBuilder(
-                                path: $"/api/w/{wId}/assistant/conversations/{cId}",
+                                path: $"/api/w/{wId}/assistant/go-template",
                                 baseUri: ResolveBaseUri(
-                                servers: s_EditWByWIdAssistantConversationsByCIdServers,
+                                servers: s_GetWByWIdAssistantGoTemplateServers,
                                 defaultBaseUrl: "https://dust.tt/"));
+                            __pathBuilder
+                                .AddRequiredParameter("slug", slug)
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: new global::System.Net.Http.HttpMethod("PATCH"),
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -170,12 +162,6 @@ namespace Dust
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::Dust.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -184,12 +170,11 @@ namespace Dust
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareEditWByWIdAssistantConversationsByCIdRequest(
+                PrepareGetWByWIdAssistantGoTemplateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     wId: wId!,
-                    cId: cId!,
-                    request: request);
+                    slug: slug!);
 
                 return __httpRequest;
             }
@@ -206,10 +191,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "getWByWIdAssistantGoTemplate",
+                                methodName: "GetWByWIdAssistantGoTemplateAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/go-template\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -240,10 +225,10 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "getWByWIdAssistantGoTemplate",
+                                methodName: "GetWByWIdAssistantGoTemplateAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/go-template\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -281,10 +266,10 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "getWByWIdAssistantGoTemplate",
+                                methodName: "GetWByWIdAssistantGoTemplateAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/go-template\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -321,7 +306,7 @@ namespace Dust
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessEditWByWIdAssistantConversationsByCIdResponse(
+                ProcessGetWByWIdAssistantGoTemplateResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -329,10 +314,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "getWByWIdAssistantGoTemplate",
+                                methodName: "GetWByWIdAssistantGoTemplateAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/go-template\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -351,10 +336,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "editWByWIdAssistantConversationsByCId",
-                                methodName: "EditWByWIdAssistantConversationsByCIdAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}\"",
-                                httpMethod: "PATCH",
+                                operationId: "getWByWIdAssistantGoTemplate",
+                                methodName: "GetWByWIdAssistantGoTemplateAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/go-template\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -369,32 +354,64 @@ namespace Dust
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
-                            if ((int)__response.StatusCode == 401)
+                            if ((int)__response.StatusCode == 404)
                             {
-                                string? __content_401 = null;
-                                global::System.Exception? __exception_401 = null;
+                                string? __content_404 = null;
+                                global::System.Exception? __exception_404 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
-                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
                                     }
                                     else
                                     {
-                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    __exception_401 = __ex;
+                                    __exception_404 = __ex;
                                 }
 
 
                                 throw global::Dust.ApiException.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_401,
-                                    responseBody: __content_401,
+                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_404,
+                                    responseBody: __content_404,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // 
+                            if ((int)__response.StatusCode == 422)
+                            {
+                                string? __content_422 = null;
+                                global::System.Exception? __exception_422 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_422 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_422 = __ex;
+                                }
+
+
+                                throw global::Dust.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_422 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_422,
+                                    responseBody: __content_422,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -413,7 +430,7 @@ namespace Dust
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessEditWByWIdAssistantConversationsByCIdResponseContent(
+                                ProcessGetWByWIdAssistantGoTemplateResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -422,9 +439,9 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dust.PatchWAssistantConversationsResponse2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dust.GetGoTemplateDraftResponseBody.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.PatchWAssistantConversationsResponse2>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetGoTemplateDraftResponseBody>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -454,9 +471,9 @@ namespace Dust
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Dust.PatchWAssistantConversationsResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dust.GetGoTemplateDraftResponseBody.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.PatchWAssistantConversationsResponse2>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetGoTemplateDraftResponseBody>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -495,32 +512,6 @@ namespace Dust
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
-        /// </summary>
-        /// <param name="wId"></param>
-        /// <param name="cId"></param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.PatchWAssistantConversationsResponse2> EditWByWIdAssistantConversationsByCIdAsync(
-            string wId,
-            string cId,
-            global::Dust.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>
-            {
-            };
-
-            return await EditWByWIdAssistantConversationsByCIdAsync(
-                wId: wId,
-                cId: cId,
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }

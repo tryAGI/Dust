@@ -11,9 +11,9 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("title")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("read")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Title { get; set; }
+        public required bool Read { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -24,14 +24,14 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="PatchWAssistantConversationsRequestVariant1" /> class.
         /// </summary>
-        /// <param name="title"></param>
+        /// <param name="read"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PatchWAssistantConversationsRequestVariant1(
-            string title)
+            bool read)
         {
-            this.Title = title ?? throw new global::System.ArgumentNullException(nameof(title));
+            this.Read = read;
         }
 
         /// <summary>

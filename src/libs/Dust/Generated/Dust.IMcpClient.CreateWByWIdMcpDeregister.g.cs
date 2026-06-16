@@ -2,54 +2,55 @@
 
 namespace Dust
 {
-    public partial interface IPrivateConversationsClient
+    public partial interface IMcpClient
     {
         /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+        /// Deregister a client-side MCP server<br/>
+        /// [Documentation](https://docs.dust.tt/docs/client-side-mcp-server)<br/>
+        /// Remove a previously registered client-side MCP server registration.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="cId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.PatchWAssistantConversationsResponse2> EditWByWIdAssistantConversationsByCIdAsync(
+        global::System.Threading.Tasks.Task CreateWByWIdMcpDeregisterAsync(
             string wId,
-            string cId,
 
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request,
+            global::Dust.CreateWMcpDeregisterRequest request,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+        /// Deregister a client-side MCP server<br/>
+        /// [Documentation](https://docs.dust.tt/docs/client-side-mcp-server)<br/>
+        /// Remove a previously registered client-side MCP server registration.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="cId"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.PatchWAssistantConversationsResponse2>> EditWByWIdAssistantConversationsByCIdAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse> CreateWByWIdMcpDeregisterAsResponseAsync(
             string wId,
-            string cId,
 
-            global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4> request,
+            global::Dust.CreateWMcpDeregisterRequest request,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Update a conversation<br/>
-        /// Update a conversation's title, mark it as read, move it to a different space, or control URL access mode.
+        /// Deregister a client-side MCP server<br/>
+        /// [Documentation](https://docs.dust.tt/docs/client-side-mcp-server)<br/>
+        /// Remove a previously registered client-side MCP server registration.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="cId"></param>
+        /// <param name="serverId">
+        /// The ID of the registered MCP server
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.PatchWAssistantConversationsResponse2> EditWByWIdAssistantConversationsByCIdAsync(
+        global::System.Threading.Tasks.Task CreateWByWIdMcpDeregisterAsync(
             string wId,
-            string cId,
+            string serverId,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

@@ -36,6 +36,10 @@ namespace Dust
         /// 
         /// </summary>
         UpsertTable,
+        /// <summary>
+        /// 
+        /// </summary>
+        WorkspaceBranding,
     }
 
     /// <summary>
@@ -57,6 +61,7 @@ namespace Dust
                 CreateWFilesRequestUseCase.SkillAttachment => "skill_attachment",
                 CreateWFilesRequestUseCase.UpsertDocument => "upsert_document",
                 CreateWFilesRequestUseCase.UpsertTable => "upsert_table",
+                CreateWFilesRequestUseCase.WorkspaceBranding => "workspace_branding",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -74,6 +79,7 @@ namespace Dust
                 "skill_attachment" => CreateWFilesRequestUseCase.SkillAttachment,
                 "upsert_document" => CreateWFilesRequestUseCase.UpsertDocument,
                 "upsert_table" => CreateWFilesRequestUseCase.UpsertTable,
+                "workspace_branding" => CreateWFilesRequestUseCase.WorkspaceBranding,
                 _ => null,
             };
         }
