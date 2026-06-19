@@ -29,6 +29,10 @@ namespace Dust
         /// </summary>
         SkillUsage,
         /// <summary>
+        /// Skill metadata catalog.
+        /// </summary>
+        Skills,
+        /// <summary>
         /// Message volume by context origin (web, slack, etc.).
         /// </summary>
         Source,
@@ -63,6 +67,7 @@ namespace Dust
                 GetWAnalyticsExportTable.Feedback => "feedback",
                 GetWAnalyticsExportTable.Messages => "messages",
                 GetWAnalyticsExportTable.SkillUsage => "skill_usage",
+                GetWAnalyticsExportTable.Skills => "skills",
                 GetWAnalyticsExportTable.Source => "source",
                 GetWAnalyticsExportTable.ToolUsage => "tool_usage",
                 GetWAnalyticsExportTable.UsageMetrics => "usage_metrics",
@@ -82,6 +87,7 @@ namespace Dust
                 "feedback" => GetWAnalyticsExportTable.Feedback,
                 "messages" => GetWAnalyticsExportTable.Messages,
                 "skill_usage" => GetWAnalyticsExportTable.SkillUsage,
+                "skills" => GetWAnalyticsExportTable.Skills,
                 "source" => GetWAnalyticsExportTable.Source,
                 "tool_usage" => GetWAnalyticsExportTable.ToolUsage,
                 "usage_metrics" => GetWAnalyticsExportTable.UsageMetrics,

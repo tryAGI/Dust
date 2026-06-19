@@ -32,6 +32,10 @@ namespace Dust
         /// 
         /// </summary>
         UserMessageNew,
+        /// <summary>
+        /// 
+        /// </summary>
+        WakeUpUpdated,
     }
 
     /// <summary>
@@ -52,6 +56,7 @@ namespace Dust
                 PrivateConversationEventDiscriminatorType.CompactionMessageNew => "compaction_message_new",
                 PrivateConversationEventDiscriminatorType.ConversationTitle => "conversation_title",
                 PrivateConversationEventDiscriminatorType.UserMessageNew => "user_message_new",
+                PrivateConversationEventDiscriminatorType.WakeUpUpdated => "wake_up_updated",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -68,6 +73,7 @@ namespace Dust
                 "compaction_message_new" => PrivateConversationEventDiscriminatorType.CompactionMessageNew,
                 "conversation_title" => PrivateConversationEventDiscriminatorType.ConversationTitle,
                 "user_message_new" => PrivateConversationEventDiscriminatorType.UserMessageNew,
+                "wake_up_updated" => PrivateConversationEventDiscriminatorType.WakeUpUpdated,
                 _ => null,
             };
         }

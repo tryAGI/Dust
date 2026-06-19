@@ -63,6 +63,13 @@ namespace Dust.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Dust.PrivateConversationTitleEvent)}");
                 conversationTitle = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Dust.PrivateWakeUpUpdatedEvent? wakeUpUpdated = default;
+            if (discriminator?.Type == global::Dust.PrivateConversationEventDiscriminatorType.WakeUpUpdated)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateWakeUpUpdatedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateWakeUpUpdatedEvent> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Dust.PrivateWakeUpUpdatedEvent)}");
+                wakeUpUpdated = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
 
             var __value = new global::Dust.PrivateConversationEvent(
                 discriminator?.Type,
@@ -76,7 +83,9 @@ namespace Dust.JsonConverters
 
                 compactionMessageDone,
 
-                conversationTitle
+                conversationTitle,
+
+                wakeUpUpdated
                 );
 
             return __value;
@@ -126,6 +135,12 @@ namespace Dust.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversationTitleEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversationTitleEvent?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateConversationTitleEvent).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.ConversationTitle!, typeInfo);
+            }
+            else if (value.IsWakeUpUpdated)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateWakeUpUpdatedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateWakeUpUpdatedEvent?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateWakeUpUpdatedEvent).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.WakeUpUpdated!, typeInfo);
             }
         }
     }
