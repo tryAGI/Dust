@@ -235,6 +235,43 @@ namespace Dust
         public global::Dust.PrivateConversationTitleEvent PickConversationTitle() => IsConversationTitle
             ? ConversationTitle!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ConversationTitle' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Dust.PrivateWakeUpUpdatedEvent? WakeUpUpdated { get; init; }
+#else
+        public global::Dust.PrivateWakeUpUpdatedEvent? WakeUpUpdated { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(WakeUpUpdated))]
+#endif
+        public bool IsWakeUpUpdated => WakeUpUpdated != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickWakeUpUpdated(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateWakeUpUpdatedEvent? value)
+        {
+            value = WakeUpUpdated;
+            return IsWakeUpUpdated;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateWakeUpUpdatedEvent PickWakeUpUpdated() => IsWakeUpUpdated
+            ? WakeUpUpdated!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'WakeUpUpdated' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -376,6 +413,29 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static implicit operator PrivateConversationEvent(global::Dust.PrivateWakeUpUpdatedEvent value) => new PrivateConversationEvent((global::Dust.PrivateWakeUpUpdatedEvent?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Dust.PrivateWakeUpUpdatedEvent?(PrivateConversationEvent @this) => @this.WakeUpUpdated;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PrivateConversationEvent(global::Dust.PrivateWakeUpUpdatedEvent? value)
+        {
+            WakeUpUpdated = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromWakeUpUpdated(global::Dust.PrivateWakeUpUpdatedEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public PrivateConversationEvent(
             global::Dust.PrivateConversationEventDiscriminatorType? type,
             global::Dust.PrivateUserMessageNewEvent? userMessageNew,
@@ -383,7 +443,8 @@ namespace Dust
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone,
             global::Dust.PrivateCompactionMessageNewEvent? compactionMessageNew,
             global::Dust.PrivateCompactionMessageDoneEvent? compactionMessageDone,
-            global::Dust.PrivateConversationTitleEvent? conversationTitle
+            global::Dust.PrivateConversationTitleEvent? conversationTitle,
+            global::Dust.PrivateWakeUpUpdatedEvent? wakeUpUpdated
             )
         {
             Type = type;
@@ -394,12 +455,14 @@ namespace Dust
             CompactionMessageNew = compactionMessageNew;
             CompactionMessageDone = compactionMessageDone;
             ConversationTitle = conversationTitle;
+            WakeUpUpdated = wakeUpUpdated;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
+            WakeUpUpdated as object ??
             ConversationTitle as object ??
             CompactionMessageDone as object ??
             CompactionMessageNew as object ??
@@ -417,7 +480,8 @@ namespace Dust
             AgentMessageDone?.ToString() ??
             CompactionMessageNew?.ToString() ??
             CompactionMessageDone?.ToString() ??
-            ConversationTitle?.ToString() 
+            ConversationTitle?.ToString() ??
+            WakeUpUpdated?.ToString() 
             ;
 
         /// <summary>
@@ -425,7 +489,7 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && IsCompactionMessageDone && !IsConversationTitle || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && IsConversationTitle;
+            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && IsWakeUpUpdated;
         }
 
         /// <summary>
@@ -438,6 +502,7 @@ namespace Dust
             global::System.Func<global::Dust.PrivateCompactionMessageNewEvent, TResult>? compactionMessageNew = null,
             global::System.Func<global::Dust.PrivateCompactionMessageDoneEvent, TResult>? compactionMessageDone = null,
             global::System.Func<global::Dust.PrivateConversationTitleEvent, TResult>? conversationTitle = null,
+            global::System.Func<global::Dust.PrivateWakeUpUpdatedEvent, TResult>? wakeUpUpdated = null,
             bool validate = true)
         {
             if (validate)
@@ -469,6 +534,10 @@ namespace Dust
             {
                 return conversationTitle(ConversationTitle!);
             }
+            else if (IsWakeUpUpdated && wakeUpUpdated != null)
+            {
+                return wakeUpUpdated(WakeUpUpdated!);
+            }
 
             return default(TResult);
         }
@@ -488,6 +557,8 @@ namespace Dust
             global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent>? compactionMessageDone = null,
 
             global::System.Action<global::Dust.PrivateConversationTitleEvent>? conversationTitle = null,
+
+            global::System.Action<global::Dust.PrivateWakeUpUpdatedEvent>? wakeUpUpdated = null,
             bool validate = true)
         {
             if (validate)
@@ -518,6 +589,10 @@ namespace Dust
             else if (IsConversationTitle)
             {
                 conversationTitle?.Invoke(ConversationTitle!);
+            }
+            else if (IsWakeUpUpdated)
+            {
+                wakeUpUpdated?.Invoke(WakeUpUpdated!);
             }
         }
 
@@ -531,6 +606,7 @@ namespace Dust
             global::System.Action<global::Dust.PrivateCompactionMessageNewEvent>? compactionMessageNew = null,
             global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent>? compactionMessageDone = null,
             global::System.Action<global::Dust.PrivateConversationTitleEvent>? conversationTitle = null,
+            global::System.Action<global::Dust.PrivateWakeUpUpdatedEvent>? wakeUpUpdated = null,
             bool validate = true)
         {
             if (validate)
@@ -561,6 +637,10 @@ namespace Dust
             else if (IsConversationTitle)
             {
                 conversationTitle?.Invoke(ConversationTitle!);
+            }
+            else if (IsWakeUpUpdated)
+            {
+                wakeUpUpdated?.Invoke(WakeUpUpdated!);
             }
         }
 
@@ -583,6 +663,8 @@ namespace Dust
                 typeof(global::Dust.PrivateCompactionMessageDoneEvent),
                 ConversationTitle,
                 typeof(global::Dust.PrivateConversationTitleEvent),
+                WakeUpUpdated,
+                typeof(global::Dust.PrivateWakeUpUpdatedEvent),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -604,7 +686,8 @@ namespace Dust
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageDoneEvent?>.Default.Equals(AgentMessageDone, other.AgentMessageDone) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateCompactionMessageNewEvent?>.Default.Equals(CompactionMessageNew, other.CompactionMessageNew) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateCompactionMessageDoneEvent?>.Default.Equals(CompactionMessageDone, other.CompactionMessageDone) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversationTitleEvent?>.Default.Equals(ConversationTitle, other.ConversationTitle) 
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversationTitleEvent?>.Default.Equals(ConversationTitle, other.ConversationTitle) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateWakeUpUpdatedEvent?>.Default.Equals(WakeUpUpdated, other.WakeUpUpdated) 
                 ;
         }
 
