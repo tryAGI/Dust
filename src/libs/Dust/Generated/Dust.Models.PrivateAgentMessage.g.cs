@@ -149,13 +149,13 @@ namespace Dust
         public global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? Reactions { get; set; }
 
         /// <summary>
-        /// Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
+        /// Cost of producing this agent message, in credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("costCredits")]
         public int? CostCredits { get; set; }
 
         /// <summary>
-        /// Aggregated AWU credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
+        /// Aggregated credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("subAgentCostCredits")]
         public double? SubAgentCostCredits { get; set; }
@@ -198,10 +198,10 @@ namespace Dust
         /// <param name="completionDurationMs"></param>
         /// <param name="reactions"></param>
         /// <param name="costCredits">
-        /// Cost of producing this agent message, in AWU credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
+        /// Cost of producing this agent message, in credits (intelligence + tool credits). Null when no billable usage is attributed to the message.
         /// </param>
         /// <param name="subAgentCostCredits">
-        /// Aggregated AWU credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
+        /// Aggregated credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
