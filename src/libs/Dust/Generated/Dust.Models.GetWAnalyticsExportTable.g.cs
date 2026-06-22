@@ -13,7 +13,7 @@ namespace Dust
         /// </summary>
         ActiveUsers,
         /// <summary>
-        /// Top agents by message count.
+        /// Top agents by message count, including credits.
         /// </summary>
         Agents,
         /// <summary>
