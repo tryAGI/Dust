@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Dust
@@ -120,9 +122,10 @@ namespace Dust
         public bool? CanWrite { get; set; }
 
         /// <summary>
-        /// Whether this skill can be extended by another skill
+        /// Deprecated compatibility field. Always false.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isExtendable")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public bool? IsExtendable { get; set; }
 
         /// <summary>
@@ -132,9 +135,10 @@ namespace Dust
         public bool? IsDefault { get; set; }
 
         /// <summary>
-        /// Identifier of the extended skill, when applicable
+        /// Deprecated compatibility field. Always null.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("extendedSkillId")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public string? ExtendedSkillId { get; set; }
 
         /// <summary>
@@ -214,14 +218,8 @@ namespace Dust
         /// <param name="canWrite">
         /// Whether the authenticated actor can edit the skill
         /// </param>
-        /// <param name="isExtendable">
-        /// Whether this skill can be extended by another skill
-        /// </param>
         /// <param name="isDefault">
         /// Whether this skill is enabled by default
-        /// </param>
-        /// <param name="extendedSkillId">
-        /// Identifier of the extended skill, when applicable
         /// </param>
         /// <param name="instructions">
         /// Instructions used by the agent when running the skill
@@ -250,9 +248,7 @@ namespace Dust
             global::System.Collections.Generic.IList<string>? requestedSpaceIds,
             global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>? fileAttachments,
             bool? canWrite,
-            bool? isExtendable,
             bool? isDefault,
-            string? extendedSkillId,
             string? instructions,
             string? instructionsHtml,
             global::System.Collections.Generic.IList<global::Dust.MCPServerView>? tools)
@@ -273,9 +269,7 @@ namespace Dust
             this.RequestedSpaceIds = requestedSpaceIds;
             this.FileAttachments = fileAttachments;
             this.CanWrite = canWrite;
-            this.IsExtendable = isExtendable;
             this.IsDefault = isDefault;
-            this.ExtendedSkillId = extendedSkillId;
             this.Instructions = instructions;
             this.InstructionsHtml = instructionsHtml;
             this.Tools = tools;
