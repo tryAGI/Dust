@@ -21,7 +21,7 @@ namespace Dust
         /// </summary>
         Feedback,
         /// <summary>
-        /// Detailed message-level logs.
+        /// Detailed message-level logs, including comma-separated lists of tools (as "server__tool") and skills used per message.
         /// </summary>
         Messages,
         /// <summary>
