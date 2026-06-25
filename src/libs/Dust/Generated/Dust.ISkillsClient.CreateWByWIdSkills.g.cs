@@ -48,6 +48,9 @@ namespace Dust
         /// <param name="onConflict">
         /// Conflict handling strategy. Defaults to error.
         /// </param>
+        /// <param name="editors">
+        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace builders. Existing skills keep their current editors.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -56,6 +59,7 @@ namespace Dust
             global::System.Collections.Generic.IList<byte[]> files,
             global::System.Collections.Generic.IList<string>? names = default,
             global::Dust.CreateWSkillsRequestOnConflict? onConflict = default,
+            global::System.Collections.Generic.IList<string>? editors = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
 
@@ -76,6 +80,9 @@ namespace Dust
         /// <param name="onConflict">
         /// Conflict handling strategy. Defaults to error.
         /// </param>
+        /// <param name="editors">
+        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace builders. Existing skills keep their current editors.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
@@ -85,6 +92,7 @@ namespace Dust
             global::System.Collections.Generic.IReadOnlyList<string>? filesFileNames = default,
             global::System.Collections.Generic.IList<string>? names = default,
             global::Dust.CreateWSkillsRequestOnConflict? onConflict = default,
+            global::System.Collections.Generic.IList<string>? editors = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -104,6 +112,9 @@ namespace Dust
         /// <param name="onConflict">
         /// Conflict handling strategy. Defaults to error.
         /// </param>
+        /// <param name="editors">
+        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace builders. Existing skills keep their current editors.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
@@ -113,6 +124,7 @@ namespace Dust
             global::System.Collections.Generic.IReadOnlyList<string>? filesFileNames = default,
             global::System.Collections.Generic.IList<string>? names = default,
             global::Dust.CreateWSkillsRequestOnConflict? onConflict = default,
+            global::System.Collections.Generic.IList<string>? editors = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
