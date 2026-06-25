@@ -29,6 +29,12 @@ namespace Dust
         public global::Dust.CreateWSkillsRequestOnConflict? OnConflict { get; set; }
 
         /// <summary>
+        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace builders. Existing skills keep their current editors.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("editors")]
+        public global::System.Collections.Generic.IList<string>? Editors { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -46,17 +52,22 @@ namespace Dust
         /// <param name="onConflict">
         /// Conflict handling strategy. Defaults to error.
         /// </param>
+        /// <param name="editors">
+        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace builders. Existing skills keep their current editors.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateWSkillsRequest(
             global::System.Collections.Generic.IList<byte[]> files,
             global::System.Collections.Generic.IList<string>? names,
-            global::Dust.CreateWSkillsRequestOnConflict? onConflict)
+            global::Dust.CreateWSkillsRequestOnConflict? onConflict,
+            global::System.Collections.Generic.IList<string>? editors)
         {
             this.Files = files ?? throw new global::System.ArgumentNullException(nameof(files));
             this.Names = names;
             this.OnConflict = onConflict;
+            this.Editors = editors;
         }
 
         /// <summary>
