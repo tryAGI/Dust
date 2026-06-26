@@ -1,6 +1,4 @@
 
-#pragma warning disable CS0618 // Type or member is obsolete
-
 #nullable enable
 
 namespace Dust
@@ -122,24 +120,10 @@ namespace Dust
         public bool? CanWrite { get; set; }
 
         /// <summary>
-        /// Deprecated compatibility field. Always false.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("isExtendable")]
-        [global::System.Obsolete("This property marked as deprecated.")]
-        public bool? IsExtendable { get; set; }
-
-        /// <summary>
         /// Whether this skill is enabled by default
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isDefault")]
         public bool? IsDefault { get; set; }
-
-        /// <summary>
-        /// Deprecated compatibility field. Always null.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("extendedSkillId")]
-        [global::System.Obsolete("This property marked as deprecated.")]
-        public string? ExtendedSkillId { get; set; }
 
         /// <summary>
         /// Instructions used by the agent when running the skill
