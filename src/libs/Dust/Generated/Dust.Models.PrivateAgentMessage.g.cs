@@ -161,6 +161,12 @@ namespace Dust
         public double? SubAgentCostCredits { get; set; }
 
         /// <summary>
+        /// Per-message model override from the input-bar model picker. Null when the agent ran its configured model.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("requestedModel")]
+        public global::Dust.PrivateAgentMessageRequestedModel? RequestedModel { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -203,6 +209,9 @@ namespace Dust
         /// <param name="subAgentCostCredits">
         /// Aggregated credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
         /// </param>
+        /// <param name="requestedModel">
+        /// Per-message model override from the input-bar model picker. Null when the agent ran its configured model.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -230,7 +239,8 @@ namespace Dust
             int? completionDurationMs,
             global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions,
             int? costCredits,
-            double? subAgentCostCredits)
+            double? subAgentCostCredits,
+            global::Dust.PrivateAgentMessageRequestedModel? requestedModel)
         {
             this.Id = id;
             this.AgentMessageId = agentMessageId;
@@ -256,6 +266,7 @@ namespace Dust
             this.Reactions = reactions;
             this.CostCredits = costCredits;
             this.SubAgentCostCredits = subAgentCostCredits;
+            this.RequestedModel = requestedModel;
         }
 
         /// <summary>

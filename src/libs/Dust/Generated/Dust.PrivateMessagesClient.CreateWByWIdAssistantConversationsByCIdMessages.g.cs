@@ -508,6 +508,9 @@ namespace Dust
         /// <param name="mentions"></param>
         /// <param name="context"></param>
         /// <param name="skipToolsValidation"></param>
+        /// <param name="modelSelection">
+        /// Optional per-message model override from the input-bar model picker (an explicit model pick).
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -518,6 +521,7 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.PrivateMention> mentions,
             global::Dust.CreateWAssistantConversationsMessagesRequestContext context,
             bool? skipToolsValidation = default,
+            global::Dust.CreateWAssistantConversationsMessagesRequestModelSelection? modelSelection = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -527,6 +531,7 @@ namespace Dust
                 Mentions = mentions,
                 Context = context,
                 SkipToolsValidation = skipToolsValidation,
+                ModelSelection = modelSelection,
             };
 
             return await CreateWByWIdAssistantConversationsByCIdMessagesAsync(
