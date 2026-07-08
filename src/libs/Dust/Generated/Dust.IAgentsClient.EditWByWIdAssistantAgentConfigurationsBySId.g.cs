@@ -53,7 +53,9 @@ namespace Dust
         /// <param name="skills">
         /// Replaces the skills enabled on the agent configuration.
         /// </param>
-        /// <param name="toolset"></param>
+        /// <param name="toolset">
+        /// Replaces the full set of tools on the agent. Any tool not present in this array is removed, so send the complete desired toolset. Each entry resolves an MCP server by name (see configuration.mcp_server_name). Entries that cannot be resolved are not applied and are returned in the skippedActions field of the response rather than causing the whole request to fail.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>

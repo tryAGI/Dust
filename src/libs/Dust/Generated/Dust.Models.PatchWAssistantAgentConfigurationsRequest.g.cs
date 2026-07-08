@@ -51,7 +51,7 @@ namespace Dust
         public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestSkill>? Skills { get; set; }
 
         /// <summary>
-        /// 
+        /// Replaces the full set of tools on the agent. Any tool not present in this array is removed, so send the complete desired toolset. Each entry resolves an MCP server by name (see configuration.mcp_server_name). Entries that cannot be resolved are not applied and are returned in the skippedActions field of the response rather than causing the whole request to fail.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolset")]
         public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem>? Toolset { get; set; }
@@ -74,7 +74,9 @@ namespace Dust
         /// <param name="skills">
         /// Replaces the skills enabled on the agent configuration.
         /// </param>
-        /// <param name="toolset"></param>
+        /// <param name="toolset">
+        /// Replaces the full set of tools on the agent. Any tool not present in this array is removed, so send the complete desired toolset. Each entry resolves an MCP server by name (see configuration.mcp_server_name). Entries that cannot be resolved are not applied and are returned in the skippedActions field of the response rather than causing the whole request to fail.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

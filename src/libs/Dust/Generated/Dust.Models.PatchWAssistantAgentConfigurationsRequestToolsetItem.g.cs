@@ -31,7 +31,7 @@ namespace Dust
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configuration")]
-        public object? Configuration { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemConfiguration? Configuration { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -53,7 +53,7 @@ namespace Dust
             string? name,
             string? description,
             global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemType? type,
-            object? configuration)
+            global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemConfiguration? configuration)
         {
             this.Name = name;
             this.Description = description;
