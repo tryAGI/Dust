@@ -15,7 +15,7 @@ namespace Dust
         public global::Dust.AgentConfiguration? AgentConfiguration { get; set; }
 
         /// <summary>
-        /// 
+        /// Toolset entries that could not be applied (e.g. the referenced MCP server was not found, is not shared to an accessible space, or the name was ambiguous). The request still succeeds; inspect this list to confirm every intended tool was attached.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skippedActions")]
         public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsResponseSkippedAction>? SkippedActions { get; set; }
@@ -30,7 +30,9 @@ namespace Dust
         /// Initializes a new instance of the <see cref="PatchWAssistantAgentConfigurationsResponse" /> class.
         /// </summary>
         /// <param name="agentConfiguration"></param>
-        /// <param name="skippedActions"></param>
+        /// <param name="skippedActions">
+        /// Toolset entries that could not be applied (e.g. the referenced MCP server was not found, is not shared to an accessible space, or the name was ambiguous). The request still succeeds; inspect this list to confirm every intended tool was attached.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
