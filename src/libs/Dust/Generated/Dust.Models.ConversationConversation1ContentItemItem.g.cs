@@ -103,11 +103,10 @@ namespace Dust
         public string? Status { get; set; }
 
         /// <summary>
-        /// Example: []
+        /// 
         /// </summary>
-        /// <example>[]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("actions")]
-        public byte[]? Actions { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.ConversationConversation1ContentItemItemAction>? Actions { get; set; }
 
         /// <summary>
         /// Chain of thought for the message<br/>
@@ -185,9 +184,7 @@ namespace Dust
         /// Status of the message<br/>
         /// Example: completed
         /// </param>
-        /// <param name="actions">
-        /// Example: []
-        /// </param>
+        /// <param name="actions"></param>
         /// <param name="chainOfThought">
         /// Chain of thought for the message<br/>
         /// Example: The user is asking about their order. I should first greet them and then ask for their order number.
@@ -215,7 +212,7 @@ namespace Dust
             int? agentMessageId,
             string? parentMessageId,
             string? status,
-            byte[]? actions,
+            global::System.Collections.Generic.IList<global::Dust.ConversationConversation1ContentItemItemAction>? actions,
             string? chainOfThought,
             global::System.Collections.Generic.IList<global::Dust.ConversationConversation1ContentItemItemRawContent>? rawContents,
             string? error,

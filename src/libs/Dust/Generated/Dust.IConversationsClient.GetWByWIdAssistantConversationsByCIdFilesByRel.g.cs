@@ -6,9 +6,10 @@ namespace Dust
     {
         /// <summary>
         /// Download a conversation-scoped file by path<br/>
-        /// Download a file from a conversation's file system by its scoped path. The path must<br/>
-        /// be conversation-scoped, i.e. start with `conversation/` (as surfaced by agent file<br/>
-        /// system tools). The file content is streamed directly from the conversation mount.
+        /// Download a file from a conversation's file system by its scoped path. Pass the<br/>
+        /// canonical `filePath` surfaced in a message action's `generatedFiles` (the legacy<br/>
+        /// `conversation/foo.pdf` form is also accepted). The file content is streamed<br/>
+        /// directly from the conversation mount.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -24,9 +25,10 @@ namespace Dust
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Download a conversation-scoped file by path<br/>
-        /// Download a file from a conversation's file system by its scoped path. The path must<br/>
-        /// be conversation-scoped, i.e. start with `conversation/` (as surfaced by agent file<br/>
-        /// system tools). The file content is streamed directly from the conversation mount.
+        /// Download a file from a conversation's file system by its scoped path. Pass the<br/>
+        /// canonical `filePath` surfaced in a message action's `generatedFiles` (the legacy<br/>
+        /// `conversation/foo.pdf` form is also accepted). The file content is streamed<br/>
+        /// directly from the conversation mount.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -42,9 +44,10 @@ namespace Dust
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Download a conversation-scoped file by path<br/>
-        /// Download a file from a conversation's file system by its scoped path. The path must<br/>
-        /// be conversation-scoped, i.e. start with `conversation/` (as surfaced by agent file<br/>
-        /// system tools). The file content is streamed directly from the conversation mount.
+        /// Download a file from a conversation's file system by its scoped path. Pass the<br/>
+        /// canonical `filePath` surfaced in a message action's `generatedFiles` (the legacy<br/>
+        /// `conversation/foo.pdf` form is also accepted). The file content is streamed<br/>
+        /// directly from the conversation mount.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>

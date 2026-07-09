@@ -9,10 +9,16 @@ namespace Dust
     public sealed partial class PrivateAgentMCPActionGeneratedFile
     {
         /// <summary>
-        /// 
+        /// Dust file id for DB-backed files, or null for path-backed files.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileId")]
         public string? FileId { get; set; }
+
+        /// <summary>
+        /// Canonical scoped path for path-backed files.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("filePath")]
+        public string? FilePath { get; set; }
 
         /// <summary>
         /// 
@@ -65,7 +71,12 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="PrivateAgentMCPActionGeneratedFile" /> class.
         /// </summary>
-        /// <param name="fileId"></param>
+        /// <param name="fileId">
+        /// Dust file id for DB-backed files, or null for path-backed files.
+        /// </param>
+        /// <param name="filePath">
+        /// Canonical scoped path for path-backed files.
+        /// </param>
         /// <param name="title"></param>
         /// <param name="contentType"></param>
         /// <param name="snippet"></param>
@@ -78,6 +89,7 @@ namespace Dust
 #endif
         public PrivateAgentMCPActionGeneratedFile(
             string? fileId,
+            string? filePath,
             string? title,
             string? contentType,
             string? snippet,
@@ -87,6 +99,7 @@ namespace Dust
             bool? hidden)
         {
             this.FileId = fileId;
+            this.FilePath = filePath;
             this.Title = title;
             this.ContentType = contentType;
             this.Snippet = snippet;
