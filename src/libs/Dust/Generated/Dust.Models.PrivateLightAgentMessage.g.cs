@@ -138,6 +138,19 @@ namespace Dust
         public double? SubAgentCostCredits { get; set; }
 
         /// <summary>
+        /// Model triplet used to generate the message. Null when the agent ran its configured model (legacy).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolvedModel")]
+        public global::Dust.PrivateLightAgentMessageResolvedModel? ResolvedModel { get; set; }
+
+        /// <summary>
+        /// How resolvedModel was chosen - agent (configured model), user (per-message picker), or auto (routed through the auto model). Null (legacy).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modelResolutionMethod")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodJsonConverter))]
+        public global::Dust.PrivateLightAgentMessageModelResolutionMethod? ModelResolutionMethod { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("activitySteps")]
@@ -184,6 +197,12 @@ namespace Dust
         /// <param name="subAgentCostCredits">
         /// Aggregated credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
         /// </param>
+        /// <param name="resolvedModel">
+        /// Model triplet used to generate the message. Null when the agent ran its configured model (legacy).
+        /// </param>
+        /// <param name="modelResolutionMethod">
+        /// How resolvedModel was chosen - agent (configured model), user (per-message picker), or auto (routed through the auto model). Null (legacy).
+        /// </param>
         /// <param name="activitySteps"></param>
         /// <param name="reactions"></param>
 #if NET7_0_OR_GREATER
@@ -210,6 +229,8 @@ namespace Dust
             int? completionDurationMs,
             int? costCredits,
             double? subAgentCostCredits,
+            global::Dust.PrivateLightAgentMessageResolvedModel? resolvedModel,
+            global::Dust.PrivateLightAgentMessageModelResolutionMethod? modelResolutionMethod,
             global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>? activitySteps,
             global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions)
         {
@@ -233,6 +254,8 @@ namespace Dust
             this.CompletionDurationMs = completionDurationMs;
             this.CostCredits = costCredits;
             this.SubAgentCostCredits = subAgentCostCredits;
+            this.ResolvedModel = resolvedModel;
+            this.ModelResolutionMethod = modelResolutionMethod;
             this.ActivitySteps = activitySteps;
             this.Reactions = reactions;
         }

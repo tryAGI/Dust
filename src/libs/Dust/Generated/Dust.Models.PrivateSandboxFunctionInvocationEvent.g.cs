@@ -87,6 +87,43 @@ namespace Dust
         public global::Dust.PrivateSandboxFunctionInvocationResultEvent PickSandboxFunctionInvocationResult() => IsSandboxFunctionInvocationResult
             ? SandboxFunctionInvocationResult!
             : throw new global::System.InvalidOperationException($"Expected union variant 'SandboxFunctionInvocationResult' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Dust.PrivateSandboxFunctionInvocationErrorEvent? SandboxFunctionInvocationError { get; init; }
+#else
+        public global::Dust.PrivateSandboxFunctionInvocationErrorEvent? SandboxFunctionInvocationError { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SandboxFunctionInvocationError))]
+#endif
+        public bool IsSandboxFunctionInvocationError => SandboxFunctionInvocationError != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickSandboxFunctionInvocationError(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateSandboxFunctionInvocationErrorEvent? value)
+        {
+            value = SandboxFunctionInvocationError;
+            return IsSandboxFunctionInvocationError;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateSandboxFunctionInvocationErrorEvent PickSandboxFunctionInvocationError() => IsSandboxFunctionInvocationError
+            ? SandboxFunctionInvocationError!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SandboxFunctionInvocationError' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -136,22 +173,48 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static implicit operator PrivateSandboxFunctionInvocationEvent(global::Dust.PrivateSandboxFunctionInvocationErrorEvent value) => new PrivateSandboxFunctionInvocationEvent((global::Dust.PrivateSandboxFunctionInvocationErrorEvent?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Dust.PrivateSandboxFunctionInvocationErrorEvent?(PrivateSandboxFunctionInvocationEvent @this) => @this.SandboxFunctionInvocationError;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PrivateSandboxFunctionInvocationEvent(global::Dust.PrivateSandboxFunctionInvocationErrorEvent? value)
+        {
+            SandboxFunctionInvocationError = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateSandboxFunctionInvocationEvent FromSandboxFunctionInvocationError(global::Dust.PrivateSandboxFunctionInvocationErrorEvent? value) => new PrivateSandboxFunctionInvocationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public PrivateSandboxFunctionInvocationEvent(
             global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType? type,
             global::Dust.PrivateSandboxFunctionInvocationCreatedEvent? sandboxFunctionInvocationCreated,
-            global::Dust.PrivateSandboxFunctionInvocationResultEvent? sandboxFunctionInvocationResult
+            global::Dust.PrivateSandboxFunctionInvocationResultEvent? sandboxFunctionInvocationResult,
+            global::Dust.PrivateSandboxFunctionInvocationErrorEvent? sandboxFunctionInvocationError
             )
         {
             Type = type;
 
             SandboxFunctionInvocationCreated = sandboxFunctionInvocationCreated;
             SandboxFunctionInvocationResult = sandboxFunctionInvocationResult;
+            SandboxFunctionInvocationError = sandboxFunctionInvocationError;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
+            SandboxFunctionInvocationError as object ??
             SandboxFunctionInvocationResult as object ??
             SandboxFunctionInvocationCreated as object 
             ;
@@ -161,7 +224,8 @@ namespace Dust
         /// </summary>
         public override string? ToString() =>
             SandboxFunctionInvocationCreated?.ToString() ??
-            SandboxFunctionInvocationResult?.ToString() 
+            SandboxFunctionInvocationResult?.ToString() ??
+            SandboxFunctionInvocationError?.ToString() 
             ;
 
         /// <summary>
@@ -169,7 +233,7 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsSandboxFunctionInvocationCreated && !IsSandboxFunctionInvocationResult || !IsSandboxFunctionInvocationCreated && IsSandboxFunctionInvocationResult;
+            return IsSandboxFunctionInvocationCreated && !IsSandboxFunctionInvocationResult && !IsSandboxFunctionInvocationError || !IsSandboxFunctionInvocationCreated && IsSandboxFunctionInvocationResult && !IsSandboxFunctionInvocationError || !IsSandboxFunctionInvocationCreated && !IsSandboxFunctionInvocationResult && IsSandboxFunctionInvocationError;
         }
 
         /// <summary>
@@ -178,6 +242,7 @@ namespace Dust
         public TResult? Match<TResult>(
             global::System.Func<global::Dust.PrivateSandboxFunctionInvocationCreatedEvent, TResult>? sandboxFunctionInvocationCreated = null,
             global::System.Func<global::Dust.PrivateSandboxFunctionInvocationResultEvent, TResult>? sandboxFunctionInvocationResult = null,
+            global::System.Func<global::Dust.PrivateSandboxFunctionInvocationErrorEvent, TResult>? sandboxFunctionInvocationError = null,
             bool validate = true)
         {
             if (validate)
@@ -193,6 +258,10 @@ namespace Dust
             {
                 return sandboxFunctionInvocationResult(SandboxFunctionInvocationResult!);
             }
+            else if (IsSandboxFunctionInvocationError && sandboxFunctionInvocationError != null)
+            {
+                return sandboxFunctionInvocationError(SandboxFunctionInvocationError!);
+            }
 
             return default(TResult);
         }
@@ -204,6 +273,8 @@ namespace Dust
             global::System.Action<global::Dust.PrivateSandboxFunctionInvocationCreatedEvent>? sandboxFunctionInvocationCreated = null,
 
             global::System.Action<global::Dust.PrivateSandboxFunctionInvocationResultEvent>? sandboxFunctionInvocationResult = null,
+
+            global::System.Action<global::Dust.PrivateSandboxFunctionInvocationErrorEvent>? sandboxFunctionInvocationError = null,
             bool validate = true)
         {
             if (validate)
@@ -218,6 +289,10 @@ namespace Dust
             else if (IsSandboxFunctionInvocationResult)
             {
                 sandboxFunctionInvocationResult?.Invoke(SandboxFunctionInvocationResult!);
+            }
+            else if (IsSandboxFunctionInvocationError)
+            {
+                sandboxFunctionInvocationError?.Invoke(SandboxFunctionInvocationError!);
             }
         }
 
@@ -227,6 +302,7 @@ namespace Dust
         public void Switch(
             global::System.Action<global::Dust.PrivateSandboxFunctionInvocationCreatedEvent>? sandboxFunctionInvocationCreated = null,
             global::System.Action<global::Dust.PrivateSandboxFunctionInvocationResultEvent>? sandboxFunctionInvocationResult = null,
+            global::System.Action<global::Dust.PrivateSandboxFunctionInvocationErrorEvent>? sandboxFunctionInvocationError = null,
             bool validate = true)
         {
             if (validate)
@@ -241,6 +317,10 @@ namespace Dust
             else if (IsSandboxFunctionInvocationResult)
             {
                 sandboxFunctionInvocationResult?.Invoke(SandboxFunctionInvocationResult!);
+            }
+            else if (IsSandboxFunctionInvocationError)
+            {
+                sandboxFunctionInvocationError?.Invoke(SandboxFunctionInvocationError!);
             }
         }
 
@@ -255,6 +335,8 @@ namespace Dust
                 typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEvent),
                 SandboxFunctionInvocationResult,
                 typeof(global::Dust.PrivateSandboxFunctionInvocationResultEvent),
+                SandboxFunctionInvocationError,
+                typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEvent),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -272,7 +354,8 @@ namespace Dust
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateSandboxFunctionInvocationCreatedEvent?>.Default.Equals(SandboxFunctionInvocationCreated, other.SandboxFunctionInvocationCreated) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateSandboxFunctionInvocationResultEvent?>.Default.Equals(SandboxFunctionInvocationResult, other.SandboxFunctionInvocationResult) 
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateSandboxFunctionInvocationResultEvent?>.Default.Equals(SandboxFunctionInvocationResult, other.SandboxFunctionInvocationResult) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateSandboxFunctionInvocationErrorEvent?>.Default.Equals(SandboxFunctionInvocationError, other.SandboxFunctionInvocationError) 
                 ;
         }
 

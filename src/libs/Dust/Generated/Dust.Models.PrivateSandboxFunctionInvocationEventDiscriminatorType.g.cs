@@ -15,6 +15,10 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        SandboxFunctionInvocationError,
+        /// <summary>
+        /// 
+        /// </summary>
         SandboxFunctionInvocationResult,
     }
 
@@ -31,6 +35,7 @@ namespace Dust
             return value switch
             {
                 PrivateSandboxFunctionInvocationEventDiscriminatorType.SandboxFunctionInvocationCreated => "sandbox_function_invocation_created",
+                PrivateSandboxFunctionInvocationEventDiscriminatorType.SandboxFunctionInvocationError => "sandbox_function_invocation_error",
                 PrivateSandboxFunctionInvocationEventDiscriminatorType.SandboxFunctionInvocationResult => "sandbox_function_invocation_result",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -43,6 +48,7 @@ namespace Dust
             return value switch
             {
                 "sandbox_function_invocation_created" => PrivateSandboxFunctionInvocationEventDiscriminatorType.SandboxFunctionInvocationCreated,
+                "sandbox_function_invocation_error" => PrivateSandboxFunctionInvocationEventDiscriminatorType.SandboxFunctionInvocationError,
                 "sandbox_function_invocation_result" => PrivateSandboxFunctionInvocationEventDiscriminatorType.SandboxFunctionInvocationResult,
                 _ => null,
             };
