@@ -2,7 +2,7 @@
 
 namespace Dust
 {
-    public sealed partial class PrivateAgentMessageRequestedModel
+    public sealed partial class PrivateSandboxFunctionInvocationErrorEvent
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -47,20 +47,20 @@ namespace Dust
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::Dust.PrivateAgentMessageRequestedModel? FromJson(
+        public static global::Dust.PrivateSandboxFunctionInvocationErrorEvent? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::Dust.PrivateAgentMessageRequestedModel),
-                jsonSerializerContext) as global::Dust.PrivateAgentMessageRequestedModel;
+                typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEvent),
+                jsonSerializerContext) as global::Dust.PrivateSandboxFunctionInvocationErrorEvent;
         }
 
         /// <summary>
         /// Deserializes a JSON string using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::Dust.PrivateAgentMessageRequestedModel? FromJson(
+        public static global::Dust.PrivateSandboxFunctionInvocationErrorEvent? FromJson(
             string json)
         {
             return FromJson(
@@ -75,7 +75,7 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::Dust.PrivateAgentMessageRequestedModel? FromJson(
+        public static global::Dust.PrivateSandboxFunctionInvocationErrorEvent? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -86,7 +86,7 @@ namespace Dust
                     global::Dust.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateAgentMessageRequestedModel>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::Dust.PrivateSandboxFunctionInvocationErrorEvent>(
                 json,
                 jsonSerializerOptions);
         }
@@ -94,20 +94,20 @@ namespace Dust
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::Dust.PrivateAgentMessageRequestedModel?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::Dust.PrivateSandboxFunctionInvocationErrorEvent?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::Dust.PrivateAgentMessageRequestedModel),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Dust.PrivateAgentMessageRequestedModel;
+                typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEvent),
+                jsonSerializerContext).ConfigureAwait(false)) as global::Dust.PrivateSandboxFunctionInvocationErrorEvent;
         }
 
         /// <summary>
         /// Deserializes a JSON stream using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::System.Threading.Tasks.ValueTask<global::Dust.PrivateAgentMessageRequestedModel?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Dust.PrivateSandboxFunctionInvocationErrorEvent?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream)
         {
             return FromJsonStreamAsync(
@@ -122,7 +122,7 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::Dust.PrivateAgentMessageRequestedModel?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Dust.PrivateSandboxFunctionInvocationErrorEvent?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -133,7 +133,7 @@ namespace Dust
                     global::Dust.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Dust.PrivateAgentMessageRequestedModel?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Dust.PrivateSandboxFunctionInvocationErrorEvent?>(
                 jsonStream,
                 jsonSerializerOptions);
         }

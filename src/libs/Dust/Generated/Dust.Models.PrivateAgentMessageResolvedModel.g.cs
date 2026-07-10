@@ -4,9 +4,9 @@
 namespace Dust
 {
     /// <summary>
-    /// Per-message model override from the input-bar model picker. Null when the agent ran its configured model.
+    /// Model triplet used to generate the message. Null when the agent ran its configured model (legacy).
     /// </summary>
-    public sealed partial class PrivateAgentMessageRequestedModel
+    public sealed partial class PrivateAgentMessageResolvedModel
     {
         /// <summary>
         /// 
@@ -33,7 +33,7 @@ namespace Dust
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PrivateAgentMessageRequestedModel" /> class.
+        /// Initializes a new instance of the <see cref="PrivateAgentMessageResolvedModel" /> class.
         /// </summary>
         /// <param name="providerId"></param>
         /// <param name="modelId"></param>
@@ -41,7 +41,7 @@ namespace Dust
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public PrivateAgentMessageRequestedModel(
+        public PrivateAgentMessageResolvedModel(
             string? providerId,
             string? modelId,
             string? reasoningEffort)
@@ -52,9 +52,9 @@ namespace Dust
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PrivateAgentMessageRequestedModel" /> class.
+        /// Initializes a new instance of the <see cref="PrivateAgentMessageResolvedModel" /> class.
         /// </summary>
-        public PrivateAgentMessageRequestedModel()
+        public PrivateAgentMessageResolvedModel()
         {
         }
 

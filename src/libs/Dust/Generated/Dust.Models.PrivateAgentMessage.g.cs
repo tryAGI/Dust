@@ -161,10 +161,17 @@ namespace Dust
         public double? SubAgentCostCredits { get; set; }
 
         /// <summary>
-        /// Per-message model override from the input-bar model picker. Null when the agent ran its configured model.
+        /// Model triplet used to generate the message. Null when the agent ran its configured model (legacy).
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("requestedModel")]
-        public global::Dust.PrivateAgentMessageRequestedModel? RequestedModel { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("resolvedModel")]
+        public global::Dust.PrivateAgentMessageResolvedModel? ResolvedModel { get; set; }
+
+        /// <summary>
+        /// How resolvedModel was chosen - agent (configured model), user (per-message picker), or auto (routed through the auto model). Null (legacy).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("modelResolutionMethod")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodJsonConverter))]
+        public global::Dust.PrivateAgentMessageModelResolutionMethod? ModelResolutionMethod { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -209,8 +216,11 @@ namespace Dust
         /// <param name="subAgentCostCredits">
         /// Aggregated credit cost of all sub-agents (run_agent / agent_handover) spawned recursively by this message. Computed only on single-message fetches; null otherwise.
         /// </param>
-        /// <param name="requestedModel">
-        /// Per-message model override from the input-bar model picker. Null when the agent ran its configured model.
+        /// <param name="resolvedModel">
+        /// Model triplet used to generate the message. Null when the agent ran its configured model (legacy).
+        /// </param>
+        /// <param name="modelResolutionMethod">
+        /// How resolvedModel was chosen - agent (configured model), user (per-message picker), or auto (routed through the auto model). Null (legacy).
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -240,7 +250,8 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? reactions,
             int? costCredits,
             double? subAgentCostCredits,
-            global::Dust.PrivateAgentMessageRequestedModel? requestedModel)
+            global::Dust.PrivateAgentMessageResolvedModel? resolvedModel,
+            global::Dust.PrivateAgentMessageModelResolutionMethod? modelResolutionMethod)
         {
             this.Id = id;
             this.AgentMessageId = agentMessageId;
@@ -266,7 +277,8 @@ namespace Dust
             this.Reactions = reactions;
             this.CostCredits = costCredits;
             this.SubAgentCostCredits = subAgentCostCredits;
-            this.RequestedModel = requestedModel;
+            this.ResolvedModel = resolvedModel;
+            this.ModelResolutionMethod = modelResolutionMethod;
         }
 
         /// <summary>

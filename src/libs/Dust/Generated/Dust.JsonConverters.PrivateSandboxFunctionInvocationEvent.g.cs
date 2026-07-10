@@ -35,12 +35,21 @@ namespace Dust.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Dust.PrivateSandboxFunctionInvocationResultEvent)}");
                 sandboxFunctionInvocationResult = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Dust.PrivateSandboxFunctionInvocationErrorEvent? sandboxFunctionInvocationError = default;
+            if (discriminator?.Type == global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType.SandboxFunctionInvocationError)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateSandboxFunctionInvocationErrorEvent> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Dust.PrivateSandboxFunctionInvocationErrorEvent)}");
+                sandboxFunctionInvocationError = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
 
             var __value = new global::Dust.PrivateSandboxFunctionInvocationEvent(
                 discriminator?.Type,
                 sandboxFunctionInvocationCreated,
 
-                sandboxFunctionInvocationResult
+                sandboxFunctionInvocationResult,
+
+                sandboxFunctionInvocationError
                 );
 
             return __value;
@@ -66,6 +75,12 @@ namespace Dust.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateSandboxFunctionInvocationResultEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateSandboxFunctionInvocationResultEvent?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateSandboxFunctionInvocationResultEvent).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.SandboxFunctionInvocationResult!, typeInfo);
+            }
+            else if (value.IsSandboxFunctionInvocationError)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateSandboxFunctionInvocationErrorEvent?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEvent).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SandboxFunctionInvocationError!, typeInfo);
             }
         }
     }
