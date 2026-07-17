@@ -309,6 +309,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.ModelSelectionReasoningEffortJsonConverter),
+
+            typeof(global::Dust.JsonConverters.ModelSelectionReasoningEffortNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.SpaceKindJsonConverter),
 
             typeof(global::Dust.JsonConverters.SpaceKindNullableJsonConverter),
@@ -800,6 +804,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.RichMention))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.RichMentionType), TypeInfoPropertyName = "RichMentionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Message))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ModelSelection))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ModelSelectionReasoningEffort), TypeInfoPropertyName = "ModelSelectionReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContentFragment))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Space))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SpaceKind), TypeInfoPropertyName = "SpaceKind2")]
@@ -1075,8 +1081,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateWakeUp>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateConversation>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantMentionsSuggestionsResponse2))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1384,6 +1388,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.ModelSelectionReasoningEffortJsonConverter),
+
+            typeof(global::Dust.JsonConverters.ModelSelectionReasoningEffortNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.SpaceKindJsonConverter),
 
             typeof(global::Dust.JsonConverters.SpaceKindNullableJsonConverter),
@@ -1654,6 +1662,8 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantMentionsSuggestionsResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateMentionSuggestion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWFilesResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWFilesResponse3))]
@@ -1769,6 +1779,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentContextPrunedEventType?), TypeInfoPropertyName = "NullablePrivateAgentContextPrunedEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContextAgenticMessageDataType?), TypeInfoPropertyName = "NullableContextAgenticMessageDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.RichMentionType?), TypeInfoPropertyName = "NullableRichMentionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ModelSelectionReasoningEffort?), TypeInfoPropertyName = "NullableModelSelectionReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SpaceKind?), TypeInfoPropertyName = "NullableSpaceKind2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.TableSchemaItemValueType?), TypeInfoPropertyName = "NullableTableSchemaItemValueType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DatasourceViewCategory?), TypeInfoPropertyName = "NullableDatasourceViewCategory2")]
@@ -2101,6 +2112,8 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.ContextAgenticMessageDataTypeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.RichMentionTypeJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.ModelSelectionReasoningEffortJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.ModelSelectionReasoningEffortNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.SpaceKindJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.SpaceKindNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.TableSchemaItemValueTypeJsonConverter());

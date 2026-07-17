@@ -52,6 +52,13 @@ namespace Dust
         /// Empty array is accepted but won't trigger any agent.
         /// </param>
         /// <param name="context"></param>
+        /// <param name="modelSelection">
+        /// Optional per-message model and reasoning-effort override applied to the<br/>
+        /// mentioned agent(s). When omitted, each agent runs its configured model.<br/>
+        /// If the requested model is not available to the workspace, the agent's<br/>
+        /// configured model is used instead. An unknown provider, model, or<br/>
+        /// reasoning effort results in a 400.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -61,6 +68,7 @@ namespace Dust
             string content,
             global::System.Collections.Generic.IList<global::Dust.Mention> mentions,
             global::Dust.Context? context = default,
+            global::Dust.ModelSelection? modelSelection = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

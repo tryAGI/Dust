@@ -900,1223 +900,1231 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.ContentFragment? Type218 { get; set; }
+        public global::Dust.ModelSelection? Type218 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.Space? Type219 { get; set; }
+        public global::Dust.ModelSelectionReasoningEffort? Type219 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.SpaceKind? Type220 { get; set; }
+        public global::Dust.ContentFragment? Type220 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.Datasource? Type221 { get; set; }
+        public global::Dust.Space? Type221 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.Table? Type222 { get; set; }
+        public global::Dust.SpaceKind? Type222 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.TableSchemaItem>? Type223 { get; set; }
+        public global::Dust.Datasource? Type223 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.TableSchemaItem? Type224 { get; set; }
+        public global::Dust.Table? Type224 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.TableSchemaItemValueType? Type225 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.TableSchemaItem>? Type225 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DatasourceView? Type226 { get; set; }
+        public global::Dust.TableSchemaItem? Type226 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DatasourceViewCategory? Type227 { get; set; }
+        public global::Dust.TableSchemaItemValueType? Type227 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DatasourceViewEditedByUser? Type228 { get; set; }
+        public global::Dust.DatasourceView? Type228 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DatasourceViewKind? Type229 { get; set; }
+        public global::Dust.DatasourceViewCategory? Type229 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.SkillSourceMetadata? Type230 { get; set; }
+        public global::Dust.DatasourceViewEditedByUser? Type230 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.Skill? Type231 { get; set; }
+        public global::Dust.DatasourceViewKind? Type231 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.SkillStatus? Type232 { get; set; }
+        public global::Dust.SkillSourceMetadata? Type232 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.SkillSource? Type233 { get; set; }
+        public global::Dust.Skill? Type233 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.SkillReinforcement? Type234 { get; set; }
+        public global::Dust.SkillStatus? Type234 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>? Type235 { get; set; }
+        public global::Dust.SkillSource? Type235 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.SkillFileAttachment? Type236 { get; set; }
+        public global::Dust.SkillReinforcement? Type236 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.MCPServerView>? Type237 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>? Type237 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.MCPServerView? Type238 { get; set; }
+        public global::Dust.SkillFileAttachment? Type238 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.Run? Type239 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.MCPServerView>? Type239 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.RunStatus? Type240 { get; set; }
+        public global::Dust.MCPServerView? Type240 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dust.RunTraceItem>>? Type241 { get; set; }
+        public global::Dust.Run? Type241 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.RunTraceItem>? Type242 { get; set; }
+        public global::Dust.RunStatus? Type242 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.RunTraceItem? Type243 { get; set; }
+        public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dust.RunTraceItem>>? Type243 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.Document? Type244 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.RunTraceItem>? Type244 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.MCPServerViewServerType? Type245 { get; set; }
+        public global::Dust.RunTraceItem? Type245 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.MCPServerViewServer? Type246 { get; set; }
+        public global::Dust.Document? Type246 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.MCPServerViewServerAuthorization? Type247 { get; set; }
+        public global::Dust.MCPServerViewServerType? Type247 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.MCPServerViewServerAuthorizationSupportedUseCase>? Type248 { get; set; }
+        public global::Dust.MCPServerViewServer? Type248 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.MCPServerViewServerAuthorizationSupportedUseCase? Type249 { get; set; }
+        public global::Dust.MCPServerViewServerAuthorization? Type249 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.MCPServerViewServerTool>? Type250 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.MCPServerViewServerAuthorizationSupportedUseCase>? Type250 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.MCPServerViewServerTool? Type251 { get; set; }
+        public global::Dust.MCPServerViewServerAuthorizationSupportedUseCase? Type251 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.MCPServerViewOAuthUseCase? Type252 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.MCPServerViewServerTool>? Type252 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.MCPServerViewEditedByUser? Type253 { get; set; }
+        public global::Dust.MCPServerViewServerTool? Type253 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchUserRequest? Type254 { get; set; }
+        public global::Dust.MCPServerViewOAuthUseCase? Type254 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequest? Type255 { get; set; }
+        public global::Dust.MCPServerViewEditedByUser? Type255 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestAgent? Type256 { get; set; }
+        public global::Dust.PatchUserRequest? Type256 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope? Type257 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequest? Type257 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestGenerationSettings? Type258 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestAgent? Type258 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestTag>? Type259 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope? Type259 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestTag? Type260 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestGenerationSettings? Type260 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestTagKind? Type261 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestTag>? Type261 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestEditor>? Type262 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestTag? Type262 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestEditor? Type263 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestTagKind? Type263 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestSkill>? Type264 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestEditor>? Type264 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestSkill? Type265 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestEditor? Type265 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem>? Type266 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestSkill>? Type266 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem? Type267 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestSkill? Type267 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemType? Type268 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem>? Type268 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemConfiguration? Type269 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem? Type269 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequest? Type270 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemType? Type270 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgent? Type271 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemConfiguration? Type271 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgentScope? Type272 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequest? Type272 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestGenerationSettings? Type273 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgent? Type273 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestTag>? Type274 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgentScope? Type274 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestTag? Type275 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestGenerationSettings? Type275 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestTagKind? Type276 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestTag>? Type276 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestEditor>? Type277 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestTag? Type277 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestEditor? Type278 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestTagKind? Type278 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItem>? Type279 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestEditor>? Type279 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItem? Type280 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestEditor? Type280 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItemType? Type281 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItem>? Type281 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsCancelRequest? Type282 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItem? Type282 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>? Type283 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItemType? Type283 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsRequestVariant1? Type284 { get; set; }
+        public global::Dust.CreateWAssistantConversationsCancelRequest? Type284 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsRequestVariant2? Type285 { get; set; }
+        public global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>? Type285 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesAnswerQuestionRequest? Type286 { get; set; }
+        public global::Dust.PatchWAssistantConversationsRequestVariant1? Type286 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesAnswerQuestionRequestAnswer? Type287 { get; set; }
+        public global::Dust.PatchWAssistantConversationsRequestVariant2? Type287 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<int>? Type288 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesAnswerQuestionRequest? Type288 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesEditRequest? Type289 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesAnswerQuestionRequestAnswer? Type289 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantConversationsMessagesEditRequestMention>? Type290 { get; set; }
+        public global::System.Collections.Generic.IList<int>? Type290 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesEditRequestMention? Type291 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesEditRequest? Type291 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequest? Type292 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantConversationsMessagesEditRequestMention>? Type292 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection? Type293 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesEditRequestMention? Type293 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesValidateActionRequest? Type294 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequest? Type294 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsRequest? Type295 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection? Type295 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.ContentFragment>? Type296 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesValidateActionRequest? Type296 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantMentionsParseRequest? Type297 { get; set; }
+        public global::Dust.CreateWAssistantConversationsRequest? Type297 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWFilesRequest? Type298 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.ContentFragment>? Type298 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWMcpDeregisterRequest? Type299 { get; set; }
+        public global::Dust.CreateWAssistantMentionsParseRequest? Type299 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWMcpHeartbeatRequest? Type300 { get; set; }
+        public global::Dust.CreateWFilesRequest? Type300 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWMcpRegisterRequest? Type301 { get; set; }
+        public global::Dust.CreateWMcpDeregisterRequest? Type301 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWMcpResultsRequest? Type302 { get; set; }
+        public global::Dust.CreateWMcpHeartbeatRequest? Type302 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSearchRequest? Type303 { get; set; }
+        public global::Dust.CreateWMcpRegisterRequest? Type303 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSearchToolsUploadRequest? Type304 { get; set; }
+        public global::Dust.CreateWMcpResultsRequest? Type304 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSkillsRequest? Type305 { get; set; }
+        public global::Dust.CreateWSearchRequest? Type305 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<byte[]>? Type306 { get; set; }
+        public global::Dust.CreateWSearchToolsUploadRequest? Type306 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSkillsRequestOnConflict? Type307 { get; set; }
+        public global::Dust.CreateWSkillsRequest? Type307 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesAppsRunsRequest? Type308 { get; set; }
+        public global::System.Collections.Generic.IList<byte[]>? Type308 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesAppsRunsRequestConfig? Type309 { get; set; }
+        public global::Dust.CreateWSkillsRequestOnConflict? Type309 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesAppsRunsRequestConfigModel? Type310 { get; set; }
+        public global::Dust.CreateWSpacesAppsRunsRequest? Type310 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.OneOf<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>? Type311 { get; set; }
+        public global::Dust.CreateWSpacesAppsRunsRequestConfig? Type311 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesDataSourceViewsRequestVariant1? Type312 { get; set; }
+        public global::Dust.CreateWSpacesAppsRunsRequestConfigModel? Type312 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesDataSourceViewsRequestVariant2? Type313 { get; set; }
+        public global::Dust.OneOf<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>? Type313 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourcesDocumentsRequest? Type314 { get; set; }
+        public global::Dust.PatchWSpacesDataSourceViewsRequestVariant1? Type314 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourcesDocumentsParentsRequest? Type315 { get; set; }
+        public global::Dust.PatchWSpacesDataSourceViewsRequestVariant2? Type315 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourcesTablesRowsRequest? Type316 { get; set; }
+        public global::Dust.CreateWSpacesDataSourcesDocumentsRequest? Type316 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRow>? Type317 { get; set; }
+        public global::Dust.CreateWSpacesDataSourcesDocumentsParentsRequest? Type317 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRow? Type318 { get; set; }
+        public global::Dust.CreateWSpacesDataSourcesTablesRowsRequest? Type318 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.OneOf<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>? Type319 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRow>? Type319 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2? Type320 { get; set; }
+        public global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRow? Type320 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValueType? Type321 { get; set; }
+        public global::Dust.OneOf<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>? Type321 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourcesTablesRequest? Type322 { get; set; }
+        public global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2? Type322 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsRequest? Type323 { get; set; }
+        public global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValueType? Type323 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsCancelRequest2? Type324 { get; set; }
+        public global::Dust.CreateWSpacesDataSourcesTablesRequest? Type324 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsCancelRequestAction? Type325 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsRequest? Type325 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsCompactionsRequest? Type326 { get; set; }
+        public global::Dust.CreateWAssistantConversationsCancelRequest2? Type326 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsCompactionsRequestModel? Type327 { get; set; }
+        public global::Dust.CreateWAssistantConversationsCancelRequestAction? Type327 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsContentFragmentRequest? Type328 { get; set; }
+        public global::Dust.CreateWAssistantConversationsCompactionsRequest? Type328 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsContentFragmentRequestContext? Type329 { get; set; }
+        public global::Dust.CreateWAssistantConversationsCompactionsRequestModel? Type329 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsRequestVariant12? Type330 { get; set; }
+        public global::Dust.CreateWAssistantConversationsContentFragmentRequest? Type330 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsRequestVariant22? Type331 { get; set; }
+        public global::Dust.CreateWAssistantConversationsContentFragmentRequestContext? Type331 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsRequestVariant3? Type332 { get; set; }
+        public global::Dust.PatchWAssistantConversationsRequestVariant12? Type332 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsRequestVariant4? Type333 { get; set; }
+        public global::Dust.PatchWAssistantConversationsRequestVariant22? Type333 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsRequestVariant4AccessMode? Type334 { get; set; }
+        public global::Dust.PatchWAssistantConversationsRequestVariant3? Type334 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesEditRequest2? Type335 { get; set; }
+        public global::Dust.PatchWAssistantConversationsRequestVariant4? Type335 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequest2? Type336 { get; set; }
+        public global::Dust.PatchWAssistantConversationsRequestVariant4AccessMode? Type336 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2? Type337 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesEditRequest2? Type337 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesRequest? Type338 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequest2? Type338 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesRequestContext? Type339 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2? Type339 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesRequestModelSelection? Type340 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesRequest? Type340 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsRequest2? Type341 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesRequestContext? Type341 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsRequestVisibility? Type342 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesRequestModelSelection? Type342 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsRequestMessage? Type343 { get; set; }
+        public global::Dust.CreateWAssistantConversationsRequest2? Type343 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsRequestMessageContext? Type344 { get; set; }
+        public global::Dust.CreateWAssistantConversationsRequestVisibility? Type344 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWFilesRequest2? Type345 { get; set; }
+        public global::Dust.CreateWAssistantConversationsRequestMessage? Type345 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWFilesRequest3? Type346 { get; set; }
+        public global::Dust.CreateWAssistantConversationsRequestMessageContext? Type346 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWFilesRequestUseCase? Type347 { get; set; }
+        public global::Dust.CreateWFilesRequest2? Type347 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesDataSourceViewsRequest2? Type348 { get; set; }
+        public global::Dust.CreateWFilesRequest3? Type348 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourceViewsRequest? Type349 { get; set; }
+        public global::Dust.CreateWFilesRequestUseCase? Type349 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesRequest? Type350 { get; set; }
+        public global::Dust.PatchWSpacesDataSourceViewsRequest2? Type350 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PatchWSpacesRequestContentItem>? Type351 { get; set; }
+        public global::Dust.CreateWSpacesDataSourceViewsRequest? Type351 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesRequestContentItem? Type352 { get; set; }
+        public global::Dust.PatchWSpacesRequest? Type352 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesProjectNotificationPreferencesRequest? Type353 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PatchWSpacesRequestContentItem>? Type353 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference? Type354 { get; set; }
+        public global::Dust.PatchWSpacesRequestContentItem? Type354 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesRequest? Type355 { get; set; }
+        public global::Dust.PatchWSpacesProjectNotificationPreferencesRequest? Type355 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesRequestSpaceKind? Type356 { get; set; }
+        public global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference? Type356 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesRequestManagementMode? Type357 { get; set; }
+        public global::Dust.CreateWSpacesRequest? Type357 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWorkosAuthenticateRequest? Type358 { get; set; }
+        public global::Dust.CreateWSpacesRequestSpaceKind? Type358 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWorkosAuthenticateRequestGrantType? Type359 { get; set; }
+        public global::Dust.CreateWSpacesRequestManagementMode? Type359 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWorkosRevokeSessionRequest? Type360 { get; set; }
+        public global::Dust.CreateWorkosAuthenticateRequest? Type360 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAnalyticsExportTable? Type361 { get; set; }
+        public global::Dust.CreateWorkosAuthenticateRequestGrantType? Type361 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAnalyticsExportFormat? Type362 { get; set; }
+        public global::Dust.CreateWorkosRevokeSessionRequest? Type362 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsView? Type363 { get; set; }
+        public global::Dust.GetWAnalyticsExportTable? Type363 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsWithAuthors? Type364 { get; set; }
+        public global::Dust.GetWAnalyticsExportFormat? Type364 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsVariant? Type365 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsView? Type365 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem>? Type366 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsWithAuthors? Type366 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem? Type367 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsVariant? Type367 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantMentionsSuggestionsSelectItem>? Type368 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem>? Type368 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantMentionsSuggestionsSelectItem? Type369 { get; set; }
+        public global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem? Type369 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSearchViewType? Type370 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantMentionsSuggestionsSelectItem>? Type370 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSkillsStatus? Type371 { get; set; }
+        public global::Dust.GetWAssistantMentionsSuggestionsSelectItem? Type371 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWWorkspaceUsageMode? Type372 { get; set; }
+        public global::Dust.GetWSearchViewType? Type372 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWWorkspaceUsageFormat? Type373 { get; set; }
+        public global::Dust.GetWSkillsStatus? Type373 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWWorkspaceUsageTable? Type374 { get; set; }
+        public global::Dust.GetWWorkspaceUsageMode? Type374 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsView2? Type375 { get; set; }
+        public global::Dust.GetWWorkspaceUsageFormat? Type375 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsWithUsage? Type376 { get; set; }
+        public global::Dust.GetWWorkspaceUsageTable? Type376 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsWithAuthors2? Type377 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsView2? Type377 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsWithFeedbacks? Type378 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsWithUsage? Type378 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsWithEditors? Type379 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsWithAuthors2? Type379 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantMentionsSuggestionsSelect? Type380 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsWithFeedbacks? Type380 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantMentionsSuggestionsCurrent? Type381 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsWithEditors? Type381 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWFilesVersion? Type382 { get; set; }
+        public global::Dust.GetWAssistantMentionsSuggestionsSelect? Type382 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWFilesAction? Type383 { get; set; }
+        public global::Dust.GetWAssistantMentionsSuggestionsCurrent? Type383 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWSpacesDataSourceViewsForce? Type384 { get; set; }
+        public global::Dust.GetWFilesVersion? Type384 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourceViewsCategory? Type385 { get; set; }
+        public global::Dust.GetWFilesAction? Type385 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourceViewsWithDetails? Type386 { get; set; }
+        public global::Dust.DeleteWSpacesDataSourceViewsForce? Type386 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourceViewsIncludeEditedBy? Type387 { get; set; }
+        public global::Dust.GetWSpacesDataSourceViewsCategory? Type387 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesIncludeAllMembers? Type388 { get; set; }
+        public global::Dust.GetWSpacesDataSourceViewsWithDetails? Type388 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWSpacesForce? Type389 { get; set; }
+        public global::Dust.GetWSpacesDataSourceViewsIncludeEditedBy? Type389 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetUserResponse? Type390 { get; set; }
+        public global::Dust.GetWSpacesIncludeAllMembers? Type390 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchUserResponse? Type391 { get; set; }
+        public global::Dust.DeleteWSpacesForce? Type391 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsResponse? Type392 { get; set; }
+        public global::Dust.GetUserResponse? Type392 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.AgentConfiguration>? Type393 { get; set; }
+        public global::Dust.PatchUserResponse? Type393 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsResponse2? Type394 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsResponse? Type394 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsResponse? Type395 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.AgentConfiguration>? Type395 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsResponseSkippedAction>? Type396 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsResponse2? Type396 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantAgentConfigurationsResponseSkippedAction? Type397 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsResponse? Type397 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWAssistantAgentConfigurationsResponse? Type398 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsResponseSkippedAction>? Type398 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportResponse? Type399 { get; set; }
+        public global::Dust.PatchWAssistantAgentConfigurationsResponseSkippedAction? Type399 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportResponseSkippedAction>? Type400 { get; set; }
+        public global::Dust.DeleteWAssistantAgentConfigurationsResponse? Type400 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsImportResponseSkippedAction? Type401 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportResponse? Type401 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsSearchResponse? Type402 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportResponseSkippedAction>? Type402 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsCancelResponse? Type403 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsImportResponseSkippedAction? Type403 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsFeedbacksResponse? Type404 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsSearchResponse? Type404 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsFeedbacksResponseFeedback>? Type405 { get; set; }
+        public global::Dust.CreateWAssistantConversationsCancelResponse? Type405 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsFeedbacksResponseFeedback? Type406 { get; set; }
+        public global::Dust.GetWAssistantConversationsFeedbacksResponse? Type406 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirection? Type407 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsFeedbacksResponseFeedback>? Type407 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsResponse? Type408 { get; set; }
+        public global::Dust.GetWAssistantConversationsFeedbacksResponseFeedback? Type408 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse? Type409 { get; set; }
+        public global::Dust.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirection? Type409 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.RichMention>? Type410 { get; set; }
+        public global::Dust.PatchWAssistantConversationsResponse? Type410 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesAnswerQuestionResponse? Type411 { get; set; }
+        public global::Dust.GetWAssistantConversationsMentionsSuggestionsResponse? Type411 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesEditResponse? Type412 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.RichMention>? Type412 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsMessagesEventsResponse? Type413 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesAnswerQuestionResponse? Type413 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsMessagesEventsResponseEvent>? Type414 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesEditResponse? Type414 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsMessagesEventsResponseEvent? Type415 { get; set; }
+        public global::Dust.GetWAssistantConversationsMessagesEventsResponse? Type415 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse? Type416 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsMessagesEventsResponseEvent>? Type416 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse? Type417 { get; set; }
+        public global::Dust.GetWAssistantConversationsMessagesEventsResponseEvent? Type417 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesValidateActionResponse? Type418 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse? Type418 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantMentionsParseResponse? Type419 { get; set; }
+        public global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse? Type419 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantMentionsSuggestionsResponse? Type420 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesValidateActionResponse? Type420 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWFilesResponse? Type421 { get; set; }
+        public global::Dust.CreateWAssistantMentionsParseResponse? Type421 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWFilesResponseFile? Type422 { get; set; }
+        public global::Dust.GetWAssistantMentionsSuggestionsResponse? Type422 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWMcpHeartbeatResponse? Type423 { get; set; }
+        public global::Dust.CreateWFilesResponse? Type423 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWMcpRegisterResponse? Type424 { get; set; }
+        public global::Dust.CreateWFilesResponseFile? Type424 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWMcpRequestsResponse? Type425 { get; set; }
+        public global::Dust.CreateWMcpHeartbeatResponse? Type425 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSkillsResponse? Type426 { get; set; }
+        public global::Dust.CreateWMcpRegisterResponse? Type426 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.Skill>? Type427 { get; set; }
+        public global::Dust.GetWMcpRequestsResponse? Type427 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSkillsResponse? Type428 { get; set; }
+        public global::Dust.GetWSkillsResponse? Type428 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedItem>? Type429 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.Skill>? Type429 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSkillsResponseSkippedItem? Type430 { get; set; }
+        public global::Dust.CreateWSkillsResponse? Type430 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesAppsRunsResponse? Type431 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedItem>? Type431 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesAppsRunsResponse? Type432 { get; set; }
+        public global::Dust.CreateWSkillsResponseSkippedItem? Type432 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesAppsResponse? Type433 { get; set; }
+        public global::Dust.GetWSpacesAppsRunsResponse? Type433 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWSpacesAppsResponseApp>? Type434 { get; set; }
+        public global::Dust.CreateWSpacesAppsRunsResponse? Type434 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesAppsResponseApp? Type435 { get; set; }
+        public global::Dust.GetWSpacesAppsResponse? Type435 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourceViewsSearchResponse? Type436 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWSpacesAppsResponseApp>? Type436 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWSpacesDataSourceViewsSearchResponseDocument>? Type437 { get; set; }
+        public global::Dust.GetWSpacesAppsResponseApp? Type437 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourceViewsSearchResponseDocument? Type438 { get; set; }
+        public global::Dust.GetWSpacesDataSourceViewsSearchResponse? Type438 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourceViewsResponse? Type439 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWSpacesDataSourceViewsSearchResponseDocument>? Type439 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.DatasourceView>? Type440 { get; set; }
+        public global::Dust.GetWSpacesDataSourceViewsSearchResponseDocument? Type440 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourcesCheckUpsertQueueResponse? Type441 { get; set; }
+        public global::Dust.GetWSpacesDataSourceViewsResponse? Type441 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourcesDocumentsResponse? Type442 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.DatasourceView>? Type442 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourcesDocumentsResponse? Type443 { get; set; }
+        public global::Dust.GetWSpacesDataSourcesCheckUpsertQueueResponse? Type443 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWSpacesDataSourcesDocumentsResponse? Type444 { get; set; }
+        public global::Dust.GetWSpacesDataSourcesDocumentsResponse? Type444 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWSpacesDataSourcesDocumentsResponseDocument? Type445 { get; set; }
+        public global::Dust.CreateWSpacesDataSourcesDocumentsResponse? Type445 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourcesDocumentsResponse2? Type446 { get; set; }
+        public global::Dust.DeleteWSpacesDataSourcesDocumentsResponse? Type446 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.Document>? Type447 { get; set; }
+        public global::Dust.DeleteWSpacesDataSourcesDocumentsResponseDocument? Type447 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourcesSearchResponse? Type448 { get; set; }
+        public global::Dust.GetWSpacesDataSourcesDocumentsResponse2? Type448 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWSpacesDataSourcesSearchResponseDocument>? Type449 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.Document>? Type449 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourcesSearchResponseDocument? Type450 { get; set; }
+        public global::Dust.GetWSpacesDataSourcesSearchResponse? Type450 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.Datasource>? Type451 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWSpacesDataSourcesSearchResponseDocument>? Type451 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.Table>? Type452 { get; set; }
+        public global::Dust.GetWSpacesDataSourcesSearchResponseDocument? Type452 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourcesResponse? Type453 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.Datasource>? Type453 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesMcpServerViewsResponse? Type454 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.Table>? Type454 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesResponse? Type455 { get; set; }
+        public global::Dust.GetWSpacesDataSourcesResponse? Type455 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.Space>? Type456 { get; set; }
+        public global::Dust.GetWSpacesMcpServerViewsResponse? Type456 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantAgentConfigurationsResponse3? Type457 { get; set; }
+        public global::Dust.GetWSpacesResponse? Type457 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentConfiguration>? Type458 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.Space>? Type458 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantAgentConfigurationsResponse? Type459 { get; set; }
+        public global::Dust.GetWAssistantAgentConfigurationsResponse3? Type459 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsCancelResponse2? Type460 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentConfiguration>? Type460 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsCompactionsResponse? Type461 { get; set; }
+        public global::Dust.CreateWAssistantAgentConfigurationsResponse? Type461 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsContentFragmentResponse? Type462 { get; set; }
+        public global::Dust.CreateWAssistantConversationsCancelResponse2? Type462 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsFeedbacksResponse2? Type463 { get; set; }
+        public global::Dust.CreateWAssistantConversationsCompactionsResponse? Type463 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateFeedback>? Type464 { get; set; }
+        public global::Dust.CreateWAssistantConversationsContentFragmentResponse? Type464 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsResponse? Type465 { get; set; }
+        public global::Dust.GetWAssistantConversationsFeedbacksResponse2? Type465 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWAssistantConversationsResponse2? Type466 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateFeedback>? Type466 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsMessagesActionsResponse? Type467 { get; set; }
+        public global::Dust.GetWAssistantConversationsResponse? Type467 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus? Type468 { get; set; }
+        public global::Dust.PatchWAssistantConversationsResponse2? Type468 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesEditResponse2? Type469 { get; set; }
+        public global::Dust.GetWAssistantConversationsMessagesActionsResponse? Type469 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse2? Type470 { get; set; }
+        public global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus? Type470 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse2? Type471 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesEditResponse2? Type471 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsMessagesResponse? Type472 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse2? Type472 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>? Type473 { get; set; }
+        public global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse2? Type473 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWAssistantConversationsMessagesResponse? Type474 { get; set; }
+        public global::Dust.GetWAssistantConversationsMessagesResponse? Type474 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesRetryResponse? Type475 { get; set; }
+        public global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>? Type475 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsMessagesResponse2? Type476 { get; set; }
+        public global::Dust.DeleteWAssistantConversationsMessagesResponse? Type476 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateLightAgentMessage, global::Dust.PrivateContentFragment>>? Type477 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesRetryResponse? Type477 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateLightAgentMessage, global::Dust.PrivateContentFragment>? Type478 { get; set; }
+        public global::Dust.GetWAssistantConversationsMessagesResponse2? Type478 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsMessagesResponse? Type479 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateLightAgentMessage, global::Dust.PrivateContentFragment>>? Type479 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateContentFragment>? Type480 { get; set; }
+        public global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateLightAgentMessage, global::Dust.PrivateContentFragment>? Type480 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateAgentMessage>? Type481 { get; set; }
+        public global::Dust.CreateWAssistantConversationsMessagesResponse? Type481 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsParticipantsResponse? Type482 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateContentFragment>? Type482 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsParticipantsResponseParticipants? Type483 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateAgentMessage>? Type483 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent>? Type484 { get; set; }
+        public global::Dust.GetWAssistantConversationsParticipantsResponse? Type484 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent? Type485 { get; set; }
+        public global::Dust.GetWAssistantConversationsParticipantsResponseParticipants? Type485 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser>? Type486 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent>? Type486 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser? Type487 { get; set; }
+        public global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent? Type487 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWAssistantConversationsWakeupsResponse? Type488 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser>? Type488 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsWakeupsResponse? Type489 { get; set; }
+        public global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser? Type489 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateWakeUp>? Type490 { get; set; }
+        public global::Dust.DeleteWAssistantConversationsWakeupsResponse? Type490 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantConversationsResponse2? Type491 { get; set; }
+        public global::Dust.GetWAssistantConversationsWakeupsResponse? Type491 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateConversation>? Type492 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateWakeUp>? Type492 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWAssistantConversationsResponse? Type493 { get; set; }
+        public global::Dust.GetWAssistantConversationsResponse2? Type493 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWAssistantMentionsSuggestionsResponse2? Type494 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateConversation>? Type494 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateMentionSuggestion>? Type495 { get; set; }
+        public global::Dust.CreateWAssistantConversationsResponse? Type495 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWFilesResponse2? Type496 { get; set; }
+        public global::Dust.GetWAssistantMentionsSuggestionsResponse2? Type496 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWFilesResponse3? Type497 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateMentionSuggestion>? Type497 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourceViewsResponse2? Type498 { get; set; }
+        public global::Dust.CreateWFilesResponse2? Type498 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesDataSourceViewsResponse? Type499 { get; set; }
+        public global::Dust.CreateWFilesResponse3? Type499 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesDataSourceViewsResponse3? Type500 { get; set; }
+        public global::Dust.GetWSpacesDataSourceViewsResponse2? Type500 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.PrivateDataSourceView>? Type501 { get; set; }
+        public global::Dust.PatchWSpacesDataSourceViewsResponse? Type501 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesDataSourceViewsResponse? Type502 { get; set; }
+        public global::Dust.GetWSpacesDataSourceViewsResponse3? Type502 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesResponse2? Type503 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.PrivateDataSourceView>? Type503 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWSpacesResponseSpace>? Type504 { get; set; }
+        public global::Dust.CreateWSpacesDataSourceViewsResponse? Type504 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesResponseSpace? Type505 { get; set; }
+        public global::Dust.GetWSpacesResponse2? Type505 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, global::Dust.GetWSpacesResponseSpaceCategories2>? Type506 { get; set; }
+        public global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWSpacesResponseSpace>? Type506 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesResponseSpaceCategories2? Type507 { get; set; }
+        public global::Dust.GetWSpacesResponseSpace? Type507 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesResponseSpaceCategoriesUsage? Type508 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Dust.GetWSpacesResponseSpaceCategories2>? Type508 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesResponse? Type509 { get; set; }
+        public global::Dust.GetWSpacesResponseSpaceCategories2? Type509 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.DeleteWSpacesResponse? Type510 { get; set; }
+        public global::Dust.GetWSpacesResponseSpaceCategoriesUsage? Type510 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesProjectNotificationPreferencesResponse? Type511 { get; set; }
+        public global::Dust.PatchWSpacesResponse? Type511 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreference? Type512 { get; set; }
+        public global::Dust.DeleteWSpacesResponse? Type512 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference? Type513 { get; set; }
+        public global::Dust.GetWSpacesProjectNotificationPreferencesResponse? Type513 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesProjectNotificationPreferencesResponse? Type514 { get; set; }
+        public global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreference? Type514 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreference? Type515 { get; set; }
+        public global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference? Type515 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference? Type516 { get; set; }
+        public global::Dust.PatchWSpacesProjectNotificationPreferencesResponse? Type516 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.GetWSpacesResponse3? Type517 { get; set; }
+        public global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreference? Type517 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>>? Type518 { get; set; }
+        public global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference? Type518 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>? Type519 { get; set; }
+        public global::Dust.GetWSpacesResponse3? Type519 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWSpacesResponse? Type520 { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>>? Type520 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWorkosAuthenticateResponse? Type521 { get; set; }
+        public global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>? Type521 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Dust.CreateWorkosRevokeSessionResponse? Type522 { get; set; }
+        public global::Dust.CreateWSpacesResponse? Type522 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.CreateWorkosAuthenticateResponse? Type523 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.CreateWorkosRevokeSessionResponse? Type524 { get; set; }
 
         /// <summary>
         /// 
