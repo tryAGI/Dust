@@ -17,7 +17,7 @@ namespace Dust
         global::System.Threading.Tasks.Task<global::Dust.GetWSpacesResponse3> GetWByWIdSpacesAsync(
             string wId,
             string? role = default,
-            string? kind = default,
+            global::System.Collections.Generic.IList<global::Dust.GetWSpacesKindItem>? kind = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -33,7 +33,7 @@ namespace Dust
         global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesResponse3>> GetWByWIdSpacesAsResponseAsync(
             string wId,
             string? role = default,
-            string? kind = default,
+            global::System.Collections.Generic.IList<global::Dust.GetWSpacesKindItem>? kind = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
