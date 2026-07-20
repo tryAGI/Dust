@@ -53,6 +53,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("selectedSpaceIds")]
+        public global::System.Collections.Generic.IList<string>? SelectedSpaceIds { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agenticMessageData")]
         public global::Dust.ContextAgenticMessageData? AgenticMessageData { get; set; }
 
@@ -85,6 +91,7 @@ namespace Dust
         /// URL of the user's profile picture<br/>
         /// Example: https://example.com/profiles/johndoe123.jpg
         /// </param>
+        /// <param name="selectedSpaceIds"></param>
         /// <param name="agenticMessageData"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -95,6 +102,7 @@ namespace Dust
             string? fullName,
             string? email,
             string? profilePictureUrl,
+            global::System.Collections.Generic.IList<string>? selectedSpaceIds,
             global::Dust.ContextAgenticMessageData? agenticMessageData)
         {
             this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
@@ -102,6 +110,7 @@ namespace Dust
             this.FullName = fullName;
             this.Email = email;
             this.ProfilePictureUrl = profilePictureUrl;
+            this.SelectedSpaceIds = selectedSpaceIds;
             this.AgenticMessageData = agenticMessageData;
         }
 

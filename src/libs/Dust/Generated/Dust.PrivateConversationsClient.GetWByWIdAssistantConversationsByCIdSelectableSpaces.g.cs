@@ -6,7 +6,7 @@ namespace Dust
     public partial class PrivateConversationsClient
     {
 
-        private static readonly global::Dust.AutoSDKServer[] s_CreateWByWIdAssistantConversationsServers = new global::Dust.AutoSDKServer[]
+        private static readonly global::Dust.AutoSDKServer[] s_GetWByWIdAssistantConversationsByCIdSelectableSpacesServers = new global::Dust.AutoSDKServer[]
         {            new global::Dust.AutoSDKServer(
                 id: "https-dust-tt",
                 name: "Dust.tt API (us-central1)",
@@ -20,7 +20,7 @@ namespace Dust
         };
 
 
-        private static readonly global::Dust.EndPointSecurityRequirement s_CreateWByWIdAssistantConversationsSecurityRequirement0 =
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdAssistantConversationsByCIdSelectableSpacesSecurityRequirement0 =
             new global::Dust.EndPointSecurityRequirement
             {
                 Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
@@ -34,48 +34,46 @@ namespace Dust
                     },
                 },
             };
-        private static readonly global::Dust.EndPointSecurityRequirement[] s_CreateWByWIdAssistantConversationsSecurityRequirements =
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdAssistantConversationsByCIdSelectableSpacesSecurityRequirements =
             new global::Dust.EndPointSecurityRequirement[]
-            {                s_CreateWByWIdAssistantConversationsSecurityRequirement0,
+            {                s_GetWByWIdAssistantConversationsByCIdSelectableSpacesSecurityRequirement0,
             };
-        partial void PrepareCreateWByWIdAssistantConversationsArguments(
+        partial void PrepareGetWByWIdAssistantConversationsByCIdSelectableSpacesArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
-            global::Dust.CreateWAssistantConversationsRequest2 request);
-        partial void PrepareCreateWByWIdAssistantConversationsRequest(
+            ref string cId);
+        partial void PrepareGetWByWIdAssistantConversationsByCIdSelectableSpacesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
-            global::Dust.CreateWAssistantConversationsRequest2 request);
-        partial void ProcessCreateWByWIdAssistantConversationsResponse(
+            string cId);
+        partial void ProcessGetWByWIdAssistantConversationsByCIdSelectableSpacesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessCreateWByWIdAssistantConversationsResponseContent(
+        partial void ProcessGetWByWIdAssistantConversationsByCIdSelectableSpacesResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create a conversation<br/>
-        /// Create a new conversation, optionally with an initial user message and content fragments.
+        /// List selectable Spaces<br/>
+        /// Lists regular Spaces the user can select for a conversation, with current selection state.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="request"></param>
+        /// <param name="cId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantConversationsResponse> CreateWByWIdAssistantConversationsAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.GetWAssistantConversationsSelectableSpacesResponse> GetWByWIdAssistantConversationsByCIdSelectableSpacesAsync(
             string wId,
-
-            global::Dust.CreateWAssistantConversationsRequest2 request,
+            string cId,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await CreateWByWIdAssistantConversationsAsResponseAsync(
+            var __response = await GetWByWIdAssistantConversationsByCIdSelectableSpacesAsResponseAsync(
                 wId: wId,
-
-                request: request,
+                cId: cId,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -83,35 +81,32 @@ namespace Dust
             return __response.Body;
         }
         /// <summary>
-        /// Create a conversation<br/>
-        /// Create a new conversation, optionally with an initial user message and content fragments.
+        /// List selectable Spaces<br/>
+        /// Lists regular Spaces the user can select for a conversation, with current selection state.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="request"></param>
+        /// <param name="cId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWAssistantConversationsResponse>> CreateWByWIdAssistantConversationsAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWAssistantConversationsSelectableSpacesResponse>> GetWByWIdAssistantConversationsByCIdSelectableSpacesAsResponseAsync(
             string wId,
-
-            global::Dust.CreateWAssistantConversationsRequest2 request,
+            string cId,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
-
             PrepareArguments(
                 client: HttpClient);
-            PrepareCreateWByWIdAssistantConversationsArguments(
+            PrepareGetWByWIdAssistantConversationsByCIdSelectableSpacesArguments(
                 httpClient: HttpClient,
                 wId: ref wId,
-                request: request);
+                cId: ref cId);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_CreateWByWIdAssistantConversationsSecurityRequirements,
-                operationName: "CreateWByWIdAssistantConversationsAsync");
+                securityRequirements: s_GetWByWIdAssistantConversationsByCIdSelectableSpacesSecurityRequirements,
+                operationName: "GetWByWIdAssistantConversationsByCIdSelectableSpacesAsync");
 
             using var __timeoutCancellationTokenSource = global::Dust.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -131,9 +126,9 @@ namespace Dust
             {
 
                             var __pathBuilder = new global::Dust.PathBuilder(
-                                path: $"/api/w/{wId}/assistant/conversations",
+                                path: $"/api/w/{wId}/assistant/conversations/{cId}/selectable_spaces",
                                 baseUri: ResolveBaseUri(
-                                servers: s_CreateWByWIdAssistantConversationsServers,
+                                servers: s_GetWByWIdAssistantConversationsByCIdSelectableSpacesServers,
                                 defaultBaseUrl: "https://dust.tt/"));
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -141,7 +136,7 @@ namespace Dust
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -164,12 +159,6 @@ namespace Dust
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 } 
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
-                            var __httpRequestContent = new global::System.Net.Http.StringContent(
-                                content: __httpRequestContentBody,
-                                encoding: global::System.Text.Encoding.UTF8,
-                                mediaType: "application/json");
-                            __httpRequest.Content = __httpRequestContent;
                 global::Dust.AutoSDKRequestOptionsSupport.ApplyHeaders(
                     request: __httpRequest,
                     clientHeaders: Options.Headers,
@@ -178,11 +167,11 @@ namespace Dust
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareCreateWByWIdAssistantConversationsRequest(
+                PrepareGetWByWIdAssistantConversationsByCIdSelectableSpacesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     wId: wId!,
-                    request: request);
+                    cId: cId!);
 
                 return __httpRequest;
             }
@@ -199,10 +188,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createWByWIdAssistantConversations",
-                                methodName: "CreateWByWIdAssistantConversationsAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations\"",
-                                httpMethod: "POST",
+                                operationId: "getWByWIdAssistantConversationsByCIdSelectableSpaces",
+                                methodName: "GetWByWIdAssistantConversationsByCIdSelectableSpacesAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}/selectable_spaces\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -233,10 +222,10 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createWByWIdAssistantConversations",
-                                methodName: "CreateWByWIdAssistantConversationsAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations\"",
-                                httpMethod: "POST",
+                                operationId: "getWByWIdAssistantConversationsByCIdSelectableSpaces",
+                                methodName: "GetWByWIdAssistantConversationsByCIdSelectableSpacesAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}/selectable_spaces\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -274,10 +263,10 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createWByWIdAssistantConversations",
-                                methodName: "CreateWByWIdAssistantConversationsAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations\"",
-                                httpMethod: "POST",
+                                operationId: "getWByWIdAssistantConversationsByCIdSelectableSpaces",
+                                methodName: "GetWByWIdAssistantConversationsByCIdSelectableSpacesAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}/selectable_spaces\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -314,7 +303,7 @@ namespace Dust
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessCreateWByWIdAssistantConversationsResponse(
+                ProcessGetWByWIdAssistantConversationsByCIdSelectableSpacesResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -322,10 +311,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createWByWIdAssistantConversations",
-                                methodName: "CreateWByWIdAssistantConversationsAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations\"",
-                                httpMethod: "POST",
+                                operationId: "getWByWIdAssistantConversationsByCIdSelectableSpaces",
+                                methodName: "GetWByWIdAssistantConversationsByCIdSelectableSpacesAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}/selectable_spaces\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -344,10 +333,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "createWByWIdAssistantConversations",
-                                methodName: "CreateWByWIdAssistantConversationsAsync",
-                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations\"",
-                                httpMethod: "POST",
+                                operationId: "getWByWIdAssistantConversationsByCIdSelectableSpaces",
+                                methodName: "GetWByWIdAssistantConversationsByCIdSelectableSpacesAsync",
+                                pathTemplate: "$\"/api/w/{wId}/assistant/conversations/{cId}/selectable_spaces\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -406,7 +395,7 @@ namespace Dust
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessCreateWByWIdAssistantConversationsResponseContent(
+                                ProcessGetWByWIdAssistantConversationsByCIdSelectableSpacesResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -415,9 +404,9 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dust.CreateWAssistantConversationsResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dust.GetWAssistantConversationsSelectableSpacesResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.CreateWAssistantConversationsResponse>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWAssistantConversationsSelectableSpacesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -447,9 +436,9 @@ namespace Dust
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Dust.CreateWAssistantConversationsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dust.GetWAssistantConversationsSelectableSpacesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.CreateWAssistantConversationsResponse>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWAssistantConversationsSelectableSpacesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -488,53 +477,6 @@ namespace Dust
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Create a conversation<br/>
-        /// Create a new conversation, optionally with an initial user message and content fragments.
-        /// </summary>
-        /// <param name="wId"></param>
-        /// <param name="title"></param>
-        /// <param name="visibility"></param>
-        /// <param name="spaceId"></param>
-        /// <param name="message"></param>
-        /// <param name="contentFragments"></param>
-        /// <param name="metadata"></param>
-        /// <param name="selectedSpaceIds"></param>
-        /// <param name="skipToolsValidation"></param>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantConversationsResponse> CreateWByWIdAssistantConversationsAsync(
-            string wId,
-            string? title = default,
-            global::Dust.CreateWAssistantConversationsRequestVisibility? visibility = default,
-            string? spaceId = default,
-            global::Dust.CreateWAssistantConversationsRequestMessage? message = default,
-            global::System.Collections.Generic.IList<object>? contentFragments = default,
-            object? metadata = default,
-            global::System.Collections.Generic.IList<string>? selectedSpaceIds = default,
-            bool? skipToolsValidation = default,
-            global::Dust.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::Dust.CreateWAssistantConversationsRequest2
-            {
-                Title = title,
-                Visibility = visibility,
-                SpaceId = spaceId,
-                Message = message,
-                ContentFragments = contentFragments,
-                Metadata = metadata,
-                SelectedSpaceIds = selectedSpaceIds,
-                SkipToolsValidation = skipToolsValidation,
-            };
-
-            return await CreateWByWIdAssistantConversationsAsync(
-                wId: wId,
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
