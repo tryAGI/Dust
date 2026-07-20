@@ -42,13 +42,13 @@ namespace Dust
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
             ref string? role,
-            ref string? kind);
+            global::System.Collections.Generic.IList<global::Dust.GetWSpacesKindItem>? kind);
         partial void PrepareGetWByWIdSpacesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
             string? role,
-            string? kind);
+            global::System.Collections.Generic.IList<global::Dust.GetWSpacesKindItem>? kind);
         partial void ProcessGetWByWIdSpacesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -71,7 +71,7 @@ namespace Dust
         public async global::System.Threading.Tasks.Task<global::Dust.GetWSpacesResponse3> GetWByWIdSpacesAsync(
             string wId,
             string? role = default,
-            string? kind = default,
+            global::System.Collections.Generic.IList<global::Dust.GetWSpacesKindItem>? kind = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -98,7 +98,7 @@ namespace Dust
         public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesResponse3>> GetWByWIdSpacesAsResponseAsync(
             string wId,
             string? role = default,
-            string? kind = default,
+            global::System.Collections.Generic.IList<global::Dust.GetWSpacesKindItem>? kind = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -108,7 +108,7 @@ namespace Dust
                 httpClient: HttpClient,
                 wId: ref wId,
                 role: ref role,
-                kind: ref kind);
+                kind: kind);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
@@ -140,7 +140,7 @@ namespace Dust
                                 defaultBaseUrl: "https://dust.tt/"));
                             __pathBuilder
                                 .AddOptionalParameter("role", role)
-                                .AddOptionalParameter("kind", kind)
+                                .AddOptionalParameter("kind", kind, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
