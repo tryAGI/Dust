@@ -45,6 +45,7 @@ namespace Dust
         /// <param name="message"></param>
         /// <param name="contentFragments"></param>
         /// <param name="metadata"></param>
+        /// <param name="selectedSpaceIds"></param>
         /// <param name="skipToolsValidation"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -57,6 +58,7 @@ namespace Dust
             global::Dust.CreateWAssistantConversationsRequestMessage? message = default,
             global::System.Collections.Generic.IList<object>? contentFragments = default,
             object? metadata = default,
+            global::System.Collections.Generic.IList<string>? selectedSpaceIds = default,
             bool? skipToolsValidation = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

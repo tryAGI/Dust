@@ -39,6 +39,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? SelectedMCPServerViewIds { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("selectedSpaceIds")]
+        public global::System.Collections.Generic.IList<string>? SelectedSpaceIds { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -52,6 +58,7 @@ namespace Dust
         /// <param name="origin"></param>
         /// <param name="clientSideMCPServerIds"></param>
         /// <param name="selectedMCPServerViewIds"></param>
+        /// <param name="selectedSpaceIds"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -60,13 +67,15 @@ namespace Dust
             string? profilePictureUrl,
             string? origin,
             global::System.Collections.Generic.IList<string>? clientSideMCPServerIds,
-            global::System.Collections.Generic.IList<string>? selectedMCPServerViewIds)
+            global::System.Collections.Generic.IList<string>? selectedMCPServerViewIds,
+            global::System.Collections.Generic.IList<string>? selectedSpaceIds)
         {
             this.Timezone = timezone;
             this.ProfilePictureUrl = profilePictureUrl;
             this.Origin = origin;
             this.ClientSideMCPServerIds = clientSideMCPServerIds;
             this.SelectedMCPServerViewIds = selectedMCPServerViewIds;
+            this.SelectedSpaceIds = selectedSpaceIds;
         }
 
         /// <summary>

@@ -49,6 +49,12 @@ namespace Dust
         public required global::Dust.PrivateUserMessageContextOrigin Origin { get; set; }
 
         /// <summary>
+        /// 
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("selectedSpaceIds")]
+        public global::System.Collections.Generic.IList<string>? SelectedSpaceIds { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -63,6 +69,7 @@ namespace Dust
         /// <param name="fullName"></param>
         /// <param name="email"></param>
         /// <param name="profilePictureUrl"></param>
+        /// <param name="selectedSpaceIds"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -72,7 +79,8 @@ namespace Dust
             global::Dust.PrivateUserMessageContextOrigin origin,
             string? fullName,
             string? email,
-            string? profilePictureUrl)
+            string? profilePictureUrl,
+            global::System.Collections.Generic.IList<string>? selectedSpaceIds)
         {
             this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
             this.FullName = fullName;
@@ -80,6 +88,7 @@ namespace Dust
             this.ProfilePictureUrl = profilePictureUrl;
             this.Timezone = timezone ?? throw new global::System.ArgumentNullException(nameof(timezone));
             this.Origin = origin;
+            this.SelectedSpaceIds = selectedSpaceIds;
         }
 
         /// <summary>

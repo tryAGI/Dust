@@ -48,6 +48,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("selectedSpaceIds")]
+        public global::System.Collections.Generic.IList<string>? SelectedSpaceIds { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skipToolsValidation")]
         public bool? SkipToolsValidation { get; set; }
 
@@ -66,6 +72,7 @@ namespace Dust
         /// <param name="message"></param>
         /// <param name="contentFragments"></param>
         /// <param name="metadata"></param>
+        /// <param name="selectedSpaceIds"></param>
         /// <param name="skipToolsValidation"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -77,6 +84,7 @@ namespace Dust
             global::Dust.CreateWAssistantConversationsRequestMessage? message,
             global::System.Collections.Generic.IList<object>? contentFragments,
             object? metadata,
+            global::System.Collections.Generic.IList<string>? selectedSpaceIds,
             bool? skipToolsValidation)
         {
             this.Title = title;
@@ -85,6 +93,7 @@ namespace Dust
             this.Message = message;
             this.ContentFragments = contentFragments;
             this.Metadata = metadata;
+            this.SelectedSpaceIds = selectedSpaceIds;
             this.SkipToolsValidation = skipToolsValidation;
         }
 
