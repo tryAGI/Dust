@@ -56,6 +56,13 @@ namespace Dust.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Dust.PrivateCompactionMessageDoneEvent)}");
                 compactionMessageDone = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Dust.PrivateConversationForkPreparedEvent? conversationForkPrepared = default;
+            if (discriminator?.Type == global::Dust.PrivateConversationEventDiscriminatorType.ConversationForkPrepared)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversationForkPreparedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversationForkPreparedEvent> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Dust.PrivateConversationForkPreparedEvent)}");
+                conversationForkPrepared = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Dust.PrivateConversationTitleEvent? conversationTitle = default;
             if (discriminator?.Type == global::Dust.PrivateConversationEventDiscriminatorType.ConversationTitle)
             {
@@ -82,6 +89,8 @@ namespace Dust.JsonConverters
                 compactionMessageNew,
 
                 compactionMessageDone,
+
+                conversationForkPrepared,
 
                 conversationTitle,
 
@@ -129,6 +138,12 @@ namespace Dust.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateCompactionMessageDoneEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateCompactionMessageDoneEvent?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateCompactionMessageDoneEvent).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.CompactionMessageDone!, typeInfo);
+            }
+            else if (value.IsConversationForkPrepared)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateConversationForkPreparedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateConversationForkPreparedEvent?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateConversationForkPreparedEvent).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ConversationForkPrepared!, typeInfo);
             }
             else if (value.IsConversationTitle)
             {

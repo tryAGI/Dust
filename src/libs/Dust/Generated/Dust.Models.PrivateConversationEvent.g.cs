@@ -203,6 +203,43 @@ namespace Dust
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
+        public global::Dust.PrivateConversationForkPreparedEvent? ConversationForkPrepared { get; init; }
+#else
+        public global::Dust.PrivateConversationForkPreparedEvent? ConversationForkPrepared { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ConversationForkPrepared))]
+#endif
+        public bool IsConversationForkPrepared => ConversationForkPrepared != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickConversationForkPrepared(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateConversationForkPreparedEvent? value)
+        {
+            value = ConversationForkPrepared;
+            return IsConversationForkPrepared;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateConversationForkPreparedEvent PickConversationForkPrepared() => IsConversationForkPrepared
+            ? ConversationForkPrepared!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ConversationForkPrepared' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
         public global::Dust.PrivateConversationTitleEvent? ConversationTitle { get; init; }
 #else
         public global::Dust.PrivateConversationTitleEvent? ConversationTitle { get; }
@@ -390,6 +427,29 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static implicit operator PrivateConversationEvent(global::Dust.PrivateConversationForkPreparedEvent value) => new PrivateConversationEvent((global::Dust.PrivateConversationForkPreparedEvent?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Dust.PrivateConversationForkPreparedEvent?(PrivateConversationEvent @this) => @this.ConversationForkPrepared;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PrivateConversationEvent(global::Dust.PrivateConversationForkPreparedEvent? value)
+        {
+            ConversationForkPrepared = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromConversationForkPrepared(global::Dust.PrivateConversationForkPreparedEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateConversationEvent(global::Dust.PrivateConversationTitleEvent value) => new PrivateConversationEvent((global::Dust.PrivateConversationTitleEvent?)value);
 
         /// <summary>
@@ -443,6 +503,7 @@ namespace Dust
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone,
             global::Dust.PrivateCompactionMessageNewEvent? compactionMessageNew,
             global::Dust.PrivateCompactionMessageDoneEvent? compactionMessageDone,
+            global::Dust.PrivateConversationForkPreparedEvent? conversationForkPrepared,
             global::Dust.PrivateConversationTitleEvent? conversationTitle,
             global::Dust.PrivateWakeUpUpdatedEvent? wakeUpUpdated
             )
@@ -454,6 +515,7 @@ namespace Dust
             AgentMessageDone = agentMessageDone;
             CompactionMessageNew = compactionMessageNew;
             CompactionMessageDone = compactionMessageDone;
+            ConversationForkPrepared = conversationForkPrepared;
             ConversationTitle = conversationTitle;
             WakeUpUpdated = wakeUpUpdated;
         }
@@ -464,6 +526,7 @@ namespace Dust
         public object? Object =>
             WakeUpUpdated as object ??
             ConversationTitle as object ??
+            ConversationForkPrepared as object ??
             CompactionMessageDone as object ??
             CompactionMessageNew as object ??
             AgentMessageDone as object ??
@@ -480,6 +543,7 @@ namespace Dust
             AgentMessageDone?.ToString() ??
             CompactionMessageNew?.ToString() ??
             CompactionMessageDone?.ToString() ??
+            ConversationForkPrepared?.ToString() ??
             ConversationTitle?.ToString() ??
             WakeUpUpdated?.ToString() 
             ;
@@ -489,7 +553,7 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && IsCompactionMessageDone && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationTitle && IsWakeUpUpdated;
+            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && IsWakeUpUpdated;
         }
 
         /// <summary>
@@ -501,6 +565,7 @@ namespace Dust
             global::System.Func<global::Dust.PrivateAgentMessageDoneEvent, TResult>? agentMessageDone = null,
             global::System.Func<global::Dust.PrivateCompactionMessageNewEvent, TResult>? compactionMessageNew = null,
             global::System.Func<global::Dust.PrivateCompactionMessageDoneEvent, TResult>? compactionMessageDone = null,
+            global::System.Func<global::Dust.PrivateConversationForkPreparedEvent, TResult>? conversationForkPrepared = null,
             global::System.Func<global::Dust.PrivateConversationTitleEvent, TResult>? conversationTitle = null,
             global::System.Func<global::Dust.PrivateWakeUpUpdatedEvent, TResult>? wakeUpUpdated = null,
             bool validate = true)
@@ -530,6 +595,10 @@ namespace Dust
             {
                 return compactionMessageDone(CompactionMessageDone!);
             }
+            else if (IsConversationForkPrepared && conversationForkPrepared != null)
+            {
+                return conversationForkPrepared(ConversationForkPrepared!);
+            }
             else if (IsConversationTitle && conversationTitle != null)
             {
                 return conversationTitle(ConversationTitle!);
@@ -556,6 +625,8 @@ namespace Dust
 
             global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent>? compactionMessageDone = null,
 
+            global::System.Action<global::Dust.PrivateConversationForkPreparedEvent>? conversationForkPrepared = null,
+
             global::System.Action<global::Dust.PrivateConversationTitleEvent>? conversationTitle = null,
 
             global::System.Action<global::Dust.PrivateWakeUpUpdatedEvent>? wakeUpUpdated = null,
@@ -585,6 +656,10 @@ namespace Dust
             else if (IsCompactionMessageDone)
             {
                 compactionMessageDone?.Invoke(CompactionMessageDone!);
+            }
+            else if (IsConversationForkPrepared)
+            {
+                conversationForkPrepared?.Invoke(ConversationForkPrepared!);
             }
             else if (IsConversationTitle)
             {
@@ -605,6 +680,7 @@ namespace Dust
             global::System.Action<global::Dust.PrivateAgentMessageDoneEvent>? agentMessageDone = null,
             global::System.Action<global::Dust.PrivateCompactionMessageNewEvent>? compactionMessageNew = null,
             global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent>? compactionMessageDone = null,
+            global::System.Action<global::Dust.PrivateConversationForkPreparedEvent>? conversationForkPrepared = null,
             global::System.Action<global::Dust.PrivateConversationTitleEvent>? conversationTitle = null,
             global::System.Action<global::Dust.PrivateWakeUpUpdatedEvent>? wakeUpUpdated = null,
             bool validate = true)
@@ -633,6 +709,10 @@ namespace Dust
             else if (IsCompactionMessageDone)
             {
                 compactionMessageDone?.Invoke(CompactionMessageDone!);
+            }
+            else if (IsConversationForkPrepared)
+            {
+                conversationForkPrepared?.Invoke(ConversationForkPrepared!);
             }
             else if (IsConversationTitle)
             {
@@ -661,6 +741,8 @@ namespace Dust
                 typeof(global::Dust.PrivateCompactionMessageNewEvent),
                 CompactionMessageDone,
                 typeof(global::Dust.PrivateCompactionMessageDoneEvent),
+                ConversationForkPrepared,
+                typeof(global::Dust.PrivateConversationForkPreparedEvent),
                 ConversationTitle,
                 typeof(global::Dust.PrivateConversationTitleEvent),
                 WakeUpUpdated,
@@ -686,6 +768,7 @@ namespace Dust
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageDoneEvent?>.Default.Equals(AgentMessageDone, other.AgentMessageDone) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateCompactionMessageNewEvent?>.Default.Equals(CompactionMessageNew, other.CompactionMessageNew) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateCompactionMessageDoneEvent?>.Default.Equals(CompactionMessageDone, other.CompactionMessageDone) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversationForkPreparedEvent?>.Default.Equals(ConversationForkPrepared, other.ConversationForkPrepared) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversationTitleEvent?>.Default.Equals(ConversationTitle, other.ConversationTitle) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateWakeUpUpdatedEvent?>.Default.Equals(WakeUpUpdated, other.WakeUpUpdated) 
                 ;
