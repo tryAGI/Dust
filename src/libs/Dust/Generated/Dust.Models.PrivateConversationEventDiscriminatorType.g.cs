@@ -27,6 +27,10 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        ConversationForkPrepared,
+        /// <summary>
+        /// 
+        /// </summary>
         ConversationTitle,
         /// <summary>
         /// 
@@ -54,6 +58,7 @@ namespace Dust
                 PrivateConversationEventDiscriminatorType.AgentMessageNew => "agent_message_new",
                 PrivateConversationEventDiscriminatorType.CompactionMessageDone => "compaction_message_done",
                 PrivateConversationEventDiscriminatorType.CompactionMessageNew => "compaction_message_new",
+                PrivateConversationEventDiscriminatorType.ConversationForkPrepared => "conversation_fork_prepared",
                 PrivateConversationEventDiscriminatorType.ConversationTitle => "conversation_title",
                 PrivateConversationEventDiscriminatorType.UserMessageNew => "user_message_new",
                 PrivateConversationEventDiscriminatorType.WakeUpUpdated => "wake_up_updated",
@@ -71,6 +76,7 @@ namespace Dust
                 "agent_message_new" => PrivateConversationEventDiscriminatorType.AgentMessageNew,
                 "compaction_message_done" => PrivateConversationEventDiscriminatorType.CompactionMessageDone,
                 "compaction_message_new" => PrivateConversationEventDiscriminatorType.CompactionMessageNew,
+                "conversation_fork_prepared" => PrivateConversationEventDiscriminatorType.ConversationForkPrepared,
                 "conversation_title" => PrivateConversationEventDiscriminatorType.ConversationTitle,
                 "user_message_new" => PrivateConversationEventDiscriminatorType.UserMessageNew,
                 "wake_up_updated" => PrivateConversationEventDiscriminatorType.WakeUpUpdated,
