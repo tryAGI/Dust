@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Dust
@@ -120,10 +122,18 @@ namespace Dust
         public bool? CanWrite { get; set; }
 
         /// <summary>
-        /// Whether this skill is enabled by default
+        /// Whether this skill is enabled by default. Deprecated, use availability instead.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isDefault")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public bool? IsDefault { get; set; }
+
+        /// <summary>
+        /// Who the skill is available to (users_and_agents makes it discoverable by agents)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("availability")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.SkillAvailabilityJsonConverter))]
+        public global::Dust.SkillAvailability? Availability { get; set; }
 
         /// <summary>
         /// Instructions used by the agent when running the skill
@@ -202,8 +212,8 @@ namespace Dust
         /// <param name="canWrite">
         /// Whether the authenticated actor can edit the skill
         /// </param>
-        /// <param name="isDefault">
-        /// Whether this skill is enabled by default
+        /// <param name="availability">
+        /// Who the skill is available to (users_and_agents makes it discoverable by agents)
         /// </param>
         /// <param name="instructions">
         /// Instructions used by the agent when running the skill
@@ -232,7 +242,7 @@ namespace Dust
             global::System.Collections.Generic.IList<string>? requestedSpaceIds,
             global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>? fileAttachments,
             bool? canWrite,
-            bool? isDefault,
+            global::Dust.SkillAvailability? availability,
             string? instructions,
             string? instructionsHtml,
             global::System.Collections.Generic.IList<global::Dust.MCPServerView>? tools)
@@ -253,7 +263,7 @@ namespace Dust
             this.RequestedSpaceIds = requestedSpaceIds;
             this.FileAttachments = fileAttachments;
             this.CanWrite = canWrite;
-            this.IsDefault = isDefault;
+            this.Availability = availability;
             this.Instructions = instructions;
             this.InstructionsHtml = instructionsHtml;
             this.Tools = tools;
