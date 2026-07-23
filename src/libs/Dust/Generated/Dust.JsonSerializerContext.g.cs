@@ -241,6 +241,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventErrorCodeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventErrorCodeNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeNullableJsonConverter),
@@ -745,6 +749,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventInvocationStatus), TypeInfoPropertyName = "PrivateSandboxFunctionInvocationCreatedEventInvocationStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationResultEventType), TypeInfoPropertyName = "PrivateSandboxFunctionInvocationResultEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventType), TypeInfoPropertyName = "PrivateSandboxFunctionInvocationErrorEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode), TypeInfoPropertyName = "PrivateSandboxFunctionInvocationErrorEventErrorCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageEvent), TypeInfoPropertyName = "PrivateAgentMessageEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateGenerationTokensEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateToolCallStartedEvent))]
@@ -1083,8 +1089,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsSelectableSpacesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace>>))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1323,6 +1327,10 @@ namespace Dust
             typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventErrorCodeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventErrorCodeNullableJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeJsonConverter),
 
@@ -1670,6 +1678,8 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsSelectableSpacesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace>), TypeInfoPropertyName = "AllOfPrivateSpaceGetWAssistantConversationsSelectableSpacesResponseSpace2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsSelectedSpacesResponse))]
@@ -1781,6 +1791,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventInvocationStatus?), TypeInfoPropertyName = "NullablePrivateSandboxFunctionInvocationCreatedEventInvocationStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationResultEventType?), TypeInfoPropertyName = "NullablePrivateSandboxFunctionInvocationResultEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventType?), TypeInfoPropertyName = "NullablePrivateSandboxFunctionInvocationErrorEventType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode?), TypeInfoPropertyName = "NullablePrivateSandboxFunctionInvocationErrorEventErrorCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageEvent?), TypeInfoPropertyName = "NullablePrivateAgentMessageEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageEventDiscriminatorType?), TypeInfoPropertyName = "NullablePrivateAgentMessageEventDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateGenerationTokensEventType?), TypeInfoPropertyName = "NullablePrivateGenerationTokensEventType2")]
@@ -2103,6 +2114,8 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventErrorCodeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventErrorCodeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventTypeJsonConverter());
