@@ -349,6 +349,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.SkillAvailabilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillAvailabilityNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter),
@@ -837,6 +841,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillReinforcement), TypeInfoPropertyName = "SkillReinforcement2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillFileAttachment))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillAvailability), TypeInfoPropertyName = "SkillAvailability2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.MCPServerView>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerView))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Run))]
@@ -1088,7 +1093,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsAgent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1436,6 +1440,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.SkillAvailabilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.SkillAvailabilityNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter),
@@ -1678,6 +1686,7 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsParticipantsResponseParticipantsUser))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsSelectableSpacesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace>>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace>), TypeInfoPropertyName = "AllOfPrivateSpaceGetWAssistantConversationsSelectableSpacesResponseSpace2")]
@@ -1819,6 +1828,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillStatus?), TypeInfoPropertyName = "NullableSkillStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillSource?), TypeInfoPropertyName = "NullableSkillSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillReinforcement?), TypeInfoPropertyName = "NullableSkillReinforcement2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SkillAvailability?), TypeInfoPropertyName = "NullableSkillAvailability2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewServerType?), TypeInfoPropertyName = "NullableMCPServerViewServerType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewServerAuthorizationSupportedUseCase?), TypeInfoPropertyName = "NullableMCPServerViewServerAuthorizationSupportedUseCase2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewOAuthUseCase?), TypeInfoPropertyName = "NullableMCPServerViewOAuthUseCase2")]
@@ -2168,6 +2178,8 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.SkillSourceNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.SkillReinforcementJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SkillAvailabilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.SkillAvailabilityNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseJsonConverter());
