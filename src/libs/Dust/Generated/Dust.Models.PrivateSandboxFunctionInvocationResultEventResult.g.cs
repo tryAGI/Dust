@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// Result returned by the sandbox function.
+    /// Parsed result validated against the sandbox function output schema.
     /// </summary>
     public sealed partial class PrivateSandboxFunctionInvocationResultEventResult
     {

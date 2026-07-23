@@ -37,11 +37,11 @@ namespace Dust
         public required string FunctionId { get; set; }
 
         /// <summary>
-        /// Why the invocation failed before producing a result.
+        /// A structured error describing why the invocation failed.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("message")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Message { get; set; }
+        public required global::Dust.PrivateSandboxFunctionInvocationErrorEventError Error { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -55,8 +55,8 @@ namespace Dust
         /// <param name="created"></param>
         /// <param name="invocationId"></param>
         /// <param name="functionId"></param>
-        /// <param name="message">
-        /// Why the invocation failed before producing a result.
+        /// <param name="error">
+        /// A structured error describing why the invocation failed.
         /// </param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
@@ -66,14 +66,14 @@ namespace Dust
             int created,
             string invocationId,
             string functionId,
-            string message,
+            global::Dust.PrivateSandboxFunctionInvocationErrorEventError error,
             global::Dust.PrivateSandboxFunctionInvocationErrorEventType type)
         {
             this.Type = type;
             this.Created = created;
             this.InvocationId = invocationId ?? throw new global::System.ArgumentNullException(nameof(invocationId));
             this.FunctionId = functionId ?? throw new global::System.ArgumentNullException(nameof(functionId));
-            this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
+            this.Error = error ?? throw new global::System.ArgumentNullException(nameof(error));
         }
 
         /// <summary>

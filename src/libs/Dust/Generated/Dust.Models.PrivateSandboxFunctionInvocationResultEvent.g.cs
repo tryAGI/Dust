@@ -37,7 +37,7 @@ namespace Dust
         public required string FunctionId { get; set; }
 
         /// <summary>
-        /// Result returned by the sandbox function.
+        /// Parsed result validated against the sandbox function output schema.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("result")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -56,7 +56,7 @@ namespace Dust
         /// <param name="invocationId"></param>
         /// <param name="functionId"></param>
         /// <param name="result">
-        /// Result returned by the sandbox function.
+        /// Parsed result validated against the sandbox function output schema.
         /// </param>
         /// <param name="type"></param>
 #if NET7_0_OR_GREATER
