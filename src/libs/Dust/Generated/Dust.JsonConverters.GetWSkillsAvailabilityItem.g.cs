@@ -3,10 +3,10 @@
 namespace Dust.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class PrivateSandboxFunctionInvocationErrorEventErrorCodeJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode>
+    public sealed class GetWSkillsAvailabilityItemJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Dust.GetWSkillsAvailabilityItem>
     {
         /// <inheritdoc />
-        public override global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode Read(
+        public override global::Dust.GetWSkillsAvailabilityItem Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Dust.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCodeExtensions.ToEnum(stringValue) ?? default;
+                        return global::Dust.GetWSkillsAvailabilityItemExtensions.ToEnum(stringValue) ?? default;
                     }
                     
                     break;
@@ -26,11 +26,11 @@ namespace Dust.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode)numValue;
+                    return (global::Dust.GetWSkillsAvailabilityItem)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode);
+                    return default(global::Dust.GetWSkillsAvailabilityItem);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,12 +42,12 @@ namespace Dust.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode value,
+            global::Dust.GetWSkillsAvailabilityItem value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCodeExtensions.ToValueString(value));
+            writer.WriteStringValue(global::Dust.GetWSkillsAvailabilityItemExtensions.ToValueString(value));
         }
     }
 }

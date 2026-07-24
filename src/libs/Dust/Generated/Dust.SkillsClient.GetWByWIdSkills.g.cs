@@ -41,12 +41,14 @@ namespace Dust
         partial void PrepareGetWByWIdSkillsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
-            ref global::Dust.GetWSkillsStatus? status);
+            ref global::Dust.GetWSkillsStatus? status,
+            global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability);
         partial void PrepareGetWByWIdSkillsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
-            global::Dust.GetWSkillsStatus? status);
+            global::Dust.GetWSkillsStatus? status,
+            global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability);
         partial void ProcessGetWByWIdSkillsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -62,18 +64,21 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="status"></param>
+        /// <param name="availability"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dust.GetWSkillsResponse> GetWByWIdSkillsAsync(
             string wId,
             global::Dust.GetWSkillsStatus? status = default,
+            global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await GetWByWIdSkillsAsResponseAsync(
                 wId: wId,
                 status: status,
+                availability: availability,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -86,12 +91,14 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="status"></param>
+        /// <param name="availability"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSkillsResponse>> GetWByWIdSkillsAsResponseAsync(
             string wId,
             global::Dust.GetWSkillsStatus? status = default,
+            global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -100,7 +107,8 @@ namespace Dust
             PrepareGetWByWIdSkillsArguments(
                 httpClient: HttpClient,
                 wId: ref wId,
-                status: ref status);
+                status: ref status,
+                availability: availability);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
@@ -132,6 +140,7 @@ namespace Dust
                                 defaultBaseUrl: "https://dust.tt/"));
                             __pathBuilder
                                 .AddOptionalParameter("status", status?.ToValueString())
+                                .AddOptionalParameter("availability", availability, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -174,7 +183,8 @@ namespace Dust
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     wId: wId!,
-                    status: status);
+                    status: status,
+                    availability: availability);
 
                 return __httpRequest;
             }
