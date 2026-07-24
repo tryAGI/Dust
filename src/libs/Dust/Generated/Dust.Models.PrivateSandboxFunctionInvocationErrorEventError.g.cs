@@ -9,12 +9,11 @@ namespace Dust
     public sealed partial class PrivateSandboxFunctionInvocationErrorEventError
     {
         /// <summary>
-        /// 
+        /// Whatever classified the failure, forwarded as-is (a runner code such as `threw` or `http_error`, or the `type` of the API error that failed the call). Open by design, branch on the codes you handle and treat the rest as generic failures.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventErrorCodeJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode Code { get; set; }
+        public required string Code { get; set; }
 
         /// <summary>
         /// 
@@ -38,18 +37,20 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="PrivateSandboxFunctionInvocationErrorEventError" /> class.
         /// </summary>
-        /// <param name="code"></param>
+        /// <param name="code">
+        /// Whatever classified the failure, forwarded as-is (a runner code such as `threw` or `http_error`, or the `type` of the API error that failed the call). Open by design, branch on the codes you handle and treat the rest as generic failures.
+        /// </param>
         /// <param name="message"></param>
         /// <param name="status"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PrivateSandboxFunctionInvocationErrorEventError(
-            global::Dust.PrivateSandboxFunctionInvocationErrorEventErrorCode code,
+            string code,
             string message,
             int? status)
         {
-            this.Code = code;
+            this.Code = code ?? throw new global::System.ArgumentNullException(nameof(code));
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.Status = status;
         }
