@@ -42,13 +42,15 @@ namespace Dust
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
             ref global::Dust.GetWSkillsStatus? status,
-            global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability);
+            global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability,
+            ref bool? bypassEditorVisibility);
         partial void PrepareGetWByWIdSkillsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
             global::Dust.GetWSkillsStatus? status,
-            global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability);
+            global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability,
+            bool? bypassEditorVisibility);
         partial void ProcessGetWByWIdSkillsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -65,6 +67,7 @@ namespace Dust
         /// <param name="wId"></param>
         /// <param name="status"></param>
         /// <param name="availability"></param>
+        /// <param name="bypassEditorVisibility"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
@@ -72,6 +75,7 @@ namespace Dust
             string wId,
             global::Dust.GetWSkillsStatus? status = default,
             global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability = default,
+            bool? bypassEditorVisibility = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -79,6 +83,7 @@ namespace Dust
                 wId: wId,
                 status: status,
                 availability: availability,
+                bypassEditorVisibility: bypassEditorVisibility,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -92,6 +97,7 @@ namespace Dust
         /// <param name="wId"></param>
         /// <param name="status"></param>
         /// <param name="availability"></param>
+        /// <param name="bypassEditorVisibility"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
@@ -99,6 +105,7 @@ namespace Dust
             string wId,
             global::Dust.GetWSkillsStatus? status = default,
             global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability = default,
+            bool? bypassEditorVisibility = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -108,7 +115,8 @@ namespace Dust
                 httpClient: HttpClient,
                 wId: ref wId,
                 status: ref status,
-                availability: availability);
+                availability: availability,
+                bypassEditorVisibility: ref bypassEditorVisibility);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
@@ -141,6 +149,7 @@ namespace Dust
                             __pathBuilder
                                 .AddOptionalParameter("status", status?.ToValueString())
                                 .AddOptionalParameter("availability", availability, selector: static x => x.ToValueString(), delimiter: ",", explode: true)
+                                .AddOptionalParameter("bypassEditorVisibility", bypassEditorVisibility?.ToString().ToLowerInvariant())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -184,7 +193,8 @@ namespace Dust
                     httpRequestMessage: __httpRequest,
                     wId: wId!,
                     status: status,
-                    availability: availability);
+                    availability: availability,
+                    bypassEditorVisibility: bypassEditorVisibility);
 
                 return __httpRequest;
             }

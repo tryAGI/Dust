@@ -11,6 +11,7 @@ namespace Dust
         /// <param name="wId"></param>
         /// <param name="status"></param>
         /// <param name="availability"></param>
+        /// <param name="bypassEditorVisibility"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
@@ -18,6 +19,7 @@ namespace Dust
             string wId,
             global::Dust.GetWSkillsStatus? status = default,
             global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability = default,
+            bool? bypassEditorVisibility = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -27,6 +29,7 @@ namespace Dust
         /// <param name="wId"></param>
         /// <param name="status"></param>
         /// <param name="availability"></param>
+        /// <param name="bypassEditorVisibility"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
@@ -34,6 +37,7 @@ namespace Dust
             string wId,
             global::Dust.GetWSkillsStatus? status = default,
             global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>? availability = default,
+            bool? bypassEditorVisibility = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
