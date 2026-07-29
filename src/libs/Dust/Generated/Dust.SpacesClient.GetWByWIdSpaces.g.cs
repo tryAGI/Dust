@@ -40,11 +40,13 @@ namespace Dust
             };
         partial void PrepareGetWByWIdSpacesArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string wId);
+            ref string wId,
+            ref string? kinds);
         partial void PrepareGetWByWIdSpacesRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string wId);
+            string wId,
+            string? kinds);
         partial void ProcessGetWByWIdSpacesResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -59,16 +61,19 @@ namespace Dust
         /// Retrieves a list of accessible spaces for the authenticated workspace.
         /// </summary>
         /// <param name="wId"></param>
+        /// <param name="kinds"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dust.GetWSpacesResponse> GetWByWIdSpacesAsync(
             string wId,
+            string? kinds = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             var __response = await GetWByWIdSpacesAsResponseAsync(
                 wId: wId,
+                kinds: kinds,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -80,11 +85,13 @@ namespace Dust
         /// Retrieves a list of accessible spaces for the authenticated workspace.
         /// </summary>
         /// <param name="wId"></param>
+        /// <param name="kinds"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesResponse>> GetWByWIdSpacesAsResponseAsync(
             string wId,
+            string? kinds = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -92,7 +99,8 @@ namespace Dust
                 client: HttpClient);
             PrepareGetWByWIdSpacesArguments(
                 httpClient: HttpClient,
-                wId: ref wId);
+                wId: ref wId,
+                kinds: ref kinds);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
@@ -122,6 +130,9 @@ namespace Dust
                                 baseUri: ResolveBaseUri(
                                 servers: s_GetWByWIdSpacesServers,
                                 defaultBaseUrl: "https://dust.tt/"));
+                            __pathBuilder
+                                .AddOptionalParameter("kinds", kinds)
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -162,7 +173,8 @@ namespace Dust
                 PrepareGetWByWIdSpacesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!);
+                    wId: wId!,
+                    kinds: kinds);
 
                 return __httpRequest;
             }
