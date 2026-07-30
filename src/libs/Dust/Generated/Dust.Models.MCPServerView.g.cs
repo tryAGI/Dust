@@ -89,6 +89,15 @@ namespace Dust
         public global::Dust.MCPServerViewOAuthUseCase? OAuthUseCase { get; set; }
 
         /// <summary>
+        /// Whether the MCP server view can only be used through skills<br/>
+        /// Example: false
+        /// </summary>
+        /// <example>false</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isRestrictedToSkills")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool IsRestrictedToSkills { get; set; }
+
+        /// <summary>
         /// Information about the user who last edited the MCP server view
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("editedByUser")]
@@ -103,6 +112,10 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="MCPServerView" /> class.
         /// </summary>
+        /// <param name="isRestrictedToSkills">
+        /// Whether the MCP server view can only be used through skills<br/>
+        /// Example: false
+        /// </param>
         /// <param name="id">
         /// Unique identifier for the MCP server view<br/>
         /// Example: 123
@@ -147,6 +160,7 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MCPServerView(
+            bool isRestrictedToSkills,
             int? id,
             string? sId,
             string? name,
@@ -169,6 +183,7 @@ namespace Dust
             this.ServerType = serverType;
             this.Server = server;
             this.OAuthUseCase = oAuthUseCase;
+            this.IsRestrictedToSkills = isRestrictedToSkills;
             this.EditedByUser = editedByUser;
         }
 
