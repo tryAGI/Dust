@@ -6,7 +6,7 @@ namespace Dust
     {
         /// <summary>
         /// Delete a file<br/>
-        /// Delete a file from the workspace.
+        /// Delete a file from the workspace. Files referenced by a skill or its version history cannot be deleted.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="fileId"></param>
@@ -20,7 +20,7 @@ namespace Dust
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Delete a file<br/>
-        /// Delete a file from the workspace.
+        /// Delete a file from the workspace. Files referenced by a skill or its version history cannot be deleted.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="fileId"></param>
