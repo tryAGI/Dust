@@ -120,6 +120,12 @@ namespace Dust
         public string? Path { get; set; }
 
         /// <summary>
+        /// Path of the plain-text sibling of this file inside the sandbox conversation mount (e.g. an audio transcript), when it has one.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("processedPath")]
+        public string? ProcessedPath { get; set; }
+
+        /// <summary>
         /// Whether data source indexing was skipped for this file.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skipDataSourceIndexing")]
@@ -195,6 +201,9 @@ namespace Dust
         /// <param name="path">
         /// Path of this file inside the sandbox conversation mount.
         /// </param>
+        /// <param name="processedPath">
+        /// Path of the plain-text sibling of this file inside the sandbox conversation mount (e.g. an audio transcript), when it has one.
+        /// </param>
         /// <param name="skipDataSourceIndexing">
         /// Whether data source indexing was skipped for this file.
         /// </param>
@@ -229,6 +238,7 @@ namespace Dust
             global::Dust.PrivateContentFragmentExpiredReason? expiredReason,
             string? fileId,
             string? path,
+            string? processedPath,
             bool? skipDataSourceIndexing,
             bool? skipFileProcessing,
             string? snippet,
@@ -254,6 +264,7 @@ namespace Dust
             this.ExpiredReason = expiredReason;
             this.FileId = fileId;
             this.Path = path;
+            this.ProcessedPath = processedPath;
             this.SkipDataSourceIndexing = skipDataSourceIndexing;
             this.SkipFileProcessing = skipFileProcessing;
             this.Snippet = snippet;

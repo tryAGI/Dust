@@ -58,6 +58,14 @@ namespace Dust
         public string? Path { get; set; }
 
         /// <summary>
+        /// Path of the plain-text sibling of this file inside the sandbox conversation mount (e.g. an audio transcript), when it has one.<br/>
+        /// Example: conversation/voice.processed.txt
+        /// </summary>
+        /// <example>conversation/voice.processed.txt</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("processedPath")]
+        public string? ProcessedPath { get; set; }
+
+        /// <summary>
         /// Whether data source indexing was skipped for this file.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skipDataSourceIndexing")]
@@ -124,6 +132,10 @@ namespace Dust
         /// Path of this file inside the sandbox conversation mount.<br/>
         /// Example: conversation/report.csv
         /// </param>
+        /// <param name="processedPath">
+        /// Path of the plain-text sibling of this file inside the sandbox conversation mount (e.g. an audio transcript), when it has one.<br/>
+        /// Example: conversation/voice.processed.txt
+        /// </param>
         /// <param name="skipDataSourceIndexing">
         /// Whether data source indexing was skipped for this file.
         /// </param>
@@ -149,6 +161,7 @@ namespace Dust
             string? url,
             string? fileId,
             string? path,
+            string? processedPath,
             bool? skipDataSourceIndexing,
             bool? skipFileProcessing,
             string? nodeId,
@@ -161,6 +174,7 @@ namespace Dust
             this.Url = url;
             this.FileId = fileId;
             this.Path = path;
+            this.ProcessedPath = processedPath;
             this.SkipDataSourceIndexing = skipDataSourceIndexing;
             this.SkipFileProcessing = skipFileProcessing;
             this.NodeId = nodeId;
