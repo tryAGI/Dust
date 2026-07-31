@@ -592,6 +592,10 @@ namespace Dust
         /// Path of this file inside the sandbox conversation mount.<br/>
         /// Example: conversation/report.csv
         /// </param>
+        /// <param name="processedPath">
+        /// Path of the plain-text sibling of this file inside the sandbox conversation mount (e.g. an audio transcript), when it has one.<br/>
+        /// Example: conversation/voice.processed.txt
+        /// </param>
         /// <param name="skipDataSourceIndexing">
         /// Whether data source indexing was skipped for this file.
         /// </param>
@@ -619,6 +623,7 @@ namespace Dust
             string? url = default,
             string? fileId = default,
             string? path = default,
+            string? processedPath = default,
             bool? skipDataSourceIndexing = default,
             bool? skipFileProcessing = default,
             string? nodeId = default,
@@ -635,6 +640,7 @@ namespace Dust
                 Url = url,
                 FileId = fileId,
                 Path = path,
+                ProcessedPath = processedPath,
                 SkipDataSourceIndexing = skipDataSourceIndexing,
                 SkipFileProcessing = skipFileProcessing,
                 NodeId = nodeId,
