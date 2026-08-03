@@ -56,6 +56,12 @@ namespace Dust
         public required int Rank { get; set; }
 
         /// <summary>
+        /// Legacy, always null. Branches were removed.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branchId")]
+        public string? BranchId { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentMessageId")]
@@ -183,6 +189,9 @@ namespace Dust
         /// <param name="created"></param>
         /// <param name="completedTs"></param>
         /// <param name="visibility"></param>
+        /// <param name="branchId">
+        /// Legacy, always null. Branches were removed.
+        /// </param>
         /// <param name="parentAgentMessageId"></param>
         /// <param name="content"></param>
         /// <param name="chainOfThought"></param>
@@ -219,6 +228,7 @@ namespace Dust
             int? created,
             int? completedTs,
             global::Dust.PrivateLightAgentMessageVisibility? visibility,
+            string? branchId,
             string? parentAgentMessageId,
             string? content,
             string? chainOfThought,
@@ -241,6 +251,7 @@ namespace Dust
             this.Visibility = visibility;
             this.Version = version;
             this.Rank = rank;
+            this.BranchId = branchId;
             this.ParentMessageId = parentMessageId ?? throw new global::System.ArgumentNullException(nameof(parentMessageId));
             this.ParentAgentMessageId = parentAgentMessageId;
             this.Status = status;

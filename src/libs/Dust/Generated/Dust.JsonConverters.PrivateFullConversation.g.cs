@@ -53,7 +53,6 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("unread")) __score0++;
             if (__jsonProps.Contains("updated")) __score0++;
             var __score1 = 0;
-            if (__jsonProps.Contains("branchId")) __score1++;
             if (__jsonProps.Contains("content")) __score1++;
             if (__jsonProps.Contains("owner")) __score1++;
             if (__jsonProps.Contains("owner.defaultEmbeddingProvider")) __score1++;

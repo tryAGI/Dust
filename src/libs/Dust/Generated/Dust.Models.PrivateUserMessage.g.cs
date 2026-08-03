@@ -57,6 +57,12 @@ namespace Dust
         public required int Rank { get; set; }
 
         /// <summary>
+        /// Legacy, always null. Branches were removed.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("branchId")]
+        public string? BranchId { get; set; }
+
+        /// <summary>
         /// The user who sent the message
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
@@ -110,6 +116,9 @@ namespace Dust
         /// <param name="id"></param>
         /// <param name="type"></param>
         /// <param name="visibility"></param>
+        /// <param name="branchId">
+        /// Legacy, always null. Branches were removed.
+        /// </param>
         /// <param name="user">
         /// The user who sent the message
         /// </param>
@@ -131,6 +140,7 @@ namespace Dust
             int? id,
             global::Dust.PrivateUserMessageType type,
             global::Dust.PrivateUserMessageVisibility? visibility,
+            string? branchId,
             global::Dust.PrivateUserMessageUser? user,
             global::System.Collections.Generic.IList<global::Dust.PrivateMention>? mentions,
             global::System.Collections.Generic.IList<global::Dust.PrivateRichMentionWithStatus>? richMentions,
@@ -144,6 +154,7 @@ namespace Dust
             this.Visibility = visibility;
             this.Version = version;
             this.Rank = rank;
+            this.BranchId = branchId;
             this.User = user;
             this.Mentions = mentions;
             this.RichMentions = richMentions;
