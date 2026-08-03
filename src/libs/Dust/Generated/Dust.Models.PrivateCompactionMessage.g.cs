@@ -63,7 +63,7 @@ namespace Dust
         public required int Rank { get; set; }
 
         /// <summary>
-        /// 
+        /// Legacy, always null. Branches were removed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("branchId")]
         public string? BranchId { get; set; }
@@ -106,7 +106,9 @@ namespace Dust
         /// <param name="id"></param>
         /// <param name="compactionMessageId"></param>
         /// <param name="visibility"></param>
-        /// <param name="branchId"></param>
+        /// <param name="branchId">
+        /// Legacy, always null. Branches were removed.
+        /// </param>
         /// <param name="sourceConversationId"></param>
         /// <param name="content">
         /// Compacted summary. Null while status is "created".

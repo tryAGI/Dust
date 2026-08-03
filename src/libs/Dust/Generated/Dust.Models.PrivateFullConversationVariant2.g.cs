@@ -22,12 +22,6 @@ namespace Dust
         public global::Dust.PrivateFullConversationVariant2Visibility? Visibility { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("branchId")]
-        public string? BranchId { get; set; }
-
-        /// <summary>
         /// Array of message arrays (versions/retries)
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content")]
@@ -46,7 +40,6 @@ namespace Dust
         /// Workspace as returned by the private API, includes SSO and provider settings.
         /// </param>
         /// <param name="visibility"></param>
-        /// <param name="branchId"></param>
         /// <param name="content">
         /// Array of message arrays (versions/retries)
         /// </param>
@@ -56,12 +49,10 @@ namespace Dust
         public PrivateFullConversationVariant2(
             global::Dust.PrivateWorkspace? owner,
             global::Dust.PrivateFullConversationVariant2Visibility? visibility,
-            string? branchId,
             global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>>>? content)
         {
             this.Owner = owner;
             this.Visibility = visibility;
-            this.BranchId = branchId;
             this.Content = content;
         }
 
