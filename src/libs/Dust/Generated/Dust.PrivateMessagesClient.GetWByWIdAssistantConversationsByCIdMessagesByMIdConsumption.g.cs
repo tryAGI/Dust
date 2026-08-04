@@ -60,7 +60,7 @@ namespace Dust
 
         /// <summary>
         /// Get an agent message credit attribution<br/>
-        /// Returns the exact billed credits and, when available, an estimated cache-naive attribution grouped into agent work and tools.
+        /// Returns exact billed credits and an additive attribution reconciled exclusively through model input rows.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -87,7 +87,7 @@ namespace Dust
         }
         /// <summary>
         /// Get an agent message credit attribution<br/>
-        /// Returns the exact billed credits and, when available, an estimated cache-naive attribution grouped into agent work and tools.
+        /// Returns exact billed credits and an additive attribution reconciled exclusively through model input rows.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
