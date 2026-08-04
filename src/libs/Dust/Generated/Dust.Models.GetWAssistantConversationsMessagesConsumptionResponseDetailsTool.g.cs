@@ -36,11 +36,11 @@ namespace Dust
         public required int CallCount { get; set; }
 
         /// <summary>
-        /// 
+        /// Share of billed credits after input-only reconciliation.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("grossAttributedCredits")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("attributedCredits")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required double GrossAttributedCredits { get; set; }
+        public required double AttributedCredits { get; set; }
 
         /// <summary>
         /// 
@@ -68,7 +68,9 @@ namespace Dust
         /// <param name="label"></param>
         /// <param name="toolName"></param>
         /// <param name="callCount"></param>
-        /// <param name="grossAttributedCredits"></param>
+        /// <param name="attributedCredits">
+        /// Share of billed credits after input-only reconciliation.
+        /// </param>
         /// <param name="directCredits"></param>
         /// <param name="pending"></param>
         /// <param name="internalMCPServerName"></param>
@@ -79,7 +81,7 @@ namespace Dust
             string label,
             string toolName,
             int callCount,
-            double grossAttributedCredits,
+            double attributedCredits,
             double directCredits,
             bool pending,
             string? internalMCPServerName)
@@ -88,7 +90,7 @@ namespace Dust
             this.InternalMCPServerName = internalMCPServerName;
             this.ToolName = toolName ?? throw new global::System.ArgumentNullException(nameof(toolName));
             this.CallCount = callCount;
-            this.GrossAttributedCredits = grossAttributedCredits;
+            this.AttributedCredits = attributedCredits;
             this.DirectCredits = directCredits;
             this.Pending = pending;
         }
