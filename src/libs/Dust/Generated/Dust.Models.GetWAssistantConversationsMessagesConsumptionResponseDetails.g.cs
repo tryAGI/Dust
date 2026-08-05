@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// Additive attribution reconciled to the bill through model input rows. Null when the active attribution version is unavailable or incomplete.
+    /// Additive attribution reconciled to the bill through model input rows, using the newest complete stored attribution version. Null when no stored version is complete.
     /// </summary>
     public sealed partial class GetWAssistantConversationsMessagesConsumptionResponseDetails
     {
         /// <summary>
-        /// 
+        /// Attribution version used for this breakdown.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attributionVersion")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -38,7 +38,9 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWAssistantConversationsMessagesConsumptionResponseDetails" /> class.
         /// </summary>
-        /// <param name="attributionVersion"></param>
+        /// <param name="attributionVersion">
+        /// Attribution version used for this breakdown.
+        /// </param>
         /// <param name="agentWorkCredits">
         /// Agent work after assigning billing reconciliation exclusively to model input rows.
         /// </param>

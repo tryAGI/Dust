@@ -46,6 +46,18 @@ namespace Dust
         public string? PinnedFramePath { get; set; }
 
         /// <summary>
+        /// Frames promoted as custom Pod tabs (shared for all members).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("frameTabs")]
+        public global::System.Collections.Generic.IList<global::Dust.PrivateProjectVariant2FrameTab>? FrameTabs { get; set; }
+
+        /// <summary>
+        /// Interleaved system tab ids and frame paths before Settings.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tabsOrder")]
+        public global::System.Collections.Generic.IList<string>? TabsOrder { get; set; }
+
+        /// <summary>
         /// Whether workspace admins control membership and connected data for this Pod.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isAdminControlled")]
@@ -72,6 +84,12 @@ namespace Dust
         /// <param name="pinnedFramePath">
         /// Scoped path to the frame file pinned as the Pod banner (e.g. project/banner.html).
         /// </param>
+        /// <param name="frameTabs">
+        /// Frames promoted as custom Pod tabs (shared for all members).
+        /// </param>
+        /// <param name="tabsOrder">
+        /// Interleaved system tab ids and frame paths before Settings.
+        /// </param>
         /// <param name="isAdminControlled">
         /// Whether workspace admins control membership and connected data for this Pod.
         /// </param>
@@ -85,6 +103,8 @@ namespace Dust
             bool? todoGenerationEnabled,
             global::System.DateTimeOffset? lastTodoAnalysisAt,
             string? pinnedFramePath,
+            global::System.Collections.Generic.IList<global::Dust.PrivateProjectVariant2FrameTab>? frameTabs,
+            global::System.Collections.Generic.IList<string>? tabsOrder,
             bool? isAdminControlled)
         {
             this.Description = description;
@@ -93,6 +113,8 @@ namespace Dust
             this.TodoGenerationEnabled = todoGenerationEnabled;
             this.LastTodoAnalysisAt = lastTodoAnalysisAt;
             this.PinnedFramePath = pinnedFramePath;
+            this.FrameTabs = frameTabs;
+            this.TabsOrder = tabsOrder;
             this.IsAdminControlled = isAdminControlled;
         }
 

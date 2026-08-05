@@ -4,17 +4,10 @@
 namespace Dust
 {
     /// <summary>
-    /// Additive attribution reconciled to the authoritative bill exclusively through model input rows. Null when any billed message lacks complete attribution for the active version.
+    /// Additive attribution reconciled to the authoritative bill exclusively through model input rows. Each message uses its newest complete stored attribution version. Null when any billed message has no complete stored attribution.
     /// </summary>
     public sealed partial class PrivateConversationConsumptionDetails
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("attributionVersion")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required int AttributionVersion { get; set; }
-
         /// <summary>
         /// Agent work after assigning billing reconciliation exclusively to model input rows.
         /// </summary>
@@ -52,7 +45,6 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="PrivateConversationConsumptionDetails" /> class.
         /// </summary>
-        /// <param name="attributionVersion"></param>
         /// <param name="agentWorkCredits">
         /// Agent work after assigning billing reconciliation exclusively to model input rows.
         /// </param>
@@ -63,13 +55,11 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PrivateConversationConsumptionDetails(
-            int attributionVersion,
             double agentWorkCredits,
             global::System.Collections.Generic.IList<global::Dust.PrivateConversationConsumptionToolDetails> tools,
             global::System.Collections.Generic.IList<global::Dust.PrivateConversationConsumptionModelDetails> models,
             global::System.Collections.Generic.IList<global::Dust.PrivateConversationConsumptionAgentDetails> agents)
         {
-            this.AttributionVersion = attributionVersion;
             this.AgentWorkCredits = agentWorkCredits;
             this.Tools = tools ?? throw new global::System.ArgumentNullException(nameof(tools));
             this.Models = models ?? throw new global::System.ArgumentNullException(nameof(models));
