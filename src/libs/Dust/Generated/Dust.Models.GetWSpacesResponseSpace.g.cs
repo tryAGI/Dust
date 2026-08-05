@@ -76,6 +76,12 @@ namespace Dust
         public string? PinnedFramePath { get; set; }
 
         /// <summary>
+        /// Whether workspace admins control membership and connected data for this Pod.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isAdminControlled")]
+        public bool? IsAdminControlled { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -101,6 +107,9 @@ namespace Dust
         /// <param name="pinnedFramePath">
         /// Scoped path to the frame file pinned as the Pod banner.
         /// </param>
+        /// <param name="isAdminControlled">
+        /// Whether workspace admins control membership and connected data for this Pod.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -115,7 +124,8 @@ namespace Dust
             int? archivedAt,
             bool? todoGenerationEnabled,
             global::System.DateTimeOffset? lastTodoAnalysisAt,
-            string? pinnedFramePath)
+            string? pinnedFramePath,
+            bool? isAdminControlled)
         {
             this.Categories = categories;
             this.CanWrite = canWrite;
@@ -128,6 +138,7 @@ namespace Dust
             this.TodoGenerationEnabled = todoGenerationEnabled;
             this.LastTodoAnalysisAt = lastTodoAnalysisAt;
             this.PinnedFramePath = pinnedFramePath;
+            this.IsAdminControlled = isAdminControlled;
         }
 
         /// <summary>
