@@ -39,6 +39,7 @@ namespace Dust.JsonConverters
             var __score1 = 0;
             if (__jsonProps.Contains("archivedAt")) __score1++;
             if (__jsonProps.Contains("description")) __score1++;
+            if (__jsonProps.Contains("isAdminControlled")) __score1++;
             if (__jsonProps.Contains("isMember")) __score1++;
             if (__jsonProps.Contains("lastTodoAnalysisAt")) __score1++;
             if (__jsonProps.Contains("pinnedFramePath")) __score1++;
