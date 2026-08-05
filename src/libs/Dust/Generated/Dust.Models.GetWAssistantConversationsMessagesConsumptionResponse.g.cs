@@ -15,7 +15,7 @@ namespace Dust
         public double? BilledCredits { get; set; }
 
         /// <summary>
-        /// Additive attribution reconciled to the bill through model input rows. Null when the active attribution version is unavailable or incomplete.
+        /// Additive attribution reconciled to the bill through model input rows, using the newest complete stored attribution version. Null when no stored version is complete.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("details")]
         public global::Dust.GetWAssistantConversationsMessagesConsumptionResponseDetails? Details { get; set; }
@@ -33,7 +33,7 @@ namespace Dust
         /// Authoritative credits billed for this agent message.
         /// </param>
         /// <param name="details">
-        /// Additive attribution reconciled to the bill through model input rows. Null when the active attribution version is unavailable or incomplete.
+        /// Additive attribution reconciled to the bill through model input rows, using the newest complete stored attribution version. Null when no stored version is complete.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
