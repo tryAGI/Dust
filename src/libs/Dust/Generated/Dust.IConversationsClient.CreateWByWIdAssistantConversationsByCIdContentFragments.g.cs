@@ -72,9 +72,6 @@ namespace Dust
         /// Path of the plain-text sibling of this file inside the sandbox conversation mount (e.g. an audio transcript), when it has one.<br/>
         /// Example: conversation/voice.processed.txt
         /// </param>
-        /// <param name="skipDataSourceIndexing">
-        /// Whether data source indexing was skipped for this file.
-        /// </param>
         /// <param name="skipFileProcessing">
         /// Whether upload-time file processing was skipped.
         /// </param>
@@ -100,7 +97,6 @@ namespace Dust
             string? fileId = default,
             string? path = default,
             string? processedPath = default,
-            bool? skipDataSourceIndexing = default,
             bool? skipFileProcessing = default,
             string? nodeId = default,
             string? nodeDataSourceViewId = default,

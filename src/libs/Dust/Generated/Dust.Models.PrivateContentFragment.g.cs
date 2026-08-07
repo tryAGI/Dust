@@ -126,12 +126,6 @@ namespace Dust
         public string? ProcessedPath { get; set; }
 
         /// <summary>
-        /// Whether data source indexing was skipped for this file.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("skipDataSourceIndexing")]
-        public bool? SkipDataSourceIndexing { get; set; }
-
-        /// <summary>
         /// Whether upload-time file processing was skipped.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skipFileProcessing")]
@@ -204,9 +198,6 @@ namespace Dust
         /// <param name="processedPath">
         /// Path of the plain-text sibling of this file inside the sandbox conversation mount (e.g. an audio transcript), when it has one.
         /// </param>
-        /// <param name="skipDataSourceIndexing">
-        /// Whether data source indexing was skipped for this file.
-        /// </param>
         /// <param name="skipFileProcessing">
         /// Whether upload-time file processing was skipped.
         /// </param>
@@ -239,7 +230,6 @@ namespace Dust
             string? fileId,
             string? path,
             string? processedPath,
-            bool? skipDataSourceIndexing,
             bool? skipFileProcessing,
             string? snippet,
             string? textUrl,
@@ -265,7 +255,6 @@ namespace Dust
             this.FileId = fileId;
             this.Path = path;
             this.ProcessedPath = processedPath;
-            this.SkipDataSourceIndexing = skipDataSourceIndexing;
             this.SkipFileProcessing = skipFileProcessing;
             this.Snippet = snippet;
             this.TextUrl = textUrl;
