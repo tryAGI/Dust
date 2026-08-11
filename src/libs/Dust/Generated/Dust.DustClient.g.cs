@@ -136,6 +136,16 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public PrivateAnalyticsClient PrivateAnalytics => new PrivateAnalyticsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
         public PrivateAssistantClient PrivateAssistant => new PrivateAssistantClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
