@@ -393,6 +393,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter),
@@ -921,6 +925,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<byte[]>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsRequestOnConflict), TypeInfoPropertyName = "CreateWSkillsRequestOnConflict2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsRequestAvailability), TypeInfoPropertyName = "CreateWSkillsRequestAvailability2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesAppsRunsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesAppsRunsRequestConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesAppsRunsRequestConfigModel))]
@@ -1092,7 +1097,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWAssistantConversationsMessagesConsumptionResponseDetailsTool>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsMessagesConsumptionResponseDetailsTool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesEditResponse2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse2))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1484,6 +1488,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityJsonConverter),
+
+            typeof(global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter),
@@ -1686,6 +1694,7 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsMessagesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>), TypeInfoPropertyName = "OneOfPrivateUserMessagePrivateAgentMessagePrivateContentFragment2")]
@@ -1858,6 +1867,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>?), TypeInfoPropertyName = "NullableOneOfPatchWAssistantConversationsRequestVariant1PatchWAssistantConversationsRequestVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection?), TypeInfoPropertyName = "NullableCreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsRequestOnConflict?), TypeInfoPropertyName = "NullableCreateWSkillsRequestOnConflict2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSkillsRequestAvailability?), TypeInfoPropertyName = "NullableCreateWSkillsRequestAvailability2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>?), TypeInfoPropertyName = "NullableOneOfPatchWSpacesDataSourceViewsRequestVariant1PatchWSpacesDataSourceViewsRequestVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>?), TypeInfoPropertyName = "NullableOneOfStringDoubleBooleanCreateWSpacesDataSourcesTablesRowsRequestRowValue22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValueType?), TypeInfoPropertyName = "NullableCreateWSpacesDataSourcesTablesRowsRequestRowValueType2")]
@@ -2225,6 +2235,8 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestOnConflictJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionJsonConverter());
