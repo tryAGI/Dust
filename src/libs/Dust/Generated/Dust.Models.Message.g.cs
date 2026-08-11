@@ -33,9 +33,10 @@ namespace Dust
         /// <summary>
         /// Optional per-message model and reasoning-effort override applied to the<br/>
         /// mentioned agent(s). When omitted, each agent runs its configured model.<br/>
-        /// If the requested model is not available to the workspace, the agent's<br/>
-        /// configured model is used instead. An unknown provider, model, or<br/>
-        /// reasoning effort results in a 400.
+        /// A provider/model pair that is not authorized for the workspace is<br/>
+        /// rejected with a 400 (`model_disabled`), it does not fall back to the<br/>
+        /// agent's configured model. A malformed object, or an unknown reasoning<br/>
+        /// effort, also results in a 400.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelSelection")]
         public global::Dust.ModelSelection? ModelSelection { get; set; }
@@ -60,9 +61,10 @@ namespace Dust
         /// <param name="modelSelection">
         /// Optional per-message model and reasoning-effort override applied to the<br/>
         /// mentioned agent(s). When omitted, each agent runs its configured model.<br/>
-        /// If the requested model is not available to the workspace, the agent's<br/>
-        /// configured model is used instead. An unknown provider, model, or<br/>
-        /// reasoning effort results in a 400.
+        /// A provider/model pair that is not authorized for the workspace is<br/>
+        /// rejected with a 400 (`model_disabled`), it does not fall back to the<br/>
+        /// agent's configured model. A malformed object, or an unknown reasoning<br/>
+        /// effort, also results in a 400.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
