@@ -114,6 +114,11 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public PrivateAnalyticsClient PrivateAnalytics { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public PrivateAssistantClient PrivateAssistant { get; }
 
         /// <summary>
