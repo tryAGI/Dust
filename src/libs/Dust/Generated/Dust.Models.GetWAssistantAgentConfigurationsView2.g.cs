@@ -19,6 +19,10 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        Analytics,
+        /// <summary>
+        /// 
+        /// </summary>
         Favorites,
         /// <summary>
         /// 
@@ -52,6 +56,7 @@ namespace Dust
             {
                 GetWAssistantAgentConfigurationsView2.AdminInternal => "admin_internal",
                 GetWAssistantAgentConfigurationsView2.All => "all",
+                GetWAssistantAgentConfigurationsView2.Analytics => "analytics",
                 GetWAssistantAgentConfigurationsView2.Favorites => "favorites",
                 GetWAssistantAgentConfigurationsView2.Global => "global",
                 GetWAssistantAgentConfigurationsView2.List => "list",
@@ -69,6 +74,7 @@ namespace Dust
             {
                 "admin_internal" => GetWAssistantAgentConfigurationsView2.AdminInternal,
                 "all" => GetWAssistantAgentConfigurationsView2.All,
+                "analytics" => GetWAssistantAgentConfigurationsView2.Analytics,
                 "favorites" => GetWAssistantAgentConfigurationsView2.Favorites,
                 "global" => GetWAssistantAgentConfigurationsView2.Global,
                 "list" => GetWAssistantAgentConfigurationsView2.List,

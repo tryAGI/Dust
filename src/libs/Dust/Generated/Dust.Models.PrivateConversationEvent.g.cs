@@ -92,6 +92,43 @@ namespace Dust
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
+        public global::Dust.PrivateAgentMessageConsumptionUpdatedEvent? AgentMessageConsumptionUpdated { get; init; }
+#else
+        public global::Dust.PrivateAgentMessageConsumptionUpdatedEvent? AgentMessageConsumptionUpdated { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(AgentMessageConsumptionUpdated))]
+#endif
+        public bool IsAgentMessageConsumptionUpdated => AgentMessageConsumptionUpdated != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickAgentMessageConsumptionUpdated(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.PrivateAgentMessageConsumptionUpdatedEvent? value)
+        {
+            value = AgentMessageConsumptionUpdated;
+            return IsAgentMessageConsumptionUpdated;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Dust.PrivateAgentMessageConsumptionUpdatedEvent PickAgentMessageConsumptionUpdated() => IsAgentMessageConsumptionUpdated
+            ? AgentMessageConsumptionUpdated!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'AgentMessageConsumptionUpdated' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
         public global::Dust.PrivateAgentMessageDoneEvent? AgentMessageDone { get; init; }
 #else
         public global::Dust.PrivateAgentMessageDoneEvent? AgentMessageDone { get; }
@@ -358,6 +395,29 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        public static implicit operator PrivateConversationEvent(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent value) => new PrivateConversationEvent((global::Dust.PrivateAgentMessageConsumptionUpdatedEvent?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Dust.PrivateAgentMessageConsumptionUpdatedEvent?(PrivateConversationEvent @this) => @this.AgentMessageConsumptionUpdated;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PrivateConversationEvent(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent? value)
+        {
+            AgentMessageConsumptionUpdated = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PrivateConversationEvent FromAgentMessageConsumptionUpdated(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent? value) => new PrivateConversationEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator PrivateConversationEvent(global::Dust.PrivateAgentMessageDoneEvent value) => new PrivateConversationEvent((global::Dust.PrivateAgentMessageDoneEvent?)value);
 
         /// <summary>
@@ -500,6 +560,7 @@ namespace Dust
             global::Dust.PrivateConversationEventDiscriminatorType? type,
             global::Dust.PrivateUserMessageNewEvent? userMessageNew,
             global::Dust.PrivateAgentMessageNewEvent? agentMessageNew,
+            global::Dust.PrivateAgentMessageConsumptionUpdatedEvent? agentMessageConsumptionUpdated,
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone,
             global::Dust.PrivateCompactionMessageNewEvent? compactionMessageNew,
             global::Dust.PrivateCompactionMessageDoneEvent? compactionMessageDone,
@@ -512,6 +573,7 @@ namespace Dust
 
             UserMessageNew = userMessageNew;
             AgentMessageNew = agentMessageNew;
+            AgentMessageConsumptionUpdated = agentMessageConsumptionUpdated;
             AgentMessageDone = agentMessageDone;
             CompactionMessageNew = compactionMessageNew;
             CompactionMessageDone = compactionMessageDone;
@@ -530,6 +592,7 @@ namespace Dust
             CompactionMessageDone as object ??
             CompactionMessageNew as object ??
             AgentMessageDone as object ??
+            AgentMessageConsumptionUpdated as object ??
             AgentMessageNew as object ??
             UserMessageNew as object 
             ;
@@ -540,6 +603,7 @@ namespace Dust
         public override string? ToString() =>
             UserMessageNew?.ToString() ??
             AgentMessageNew?.ToString() ??
+            AgentMessageConsumptionUpdated?.ToString() ??
             AgentMessageDone?.ToString() ??
             CompactionMessageNew?.ToString() ??
             CompactionMessageDone?.ToString() ??
@@ -553,7 +617,7 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && IsWakeUpUpdated;
+            return IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageConsumptionUpdated && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && IsAgentMessageNew && !IsAgentMessageConsumptionUpdated && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && IsAgentMessageConsumptionUpdated && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageConsumptionUpdated && IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageConsumptionUpdated && !IsAgentMessageDone && IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageConsumptionUpdated && !IsAgentMessageDone && !IsCompactionMessageNew && IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageConsumptionUpdated && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && IsConversationForkPrepared && !IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageConsumptionUpdated && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && IsConversationTitle && !IsWakeUpUpdated || !IsUserMessageNew && !IsAgentMessageNew && !IsAgentMessageConsumptionUpdated && !IsAgentMessageDone && !IsCompactionMessageNew && !IsCompactionMessageDone && !IsConversationForkPrepared && !IsConversationTitle && IsWakeUpUpdated;
         }
 
         /// <summary>
@@ -562,6 +626,7 @@ namespace Dust
         public TResult? Match<TResult>(
             global::System.Func<global::Dust.PrivateUserMessageNewEvent, TResult>? userMessageNew = null,
             global::System.Func<global::Dust.PrivateAgentMessageNewEvent, TResult>? agentMessageNew = null,
+            global::System.Func<global::Dust.PrivateAgentMessageConsumptionUpdatedEvent, TResult>? agentMessageConsumptionUpdated = null,
             global::System.Func<global::Dust.PrivateAgentMessageDoneEvent, TResult>? agentMessageDone = null,
             global::System.Func<global::Dust.PrivateCompactionMessageNewEvent, TResult>? compactionMessageNew = null,
             global::System.Func<global::Dust.PrivateCompactionMessageDoneEvent, TResult>? compactionMessageDone = null,
@@ -582,6 +647,10 @@ namespace Dust
             else if (IsAgentMessageNew && agentMessageNew != null)
             {
                 return agentMessageNew(AgentMessageNew!);
+            }
+            else if (IsAgentMessageConsumptionUpdated && agentMessageConsumptionUpdated != null)
+            {
+                return agentMessageConsumptionUpdated(AgentMessageConsumptionUpdated!);
             }
             else if (IsAgentMessageDone && agentMessageDone != null)
             {
@@ -619,6 +688,8 @@ namespace Dust
 
             global::System.Action<global::Dust.PrivateAgentMessageNewEvent>? agentMessageNew = null,
 
+            global::System.Action<global::Dust.PrivateAgentMessageConsumptionUpdatedEvent>? agentMessageConsumptionUpdated = null,
+
             global::System.Action<global::Dust.PrivateAgentMessageDoneEvent>? agentMessageDone = null,
 
             global::System.Action<global::Dust.PrivateCompactionMessageNewEvent>? compactionMessageNew = null,
@@ -644,6 +715,10 @@ namespace Dust
             else if (IsAgentMessageNew)
             {
                 agentMessageNew?.Invoke(AgentMessageNew!);
+            }
+            else if (IsAgentMessageConsumptionUpdated)
+            {
+                agentMessageConsumptionUpdated?.Invoke(AgentMessageConsumptionUpdated!);
             }
             else if (IsAgentMessageDone)
             {
@@ -677,6 +752,7 @@ namespace Dust
         public void Switch(
             global::System.Action<global::Dust.PrivateUserMessageNewEvent>? userMessageNew = null,
             global::System.Action<global::Dust.PrivateAgentMessageNewEvent>? agentMessageNew = null,
+            global::System.Action<global::Dust.PrivateAgentMessageConsumptionUpdatedEvent>? agentMessageConsumptionUpdated = null,
             global::System.Action<global::Dust.PrivateAgentMessageDoneEvent>? agentMessageDone = null,
             global::System.Action<global::Dust.PrivateCompactionMessageNewEvent>? compactionMessageNew = null,
             global::System.Action<global::Dust.PrivateCompactionMessageDoneEvent>? compactionMessageDone = null,
@@ -697,6 +773,10 @@ namespace Dust
             else if (IsAgentMessageNew)
             {
                 agentMessageNew?.Invoke(AgentMessageNew!);
+            }
+            else if (IsAgentMessageConsumptionUpdated)
+            {
+                agentMessageConsumptionUpdated?.Invoke(AgentMessageConsumptionUpdated!);
             }
             else if (IsAgentMessageDone)
             {
@@ -735,6 +815,8 @@ namespace Dust
                 typeof(global::Dust.PrivateUserMessageNewEvent),
                 AgentMessageNew,
                 typeof(global::Dust.PrivateAgentMessageNewEvent),
+                AgentMessageConsumptionUpdated,
+                typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent),
                 AgentMessageDone,
                 typeof(global::Dust.PrivateAgentMessageDoneEvent),
                 CompactionMessageNew,
@@ -765,6 +847,7 @@ namespace Dust
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateUserMessageNewEvent?>.Default.Equals(UserMessageNew, other.UserMessageNew) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageNewEvent?>.Default.Equals(AgentMessageNew, other.AgentMessageNew) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageConsumptionUpdatedEvent?>.Default.Equals(AgentMessageConsumptionUpdated, other.AgentMessageConsumptionUpdated) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateAgentMessageDoneEvent?>.Default.Equals(AgentMessageDone, other.AgentMessageDone) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateCompactionMessageNewEvent?>.Default.Equals(CompactionMessageNew, other.CompactionMessageNew) &&
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateCompactionMessageDoneEvent?>.Default.Equals(CompactionMessageDone, other.CompactionMessageDone) &&

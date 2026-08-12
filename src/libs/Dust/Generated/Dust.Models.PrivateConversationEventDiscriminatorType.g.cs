@@ -11,6 +11,10 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        AgentMessageConsumptionUpdated,
+        /// <summary>
+        /// 
+        /// </summary>
         AgentMessageDone,
         /// <summary>
         /// 
@@ -54,6 +58,7 @@ namespace Dust
         {
             return value switch
             {
+                PrivateConversationEventDiscriminatorType.AgentMessageConsumptionUpdated => "agent_message_consumption_updated",
                 PrivateConversationEventDiscriminatorType.AgentMessageDone => "agent_message_done",
                 PrivateConversationEventDiscriminatorType.AgentMessageNew => "agent_message_new",
                 PrivateConversationEventDiscriminatorType.CompactionMessageDone => "compaction_message_done",
@@ -72,6 +77,7 @@ namespace Dust
         {
             return value switch
             {
+                "agent_message_consumption_updated" => PrivateConversationEventDiscriminatorType.AgentMessageConsumptionUpdated,
                 "agent_message_done" => PrivateConversationEventDiscriminatorType.AgentMessageDone,
                 "agent_message_new" => PrivateConversationEventDiscriminatorType.AgentMessageNew,
                 "compaction_message_done" => PrivateConversationEventDiscriminatorType.CompactionMessageDone,
