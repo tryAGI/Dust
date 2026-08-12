@@ -209,6 +209,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter),
@@ -753,6 +757,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationEvent), TypeInfoPropertyName = "PrivateConversationEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateUserMessageNewEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageNewEvent))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageNewEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageDoneEvent))]
@@ -765,6 +770,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageNewEventType), TypeInfoPropertyName = "PrivateAgentMessageNewEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEventType), TypeInfoPropertyName = "PrivateAgentMessageDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEventStatus), TypeInfoPropertyName = "PrivateAgentMessageDoneEventStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEventType), TypeInfoPropertyName = "PrivateAgentMessageConsumptionUpdatedEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageNewEventType), TypeInfoPropertyName = "PrivateCompactionMessageNewEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageDoneEventType), TypeInfoPropertyName = "PrivateCompactionMessageDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkPreparedEventType), TypeInfoPropertyName = "PrivateConversationForkPreparedEventType2")]
@@ -1107,8 +1113,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsCancelResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsCompactionsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsConsumptionResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsContentFragmentResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsFeedbacksResponse2))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1315,6 +1319,10 @@ namespace Dust
             typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeJsonConverter),
+
+            typeof(global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeNullableJsonConverter),
 
             typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter),
 
@@ -1718,6 +1726,8 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsContentFragmentResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsFeedbacksResponse2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateFeedback>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsResponse2))]
@@ -1852,6 +1862,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageNewEventType?), TypeInfoPropertyName = "NullablePrivateAgentMessageNewEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEventType?), TypeInfoPropertyName = "NullablePrivateAgentMessageDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageDoneEventStatus?), TypeInfoPropertyName = "NullablePrivateAgentMessageDoneEventStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEventType?), TypeInfoPropertyName = "NullablePrivateAgentMessageConsumptionUpdatedEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageNewEventType?), TypeInfoPropertyName = "NullablePrivateCompactionMessageNewEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateCompactionMessageDoneEventType?), TypeInfoPropertyName = "NullablePrivateCompactionMessageDoneEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkPreparedEventType?), TypeInfoPropertyName = "NullablePrivateConversationForkPreparedEventType2")]
@@ -2181,6 +2192,8 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeJsonConverter());
+            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeJsonConverter());

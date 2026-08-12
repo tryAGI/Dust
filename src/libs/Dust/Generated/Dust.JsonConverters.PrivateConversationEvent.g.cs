@@ -35,6 +35,13 @@ namespace Dust.JsonConverters
                                throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Dust.PrivateAgentMessageNewEvent)}");
                 agentMessageNew = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
             }
+            global::Dust.PrivateAgentMessageConsumptionUpdatedEvent? agentMessageConsumptionUpdated = default;
+            if (discriminator?.Type == global::Dust.PrivateConversationEventDiscriminatorType.AgentMessageConsumptionUpdated)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentMessageConsumptionUpdatedEvent> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {nameof(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent)}");
+                agentMessageConsumptionUpdated = global::System.Text.Json.JsonSerializer.Deserialize(ref reader, typeInfo);
+            }
             global::Dust.PrivateAgentMessageDoneEvent? agentMessageDone = default;
             if (discriminator?.Type == global::Dust.PrivateConversationEventDiscriminatorType.AgentMessageDone)
             {
@@ -84,6 +91,8 @@ namespace Dust.JsonConverters
 
                 agentMessageNew,
 
+                agentMessageConsumptionUpdated,
+
                 agentMessageDone,
 
                 compactionMessageNew,
@@ -120,6 +129,12 @@ namespace Dust.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentMessageNewEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentMessageNewEvent?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentMessageNewEvent).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentMessageNew!, typeInfo);
+            }
+            else if (value.IsAgentMessageConsumptionUpdated)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.PrivateAgentMessageConsumptionUpdatedEvent?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEvent).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.AgentMessageConsumptionUpdated!, typeInfo);
             }
             else if (value.IsAgentMessageDone)
             {
