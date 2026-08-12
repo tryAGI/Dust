@@ -25,9 +25,9 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("team")]
+        [global::System.Text.Json.Serialization.JsonPropertyName("group")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> Team { get; set; }
+        public required global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> Group { get; set; }
 
         /// <summary>
         /// 
@@ -68,7 +68,7 @@ namespace Dust
         /// </summary>
         /// <param name="agent"></param>
         /// <param name="user"></param>
-        /// <param name="team"></param>
+        /// <param name="group"></param>
         /// <param name="model"></param>
         /// <param name="tool"></param>
         /// <param name="skill"></param>
@@ -79,7 +79,7 @@ namespace Dust
         public CreateWAnalyticsConsumptionFacetsResponseFacets(
             global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> agent,
             global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> user,
-            global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> team,
+            global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> group,
             global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> model,
             global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> tool,
             global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet> skill,
@@ -87,7 +87,7 @@ namespace Dust
         {
             this.Agent = agent ?? throw new global::System.ArgumentNullException(nameof(agent));
             this.User = user ?? throw new global::System.ArgumentNullException(nameof(user));
-            this.Team = team ?? throw new global::System.ArgumentNullException(nameof(team));
+            this.Group = group ?? throw new global::System.ArgumentNullException(nameof(group));
             this.Model = model ?? throw new global::System.ArgumentNullException(nameof(model));
             this.Tool = tool ?? throw new global::System.ArgumentNullException(nameof(tool));
             this.Skill = skill ?? throw new global::System.ArgumentNullException(nameof(skill));
