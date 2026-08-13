@@ -49,7 +49,10 @@ namespace Dust
         /// <param name="instructions"></param>
         /// <param name="generationSettings"></param>
         /// <param name="tags"></param>
-        /// <param name="editors"></param>
+        /// <param name="editors">
+        /// Emails of the workspace members to set as editors of the agent. Omitting this field keeps the current editors; providing it replaces the whole list.<br/>
+        /// Example: [alice@example.com]
+        /// </param>
         /// <param name="skills">
         /// Replaces the skills enabled on the agent configuration.
         /// </param>
@@ -67,7 +70,7 @@ namespace Dust
             string? instructions = default,
             global::Dust.PatchWAssistantAgentConfigurationsRequestGenerationSettings? generationSettings = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestTag>? tags = default,
-            global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestEditor>? editors = default,
+            global::System.Collections.Generic.IList<string>? editors = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestSkill>? skills = default,
             global::System.Collections.Generic.IList<global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItem>? toolset = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,

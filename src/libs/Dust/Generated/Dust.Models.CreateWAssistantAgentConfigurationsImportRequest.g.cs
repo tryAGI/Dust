@@ -37,11 +37,13 @@ namespace Dust
         public required global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestTag> Tags { get; set; }
 
         /// <summary>
-        /// 
+        /// Emails of the workspace members to set as editors of the agent.<br/>
+        /// Example: [alice@example.com]
         /// </summary>
+        /// <example>[alice@example.com]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("editors")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestEditor> Editors { get; set; }
+        public required global::System.Collections.Generic.IList<string> Editors { get; set; }
 
         /// <summary>
         /// 
@@ -63,7 +65,10 @@ namespace Dust
         /// <param name="instructions"></param>
         /// <param name="generationSettings"></param>
         /// <param name="tags"></param>
-        /// <param name="editors"></param>
+        /// <param name="editors">
+        /// Emails of the workspace members to set as editors of the agent.<br/>
+        /// Example: [alice@example.com]
+        /// </param>
         /// <param name="toolset"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -73,7 +78,7 @@ namespace Dust
             string instructions,
             global::Dust.CreateWAssistantAgentConfigurationsImportRequestGenerationSettings generationSettings,
             global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestTag> tags,
-            global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestEditor> editors,
+            global::System.Collections.Generic.IList<string> editors,
             global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItem> toolset)
         {
             this.Agent = agent ?? throw new global::System.ArgumentNullException(nameof(agent));
