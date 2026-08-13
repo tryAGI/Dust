@@ -562,7 +562,10 @@ namespace Dust
         /// <param name="instructions"></param>
         /// <param name="generationSettings"></param>
         /// <param name="tags"></param>
-        /// <param name="editors"></param>
+        /// <param name="editors">
+        /// Emails of the workspace members to set as editors of the agent.<br/>
+        /// Example: [alice@example.com]
+        /// </param>
         /// <param name="toolset"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -573,7 +576,7 @@ namespace Dust
             string instructions,
             global::Dust.CreateWAssistantAgentConfigurationsImportRequestGenerationSettings generationSettings,
             global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestTag> tags,
-            global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestEditor> editors,
+            global::System.Collections.Generic.IList<string> editors,
             global::System.Collections.Generic.IList<global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItem> toolset,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
