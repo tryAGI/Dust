@@ -23,6 +23,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("api_keys")]
+        public global::System.Collections.Generic.IList<string>? ApiKeys { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("groups")]
         public global::System.Collections.Generic.IList<string>? Groups { get; set; }
 
@@ -61,6 +67,7 @@ namespace Dust
         /// </summary>
         /// <param name="agents"></param>
         /// <param name="users"></param>
+        /// <param name="apiKeys"></param>
         /// <param name="groups"></param>
         /// <param name="models"></param>
         /// <param name="tools"></param>
@@ -72,6 +79,7 @@ namespace Dust
         public CreateWAnalyticsConsumptionFacetsRequestFilter(
             global::System.Collections.Generic.IList<string>? agents,
             global::System.Collections.Generic.IList<string>? users,
+            global::System.Collections.Generic.IList<string>? apiKeys,
             global::System.Collections.Generic.IList<string>? groups,
             global::System.Collections.Generic.IList<string>? models,
             global::System.Collections.Generic.IList<string>? tools,
@@ -80,6 +88,7 @@ namespace Dust
         {
             this.Agents = agents;
             this.Users = users;
+            this.ApiKeys = apiKeys;
             this.Groups = groups;
             this.Models = models;
             this.Tools = tools;
