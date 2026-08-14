@@ -13,605 +13,6 @@ namespace Dust
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
         Converters = new global::System.Type[]
         {
-            typeof(global::Dust.JsonConverters.PrivateConsumptionFacetScopeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConsumptionFacetScopeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConsumptionFacetTierJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConsumptionFacetTierNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserProviderJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserProviderNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWorkspaceRoleJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWorkspaceRoleNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSpaceKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSpaceKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSpaceManagementModeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateDataSourceViewCategoryJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateDataSourceViewCategoryNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateDataSourceViewKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateDataSourceViewKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateMentionSuggestionTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateMentionSuggestionTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFeedbackThumbDirectionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFeedbackThumbDirectionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateMentionTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateMentionTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageContextOriginJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageContextOriginNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageNewEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageNewEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkPreparedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkPreparedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationTitleEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationTitleEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventDiscriminatorTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventInvocationStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventInvocationStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolCallStartedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolCallStartedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMCPActionStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMCPActionStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentErrorEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentErrorEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolErrorEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolErrorEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolParamsEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolParamsEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolNotificationEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolNotificationEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.ContextAgenticMessageDataTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.ContextAgenticMessageDataTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.RichMentionTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.ModelSelectionReasoningEffortJsonConverter),
-
-            typeof(global::Dust.JsonConverters.ModelSelectionReasoningEffortNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SpaceKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SpaceKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.TableSchemaItemValueTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.TableSchemaItemValueTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DatasourceViewCategoryJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DatasourceViewCategoryNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DatasourceViewKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DatasourceViewKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillSourceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillSourceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillReinforcementJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillAvailabilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillAvailabilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewOAuthUseCaseJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewOAuthUseCaseNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestPeriodJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestPeriodNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2JsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2NullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWFilesRequestUseCaseJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWFilesRequestUseCaseNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAnalyticsExportTableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAnalyticsExportTableNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAnalyticsExportFormatJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAnalyticsExportFormatNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSearchViewTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSearchViewTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSkillsStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSkillsStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSkillsAvailabilityItemJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSkillsAvailabilityItemNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2JsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2NullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2JsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2NullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWFilesVersionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWFilesVersionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWFilesActionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWFilesActionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesIncludeAllMembersJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesIncludeAllMembersNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DeleteWSpacesForceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DeleteWSpacesForceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesKindItemJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesKindItemNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFullConversationJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateProjectJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationEventJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageEventJsonConverter),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateWakeUpScheduleConfigVariant1, global::Dust.PrivateWakeUpScheduleConfigVariant2>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateLightAgentMessage, global::Dust.PrivateContentFragment>),
-
-            typeof(global::Dust.JsonConverters.AllOfJsonConverter<global::Dust.PrivateSpace, global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace>),
-
-            typeof(global::Dust.JsonConverters.AllOfJsonConverter<global::Dust.PrivateSpace, global::Dust.CreateWAssistantConversationsSelectedSpacesResponseSelectedSpace>),
-
-            typeof(global::Dust.JsonConverters.AllOfJsonConverter<global::Dust.PrivateSpace, global::Dust.GetWSpacesResponseSpace>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateSpace, global::Dust.PrivateProject?>),
-
-            typeof(global::Dust.JsonConverters.UnixTimestampJsonConverter),
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
@@ -1124,605 +525,6 @@ namespace Dust
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
         Converters = new global::System.Type[]
         {
-            typeof(global::Dust.JsonConverters.PrivateConsumptionFacetScopeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConsumptionFacetScopeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConsumptionFacetTierJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConsumptionFacetTierNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserProviderJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserProviderNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWorkspaceRoleJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWorkspaceRoleNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSpaceKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSpaceKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSpaceManagementModeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateDataSourceViewCategoryJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateDataSourceViewCategoryNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateDataSourceViewKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateDataSourceViewKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateMentionSuggestionTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateMentionSuggestionTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFeedbackThumbDirectionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFeedbackThumbDirectionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateMentionTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateMentionTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageContextOriginJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageContextOriginNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageNewEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateUserMessageNewEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkPreparedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationForkPreparedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationTitleEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationTitleEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventDiscriminatorTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventInvocationStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventInvocationStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolCallStartedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolCallStartedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMCPActionStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMCPActionStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentErrorEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentErrorEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolErrorEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolErrorEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolParamsEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolParamsEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolNotificationEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolNotificationEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.ContextAgenticMessageDataTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.ContextAgenticMessageDataTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.RichMentionTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.ModelSelectionReasoningEffortJsonConverter),
-
-            typeof(global::Dust.JsonConverters.ModelSelectionReasoningEffortNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SpaceKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SpaceKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.TableSchemaItemValueTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.TableSchemaItemValueTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DatasourceViewCategoryJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DatasourceViewCategoryNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DatasourceViewKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DatasourceViewKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillSourceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillSourceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillReinforcementJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillAvailabilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.SkillAvailabilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewOAuthUseCaseJsonConverter),
-
-            typeof(global::Dust.JsonConverters.MCPServerViewOAuthUseCaseNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestPeriodJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestPeriodNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2JsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2NullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWFilesRequestUseCaseJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWFilesRequestUseCaseNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAnalyticsExportTableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAnalyticsExportTableNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAnalyticsExportFormatJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAnalyticsExportFormatNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSearchViewTypeJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSearchViewTypeNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSkillsStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSkillsStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSkillsAvailabilityItemJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSkillsAvailabilityItemNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2JsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2NullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2JsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2NullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWFilesVersionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWFilesVersionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWFilesActionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWFilesActionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesIncludeAllMembersJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesIncludeAllMembersNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DeleteWSpacesForceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.DeleteWSpacesForceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesKindItemJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesKindItemNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateFullConversationJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateProjectJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateConversationEventJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventJsonConverter),
-
-            typeof(global::Dust.JsonConverters.PrivateAgentMessageEventJsonConverter),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateWakeUpScheduleConfigVariant1, global::Dust.PrivateWakeUpScheduleConfigVariant2>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateLightAgentMessage, global::Dust.PrivateContentFragment>),
-
-            typeof(global::Dust.JsonConverters.AllOfJsonConverter<global::Dust.PrivateSpace, global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace>),
-
-            typeof(global::Dust.JsonConverters.AllOfJsonConverter<global::Dust.PrivateSpace, global::Dust.CreateWAssistantConversationsSelectedSpacesResponseSelectedSpace>),
-
-            typeof(global::Dust.JsonConverters.AllOfJsonConverter<global::Dust.PrivateSpace, global::Dust.GetWSpacesResponseSpace>),
-
-            typeof(global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateSpace, global::Dust.PrivateProject?>),
-
-            typeof(global::Dust.JsonConverters.UnixTimestampJsonConverter),
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
@@ -2054,11 +856,7 @@ namespace Dust
     /// </summary>
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
-        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = global::System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
-            SourceGenerationContextChunk0.Default,
-
-            SourceGenerationContextChunk1.Default
-            );
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
 
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
 
@@ -2088,288 +886,6 @@ namespace Dust
                 DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
                 TypeInfoResolver = Resolver,
             };
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConsumptionFacetScopeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConsumptionFacetScopeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConsumptionFacetTierJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConsumptionFacetTierNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserProviderJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserProviderNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWorkspaceRoleJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWorkspaceRoleNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkUserProviderJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageVisibilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageVisibilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentVisibilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageVisibilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSpaceKindJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSpaceKindNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSpaceManagementModeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateDataSourceViewCategoryJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateDataSourceViewCategoryNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateDataSourceViewKindJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateDataSourceViewKindNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateMentionSuggestionTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateMentionSuggestionTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateFeedbackThumbDirectionJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateFeedbackThumbDirectionNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateMentionTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateMentionTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageContextOriginJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageContextOriginNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageNewEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateUserMessageNewEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkPreparedEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationForkPreparedEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationTitleEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationTitleEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventInvocationStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventInvocationStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolCallStartedEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolCallStartedEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMCPActionStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMCPActionStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentErrorEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentErrorEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolErrorEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolErrorEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolParamsEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolParamsEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolNotificationEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolNotificationEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.ContextAgenticMessageDataTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.ContextAgenticMessageDataTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.RichMentionTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.ModelSelectionReasoningEffortJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.ModelSelectionReasoningEffortNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SpaceKindJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SpaceKindNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.TableSchemaItemValueTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.TableSchemaItemValueTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.DatasourceViewCategoryJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.DatasourceViewCategoryNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.DatasourceViewKindJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.DatasourceViewKindNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SkillStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SkillStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SkillSourceJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SkillSourceNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SkillReinforcementJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SkillAvailabilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.SkillAvailabilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewOAuthUseCaseJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.MCPServerViewOAuthUseCaseNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestOnConflictJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestPeriodJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestPeriodNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2JsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2NullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWFilesRequestUseCaseJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWFilesRequestUseCaseNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWSpacesRequestManagementModeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAnalyticsExportTableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAnalyticsExportTableNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAnalyticsExportFormatJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAnalyticsExportFormatNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSearchViewTypeJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSearchViewTypeNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSkillsStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSkillsStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSkillsAvailabilityItemJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSkillsAvailabilityItemNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2JsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2NullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2JsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2NullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWFilesVersionJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWFilesVersionNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWFilesActionJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWFilesActionNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesIncludeAllMembersJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesIncludeAllMembersNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.DeleteWSpacesForceJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.DeleteWSpacesForceNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesKindItemJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesKindItemNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter());
-            options.Converters.Add(new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateFullConversationJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateProjectJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.PrivateConversationEventJsonConverter());
@@ -2389,7 +905,2044 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateSpace, global::Dust.PrivateProject?>());
             options.Converters.Add(new global::Dust.JsonConverters.UnixTimestampJsonConverter());
 
+            options.Converters.Add(new LazyEnumJsonConverterFactory());
+
             return options;
+        }
+
+
+        private sealed class LazyEnumJsonConverterFactory : global::System.Text.Json.Serialization.JsonConverterFactory
+        {
+            public override bool CanConvert(global::System.Type typeToConvert)
+            {
+                return
+                    typeToConvert == typeof(global::Dust.PrivateConsumptionFacetScope)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConsumptionFacetScope?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConsumptionFacetTier)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConsumptionFacetTier?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserProvider)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserProvider?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWorkspaceRole)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWorkspaceRole?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationForkUserProvider)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationForkUserProvider?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationForkedFromFileCopyStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationForkedFromFileCopyStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateFullConversationVariant2Visibility)
+
+                    || typeToConvert == typeof(global::Dust.PrivateFullConversationVariant2Visibility?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserMessageType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserMessageType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserMessageVisibility)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserMessageVisibility?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageVisibility)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageVisibility?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageModelResolutionMethod)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageModelResolutionMethod?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageVisibility)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageVisibility?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageModelResolutionMethod)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageModelResolutionMethod?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageActivityStepType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentMessageActivityStepType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentVisibility)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentVisibility?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentContentFragmentVersion)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentContentFragmentVersion?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentContentFragmentType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentContentFragmentType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentExpiredReason)
+
+                    || typeToConvert == typeof(global::Dust.PrivateContentFragmentExpiredReason?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageVisibility)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageVisibility?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationScope)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationScope?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationModelReasoningEffort)
+
+                    || typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationModelReasoningEffort?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateFileWithUploadUrlStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateFileWithUploadUrlStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateFileWithUploadUrlUseCase)
+
+                    || typeToConvert == typeof(global::Dust.PrivateFileWithUploadUrlUseCase?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSpaceKind)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSpaceKind?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSpaceManagementMode)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSpaceManagementMode?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateDataSourceViewCategory)
+
+                    || typeToConvert == typeof(global::Dust.PrivateDataSourceViewCategory?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateDataSourceViewKind)
+
+                    || typeToConvert == typeof(global::Dust.PrivateDataSourceViewKind?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateMentionSuggestionType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateMentionSuggestionType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateFeedbackThumbDirection)
+
+                    || typeToConvert == typeof(global::Dust.PrivateFeedbackThumbDirection?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWakeUpScheduleConfigVariant1Type)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWakeUpScheduleConfigVariant1Type?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWakeUpScheduleConfigVariant2Type)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWakeUpScheduleConfigVariant2Type?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWakeUpStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWakeUpStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateMentionType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateMentionType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateRichMentionWithStatusType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateRichMentionWithStatusType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateRichMentionWithStatusStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateRichMentionWithStatusStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserMessageContextOrigin)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserMessageContextOrigin?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationEventDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationEventDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserMessageNewEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateUserMessageNewEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageNewEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageNewEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageDoneEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageDoneEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageDoneEventStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageDoneEventStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageNewEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageNewEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageDoneEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateCompactionMessageDoneEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationForkPreparedEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationForkPreparedEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationTitleEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateConversationTitleEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWakeUpUpdatedEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateWakeUpUpdatedEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventInvocationStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventInvocationStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationResultEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationResultEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageEventDiscriminatorType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageEventDiscriminatorType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateGenerationTokensEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateGenerationTokensEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateGenerationTokensEventClassification)
+
+                    || typeToConvert == typeof(global::Dust.PrivateGenerationTokensEventClassification?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolCallStartedEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolCallStartedEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentActionSuccessEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentActionSuccessEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMCPActionStatus)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMCPActionStatus?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageSuccessEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentMessageSuccessEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentErrorEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentErrorEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentGenerationCancelledEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentGenerationCancelledEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolErrorEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolErrorEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolParamsEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolParamsEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolApproveExecutionEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolApproveExecutionEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolNotificationEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolNotificationEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolPersonalAuthRequiredEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolPersonalAuthRequiredEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolFileAuthRequiredEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateToolFileAuthRequiredEventType?)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentContextPrunedEventType)
+
+                    || typeToConvert == typeof(global::Dust.PrivateAgentContextPrunedEventType?)
+
+                    || typeToConvert == typeof(global::Dust.ContextAgenticMessageDataType)
+
+                    || typeToConvert == typeof(global::Dust.ContextAgenticMessageDataType?)
+
+                    || typeToConvert == typeof(global::Dust.RichMentionType)
+
+                    || typeToConvert == typeof(global::Dust.RichMentionType?)
+
+                    || typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort)
+
+                    || typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort?)
+
+                    || typeToConvert == typeof(global::Dust.SpaceKind)
+
+                    || typeToConvert == typeof(global::Dust.SpaceKind?)
+
+                    || typeToConvert == typeof(global::Dust.TableSchemaItemValueType)
+
+                    || typeToConvert == typeof(global::Dust.TableSchemaItemValueType?)
+
+                    || typeToConvert == typeof(global::Dust.DatasourceViewCategory)
+
+                    || typeToConvert == typeof(global::Dust.DatasourceViewCategory?)
+
+                    || typeToConvert == typeof(global::Dust.DatasourceViewKind)
+
+                    || typeToConvert == typeof(global::Dust.DatasourceViewKind?)
+
+                    || typeToConvert == typeof(global::Dust.SkillStatus)
+
+                    || typeToConvert == typeof(global::Dust.SkillStatus?)
+
+                    || typeToConvert == typeof(global::Dust.SkillSource)
+
+                    || typeToConvert == typeof(global::Dust.SkillSource?)
+
+                    || typeToConvert == typeof(global::Dust.SkillReinforcement)
+
+                    || typeToConvert == typeof(global::Dust.SkillReinforcement?)
+
+                    || typeToConvert == typeof(global::Dust.SkillAvailability)
+
+                    || typeToConvert == typeof(global::Dust.SkillAvailability?)
+
+                    || typeToConvert == typeof(global::Dust.MCPServerViewServerType)
+
+                    || typeToConvert == typeof(global::Dust.MCPServerViewServerType?)
+
+                    || typeToConvert == typeof(global::Dust.MCPServerViewServerAuthorizationSupportedUseCase)
+
+                    || typeToConvert == typeof(global::Dust.MCPServerViewServerAuthorizationSupportedUseCase?)
+
+                    || typeToConvert == typeof(global::Dust.MCPServerViewOAuthUseCase)
+
+                    || typeToConvert == typeof(global::Dust.MCPServerViewOAuthUseCase?)
+
+                    || typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope)
+
+                    || typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope?)
+
+                    || typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestTagKind)
+
+                    || typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestTagKind?)
+
+                    || typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemType)
+
+                    || typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemType?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgentScope)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgentScope?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestTagKind)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestTagKind?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItemType)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItemType?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSkillsRequestOnConflict)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSkillsRequestOnConflict?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSkillsRequestAvailability)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSkillsRequestAvailability?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValueType)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValueType?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAnalyticsConsumptionFacetsRequestPeriod)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAnalyticsConsumptionFacetsRequestPeriod?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsCancelRequestAction)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsCancelRequestAction?)
+
+                    || typeToConvert == typeof(global::Dust.PatchWAssistantConversationsRequestVariant4AccessMode)
+
+                    || typeToConvert == typeof(global::Dust.PatchWAssistantConversationsRequestVariant4AccessMode?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsSelectedSpacesRequestMode)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsSelectedSpacesRequestMode?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsRequestVisibility)
+
+                    || typeToConvert == typeof(global::Dust.CreateWAssistantConversationsRequestVisibility?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWFilesRequestUseCase)
+
+                    || typeToConvert == typeof(global::Dust.CreateWFilesRequestUseCase?)
+
+                    || typeToConvert == typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference)
+
+                    || typeToConvert == typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSpacesRequestSpaceKind)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSpacesRequestSpaceKind?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSpacesRequestManagementMode)
+
+                    || typeToConvert == typeof(global::Dust.CreateWSpacesRequestManagementMode?)
+
+                    || typeToConvert == typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType)
+
+                    || typeToConvert == typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAnalyticsExportTable)
+
+                    || typeToConvert == typeof(global::Dust.GetWAnalyticsExportTable?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAnalyticsExportFormat)
+
+                    || typeToConvert == typeof(global::Dust.GetWAnalyticsExportFormat?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsVariant)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsVariant?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsSelectItem)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsSelectItem?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSearchViewType)
+
+                    || typeToConvert == typeof(global::Dust.GetWSearchViewType?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSkillsStatus)
+
+                    || typeToConvert == typeof(global::Dust.GetWSkillsStatus?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSkillsAvailabilityItem)
+
+                    || typeToConvert == typeof(global::Dust.GetWSkillsAvailabilityItem?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView2)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView2?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithUsage)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithUsage?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors2)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors2?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithFeedbacks)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithFeedbacks?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithEditors)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithEditors?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsSelect)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsSelect?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsCurrent)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsCurrent?)
+
+                    || typeToConvert == typeof(global::Dust.GetWFilesVersion)
+
+                    || typeToConvert == typeof(global::Dust.GetWFilesVersion?)
+
+                    || typeToConvert == typeof(global::Dust.GetWFilesAction)
+
+                    || typeToConvert == typeof(global::Dust.GetWFilesAction?)
+
+                    || typeToConvert == typeof(global::Dust.DeleteWSpacesDataSourceViewsForce)
+
+                    || typeToConvert == typeof(global::Dust.DeleteWSpacesDataSourceViewsForce?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsCategory)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsCategory?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsWithDetails)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsWithDetails?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsIncludeEditedBy)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsIncludeEditedBy?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesIncludeAllMembers)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesIncludeAllMembers?)
+
+                    || typeToConvert == typeof(global::Dust.DeleteWSpacesForce)
+
+                    || typeToConvert == typeof(global::Dust.DeleteWSpacesForce?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesKindItem)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesKindItem?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirection)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirection?)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus)
+
+                    || typeToConvert == typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference?)
+
+                    || typeToConvert == typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference)
+
+                    || typeToConvert == typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference?);
+            }
+
+            public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
+                global::System.Type typeToConvert,
+                global::System.Text.Json.JsonSerializerOptions options)
+            {
+                if (typeToConvert == typeof(global::Dust.PrivateConsumptionFacetScope))
+                {
+                    return new global::Dust.JsonConverters.PrivateConsumptionFacetScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConsumptionFacetScope?))
+                {
+                    return new global::Dust.JsonConverters.PrivateConsumptionFacetScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConsumptionFacetTier))
+                {
+                    return new global::Dust.JsonConverters.PrivateConsumptionFacetTierJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConsumptionFacetTier?))
+                {
+                    return new global::Dust.JsonConverters.PrivateConsumptionFacetTierNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserProvider))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserProviderJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserProvider?))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserProviderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWorkspaceRole))
+                {
+                    return new global::Dust.JsonConverters.PrivateWorkspaceRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWorkspaceRole?))
+                {
+                    return new global::Dust.JsonConverters.PrivateWorkspaceRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationForkUserProvider))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationForkUserProviderJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationForkUserProvider?))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationForkUserProviderNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationForkedFromFileCopyStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationForkedFromFileCopyStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateFullConversationVariant2Visibility))
+                {
+                    return new global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateFullConversationVariant2Visibility?))
+                {
+                    return new global::Dust.JsonConverters.PrivateFullConversationVariant2VisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserMessageType))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserMessageTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserMessageType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserMessageTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserMessageVisibility))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserMessageVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserMessageVisibility?))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserMessageVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageVisibility))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageVisibility?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageModelResolutionMethod))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageModelResolutionMethod?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageModelResolutionMethodNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageType))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageVisibility))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageVisibility?))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageModelResolutionMethod))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageModelResolutionMethod?))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageActivityStepType))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentMessageActivityStepType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentMessageActivityStepTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentType))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentVisibility))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentVisibility?))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentContentFragmentVersion))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentContentFragmentVersion?))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentVersionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentContentFragmentType))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentContentFragmentType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentContentFragmentTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentExpiredReason))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateContentFragmentExpiredReason?))
+                {
+                    return new global::Dust.JsonConverters.PrivateContentFragmentExpiredReasonNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageType))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageVisibility))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageVisibility?))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentConfigurationStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationScope))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationScope?))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentConfigurationScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationModelReasoningEffort))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateLightAgentConfigurationModelReasoningEffort?))
+                {
+                    return new global::Dust.JsonConverters.PrivateLightAgentConfigurationModelReasoningEffortNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateFileWithUploadUrlStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateFileWithUploadUrlStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateFileWithUploadUrlStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateFileWithUploadUrlUseCase))
+                {
+                    return new global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateFileWithUploadUrlUseCase?))
+                {
+                    return new global::Dust.JsonConverters.PrivateFileWithUploadUrlUseCaseNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSpaceKind))
+                {
+                    return new global::Dust.JsonConverters.PrivateSpaceKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSpaceKind?))
+                {
+                    return new global::Dust.JsonConverters.PrivateSpaceKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSpaceManagementMode))
+                {
+                    return new global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSpaceManagementMode?))
+                {
+                    return new global::Dust.JsonConverters.PrivateSpaceManagementModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateDataSourceViewCategory))
+                {
+                    return new global::Dust.JsonConverters.PrivateDataSourceViewCategoryJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateDataSourceViewCategory?))
+                {
+                    return new global::Dust.JsonConverters.PrivateDataSourceViewCategoryNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateDataSourceViewKind))
+                {
+                    return new global::Dust.JsonConverters.PrivateDataSourceViewKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateDataSourceViewKind?))
+                {
+                    return new global::Dust.JsonConverters.PrivateDataSourceViewKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateMentionSuggestionType))
+                {
+                    return new global::Dust.JsonConverters.PrivateMentionSuggestionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateMentionSuggestionType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateMentionSuggestionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateFeedbackThumbDirection))
+                {
+                    return new global::Dust.JsonConverters.PrivateFeedbackThumbDirectionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateFeedbackThumbDirection?))
+                {
+                    return new global::Dust.JsonConverters.PrivateFeedbackThumbDirectionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWakeUpScheduleConfigVariant1Type))
+                {
+                    return new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWakeUpScheduleConfigVariant1Type?))
+                {
+                    return new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant1TypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWakeUpScheduleConfigVariant2Type))
+                {
+                    return new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWakeUpScheduleConfigVariant2Type?))
+                {
+                    return new global::Dust.JsonConverters.PrivateWakeUpScheduleConfigVariant2TypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWakeUpStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateWakeUpStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWakeUpStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateWakeUpStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateMentionType))
+                {
+                    return new global::Dust.JsonConverters.PrivateMentionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateMentionType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateMentionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateRichMentionWithStatusType))
+                {
+                    return new global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateRichMentionWithStatusType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateRichMentionWithStatusTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateRichMentionWithStatusStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateRichMentionWithStatusStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateRichMentionWithStatusStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserMessageContextOrigin))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserMessageContextOriginJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserMessageContextOrigin?))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserMessageContextOriginNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationEventDiscriminatorType))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationEventDiscriminatorType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationEventDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserMessageNewEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserMessageNewEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateUserMessageNewEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateUserMessageNewEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageNewEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageNewEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageNewEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageDoneEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageDoneEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageDoneEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageDoneEventStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageDoneEventStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageDoneEventStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageConsumptionUpdatedEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageConsumptionUpdatedEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageNewEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageNewEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageNewEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageDoneEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateCompactionMessageDoneEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateCompactionMessageDoneEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationForkPreparedEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationForkPreparedEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationForkPreparedEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationForkPreparedEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationTitleEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationTitleEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateConversationTitleEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateConversationTitleEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWakeUpUpdatedEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateWakeUpUpdatedEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationEventDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventInvocationStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventInvocationStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventInvocationStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationCreatedEventInvocationStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationResultEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationResultEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationResultEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationErrorEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationErrorEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageEventDiscriminatorType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageEventDiscriminatorType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageEventDiscriminatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateGenerationTokensEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateGenerationTokensEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateGenerationTokensEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateGenerationTokensEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateGenerationTokensEventClassification))
+                {
+                    return new global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateGenerationTokensEventClassification?))
+                {
+                    return new global::Dust.JsonConverters.PrivateGenerationTokensEventClassificationNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolCallStartedEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolCallStartedEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolCallStartedEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolCallStartedEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentActionSuccessEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentActionSuccessEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentActionSuccessEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMCPActionStatus))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMCPActionStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMCPActionStatus?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMCPActionStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageSuccessEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentMessageSuccessEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentMessageSuccessEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentErrorEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentErrorEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentErrorEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentErrorEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentGenerationCancelledEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentGenerationCancelledEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentGenerationCancelledEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolErrorEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolErrorEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolErrorEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolErrorEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolParamsEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolParamsEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolParamsEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolParamsEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolApproveExecutionEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolApproveExecutionEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolApproveExecutionEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolNotificationEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolNotificationEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolNotificationEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolNotificationEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolPersonalAuthRequiredEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolPersonalAuthRequiredEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolPersonalAuthRequiredEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolFileAuthRequiredEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateToolFileAuthRequiredEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateToolFileAuthRequiredEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentContextPrunedEventType))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PrivateAgentContextPrunedEventType?))
+                {
+                    return new global::Dust.JsonConverters.PrivateAgentContextPrunedEventTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.ContextAgenticMessageDataType))
+                {
+                    return new global::Dust.JsonConverters.ContextAgenticMessageDataTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.ContextAgenticMessageDataType?))
+                {
+                    return new global::Dust.JsonConverters.ContextAgenticMessageDataTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.RichMentionType))
+                {
+                    return new global::Dust.JsonConverters.RichMentionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.RichMentionType?))
+                {
+                    return new global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort))
+                {
+                    return new global::Dust.JsonConverters.ModelSelectionReasoningEffortJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort?))
+                {
+                    return new global::Dust.JsonConverters.ModelSelectionReasoningEffortNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SpaceKind))
+                {
+                    return new global::Dust.JsonConverters.SpaceKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SpaceKind?))
+                {
+                    return new global::Dust.JsonConverters.SpaceKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.TableSchemaItemValueType))
+                {
+                    return new global::Dust.JsonConverters.TableSchemaItemValueTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.TableSchemaItemValueType?))
+                {
+                    return new global::Dust.JsonConverters.TableSchemaItemValueTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.DatasourceViewCategory))
+                {
+                    return new global::Dust.JsonConverters.DatasourceViewCategoryJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.DatasourceViewCategory?))
+                {
+                    return new global::Dust.JsonConverters.DatasourceViewCategoryNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.DatasourceViewKind))
+                {
+                    return new global::Dust.JsonConverters.DatasourceViewKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.DatasourceViewKind?))
+                {
+                    return new global::Dust.JsonConverters.DatasourceViewKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SkillStatus))
+                {
+                    return new global::Dust.JsonConverters.SkillStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SkillStatus?))
+                {
+                    return new global::Dust.JsonConverters.SkillStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SkillSource))
+                {
+                    return new global::Dust.JsonConverters.SkillSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SkillSource?))
+                {
+                    return new global::Dust.JsonConverters.SkillSourceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SkillReinforcement))
+                {
+                    return new global::Dust.JsonConverters.SkillReinforcementJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SkillReinforcement?))
+                {
+                    return new global::Dust.JsonConverters.SkillReinforcementNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SkillAvailability))
+                {
+                    return new global::Dust.JsonConverters.SkillAvailabilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.SkillAvailability?))
+                {
+                    return new global::Dust.JsonConverters.SkillAvailabilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.MCPServerViewServerType))
+                {
+                    return new global::Dust.JsonConverters.MCPServerViewServerTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.MCPServerViewServerType?))
+                {
+                    return new global::Dust.JsonConverters.MCPServerViewServerTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.MCPServerViewServerAuthorizationSupportedUseCase))
+                {
+                    return new global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.MCPServerViewServerAuthorizationSupportedUseCase?))
+                {
+                    return new global::Dust.JsonConverters.MCPServerViewServerAuthorizationSupportedUseCaseNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.MCPServerViewOAuthUseCase))
+                {
+                    return new global::Dust.JsonConverters.MCPServerViewOAuthUseCaseJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.MCPServerViewOAuthUseCase?))
+                {
+                    return new global::Dust.JsonConverters.MCPServerViewOAuthUseCaseNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope))
+                {
+                    return new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope?))
+                {
+                    return new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestTagKind))
+                {
+                    return new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestTagKind?))
+                {
+                    return new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestTagKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemType))
+                {
+                    return new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemType?))
+                {
+                    return new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestToolsetItemTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgentScope))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgentScope?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestAgentScopeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestTagKind))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestTagKind?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestTagKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItemType))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItemType?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantAgentConfigurationsImportRequestToolsetItemTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirectionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSkillsRequestOnConflict))
+                {
+                    return new global::Dust.JsonConverters.CreateWSkillsRequestOnConflictJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSkillsRequestOnConflict?))
+                {
+                    return new global::Dust.JsonConverters.CreateWSkillsRequestOnConflictNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSkillsRequestAvailability))
+                {
+                    return new global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSkillsRequestAvailability?))
+                {
+                    return new global::Dust.JsonConverters.CreateWSkillsRequestAvailabilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValueType))
+                {
+                    return new global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValueType?))
+                {
+                    return new global::Dust.JsonConverters.CreateWSpacesDataSourcesTablesRowsRequestRowValueTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAnalyticsConsumptionFacetsRequestPeriod))
+                {
+                    return new global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestPeriodJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAnalyticsConsumptionFacetsRequestPeriod?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestPeriodNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsCancelRequestAction))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsCancelRequestAction?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsCancelRequestActionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWAssistantConversationsRequestVariant4AccessMode))
+                {
+                    return new global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWAssistantConversationsRequestVariant4AccessMode?))
+                {
+                    return new global::Dust.JsonConverters.PatchWAssistantConversationsRequestVariant4AccessModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsSelectedSpacesRequestMode))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsSelectedSpacesRequestMode?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsRequestVisibility))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWAssistantConversationsRequestVisibility?))
+                {
+                    return new global::Dust.JsonConverters.CreateWAssistantConversationsRequestVisibilityNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWFilesRequestUseCase))
+                {
+                    return new global::Dust.JsonConverters.CreateWFilesRequestUseCaseJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWFilesRequestUseCase?))
+                {
+                    return new global::Dust.JsonConverters.CreateWFilesRequestUseCaseNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference))
+                {
+                    return new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference?))
+                {
+                    return new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesRequestPreferenceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSpacesRequestSpaceKind))
+                {
+                    return new global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSpacesRequestSpaceKind?))
+                {
+                    return new global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSpacesRequestManagementMode))
+                {
+                    return new global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWSpacesRequestManagementMode?))
+                {
+                    return new global::Dust.JsonConverters.CreateWSpacesRequestManagementModeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType))
+                {
+                    return new global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType?))
+                {
+                    return new global::Dust.JsonConverters.CreateWorkosAuthenticateRequestGrantTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAnalyticsExportTable))
+                {
+                    return new global::Dust.JsonConverters.GetWAnalyticsExportTableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAnalyticsExportTable?))
+                {
+                    return new global::Dust.JsonConverters.GetWAnalyticsExportTableNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAnalyticsExportFormat))
+                {
+                    return new global::Dust.JsonConverters.GetWAnalyticsExportFormatJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAnalyticsExportFormat?))
+                {
+                    return new global::Dust.JsonConverters.GetWAnalyticsExportFormatNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsViewNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthorsNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsVariant))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsVariant?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsVariantNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantConversationsMentionsSuggestionsSelectItemNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsSelectItem))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsSelectItem?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSearchViewType))
+                {
+                    return new global::Dust.JsonConverters.GetWSearchViewTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSearchViewType?))
+                {
+                    return new global::Dust.JsonConverters.GetWSearchViewTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSkillsStatus))
+                {
+                    return new global::Dust.JsonConverters.GetWSkillsStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSkillsStatus?))
+                {
+                    return new global::Dust.JsonConverters.GetWSkillsStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSkillsAvailabilityItem))
+                {
+                    return new global::Dust.JsonConverters.GetWSkillsAvailabilityItemJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSkillsAvailabilityItem?))
+                {
+                    return new global::Dust.JsonConverters.GetWSkillsAvailabilityItemNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView2))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView2?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithUsage))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithUsage?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithUsageNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors2))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2JsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors2?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithAuthors2NullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithFeedbacks))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithFeedbacks?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithFeedbacksNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithEditors))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsWithEditors?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsWithEditorsNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsSelect))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsSelect?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsCurrent))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantMentionsSuggestionsCurrent?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsCurrentNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWFilesVersion))
+                {
+                    return new global::Dust.JsonConverters.GetWFilesVersionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWFilesVersion?))
+                {
+                    return new global::Dust.JsonConverters.GetWFilesVersionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWFilesAction))
+                {
+                    return new global::Dust.JsonConverters.GetWFilesActionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWFilesAction?))
+                {
+                    return new global::Dust.JsonConverters.GetWFilesActionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.DeleteWSpacesDataSourceViewsForce))
+                {
+                    return new global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.DeleteWSpacesDataSourceViewsForce?))
+                {
+                    return new global::Dust.JsonConverters.DeleteWSpacesDataSourceViewsForceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsCategory))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsCategory?))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesDataSourceViewsCategoryNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsWithDetails))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsWithDetails?))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesDataSourceViewsWithDetailsNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsIncludeEditedBy))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesDataSourceViewsIncludeEditedBy?))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesDataSourceViewsIncludeEditedByNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesIncludeAllMembers))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesIncludeAllMembersJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesIncludeAllMembers?))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesIncludeAllMembersNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.DeleteWSpacesForce))
+                {
+                    return new global::Dust.JsonConverters.DeleteWSpacesForceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.DeleteWSpacesForce?))
+                {
+                    return new global::Dust.JsonConverters.DeleteWSpacesForceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesKindItem))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesKindItemJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesKindItem?))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesKindItemNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirection))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirection?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus?))
+                {
+                    return new global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference?))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference))
+                {
+                    return new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference?))
+                {
+                    return new global::Dust.JsonConverters.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceNullableJsonConverter();
+                }
+                throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
+            }
+        }
+
+        private sealed class LazyChunkResolver : global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver
+        {
+            private readonly object _gate = new();
+            private readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[] _resolvers = new global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver?[2];
+
+            public global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(
+                global::System.Type type,
+                global::System.Text.Json.JsonSerializerOptions options)
+            {
+                for (var index = 0; index < _resolvers.Length; index++)
+                {
+                    var typeInfo = GetResolver(index).GetTypeInfo(type, options);
+                    if (typeInfo is not null)
+                    {
+                        return typeInfo;
+                    }
+                }
+
+                return null;
+            }
+
+            private global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver GetResolver(int index)
+            {
+                var resolver = global::System.Threading.Volatile.Read(ref _resolvers[index]);
+                if (resolver is not null)
+                {
+                    return resolver;
+                }
+
+                lock (_gate)
+                {
+                    return _resolvers[index] ??= CreateResolver(index);
+                }
+            }
+
+            private static global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver CreateResolver(int index)
+            {
+                return index switch
+                {
+                    0 => new SourceGenerationContextChunk0(new global::System.Text.Json.JsonSerializerOptions()),
+
+                    1 => new SourceGenerationContextChunk1(new global::System.Text.Json.JsonSerializerOptions()),
+                    _ => throw new global::System.ArgumentOutOfRangeException(nameof(index)),
+                };
+            }
         }
     }
 }
