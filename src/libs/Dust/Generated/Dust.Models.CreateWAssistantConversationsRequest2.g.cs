@@ -43,7 +43,7 @@ namespace Dust
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        public object? Metadata { get; set; }
+        public global::Dust.CreateWAssistantConversationsRequestMetadata? Metadata { get; set; }
 
         /// <summary>
         /// 
@@ -83,7 +83,7 @@ namespace Dust
             string? spaceId,
             global::Dust.CreateWAssistantConversationsRequestMessage? message,
             global::System.Collections.Generic.IList<object>? contentFragments,
-            object? metadata,
+            global::Dust.CreateWAssistantConversationsRequestMetadata? metadata,
             global::System.Collections.Generic.IList<string>? selectedSpaceIds,
             bool? skipToolsValidation)
         {
