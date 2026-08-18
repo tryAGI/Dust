@@ -512,7 +512,7 @@ namespace Dust
             string? spaceId = default,
             global::Dust.CreateWAssistantConversationsRequestMessage? message = default,
             global::System.Collections.Generic.IList<object>? contentFragments = default,
-            object? metadata = default,
+            global::Dust.CreateWAssistantConversationsRequestMetadata? metadata = default,
             global::System.Collections.Generic.IList<string>? selectedSpaceIds = default,
             bool? skipToolsValidation = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
