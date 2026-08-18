@@ -77,6 +77,12 @@ namespace Dust
         public global::Dust.PrivateDataSourceViewEditedByUser? EditedByUser { get; set; }
 
         /// <summary>
+        /// Present when the view was fetched with usage details (withDetails query param). Counts agents and skills that use this data source view.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("usage")]
+        public global::Dust.PrivateDataSourceViewUsage? Usage { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -99,6 +105,9 @@ namespace Dust
         /// List of parent IDs included in this view, null if the full data source is used
         /// </param>
         /// <param name="editedByUser"></param>
+        /// <param name="usage">
+        /// Present when the view was fetched with usage details (withDetails query param). Counts agents and skills that use this data source view.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -112,7 +121,8 @@ namespace Dust
             int? createdAt,
             int? updatedAt,
             global::System.Collections.Generic.IList<string>? parentsIn,
-            global::Dust.PrivateDataSourceViewEditedByUser? editedByUser)
+            global::Dust.PrivateDataSourceViewEditedByUser? editedByUser,
+            global::Dust.PrivateDataSourceViewUsage? usage)
         {
             this.SId = sId ?? throw new global::System.ArgumentNullException(nameof(sId));
             this.Id = id;
@@ -124,6 +134,7 @@ namespace Dust
             this.ParentsIn = parentsIn;
             this.DataSource = dataSource ?? throw new global::System.ArgumentNullException(nameof(dataSource));
             this.EditedByUser = editedByUser;
+            this.Usage = usage;
         }
 
         /// <summary>
