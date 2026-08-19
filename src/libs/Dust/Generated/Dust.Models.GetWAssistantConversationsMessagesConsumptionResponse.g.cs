@@ -9,10 +9,22 @@ namespace Dust
     public sealed partial class GetWAssistantConversationsMessagesConsumptionResponse
     {
         /// <summary>
-        /// Authoritative credits billed for this agent message.
+        /// Authoritative credits billed directly for this agent message, excluding sub-agents.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("billedCredits")]
         public double? BilledCredits { get; set; }
+
+        /// <summary>
+        /// Credits billed by sub-agents recursively spawned from this message.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("subAgentBilledCredits")]
+        public double? SubAgentBilledCredits { get; set; }
+
+        /// <summary>
+        /// Total credits billed by this message and its recursively spawned sub-agents.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("totalBilledCredits")]
+        public double? TotalBilledCredits { get; set; }
 
         /// <summary>
         /// Additive attribution reconciled to the bill through model input rows, using the newest complete stored attribution version. Null when no stored version is complete.
@@ -30,7 +42,13 @@ namespace Dust
         /// Initializes a new instance of the <see cref="GetWAssistantConversationsMessagesConsumptionResponse" /> class.
         /// </summary>
         /// <param name="billedCredits">
-        /// Authoritative credits billed for this agent message.
+        /// Authoritative credits billed directly for this agent message, excluding sub-agents.
+        /// </param>
+        /// <param name="subAgentBilledCredits">
+        /// Credits billed by sub-agents recursively spawned from this message.
+        /// </param>
+        /// <param name="totalBilledCredits">
+        /// Total credits billed by this message and its recursively spawned sub-agents.
         /// </param>
         /// <param name="details">
         /// Additive attribution reconciled to the bill through model input rows, using the newest complete stored attribution version. Null when no stored version is complete.
@@ -40,9 +58,13 @@ namespace Dust
 #endif
         public GetWAssistantConversationsMessagesConsumptionResponse(
             double? billedCredits,
+            double? subAgentBilledCredits,
+            double? totalBilledCredits,
             global::Dust.GetWAssistantConversationsMessagesConsumptionResponseDetails? details)
         {
             this.BilledCredits = billedCredits;
+            this.SubAgentBilledCredits = subAgentBilledCredits;
+            this.TotalBilledCredits = totalBilledCredits;
             this.Details = details;
         }
 
