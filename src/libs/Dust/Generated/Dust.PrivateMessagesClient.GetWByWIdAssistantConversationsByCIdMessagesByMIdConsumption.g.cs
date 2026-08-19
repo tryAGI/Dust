@@ -60,7 +60,7 @@ namespace Dust
 
         /// <summary>
         /// Get an agent message credit attribution<br/>
-        /// Returns exact billed credits and an additive attribution reconciled exclusively through model input rows.
+        /// Returns direct, recursively spawned sub-agent, and total billed credits, plus an additive attribution reconciled exclusively through model input rows.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -87,7 +87,7 @@ namespace Dust
         }
         /// <summary>
         /// Get an agent message credit attribution<br/>
-        /// Returns exact billed credits and an additive attribution reconciled exclusively through model input rows.
+        /// Returns direct, recursively spawned sub-agent, and total billed credits, plus an additive attribution reconciled exclusively through model input rows.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
