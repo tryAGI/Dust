@@ -13,6 +13,10 @@ namespace Dust
         /// </summary>
         All,
         /// <summary>
+        /// Retrieves every active agent of the workspace, including unpublished agents the caller does not edit and agents requesting spaces the caller cannot access. Requires an admin key.
+        /// </summary>
+        AllUnrestricted,
+        /// <summary>
         /// Retrieves all agents marked as favorites by the user (only available to authenticated users)
         /// </summary>
         Favorites,
@@ -29,7 +33,7 @@ namespace Dust
         /// </summary>
         Published,
         /// <summary>
-        /// 
+        /// Retrieves every active agent of the workspace, including unpublished agents the caller does not edit and agents requesting spaces the caller cannot access. Requires an admin key.
         /// </summary>
         Workspace,
     }
@@ -47,6 +51,7 @@ namespace Dust
             return value switch
             {
                 GetWAssistantAgentConfigurationsView.All => "all",
+                GetWAssistantAgentConfigurationsView.AllUnrestricted => "all_unrestricted",
                 GetWAssistantAgentConfigurationsView.Favorites => "favorites",
                 GetWAssistantAgentConfigurationsView.Global => "global",
                 GetWAssistantAgentConfigurationsView.List => "list",
@@ -63,6 +68,7 @@ namespace Dust
             return value switch
             {
                 "all" => GetWAssistantAgentConfigurationsView.All,
+                "all_unrestricted" => GetWAssistantAgentConfigurationsView.AllUnrestricted,
                 "favorites" => GetWAssistantAgentConfigurationsView.Favorites,
                 "global" => GetWAssistantAgentConfigurationsView.Global,
                 "list" => GetWAssistantAgentConfigurationsView.List,

@@ -15,7 +15,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.Table> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
+        global::System.Threading.Tasks.Task<global::Dust.CreateWSpacesDataSourcesTablesResponse> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -34,7 +34,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.Table>> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWSpacesDataSourcesTablesResponse>> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsResponseAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -73,7 +73,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.Table> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
+        global::System.Threading.Tasks.Task<global::Dust.CreateWSpacesDataSourcesTablesResponse> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
             string wId,
             string spaceId,
             string dsId,

@@ -68,7 +68,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<global::Dust.Table>> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.GetWSpacesDataSourcesTablesResponse> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -95,7 +95,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dust.Table>>> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesTablesResponse>> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsResponseAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -413,9 +413,9 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = (global::System.Collections.Generic.IList<global::Dust.Table>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<global::Dust.Table>), JsonSerializerContext) ??
+                                    var __value = global::Dust.GetWSpacesDataSourcesTablesResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dust.Table>>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesTablesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -445,9 +445,9 @@ namespace Dust
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = (global::System.Collections.Generic.IList<global::Dust.Table>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<global::Dust.Table>), JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dust.GetWSpacesDataSourcesTablesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::System.Collections.Generic.IList<global::Dust.Table>>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesTablesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
