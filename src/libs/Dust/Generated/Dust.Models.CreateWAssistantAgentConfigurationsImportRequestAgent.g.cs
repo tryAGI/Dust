@@ -34,7 +34,8 @@ namespace Dust
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("avatar_url")]
-        public string? AvatarUrl { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string AvatarUrl { get; set; }
 
         /// <summary>
         /// 
@@ -62,9 +63,9 @@ namespace Dust
         /// <param name="handle"></param>
         /// <param name="description"></param>
         /// <param name="scope"></param>
+        /// <param name="avatarUrl"></param>
         /// <param name="maxStepsPerRun"></param>
         /// <param name="visualizationEnabled"></param>
-        /// <param name="avatarUrl"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -72,14 +73,14 @@ namespace Dust
             string handle,
             string description,
             global::Dust.CreateWAssistantAgentConfigurationsImportRequestAgentScope scope,
+            string avatarUrl,
             double maxStepsPerRun,
-            bool visualizationEnabled,
-            string? avatarUrl)
+            bool visualizationEnabled)
         {
             this.Handle = handle ?? throw new global::System.ArgumentNullException(nameof(handle));
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
             this.Scope = scope;
-            this.AvatarUrl = avatarUrl;
+            this.AvatarUrl = avatarUrl ?? throw new global::System.ArgumentNullException(nameof(avatarUrl));
             this.MaxStepsPerRun = maxStepsPerRun;
             this.VisualizationEnabled = visualizationEnabled;
         }

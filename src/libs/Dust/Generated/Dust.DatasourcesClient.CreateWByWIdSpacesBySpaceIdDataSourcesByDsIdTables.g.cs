@@ -71,7 +71,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.Table> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.CreateWSpacesDataSourcesTablesResponse> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -103,7 +103,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.Table>> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWSpacesDataSourcesTablesResponse>> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsResponseAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -433,9 +433,9 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dust.Table.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dust.CreateWSpacesDataSourcesTablesResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.Table>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.CreateWSpacesDataSourcesTablesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -465,9 +465,9 @@ namespace Dust
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Dust.Table.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dust.CreateWSpacesDataSourcesTablesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.Table>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.CreateWSpacesDataSourcesTablesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -538,7 +538,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.Table> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.CreateWSpacesDataSourcesTablesResponse> CreateWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesAsync(
             string wId,
             string spaceId,
             string dsId,
