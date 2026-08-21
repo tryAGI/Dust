@@ -35,6 +35,10 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        ManageUnrestricted,
+        /// <summary>
+        /// 
+        /// </summary>
         Published,
         /// <summary>
         /// 
@@ -60,6 +64,7 @@ namespace Dust
                 GetWAssistantAgentConfigurationsView2.Favorites => "favorites",
                 GetWAssistantAgentConfigurationsView2.Global => "global",
                 GetWAssistantAgentConfigurationsView2.List => "list",
+                GetWAssistantAgentConfigurationsView2.ManageUnrestricted => "manage_unrestricted",
                 GetWAssistantAgentConfigurationsView2.Published => "published",
                 GetWAssistantAgentConfigurationsView2.Workspace => "workspace",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -78,6 +83,7 @@ namespace Dust
                 "favorites" => GetWAssistantAgentConfigurationsView2.Favorites,
                 "global" => GetWAssistantAgentConfigurationsView2.Global,
                 "list" => GetWAssistantAgentConfigurationsView2.List,
+                "manage_unrestricted" => GetWAssistantAgentConfigurationsView2.ManageUnrestricted,
                 "published" => GetWAssistantAgentConfigurationsView2.Published,
                 "workspace" => GetWAssistantAgentConfigurationsView2.Workspace,
                 _ => null,
