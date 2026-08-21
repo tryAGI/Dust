@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// How resolvedModel was chosen - agent (configured model), user (per-message picker), or auto (routed through the auto model). Null (legacy).
+    /// How resolvedModel was chosen - agent (configured model), user (per-message picker), auto/auto_fast/auto_complex (routed through a model stream), or fair_use_downgrade (premium allowance spent, ran the Standard stream instead). Null (legacy).
     /// </summary>
     public enum PrivateAgentMessageModelResolutionMethod
     {
@@ -16,6 +16,18 @@ namespace Dust
         /// 
         /// </summary>
         Auto,
+        /// <summary>
+        /// 
+        /// </summary>
+        AutoComplex,
+        /// <summary>
+        /// 
+        /// </summary>
+        AutoFast,
+        /// <summary>
+        /// 
+        /// </summary>
+        FairUseDowngrade,
         /// <summary>
         /// 
         /// </summary>
@@ -36,6 +48,9 @@ namespace Dust
             {
                 PrivateAgentMessageModelResolutionMethod.Agent => "agent",
                 PrivateAgentMessageModelResolutionMethod.Auto => "auto",
+                PrivateAgentMessageModelResolutionMethod.AutoComplex => "auto_complex",
+                PrivateAgentMessageModelResolutionMethod.AutoFast => "auto_fast",
+                PrivateAgentMessageModelResolutionMethod.FairUseDowngrade => "fair_use_downgrade",
                 PrivateAgentMessageModelResolutionMethod.User => "user",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -49,6 +64,9 @@ namespace Dust
             {
                 "agent" => PrivateAgentMessageModelResolutionMethod.Agent,
                 "auto" => PrivateAgentMessageModelResolutionMethod.Auto,
+                "auto_complex" => PrivateAgentMessageModelResolutionMethod.AutoComplex,
+                "auto_fast" => PrivateAgentMessageModelResolutionMethod.AutoFast,
+                "fair_use_downgrade" => PrivateAgentMessageModelResolutionMethod.FairUseDowngrade,
                 "user" => PrivateAgentMessageModelResolutionMethod.User,
                 _ => null,
             };

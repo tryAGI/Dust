@@ -150,7 +150,7 @@ namespace Dust
         public global::Dust.PrivateLightAgentMessageResolvedModel? ResolvedModel { get; set; }
 
         /// <summary>
-        /// How resolvedModel was chosen - agent (configured model), user (per-message picker), or auto (routed through the auto model). Null (legacy).
+        /// How resolvedModel was chosen - agent (configured model), user (per-message picker), auto/auto_fast/auto_complex (routed through a model stream), or fair_use_downgrade (premium allowance spent, ran the Standard stream instead). Null (legacy).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelResolutionMethod")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateLightAgentMessageModelResolutionMethodJsonConverter))]
@@ -210,7 +210,7 @@ namespace Dust
         /// Model triplet used to generate the message. Null when the agent ran its configured model (legacy).
         /// </param>
         /// <param name="modelResolutionMethod">
-        /// How resolvedModel was chosen - agent (configured model), user (per-message picker), or auto (routed through the auto model). Null (legacy).
+        /// How resolvedModel was chosen - agent (configured model), user (per-message picker), auto/auto_fast/auto_complex (routed through a model stream), or fair_use_downgrade (premium allowance spent, ran the Standard stream instead). Null (legacy).
         /// </param>
         /// <param name="activitySteps"></param>
         /// <param name="reactions"></param>
