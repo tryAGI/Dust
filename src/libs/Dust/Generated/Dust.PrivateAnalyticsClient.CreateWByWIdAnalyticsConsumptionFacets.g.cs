@@ -564,6 +564,13 @@ namespace Dust
         /// <param name="days">
         /// Default Value: 30
         /// </param>
+        /// <param name="scope">
+        /// Restricts which documents the facets are computed over. `automations` counts only trigger-originated runs.<br/>
+        /// Default Value: all
+        /// </param>
+        /// <param name="dimensions">
+        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays.
+        /// </param>
         /// <param name="filter">
         /// Map of consumption dimensions to selected values.
         /// </param>
@@ -574,6 +581,8 @@ namespace Dust
             string wId,
             global::Dust.CreateWAnalyticsConsumptionFacetsRequestPeriod? period = default,
             int? days = default,
+            global::Dust.CreateWAnalyticsConsumptionFacetsRequestScope? scope = default,
+            global::System.Collections.Generic.IList<global::Dust.CreateWAnalyticsConsumptionFacetsRequestDimension>? dimensions = default,
             global::Dust.CreateWAnalyticsConsumptionFacetsRequestFilter? filter = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -582,6 +591,8 @@ namespace Dust
             {
                 Period = period,
                 Days = days,
+                Scope = scope,
+                Dimensions = dimensions,
                 Filter = filter,
             };
 
