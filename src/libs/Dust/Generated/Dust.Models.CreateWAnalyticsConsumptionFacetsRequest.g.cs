@@ -22,6 +22,20 @@ namespace Dust
         public int? Days { get; set; }
 
         /// <summary>
+        /// Restricts which documents the facets are computed over. `automations` counts only trigger-originated runs.<br/>
+        /// Default Value: all
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.CreateWAnalyticsConsumptionFacetsRequestScopeJsonConverter))]
+        public global::Dust.CreateWAnalyticsConsumptionFacetsRequestScope? Scope { get; set; }
+
+        /// <summary>
+        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("dimensions")]
+        public global::System.Collections.Generic.IList<global::Dust.CreateWAnalyticsConsumptionFacetsRequestDimension>? Dimensions { get; set; }
+
+        /// <summary>
         /// Map of consumption dimensions to selected values.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("filter")]
@@ -42,6 +56,13 @@ namespace Dust
         /// <param name="days">
         /// Default Value: 30
         /// </param>
+        /// <param name="scope">
+        /// Restricts which documents the facets are computed over. `automations` counts only trigger-originated runs.<br/>
+        /// Default Value: all
+        /// </param>
+        /// <param name="dimensions">
+        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays.
+        /// </param>
         /// <param name="filter">
         /// Map of consumption dimensions to selected values.
         /// </param>
@@ -51,10 +72,14 @@ namespace Dust
         public CreateWAnalyticsConsumptionFacetsRequest(
             global::Dust.CreateWAnalyticsConsumptionFacetsRequestPeriod? period,
             int? days,
+            global::Dust.CreateWAnalyticsConsumptionFacetsRequestScope? scope,
+            global::System.Collections.Generic.IList<global::Dust.CreateWAnalyticsConsumptionFacetsRequestDimension>? dimensions,
             global::Dust.CreateWAnalyticsConsumptionFacetsRequestFilter? filter)
         {
             this.Period = period;
             this.Days = days;
+            this.Scope = scope;
+            this.Dimensions = dimensions;
             this.Filter = filter;
         }
 
