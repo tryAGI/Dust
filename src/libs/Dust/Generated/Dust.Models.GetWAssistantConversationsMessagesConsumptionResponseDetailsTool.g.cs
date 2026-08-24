@@ -36,7 +36,7 @@ namespace Dust
         public required int CallCount { get; set; }
 
         /// <summary>
-        /// Share of billed credits after input-only reconciliation.
+        /// Share of total billed credits after input-only reconciliation. Run-agent tools include their sub-agent subtree's bill.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("attributedCredits")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -69,7 +69,7 @@ namespace Dust
         /// <param name="toolName"></param>
         /// <param name="callCount"></param>
         /// <param name="attributedCredits">
-        /// Share of billed credits after input-only reconciliation.
+        /// Share of total billed credits after input-only reconciliation. Run-agent tools include their sub-agent subtree's bill.
         /// </param>
         /// <param name="directCredits"></param>
         /// <param name="pending"></param>
