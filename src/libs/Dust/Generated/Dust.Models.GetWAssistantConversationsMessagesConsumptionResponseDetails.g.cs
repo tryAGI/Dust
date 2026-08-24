@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// Additive attribution reconciled to the bill through model input rows, using the newest complete stored attribution version. Null when no stored version is complete.
+    /// Additive attribution reconciled to totalBilledCredits through model input rows. Each run-agent tool row includes its sub-agent subtree's bill. Null when no stored version is complete.
     /// </summary>
     public sealed partial class GetWAssistantConversationsMessagesConsumptionResponseDetails
     {
@@ -16,7 +16,7 @@ namespace Dust
         public required int AttributionVersion { get; set; }
 
         /// <summary>
-        /// Agent work after assigning billing reconciliation exclusively to model input rows.
+        /// Non-tool work for the originating message after assigning billing reconciliation exclusively to model input rows.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentWorkCredits")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -42,7 +42,7 @@ namespace Dust
         /// Attribution version used for this breakdown.
         /// </param>
         /// <param name="agentWorkCredits">
-        /// Agent work after assigning billing reconciliation exclusively to model input rows.
+        /// Non-tool work for the originating message after assigning billing reconciliation exclusively to model input rows.
         /// </param>
         /// <param name="tools"></param>
 #if NET7_0_OR_GREATER

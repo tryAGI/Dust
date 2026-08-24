@@ -6,7 +6,7 @@ namespace Dust
     {
         /// <summary>
         /// Get an agent message credit attribution<br/>
-        /// Returns direct, recursively spawned sub-agent, and total billed credits, plus an additive attribution reconciled exclusively through model input rows.
+        /// Returns direct and total billed credits. Run-agent tool rows combine invocation cost with the bill of their sub-agent subtree.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -22,7 +22,7 @@ namespace Dust
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get an agent message credit attribution<br/>
-        /// Returns direct, recursively spawned sub-agent, and total billed credits, plus an additive attribution reconciled exclusively through model input rows.
+        /// Returns direct and total billed credits. Run-agent tool rows combine invocation cost with the bill of their sub-agent subtree.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
