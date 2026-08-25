@@ -58,7 +58,7 @@ namespace Dust
 
         /// <summary>
         /// List consumption analytics facets<br/>
-        /// Lists current entities and historical indexed values present in the selected period for each consumption dimension. The workspace route requires a manager; the /me route is restricted server-side to the authenticated member. A facet is disabled when it has no indexed document in that period after applying every active filter except the facet's own dimension.
+        /// Lists current entities and historical indexed values present in the selected period for each consumption dimension. The workspace route requires a manager; the /me route is restricted server-side to the authenticated member; the agent route is restricted server-side to the selected agent. A facet is disabled when it has no indexed document in that period after applying every active filter except the facet's own dimension.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
@@ -84,7 +84,7 @@ namespace Dust
         }
         /// <summary>
         /// List consumption analytics facets<br/>
-        /// Lists current entities and historical indexed values present in the selected period for each consumption dimension. The workspace route requires a manager; the /me route is restricted server-side to the authenticated member. A facet is disabled when it has no indexed document in that period after applying every active filter except the facet's own dimension.
+        /// Lists current entities and historical indexed values present in the selected period for each consumption dimension. The workspace route requires a manager; the /me route is restricted server-side to the authenticated member; the agent route is restricted server-side to the selected agent. A facet is disabled when it has no indexed document in that period after applying every active filter except the facet's own dimension.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
@@ -555,7 +555,7 @@ namespace Dust
         }
         /// <summary>
         /// List consumption analytics facets<br/>
-        /// Lists current entities and historical indexed values present in the selected period for each consumption dimension. The workspace route requires a manager; the /me route is restricted server-side to the authenticated member. A facet is disabled when it has no indexed document in that period after applying every active filter except the facet's own dimension.
+        /// Lists current entities and historical indexed values present in the selected period for each consumption dimension. The workspace route requires a manager; the /me route is restricted server-side to the authenticated member; the agent route is restricted server-side to the selected agent. A facet is disabled when it has no indexed document in that period after applying every active filter except the facet's own dimension.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="period">
@@ -569,7 +569,7 @@ namespace Dust
         /// Default Value: all
         /// </param>
         /// <param name="dimensions">
-        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays. The personal route omits user and group dimensions.
+        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays. The personal route omits user and group dimensions, and the agent route omits the agent dimension.
         /// </param>
         /// <param name="filter">
         /// Map of consumption dimensions to selected values.

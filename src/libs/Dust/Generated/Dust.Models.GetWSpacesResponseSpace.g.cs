@@ -11,6 +11,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("groupIds")]
+        public global::System.Collections.Generic.IList<string>? GroupIds { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("categories")]
         public global::System.Collections.Generic.Dictionary<string, global::Dust.GetWSpacesResponseSpaceCategories2>? Categories { get; set; }
 
@@ -102,6 +108,7 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWSpacesResponseSpace" /> class.
         /// </summary>
+        /// <param name="groupIds"></param>
         /// <param name="categories"></param>
         /// <param name="canWrite"></param>
         /// <param name="canRead"></param>
@@ -132,6 +139,7 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetWSpacesResponseSpace(
+            global::System.Collections.Generic.IList<string>? groupIds,
             global::System.Collections.Generic.Dictionary<string, global::Dust.GetWSpacesResponseSpaceCategories2>? categories,
             bool? canWrite,
             bool? canRead,
@@ -147,6 +155,7 @@ namespace Dust
             global::System.Collections.Generic.IList<string>? tabsOrder,
             bool? isAdminControlled)
         {
+            this.GroupIds = groupIds;
             this.Categories = categories;
             this.CanWrite = canWrite;
             this.CanRead = canRead;
