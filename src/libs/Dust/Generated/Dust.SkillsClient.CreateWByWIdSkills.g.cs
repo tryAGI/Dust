@@ -166,10 +166,6 @@ namespace Dust
             }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(wId ?? string.Empty),
-                                name: "\"wId\"");
-
                             for (var __iFiles = 0; __iFiles < request.Files.Count; __iFiles++)
                             {
                                 var __contentFiles = new global::System.Net.Http.ByteArrayContent(request.Files[__iFiles]);
@@ -764,10 +760,6 @@ namespace Dust
             }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(wId ?? string.Empty),
-                                name: "\"wId\"");
-
                             for (var __iFiles = 0; __iFiles < files.Count; __iFiles++)
                             {
                                 var __fileNameFiles = filesFileNames != null &&
@@ -1337,10 +1329,6 @@ namespace Dust
             }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(wId ?? string.Empty),
-                                name: "\"wId\"");
-
                             for (var __iFiles = 0; __iFiles < files.Count; __iFiles++)
                             {
                                 var __fileNameFiles = filesFileNames != null &&

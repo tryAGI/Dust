@@ -6,7 +6,7 @@ namespace Dust
     public partial class WorkspaceClient
     {
 
-        private static readonly global::Dust.AutoSDKServer[] s_GetWByWIdAnalyticsExportServers = new global::Dust.AutoSDKServer[]
+        private static readonly global::Dust.AutoSDKServer[] s_GetWByWIdAnalyticsExportAsTextServers = new global::Dust.AutoSDKServer[]
         {            new global::Dust.AutoSDKServer(
                 id: "https-dust-tt",
                 name: "Dust.tt API (us-central1)",
@@ -20,7 +20,7 @@ namespace Dust
         };
 
 
-        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdAnalyticsExportSecurityRequirement0 =
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdAnalyticsExportAsTextSecurityRequirement0 =
             new global::Dust.EndPointSecurityRequirement
             {
                 Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
@@ -34,11 +34,11 @@ namespace Dust
                     },
                 },
             };
-        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdAnalyticsExportSecurityRequirements =
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdAnalyticsExportAsTextSecurityRequirements =
             new global::Dust.EndPointSecurityRequirement[]
-            {                s_GetWByWIdAnalyticsExportSecurityRequirement0,
+            {                s_GetWByWIdAnalyticsExportAsTextSecurityRequirement0,
             };
-        partial void PrepareGetWByWIdAnalyticsExportArguments(
+        partial void PrepareGetWByWIdAnalyticsExportAsTextArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
             ref global::Dust.GetWAnalyticsExportTable table,
@@ -46,7 +46,7 @@ namespace Dust
             ref global::System.DateTime endDate,
             ref string? timezone,
             ref global::Dust.GetWAnalyticsExportFormat? format);
-        partial void PrepareGetWByWIdAnalyticsExportRequest(
+        partial void PrepareGetWByWIdAnalyticsExportAsTextRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
@@ -55,11 +55,11 @@ namespace Dust
             global::System.DateTime endDate,
             string? timezone,
             global::Dust.GetWAnalyticsExportFormat? format);
-        partial void ProcessGetWByWIdAnalyticsExportResponse(
+        partial void ProcessGetWByWIdAnalyticsExportAsTextResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessGetWByWIdAnalyticsExportResponseContent(
+        partial void ProcessGetWByWIdAnalyticsExportAsTextResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
@@ -77,7 +77,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::System.Collections.Generic.IList<object>> GetWByWIdAnalyticsExportAsync(
+        public async global::System.Threading.Tasks.Task<string> GetWByWIdAnalyticsExportAsTextAsync(
             string wId,
             global::Dust.GetWAnalyticsExportTable table,
             global::System.DateTime startDate,
@@ -87,7 +87,7 @@ namespace Dust
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await GetWByWIdAnalyticsExportAsResponseAsync(
+            var __response = await GetWByWIdAnalyticsExportAsTextAsResponseAsync(
                 wId: wId,
                 table: table,
                 startDate: startDate,
@@ -113,7 +113,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::System.Collections.Generic.IList<object>>> GetWByWIdAnalyticsExportAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<string>> GetWByWIdAnalyticsExportAsTextAsResponseAsync(
             string wId,
             global::Dust.GetWAnalyticsExportTable table,
             global::System.DateTime startDate,
@@ -125,7 +125,7 @@ namespace Dust
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareGetWByWIdAnalyticsExportArguments(
+            PrepareGetWByWIdAnalyticsExportAsTextArguments(
                 httpClient: HttpClient,
                 wId: ref wId,
                 table: ref table,
@@ -137,8 +137,8 @@ namespace Dust
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_GetWByWIdAnalyticsExportSecurityRequirements,
-                operationName: "GetWByWIdAnalyticsExportAsync");
+                securityRequirements: s_GetWByWIdAnalyticsExportAsTextSecurityRequirements,
+                operationName: "GetWByWIdAnalyticsExportAsTextAsync");
 
             using var __timeoutCancellationTokenSource = global::Dust.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -160,7 +160,7 @@ namespace Dust
                             var __pathBuilder = new global::Dust.PathBuilder(
                                 path: $"/api/v1/w/{wId}/analytics/export",
                                 baseUri: ResolveBaseUri(
-                                servers: s_GetWByWIdAnalyticsExportServers,
+                                servers: s_GetWByWIdAnalyticsExportAsTextServers,
                                 defaultBaseUrl: "https://dust.tt/"));
                             __pathBuilder
                                 .AddRequiredParameter("table", table.ToValueString())
@@ -184,7 +184,7 @@ namespace Dust
 
                 __httpRequest.Headers.TryAddWithoutValidation(
                     "Accept",
-                    "application/json");
+                    "text/csv");
 
             foreach (var __authorization in __authorizations)
             {
@@ -210,7 +210,7 @@ namespace Dust
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareGetWByWIdAnalyticsExportRequest(
+                PrepareGetWByWIdAnalyticsExportAsTextRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     wId: wId!,
@@ -235,8 +235,8 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getWByWIdAnalyticsExport",
-                                methodName: "GetWByWIdAnalyticsExportAsync",
+                                operationId: "getWByWIdAnalyticsExportAsText",
+                                methodName: "GetWByWIdAnalyticsExportAsTextAsync",
                                 pathTemplate: "$\"/api/v1/w/{wId}/analytics/export\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
@@ -269,8 +269,8 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getWByWIdAnalyticsExport",
-                                methodName: "GetWByWIdAnalyticsExportAsync",
+                                operationId: "getWByWIdAnalyticsExportAsText",
+                                methodName: "GetWByWIdAnalyticsExportAsTextAsync",
                                 pathTemplate: "$\"/api/v1/w/{wId}/analytics/export\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
@@ -310,8 +310,8 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getWByWIdAnalyticsExport",
-                                methodName: "GetWByWIdAnalyticsExportAsync",
+                                operationId: "getWByWIdAnalyticsExportAsText",
+                                methodName: "GetWByWIdAnalyticsExportAsTextAsync",
                                 pathTemplate: "$\"/api/v1/w/{wId}/analytics/export\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
@@ -350,7 +350,7 @@ namespace Dust
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessGetWByWIdAnalyticsExportResponse(
+                ProcessGetWByWIdAnalyticsExportAsTextResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -358,8 +358,8 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getWByWIdAnalyticsExport",
-                                methodName: "GetWByWIdAnalyticsExportAsync",
+                                operationId: "getWByWIdAnalyticsExportAsText",
+                                methodName: "GetWByWIdAnalyticsExportAsTextAsync",
                                 pathTemplate: "$\"/api/v1/w/{wId}/analytics/export\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
@@ -380,8 +380,8 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "getWByWIdAnalyticsExport",
-                                methodName: "GetWByWIdAnalyticsExportAsync",
+                                operationId: "getWByWIdAnalyticsExportAsText",
+                                methodName: "GetWByWIdAnalyticsExportAsTextAsync",
                                 pathTemplate: "$\"/api/v1/w/{wId}/analytics/export\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
@@ -474,7 +474,7 @@ namespace Dust
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessGetWByWIdAnalyticsExportResponseContent(
+                                ProcessGetWByWIdAnalyticsExportAsTextResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -483,13 +483,11 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = (global::System.Collections.Generic.IList<object>?)global::System.Text.Json.JsonSerializer.Deserialize(__content, typeof(global::System.Collections.Generic.IList<object>), JsonSerializerContext) ??
-                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::System.Collections.Generic.IList<object>>(
+                                    return new global::Dust.AutoSDKHttpResponse<string>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        body: __content);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -509,19 +507,17 @@ namespace Dust
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                                    var __content = await __response.Content.ReadAsStringAsync(
                 #if NET5_0_OR_GREATER
                                         __effectiveCancellationToken
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = (global::System.Collections.Generic.IList<object>?)await global::System.Text.Json.JsonSerializer.DeserializeAsync(__content, typeof(global::System.Collections.Generic.IList<object>), JsonSerializerContext).ConfigureAwait(false) ??
-                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::System.Collections.Generic.IList<object>>(
+                                    return new global::Dust.AutoSDKHttpResponse<string>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
-                                        body: __value);
+                                        body: __content);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
