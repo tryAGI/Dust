@@ -174,14 +174,6 @@ namespace Dust
             }
 
                             var __httpRequestContent = new global::System.Net.Http.MultipartFormDataContent();
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(wId ?? string.Empty),
-                                name: "\"wId\"");
-
-                            __httpRequestContent.Add(
-                                content: new global::System.Net.Http.StringContent(fileId ?? string.Empty),
-                                name: "\"fileId\"");
-
                             if (request.File != default)
                             {
 
