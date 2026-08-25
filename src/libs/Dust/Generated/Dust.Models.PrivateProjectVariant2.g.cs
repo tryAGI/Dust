@@ -11,6 +11,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("groupIds")]
+        public global::System.Collections.Generic.IList<string>? GroupIds { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
 
@@ -72,6 +78,7 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="PrivateProjectVariant2" /> class.
         /// </summary>
+        /// <param name="groupIds"></param>
         /// <param name="description"></param>
         /// <param name="isMember"></param>
         /// <param name="archivedAt"></param>
@@ -97,6 +104,7 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PrivateProjectVariant2(
+            global::System.Collections.Generic.IList<string>? groupIds,
             string? description,
             bool? isMember,
             int? archivedAt,
@@ -107,6 +115,7 @@ namespace Dust
             global::System.Collections.Generic.IList<string>? tabsOrder,
             bool? isAdminControlled)
         {
+            this.GroupIds = groupIds;
             this.Description = description;
             this.IsMember = isMember;
             this.ArchivedAt = archivedAt;

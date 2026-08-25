@@ -30,7 +30,7 @@ namespace Dust
         public global::Dust.CreateWAnalyticsConsumptionFacetsRequestScope? Scope { get; set; }
 
         /// <summary>
-        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays. The personal route omits user and group dimensions.
+        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays. The personal route omits user and group dimensions, and the agent route omits the agent dimension.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dimensions")]
         public global::System.Collections.Generic.IList<global::Dust.CreateWAnalyticsConsumptionFacetsRequestDimension>? Dimensions { get; set; }
@@ -61,7 +61,7 @@ namespace Dust
         /// Default Value: all
         /// </param>
         /// <param name="dimensions">
-        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays. The personal route omits user and group dimensions.
+        /// Dimensions to compute facets for. Defaults to every dimension. Omitted dimensions come back as empty arrays. The personal route omits user and group dimensions, and the agent route omits the agent dimension.
         /// </param>
         /// <param name="filter">
         /// Map of consumption dimensions to selected values.
