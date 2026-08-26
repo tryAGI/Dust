@@ -29,7 +29,6 @@ namespace Dust.JsonConverters
 
             var __score0 = 0;
             if (__jsonProps.Contains("createdAt")) __score0++;
-            if (__jsonProps.Contains("isRestricted")) __score0++;
             if (__jsonProps.Contains("kind")) __score0++;
             if (__jsonProps.Contains("managementMode")) __score0++;
             if (__jsonProps.Contains("name")) __score0++;
@@ -42,6 +41,7 @@ namespace Dust.JsonConverters
             if (__jsonProps.Contains("groupIds")) __score1++;
             if (__jsonProps.Contains("isAdminControlled")) __score1++;
             if (__jsonProps.Contains("isMember")) __score1++;
+            if (__jsonProps.Contains("isRestricted")) __score1++;
             if (__jsonProps.Contains("lastTodoAnalysisAt")) __score1++;
             if (__jsonProps.Contains("pinnedFramePath")) __score1++;
             if (__jsonProps.Contains("tabsOrder")) __score1++;

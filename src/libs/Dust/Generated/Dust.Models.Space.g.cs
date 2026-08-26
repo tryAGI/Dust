@@ -34,6 +34,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? GroupIds { get; set; }
 
         /// <summary>
+        /// Whether the space is restricted to specific groups
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isRestricted")]
+        public bool? IsRestricted { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -54,6 +60,9 @@ namespace Dust
         /// <param name="groupIds">
         /// List of group IDs that have access to the space
         /// </param>
+        /// <param name="isRestricted">
+        /// Whether the space is restricted to specific groups
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -61,12 +70,14 @@ namespace Dust
             string? sId,
             string? name,
             global::Dust.SpaceKind? kind,
-            global::System.Collections.Generic.IList<string>? groupIds)
+            global::System.Collections.Generic.IList<string>? groupIds,
+            bool? isRestricted)
         {
             this.SId = sId;
             this.Name = name;
             this.Kind = kind;
             this.GroupIds = groupIds;
+            this.IsRestricted = isRestricted;
         }
 
         /// <summary>

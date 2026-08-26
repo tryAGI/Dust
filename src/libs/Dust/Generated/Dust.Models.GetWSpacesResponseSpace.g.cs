@@ -17,6 +17,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isRestricted")]
+        public bool? IsRestricted { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("categories")]
         public global::System.Collections.Generic.Dictionary<string, global::Dust.GetWSpacesResponseSpaceCategories2>? Categories { get; set; }
 
@@ -109,6 +115,7 @@ namespace Dust
         /// Initializes a new instance of the <see cref="GetWSpacesResponseSpace" /> class.
         /// </summary>
         /// <param name="groupIds"></param>
+        /// <param name="isRestricted"></param>
         /// <param name="categories"></param>
         /// <param name="canWrite"></param>
         /// <param name="canRead"></param>
@@ -140,6 +147,7 @@ namespace Dust
 #endif
         public GetWSpacesResponseSpace(
             global::System.Collections.Generic.IList<string>? groupIds,
+            bool? isRestricted,
             global::System.Collections.Generic.Dictionary<string, global::Dust.GetWSpacesResponseSpaceCategories2>? categories,
             bool? canWrite,
             bool? canRead,
@@ -156,6 +164,7 @@ namespace Dust
             bool? isAdminControlled)
         {
             this.GroupIds = groupIds;
+            this.IsRestricted = isRestricted;
             this.Categories = categories;
             this.CanWrite = canWrite;
             this.CanRead = canRead;
