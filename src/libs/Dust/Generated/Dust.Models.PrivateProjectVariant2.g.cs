@@ -17,6 +17,12 @@ namespace Dust
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isRestricted")]
+        public bool? IsRestricted { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
         public string? Description { get; set; }
 
@@ -79,6 +85,7 @@ namespace Dust
         /// Initializes a new instance of the <see cref="PrivateProjectVariant2" /> class.
         /// </summary>
         /// <param name="groupIds"></param>
+        /// <param name="isRestricted"></param>
         /// <param name="description"></param>
         /// <param name="isMember"></param>
         /// <param name="archivedAt"></param>
@@ -105,6 +112,7 @@ namespace Dust
 #endif
         public PrivateProjectVariant2(
             global::System.Collections.Generic.IList<string>? groupIds,
+            bool? isRestricted,
             string? description,
             bool? isMember,
             int? archivedAt,
@@ -116,6 +124,7 @@ namespace Dust
             bool? isAdminControlled)
         {
             this.GroupIds = groupIds;
+            this.IsRestricted = isRestricted;
             this.Description = description;
             this.IsMember = isMember;
             this.ArchivedAt = archivedAt;
