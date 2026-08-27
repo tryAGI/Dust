@@ -10,11 +10,11 @@ namespace Dust
     public enum MCPServerViewServerType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Internal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Remote,
     }

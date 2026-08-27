@@ -4,30 +4,30 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PrivateContentFragmentContext
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("username")]
         public string? Username { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fullName")]
         public string? FullName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("email")]
         public string? Email { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("profilePictureUrl")]
         public string? ProfilePictureUrl { get; set; }

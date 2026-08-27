@@ -20,7 +20,7 @@ namespace Dust.JsonConverters
                     {
                         return global::Dust.PrivateWakeUpStatusExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

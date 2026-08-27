@@ -4,46 +4,46 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PrivateConversationForkedFrom
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentConversationId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ParentConversationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentConversationTitle")]
         public string? ParentConversationTitle { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sourceMessageId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SourceMessageId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("branchedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int BranchedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Dust.PrivateConversationForkUser User { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileCopyStatus")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateConversationForkedFromFileCopyStatusJsonConverter))]

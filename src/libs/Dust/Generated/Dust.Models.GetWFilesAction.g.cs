@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWFilesAction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Download,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         View,
     }

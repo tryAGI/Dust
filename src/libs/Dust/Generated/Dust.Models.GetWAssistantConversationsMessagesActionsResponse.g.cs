@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWAssistantConversationsMessagesActionsResponse
     {
@@ -15,7 +15,7 @@ namespace Dust
         public global::Dust.PrivateAgentMCPAction? Action { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messageStatus")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusJsonConverter))]

@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWSpacesDataSourcesTablesRowsRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rows")]
         public global::System.Collections.Generic.IList<global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRow>? Rows { get; set; }

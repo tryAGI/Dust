@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateLightAgentMessageVisibility
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Deleted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Visible,
     }

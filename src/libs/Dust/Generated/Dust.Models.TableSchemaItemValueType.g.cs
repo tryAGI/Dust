@@ -10,23 +10,23 @@ namespace Dust
     public enum TableSchemaItemValueType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Date,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Float,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Int,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

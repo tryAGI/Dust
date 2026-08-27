@@ -9,47 +9,47 @@ namespace Dust
     public enum PrivateAgentMCPActionStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlockedAuthenticationRequired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlockedChildActionInputRequired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlockedFileAuthorizationRequired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlockedUserAnswerRequired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BlockedValidationRequired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Denied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Errored,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReadyAllowedExplicitly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ReadyAllowedImplicitly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Running,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Succeeded,
     }

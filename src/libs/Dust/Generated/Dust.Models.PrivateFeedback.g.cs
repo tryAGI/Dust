@@ -9,42 +9,42 @@ namespace Dust
     public sealed partial class PrivateFeedback
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messageId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string MessageId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentMessageId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int AgentMessageId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int UserId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("thumbDirection")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateFeedbackThumbDirectionJsonConverter))]
@@ -58,35 +58,35 @@ namespace Dust
         public string? Content { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentConfigurationId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string AgentConfigurationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentConfigurationVersion")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int AgentConfigurationVersion { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isConversationShared")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool IsConversationShared { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dismissed")]
         [global::System.Text.Json.Serialization.JsonRequired]

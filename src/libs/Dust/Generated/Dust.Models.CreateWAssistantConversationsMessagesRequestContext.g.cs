@@ -4,42 +4,42 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWAssistantConversationsMessagesRequestContext
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timezone")]
         public string? Timezone { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("profilePictureUrl")]
         public string? ProfilePictureUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("origin")]
         public string? Origin { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("clientSideMCPServerIds")]
         public global::System.Collections.Generic.IList<string>? ClientSideMCPServerIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("selectedMCPServerViewIds")]
         public global::System.Collections.Generic.IList<string>? SelectedMCPServerViewIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("selectedSpaceIds")]
         public global::System.Collections.Generic.IList<string>? SelectedSpaceIds { get; set; }

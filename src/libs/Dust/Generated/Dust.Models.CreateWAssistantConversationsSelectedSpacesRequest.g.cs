@@ -4,19 +4,19 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWAssistantConversationsSelectedSpacesRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.CreateWAssistantConversationsSelectedSpacesRequestModeJsonConverter))]
         public global::Dust.CreateWAssistantConversationsSelectedSpacesRequestMode Mode { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spaceIds")]
         [global::System.Text.Json.Serialization.JsonRequired]

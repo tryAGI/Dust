@@ -9,11 +9,11 @@ namespace Dust
     public enum CreateWAnalyticsConsumptionFacetsRequestPeriod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cycle,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Days,
     }

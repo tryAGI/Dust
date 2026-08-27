@@ -10,11 +10,11 @@ namespace Dust
     public enum MCPServerViewOAuthUseCase
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PersonalActions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PlatformActions,
     }

@@ -9,14 +9,14 @@ namespace Dust
     public sealed partial class PrivateReaction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("emoji")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Emoji { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("users")]
         [global::System.Text.Json.Serialization.JsonRequired]

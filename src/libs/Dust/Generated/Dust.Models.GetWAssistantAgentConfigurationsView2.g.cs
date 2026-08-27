@@ -4,44 +4,44 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWAssistantAgentConfigurationsView2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AdminInternal,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Analytics,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Favorites,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Global,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         List,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ManageUnrestricted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Published,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Workspace,
     }

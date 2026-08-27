@@ -10,11 +10,11 @@ namespace Dust
     public enum CreateWAnalyticsConsumptionFacetsRequestScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         All,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Automations,
     }

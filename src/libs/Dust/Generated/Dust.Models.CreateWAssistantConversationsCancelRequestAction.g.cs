@@ -4,20 +4,20 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateWAssistantConversationsCancelRequestAction
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cancel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GracefullyStop,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Interrupt,
     }

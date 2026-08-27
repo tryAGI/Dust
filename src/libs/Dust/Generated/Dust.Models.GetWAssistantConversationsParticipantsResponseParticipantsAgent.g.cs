@@ -4,18 +4,18 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWAssistantConversationsParticipantsResponseParticipantsAgent
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configurationId")]
         public string? ConfigurationId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configurationName")]
         public string? ConfigurationName { get; set; }

@@ -9,13 +9,13 @@ namespace Dust
     public sealed partial class PrivateLightAgentConfigurationFeedbacks
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("up")]
         public int? Up { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("down")]
         public int? Down { get; set; }

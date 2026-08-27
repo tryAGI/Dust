@@ -9,27 +9,27 @@ namespace Dust
     public enum PrivateUserProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auth0,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Github,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Google,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Okta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Samlp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Waad,
     }

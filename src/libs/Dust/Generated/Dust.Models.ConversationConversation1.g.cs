@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ConversationConversation1
     {
@@ -31,7 +31,7 @@ namespace Dust
         public string? SId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("owner")]
         public global::Dust.Workspace? Owner { get; set; }
@@ -53,7 +53,7 @@ namespace Dust
         public string? Visibility { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content")]
         public global::System.Collections.Generic.IList<global::System.Collections.Generic.IList<global::Dust.ConversationConversation1ContentItemItem>>? Content { get; set; }

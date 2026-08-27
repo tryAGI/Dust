@@ -6,7 +6,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Skill
     {
@@ -85,7 +85,7 @@ namespace Dust
         public global::Dust.SkillSource? Source { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sourceMetadata")]
         public global::Dust.SkillSourceMetadata? SourceMetadata { get; set; }
@@ -110,7 +110,7 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? RequestedSpaceIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileAttachments")]
         public global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>? FileAttachments { get; set; }
@@ -148,7 +148,7 @@ namespace Dust
         public string? InstructionsHtml { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tools")]
         public global::System.Collections.Generic.IList<global::Dust.MCPServerView>? Tools { get; set; }

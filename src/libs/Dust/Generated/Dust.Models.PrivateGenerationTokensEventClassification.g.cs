@@ -4,24 +4,24 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateGenerationTokensEventClassification
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ChainOfThought,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ClosingDelimiter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OpeningDelimiter,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokens,
     }

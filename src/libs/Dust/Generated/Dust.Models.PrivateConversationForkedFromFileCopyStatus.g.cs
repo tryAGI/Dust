@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateConversationForkedFromFileCopyStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Done,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
     }

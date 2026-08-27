@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateSpaceManagementMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Group,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Manual,
     }

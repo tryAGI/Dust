@@ -9,47 +9,47 @@ namespace Dust
     public sealed partial class PrivateLightAgentMessage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateLightAgentMessageTypeJsonConverter))]
         public global::Dust.PrivateLightAgentMessageType Type { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("created")]
         public int? Created { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completedTs")]
         public int? CompletedTs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("visibility")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateLightAgentMessageVisibilityJsonConverter))]
         public global::Dust.PrivateLightAgentMessageVisibility? Visibility { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("version")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Version { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rank")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -62,20 +62,20 @@ namespace Dust
         public string? BranchId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentMessageId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ParentMessageId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentAgentMessageId")]
         public string? ParentAgentMessageId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateLightAgentMessageStatusJsonConverter))]
@@ -83,19 +83,19 @@ namespace Dust
         public required global::Dust.PrivateLightAgentMessageStatus Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("content")]
         public string? Content { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("chainOfThought")]
         public string? ChainOfThought { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("error")]
         public global::Dust.PrivateLightAgentMessageError? Error { get; set; }
@@ -108,25 +108,25 @@ namespace Dust
         public required global::Dust.PrivateLightAgentMessageConfiguration Configuration { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("citations")]
         public global::System.Collections.Generic.Dictionary<string, global::Dust.PrivateCitation>? Citations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("generatedFiles")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageGeneratedFile>? GeneratedFiles { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("richMentions")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateRichMentionWithStatus>? RichMentions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("completionDurationMs")]
         public int? CompletionDurationMs { get; set; }
@@ -157,13 +157,13 @@ namespace Dust
         public global::Dust.PrivateLightAgentMessageModelResolutionMethod? ModelResolutionMethod { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("activitySteps")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateLightAgentMessageActivityStep>? ActivitySteps { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reactions")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateReaction>? Reactions { get; set; }

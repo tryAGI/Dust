@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateAgentMessageSuccessEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentMessageSuccess,
     }

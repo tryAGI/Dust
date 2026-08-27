@@ -20,7 +20,7 @@ namespace Dust.JsonConverters
                     {
                         return global::Dust.CreateWAnalyticsConsumptionFacetsRequestScopeExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

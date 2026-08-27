@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWAssistantMentionsSuggestionsResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("suggestions")]
         public global::System.Collections.Generic.IList<global::Dust.RichMention>? Suggestions { get; set; }

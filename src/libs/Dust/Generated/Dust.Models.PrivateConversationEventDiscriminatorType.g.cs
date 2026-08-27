@@ -4,44 +4,44 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateConversationEventDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentMessageConsumptionUpdated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentMessageDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentMessageNew,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CompactionMessageDone,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CompactionMessageNew,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationForkPrepared,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ConversationTitle,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserMessageNew,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WakeUpUpdated,
     }

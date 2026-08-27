@@ -9,28 +9,28 @@ namespace Dust
     public sealed partial class PrivateWorkspace
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string SId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateWorkspaceRoleJsonConverter))]
@@ -38,7 +38,7 @@ namespace Dust
         public required global::Dust.PrivateWorkspaceRole Role { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("segmentation")]
         public string? Segmentation { get; set; }
@@ -50,13 +50,13 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? WhiteListedProviders { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("defaultEmbeddingProvider")]
         public string? DefaultEmbeddingProvider { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("ssoEnforced")]
         public bool? SsoEnforced { get; set; }
@@ -69,7 +69,7 @@ namespace Dust
         public required bool RegionalModelsOnly { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public object? Metadata { get; set; }

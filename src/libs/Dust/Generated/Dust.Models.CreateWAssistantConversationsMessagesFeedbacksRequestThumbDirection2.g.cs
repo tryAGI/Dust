@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Down,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Up,
     }

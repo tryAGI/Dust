@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ConversationConversation1ContentItemItem
     {
@@ -54,13 +54,13 @@ namespace Dust
         public int? Created { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("user")]
         public global::Dust.User? User { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mentions")]
         public global::System.Collections.Generic.IList<global::Dust.Mention>? Mentions { get; set; }
@@ -74,7 +74,7 @@ namespace Dust
         public string? Content { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("context")]
         public global::Dust.Context? Context { get; set; }
@@ -103,7 +103,7 @@ namespace Dust
         public string? Status { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("actions")]
         public global::System.Collections.Generic.IList<global::Dust.ConversationConversation1ContentItemItemAction>? Actions { get; set; }
@@ -117,7 +117,7 @@ namespace Dust
         public string? ChainOfThought { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("rawContents")]
         public global::System.Collections.Generic.IList<global::Dust.ConversationConversation1ContentItemItemRawContent>? RawContents { get; set; }
@@ -131,7 +131,7 @@ namespace Dust
         public string? Error { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("configuration")]
         public global::Dust.AgentConfiguration? Configuration { get; set; }

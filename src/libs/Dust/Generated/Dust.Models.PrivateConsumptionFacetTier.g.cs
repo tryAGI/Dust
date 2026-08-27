@@ -9,15 +9,15 @@ namespace Dust
     public enum PrivateConsumptionFacetTier
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Balanced,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CostEfficient,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Premium,
     }

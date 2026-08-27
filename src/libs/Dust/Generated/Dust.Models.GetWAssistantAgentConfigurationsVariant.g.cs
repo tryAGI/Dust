@@ -9,11 +9,11 @@ namespace Dust
     public enum GetWAssistantAgentConfigurationsVariant
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Full,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Light,
     }

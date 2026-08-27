@@ -4,32 +4,32 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWAssistantConversationsMessagesConsumptionResponseDetailsTool
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("label")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Label { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("internalMCPServerName")]
         public string? InternalMCPServerName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("toolName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ToolName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("callCount")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -43,14 +43,14 @@ namespace Dust
         public required double AttributedCredits { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("directCredits")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double DirectCredits { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pending")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -9,25 +9,25 @@ namespace Dust
     public sealed partial class PrivateLightAgentConfigurationUsage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("messageCount")]
         public int? MessageCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conversationCount")]
         public int? ConversationCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userCount")]
         public int? UserCount { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("timePeriodSec")]
         public int? TimePeriodSec { get; set; }

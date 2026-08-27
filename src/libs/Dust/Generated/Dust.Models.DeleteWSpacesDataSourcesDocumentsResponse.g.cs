@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DeleteWSpacesDataSourcesDocumentsResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("document")]
         public global::Dust.DeleteWSpacesDataSourcesDocumentsResponseDocument? Document { get; set; }

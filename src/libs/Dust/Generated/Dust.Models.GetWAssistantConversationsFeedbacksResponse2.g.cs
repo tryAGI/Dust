@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWAssistantConversationsFeedbacksResponse2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("feedbacks")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateFeedback>? Feedbacks { get; set; }

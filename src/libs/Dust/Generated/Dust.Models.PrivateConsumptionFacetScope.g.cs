@@ -9,15 +9,15 @@ namespace Dust
     public enum PrivateConsumptionFacetScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Global,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hidden,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Visible,
     }

@@ -9,7 +9,7 @@ namespace Dust
     public enum PrivateMentionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

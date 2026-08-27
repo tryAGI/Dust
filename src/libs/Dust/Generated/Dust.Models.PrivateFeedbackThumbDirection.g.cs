@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateFeedbackThumbDirection
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Down,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Up,
     }

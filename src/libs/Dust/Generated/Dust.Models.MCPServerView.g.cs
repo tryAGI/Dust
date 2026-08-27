@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class MCPServerView
     {
@@ -74,7 +74,7 @@ namespace Dust
         public global::Dust.MCPServerViewServerType? ServerType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("server")]
         public global::Dust.MCPServerViewServer? Server { get; set; }

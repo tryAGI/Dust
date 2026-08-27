@@ -4,24 +4,24 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWSkillsResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("imported")]
         public global::System.Collections.Generic.IList<global::Dust.Skill>? Imported { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("updated")]
         public global::System.Collections.Generic.IList<global::Dust.Skill>? Updated { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skipped")]
         public global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedItem>? Skipped { get; set; }

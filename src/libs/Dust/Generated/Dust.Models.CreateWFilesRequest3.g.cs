@@ -4,33 +4,33 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWFilesRequest3
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contentType")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string ContentType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileName")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string FileName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileSize")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double FileSize { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("useCase")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.CreateWFilesRequestUseCaseJsonConverter))]
@@ -38,7 +38,7 @@ namespace Dust
         public required global::Dust.CreateWFilesRequestUseCase UseCase { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("useCaseMetadata")]
         public object? UseCaseMetadata { get; set; }

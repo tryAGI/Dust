@@ -4,32 +4,32 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateConversationForkUserProvider
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auth0,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Github,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Google,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Okta,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Samlp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Waad,
     }

@@ -9,15 +9,15 @@ namespace Dust
     public enum SkillReinforcement
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Off,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         On,
     }

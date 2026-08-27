@@ -16,7 +16,7 @@ namespace Dust
         public required string Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateMentionSuggestionTypeJsonConverter))]
@@ -31,7 +31,7 @@ namespace Dust
         public required string Label { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("pictureUrl")]
         [global::System.Text.Json.Serialization.JsonRequired]

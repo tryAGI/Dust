@@ -4,24 +4,24 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateDataSourceViewCategory
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Apps,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Folder,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Managed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Website,
     }

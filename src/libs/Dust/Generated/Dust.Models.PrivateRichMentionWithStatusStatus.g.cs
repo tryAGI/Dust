@@ -4,32 +4,32 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateRichMentionWithStatusStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentRestrictedBySpaceUsage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Approved,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PendingConversationAccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PendingProjectMembership,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Rejected,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UserRestrictedByConversationAccess,
     }

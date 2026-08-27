@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWAssistantAgentConfigurationsSearchResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentConfigurations")]
         public global::System.Collections.Generic.IList<global::Dust.AgentConfiguration>? AgentConfigurations { get; set; }

@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PatchWAssistantAgentConfigurationsResponse
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agentConfiguration")]
         public global::Dust.AgentConfiguration? AgentConfiguration { get; set; }

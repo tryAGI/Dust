@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateAgentContextPrunedEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentContextPruned,
     }

@@ -4,30 +4,30 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreference
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sId")]
         public string? SId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("spaceId")]
         public string? SpaceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("userId")]
         public string? UserId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("preference")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreferenceJsonConverter))]

@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Message
     {
@@ -25,7 +25,7 @@ namespace Dust
         public required global::System.Collections.Generic.IList<global::Dust.Mention> Mentions { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("context")]
         public global::Dust.Context? Context { get; set; }

@@ -19,7 +19,7 @@ namespace Dust
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Space))]
@@ -27,7 +27,7 @@ namespace Dust
         public bool IsSpace => Space != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickSpace(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dust.PrivateSpace PickSpace() => IsSpace
             ? Space!
             : throw new global::System.InvalidOperationException($"Expected union variant 'Space' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateProjectVariant2? PrivateProjectVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Dust
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PrivateProjectVariant2))]
@@ -64,7 +64,7 @@ namespace Dust
         public bool IsPrivateProjectVariant2 => PrivateProjectVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPrivateProjectVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dust.PrivateProjectVariant2 PickPrivateProjectVariant2() => IsPrivateProjectVariant2
             ? PrivateProjectVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PrivateProjectVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PrivateProject(global::Dust.PrivateSpace value) => new PrivateProject((global::Dust.PrivateSpace?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dust.PrivateSpace?(PrivateProject @this) => @this.Space;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateProject(global::Dust.PrivateSpace? value)
         {
@@ -101,22 +101,22 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PrivateProject FromSpace(global::Dust.PrivateSpace? value) => new PrivateProject(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PrivateProject(global::Dust.PrivateProjectVariant2 value) => new PrivateProject((global::Dust.PrivateProjectVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dust.PrivateProjectVariant2?(PrivateProject @this) => @this.PrivateProjectVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateProject(global::Dust.PrivateProjectVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PrivateProject FromPrivateProjectVariant2(global::Dust.PrivateProjectVariant2? value) => new PrivateProject(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateProject(
             global::Dust.PrivateSpace? space,
@@ -141,23 +141,23 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             PrivateProjectVariant2 as object ??
-            Space as object 
+            Space as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Space?.ToString() ??
-            PrivateProjectVariant2?.ToString() 
+            PrivateProjectVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dust.PrivateSpace, TResult>? space = null,
@@ -190,7 +190,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dust.PrivateSpace>? space = null,
@@ -214,7 +214,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dust.PrivateSpace>? space = null,
@@ -237,7 +237,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(PrivateProject other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateSpace?>.Default.Equals(Space, other.Space) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateProjectVariant2?>.Default.Equals(PrivateProjectVariant2, other.PrivateProjectVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateProjectVariant2?>.Default.Equals(PrivateProjectVariant2, other.PrivateProjectVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(PrivateProject obj1, PrivateProject obj2)
         {
@@ -277,7 +277,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(PrivateProject obj1, PrivateProject obj2)
         {
@@ -285,7 +285,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

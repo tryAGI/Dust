@@ -4,18 +4,18 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PrivateConversationForkingData
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forkedFrom")]
         public global::Dust.PrivateConversationForkedFrom? ForkedFrom { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("forkedChildren")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateConversationForkedChild>? ForkedChildren { get; set; }

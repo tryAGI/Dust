@@ -4,104 +4,104 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateUserMessageContextOrigin
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentSidekick,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Api,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cli,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         CliProgrammatic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Email,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Excel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Extension,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Gsheet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Make,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         N8n,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OnboardingConversation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Powerpoint,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProjectKickoff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Raycast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Slack,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SlackWorkflow,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Teams,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Transcript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Triggered,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TriggeredProgrammatic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Wakeup,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Web,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zapier,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Zendesk,
     }

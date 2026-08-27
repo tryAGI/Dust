@@ -114,13 +114,13 @@ namespace Dust
         public int? ExecutionDurationMs { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("displayLabels")]
         public global::Dust.PrivateAgentMCPActionDisplayLabels? DisplayLabels { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("generatedFiles")]
         [global::System.Text.Json.Serialization.JsonRequired]

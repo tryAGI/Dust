@@ -9,27 +9,27 @@ namespace Dust
     public enum PrivateLightAgentMessageModelResolutionMethod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Auto,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutoComplex,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AutoFast,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FairUseDowngrade,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

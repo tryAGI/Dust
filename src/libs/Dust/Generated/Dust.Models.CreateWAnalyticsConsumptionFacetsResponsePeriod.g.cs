@@ -4,19 +4,19 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWAnalyticsConsumptionFacetsResponsePeriod
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("startDate")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime StartDate { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("endDate")]
         [global::System.Text.Json.Serialization.JsonRequired]

@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum MCPServerViewServerAuthorizationSupportedUseCase
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PersonalActions,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PlatformActions,
     }

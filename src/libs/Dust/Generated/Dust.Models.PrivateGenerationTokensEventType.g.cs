@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateGenerationTokensEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GenerationTokens,
     }

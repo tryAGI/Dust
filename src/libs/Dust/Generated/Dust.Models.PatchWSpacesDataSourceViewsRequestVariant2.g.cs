@@ -4,18 +4,18 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PatchWSpacesDataSourceViewsRequestVariant2
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentsToAdd")]
         public global::System.Collections.Generic.IList<string>? ParentsToAdd { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentsToRemove")]
         public global::System.Collections.Generic.IList<string>? ParentsToRemove { get; set; }

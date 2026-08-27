@@ -4,20 +4,20 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateSandboxFunctionInvocationEventDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SandboxFunctionInvocationCreated,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SandboxFunctionInvocationError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SandboxFunctionInvocationResult,
     }

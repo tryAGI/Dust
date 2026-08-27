@@ -4,20 +4,20 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWFilesVersion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Original,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Processed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Public,
     }
