@@ -9,15 +9,15 @@ namespace Dust
     public enum CreateWSkillsRequestAvailability
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Editors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsersAndAgents,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkspaceUsers,
     }

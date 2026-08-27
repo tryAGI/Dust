@@ -4,19 +4,19 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWSpacesDataSourceViewsRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataSourceId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DataSourceId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentsIn")]
         public global::System.Collections.Generic.IList<string>? ParentsIn { get; set; }

@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchWAssistantConversationsRequestVariant4AccessMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ParticipantsOnly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkspaceMembers,
     }

@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ContentFragment
     {
@@ -88,7 +88,7 @@ namespace Dust
         public string? NodeDataSourceViewId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("context")]
         public global::Dust.Context? Context { get; set; }

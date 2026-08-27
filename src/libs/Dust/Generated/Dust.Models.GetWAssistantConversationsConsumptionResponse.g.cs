@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWAssistantConversationsConsumptionResponse
     {
@@ -16,7 +16,7 @@ namespace Dust
         public required double BilledCredits { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("details")]
         public global::Dust.PrivateConversationConsumptionDetails? Details { get; set; }

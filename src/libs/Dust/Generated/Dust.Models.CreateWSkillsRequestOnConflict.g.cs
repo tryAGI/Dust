@@ -9,15 +9,15 @@ namespace Dust
     public enum CreateWSkillsRequestOnConflict
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Error,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Override,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Skip,
     }

@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class PatchWSpacesDataSourceViewsResponse
     {
@@ -15,7 +15,7 @@ namespace Dust
         public global::Dust.PrivateDataSourceView? DataSourceView { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("connector")]
         public object? Connector { get; set; }

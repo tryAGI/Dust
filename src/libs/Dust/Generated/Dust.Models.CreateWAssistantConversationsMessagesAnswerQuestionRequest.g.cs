@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWAssistantConversationsMessagesAnswerQuestionRequest
     {
@@ -16,7 +16,7 @@ namespace Dust
         public required string ActionId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("answer")]
         [global::System.Text.Json.Serialization.JsonRequired]

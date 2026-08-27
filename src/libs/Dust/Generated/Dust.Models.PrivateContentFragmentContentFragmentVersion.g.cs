@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateContentFragmentContentFragmentVersion
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Latest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Superseded,
     }

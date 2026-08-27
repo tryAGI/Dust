@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class DatasourceView
     {
@@ -22,7 +22,7 @@ namespace Dust
         public double? CreatedAt { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataSource")]
         public global::Dust.Datasource? DataSource { get; set; }

@@ -9,11 +9,11 @@ namespace Dust
     public enum GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirection
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Down,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Up,
     }

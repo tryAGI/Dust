@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateWakeUpScheduleConfigVariant1Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OneShot,
     }

@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class Context
     {
@@ -51,13 +51,13 @@ namespace Dust
         public string? ProfilePictureUrl { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("selectedSpaceIds")]
         public global::System.Collections.Generic.IList<string>? SelectedSpaceIds { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agenticMessageData")]
         public global::Dust.ContextAgenticMessageData? AgenticMessageData { get; set; }

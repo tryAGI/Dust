@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class GetWSpacesDataSourceViewsResponse3
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("dataSourceViews")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateDataSourceView>? DataSourceViews { get; set; }

@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateWakeUpScheduleConfigVariant2Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cron,
     }

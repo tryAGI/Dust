@@ -4,16 +4,16 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWAssistantMentionsSuggestionsSelect
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agents,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Users,
     }

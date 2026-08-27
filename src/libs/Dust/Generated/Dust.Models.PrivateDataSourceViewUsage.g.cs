@@ -9,19 +9,19 @@ namespace Dust
     public sealed partial class PrivateDataSourceViewUsage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("count")]
         public int? Count { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agents")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateDataSourceViewUsageAgent>? Agents { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("skills")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateDataSourceViewUsageSkill>? Skills { get; set; }

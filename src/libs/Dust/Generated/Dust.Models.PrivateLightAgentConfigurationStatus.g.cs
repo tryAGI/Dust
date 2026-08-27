@@ -9,31 +9,31 @@ namespace Dust
     public enum PrivateLightAgentConfigurationStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Active,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Archived,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DisabledByAdmin,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DisabledFreeWorkspace,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DisabledMissingDatasource,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Draft,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pending,
     }

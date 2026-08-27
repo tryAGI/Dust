@@ -61,7 +61,7 @@ namespace Dust
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
@@ -112,12 +112,12 @@ namespace Dust
         public PrivateAgentsClient PrivateAgents { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateAnalyticsClient PrivateAnalytics { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateAssistantClient PrivateAssistant { get; }
 

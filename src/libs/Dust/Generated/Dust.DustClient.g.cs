@@ -41,7 +41,7 @@ namespace Dust
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Dust.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -141,7 +141,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateAnalyticsClient PrivateAnalytics => new PrivateAnalyticsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -151,7 +151,7 @@ namespace Dust
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateAssistantClient PrivateAssistant => new PrivateAssistantClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

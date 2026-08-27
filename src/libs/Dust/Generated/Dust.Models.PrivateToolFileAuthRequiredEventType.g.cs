@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateToolFileAuthRequiredEventType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolFileAuthRequired,
     }

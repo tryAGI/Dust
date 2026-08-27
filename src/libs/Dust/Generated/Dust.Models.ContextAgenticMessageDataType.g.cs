@@ -9,11 +9,11 @@ namespace Dust
     public enum ContextAgenticMessageDataType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentHandover,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RunAgent,
     }

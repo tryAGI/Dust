@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateSandboxFunctionInvocationCreatedEventInvocationStatus
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Created,
     }

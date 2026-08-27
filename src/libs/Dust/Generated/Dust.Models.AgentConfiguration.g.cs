@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class AgentConfiguration
     {
@@ -103,7 +103,7 @@ namespace Dust
         public bool? UserFavorite { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         public global::Dust.AgentConfigurationModel? Model { get; set; }

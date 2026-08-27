@@ -9,11 +9,11 @@ namespace Dust
     public enum PrivateContentFragmentContentFragmentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ContentNode,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         File,
     }

@@ -10,11 +10,11 @@ namespace Dust
     public enum RichMentionType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         User,
     }

@@ -9,11 +9,11 @@ namespace Dust
     public enum DatasourceViewKind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Custom,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Default,
     }

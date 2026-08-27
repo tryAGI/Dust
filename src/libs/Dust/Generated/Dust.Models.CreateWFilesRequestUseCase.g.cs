@@ -4,40 +4,40 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateWFilesRequestUseCase
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Avatar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Conversation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FoldersDocument,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProjectContext,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SkillAttachment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpsertDocument,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpsertTable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkspaceBranding,
     }

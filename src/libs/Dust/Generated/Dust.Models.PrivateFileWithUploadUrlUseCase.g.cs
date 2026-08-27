@@ -4,40 +4,40 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateFileWithUploadUrlUseCase
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Avatar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Conversation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FoldersDocument,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ProjectContext,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SkillAttachment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpsertDocument,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UpsertTable,
     }

@@ -4,20 +4,20 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWSkillsAvailabilityItem
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Editors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsersAndAgents,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkspaceUsers,
     }

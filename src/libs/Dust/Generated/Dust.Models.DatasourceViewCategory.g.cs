@@ -9,19 +9,19 @@ namespace Dust
     public enum DatasourceViewCategory
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Apps,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Folder,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Managed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Website,
     }

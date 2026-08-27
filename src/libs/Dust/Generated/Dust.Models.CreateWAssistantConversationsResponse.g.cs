@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateWAssistantConversationsResponse
     {
@@ -22,7 +22,7 @@ namespace Dust
         public global::Dust.PrivateUserMessage? Message { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("contentFragments")]
         public global::System.Collections.Generic.IList<global::Dust.PrivateContentFragment>? ContentFragments { get; set; }

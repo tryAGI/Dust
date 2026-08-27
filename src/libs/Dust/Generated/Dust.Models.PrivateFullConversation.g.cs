@@ -19,7 +19,7 @@ namespace Dust
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PrivateConversation))]
@@ -27,7 +27,7 @@ namespace Dust
         public bool IsPrivateConversation => PrivateConversation != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPrivateConversation(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dust.PrivateConversation PickPrivateConversation() => IsPrivateConversation
             ? PrivateConversation!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PrivateConversation' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Dust.PrivateFullConversationVariant2? PrivateFullConversationVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Dust
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PrivateFullConversationVariant2))]
@@ -64,7 +64,7 @@ namespace Dust
         public bool IsPrivateFullConversationVariant2 => PrivateFullConversationVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPrivateFullConversationVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Dust.PrivateFullConversationVariant2 PickPrivateFullConversationVariant2() => IsPrivateFullConversationVariant2
             ? PrivateFullConversationVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PrivateFullConversationVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PrivateFullConversation(global::Dust.PrivateConversation value) => new PrivateFullConversation((global::Dust.PrivateConversation?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dust.PrivateConversation?(PrivateFullConversation @this) => @this.PrivateConversation;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateFullConversation(global::Dust.PrivateConversation? value)
         {
@@ -101,22 +101,22 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PrivateFullConversation FromPrivateConversation(global::Dust.PrivateConversation? value) => new PrivateFullConversation(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PrivateFullConversation(global::Dust.PrivateFullConversationVariant2 value) => new PrivateFullConversation((global::Dust.PrivateFullConversationVariant2?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Dust.PrivateFullConversationVariant2?(PrivateFullConversation @this) => @this.PrivateFullConversationVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateFullConversation(global::Dust.PrivateFullConversationVariant2? value)
         {
@@ -124,12 +124,12 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PrivateFullConversation FromPrivateFullConversationVariant2(global::Dust.PrivateFullConversationVariant2? value) => new PrivateFullConversation(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PrivateFullConversation(
             global::Dust.PrivateConversation? privateConversation,
@@ -141,23 +141,23 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             PrivateFullConversationVariant2 as object ??
-            PrivateConversation as object 
+            PrivateConversation as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             PrivateConversation?.ToString() ??
-            PrivateFullConversationVariant2?.ToString() 
+            PrivateFullConversationVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Dust.PrivateConversation, TResult>? privateConversation = null,
@@ -190,7 +190,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Dust.PrivateConversation>? privateConversation = null,
@@ -214,7 +214,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Dust.PrivateConversation>? privateConversation = null,
@@ -237,7 +237,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(PrivateFullConversation other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateConversation?>.Default.Equals(PrivateConversation, other.PrivateConversation) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateFullConversationVariant2?>.Default.Equals(PrivateFullConversationVariant2, other.PrivateFullConversationVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Dust.PrivateFullConversationVariant2?>.Default.Equals(PrivateFullConversationVariant2, other.PrivateFullConversationVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(PrivateFullConversation obj1, PrivateFullConversation obj2)
         {
@@ -277,7 +277,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(PrivateFullConversation obj1, PrivateFullConversation obj2)
         {
@@ -285,7 +285,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

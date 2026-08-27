@@ -4,20 +4,20 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PatchWSpacesProjectNotificationPreferencesRequestPreference
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AllMessages,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Never,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         OnlyMentions,
     }

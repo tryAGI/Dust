@@ -9,15 +9,15 @@ namespace Dust
     public enum SkillAvailability
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Editors,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UsersAndAgents,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WorkspaceUsers,
     }

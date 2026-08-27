@@ -4,12 +4,12 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetWAssistantAgentConfigurationsWithEditors
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         True,
     }

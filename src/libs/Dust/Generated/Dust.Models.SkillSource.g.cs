@@ -9,19 +9,19 @@ namespace Dust
     public enum SkillSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Api,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Github,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LocalFile,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         WebApp,
     }

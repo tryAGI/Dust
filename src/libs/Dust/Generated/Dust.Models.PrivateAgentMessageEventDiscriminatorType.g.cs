@@ -4,60 +4,60 @@
 namespace Dust
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PrivateAgentMessageEventDiscriminatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentActionSuccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentContextPruned,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentGenerationCancelled,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AgentMessageSuccess,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GenerationTokens,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolApproveExecution,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolCallStarted,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolFileAuthRequired,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolNotification,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolParams,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ToolPersonalAuthRequired,
     }
