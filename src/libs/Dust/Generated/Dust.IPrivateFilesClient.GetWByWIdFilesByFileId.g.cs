@@ -6,7 +6,7 @@ namespace Dust
     {
         /// <summary>
         /// Get or download a file<br/>
-        /// View or download a file. Skill attachments require read access to their associated skill. Use query parameters `version` (original, processed, public) and `action` (view, download).
+        /// View or download a file. Skill attachments require read access to their associated skill. Feature-flagged Frames v2 return the active published UI bundle when viewed. Use query parameters `version` (original, processed, public) and `action` (view, download).
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="fileId"></param>
@@ -24,7 +24,7 @@ namespace Dust
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get or download a file<br/>
-        /// View or download a file. Skill attachments require read access to their associated skill. Use query parameters `version` (original, processed, public) and `action` (view, download).
+        /// View or download a file. Skill attachments require read access to their associated skill. Feature-flagged Frames v2 return the active published UI bundle when viewed. Use query parameters `version` (original, processed, public) and `action` (view, download).
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="fileId"></param>
@@ -42,7 +42,7 @@ namespace Dust
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Get or download a file<br/>
-        /// View or download a file. Skill attachments require read access to their associated skill. Use query parameters `version` (original, processed, public) and `action` (view, download).
+        /// View or download a file. Skill attachments require read access to their associated skill. Feature-flagged Frames v2 return the active published UI bundle when viewed. Use query parameters `version` (original, processed, public) and `action` (view, download).
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="fileId"></param>
