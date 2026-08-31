@@ -6,7 +6,7 @@ namespace Dust
     {
         /// <summary>
         /// Stream sandbox function invocation events<br/>
-        /// Stream real-time events for a sandbox function invocation using Server-Sent Events (SSE). This endpoint is redirected to /api/sse/ for SSE traffic routing.
+        /// Stream real-time events for a Pod or Frame function invocation using Server-Sent Events (SSE). This endpoint is redirected to /api/sse/ for SSE traffic routing.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="functionId"></param>
