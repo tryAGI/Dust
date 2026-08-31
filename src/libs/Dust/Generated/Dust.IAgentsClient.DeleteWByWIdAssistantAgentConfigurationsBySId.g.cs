@@ -6,7 +6,7 @@ namespace Dust
     {
         /// <summary>
         /// Archive agent configuration<br/>
-        /// Archive the agent configuration identified by {sId} in the workspace identified by {wId}. The agent is soft-archived and triggers/editor-group memberships associated with it are disabled.
+        /// Archive the agent configuration identified by {sId} in the workspace identified by {wId}. The agent is soft-archived and its triggers are disabled.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="sId"></param>
@@ -20,7 +20,7 @@ namespace Dust
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Archive agent configuration<br/>
-        /// Archive the agent configuration identified by {sId} in the workspace identified by {wId}. The agent is soft-archived and triggers/editor-group memberships associated with it are disabled.
+        /// Archive the agent configuration identified by {sId} in the workspace identified by {wId}. The agent is soft-archived and its triggers are disabled.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="sId"></param>
