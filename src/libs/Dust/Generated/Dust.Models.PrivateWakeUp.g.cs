@@ -26,9 +26,8 @@ namespace Dust
         /// Unix timestamp (milliseconds).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.UnixTimestampJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTimeOffset CreatedAt { get; set; }
+        public required long CreatedAt { get; set; }
 
         /// <summary>
         ///
@@ -100,7 +99,7 @@ namespace Dust
         public PrivateWakeUp(
             int id,
             string sId,
-            global::System.DateTimeOffset createdAt,
+            long createdAt,
             string agentConfigurationId,
             global::Dust.OneOf<global::Dust.PrivateWakeUpScheduleConfigVariant1, global::Dust.PrivateWakeUpScheduleConfigVariant2> scheduleConfig,
             string reason,
