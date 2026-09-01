@@ -147,11 +147,6 @@ namespace Dust
         public PrivateFilesClient PrivateFiles { get; }
 
         /// <summary>
-        ///
-        /// </summary>
-        public PrivateFramesClient PrivateFrames { get; }
-
-        /// <summary>
         /// Private API - Mention suggestions.
         /// </summary>
         public PrivateMentionsClient PrivateMentions { get; }
