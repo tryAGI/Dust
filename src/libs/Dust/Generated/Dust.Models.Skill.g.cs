@@ -110,6 +110,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? RequestedSpaceIds { get; set; }
 
         /// <summary>
+        /// Subset of requestedSpaceIds that was selected by hand rather than derived from the skill's tools, knowledge or nested skills
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("manuallyRequestedSpaceIds")]
+        public global::System.Collections.Generic.IList<string>? ManuallyRequestedSpaceIds { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileAttachments")]
@@ -208,6 +214,9 @@ namespace Dust
         /// <param name="requestedSpaceIds">
         /// Space identifiers the skill needs access to
         /// </param>
+        /// <param name="manuallyRequestedSpaceIds">
+        /// Subset of requestedSpaceIds that was selected by hand rather than derived from the skill's tools, knowledge or nested skills
+        /// </param>
         /// <param name="fileAttachments"></param>
         /// <param name="canWrite">
         /// Whether the authenticated actor can edit the skill
@@ -240,6 +249,7 @@ namespace Dust
             global::Dust.SkillReinforcement? reinforcement,
             string? lastReinforcementAnalysisAt,
             global::System.Collections.Generic.IList<string>? requestedSpaceIds,
+            global::System.Collections.Generic.IList<string>? manuallyRequestedSpaceIds,
             global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>? fileAttachments,
             bool? canWrite,
             global::Dust.SkillAvailability? availability,
@@ -261,6 +271,7 @@ namespace Dust
             this.Reinforcement = reinforcement;
             this.LastReinforcementAnalysisAt = lastReinforcementAnalysisAt;
             this.RequestedSpaceIds = requestedSpaceIds;
+            this.ManuallyRequestedSpaceIds = manuallyRequestedSpaceIds;
             this.FileAttachments = fileAttachments;
             this.CanWrite = canWrite;
             this.Availability = availability;
