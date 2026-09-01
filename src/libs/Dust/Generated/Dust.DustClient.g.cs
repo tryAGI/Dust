@@ -211,16 +211,6 @@ namespace Dust
         };
 
         /// <summary>
-        ///
-        /// </summary>
-        public PrivateFramesClient PrivateFrames => new PrivateFramesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-            AutoSDKServerConfiguration = AutoSDKServerConfiguration,
-        };
-
-        /// <summary>
         /// Private API - Mention suggestions.
         /// </summary>
         public PrivateMentionsClient PrivateMentions => new PrivateMentionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)

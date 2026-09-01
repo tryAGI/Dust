@@ -183,17 +183,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkPreparedEventType), TypeInfoPropertyName = "PrivateConversationForkPreparedEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationTitleEventType), TypeInfoPropertyName = "PrivateConversationTitleEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateWakeUpUpdatedEventType), TypeInfoPropertyName = "PrivateWakeUpUpdatedEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocation))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationStatus), TypeInfoPropertyName = "PrivateSandboxFunctionInvocationStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionCallError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationRequestContext))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1, global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2>), TypeInfoPropertyName = "OneOfPrivateFrameFunctionInvocationResponseOutcomeVariant1PrivateFrameFunctionInvocationResponseOutcomeVariant22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1Status), TypeInfoPropertyName = "PrivateFrameFunctionInvocationResponseOutcomeVariant1Status2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2Status), TypeInfoPropertyName = "PrivateFrameFunctionInvocationResponseOutcomeVariant2Status2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationEvent), TypeInfoPropertyName = "PrivateSandboxFunctionInvocationEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationResultEvent))]
@@ -514,6 +503,17 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Document>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesSearchResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWSpacesDataSourcesSearchResponseDocument>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesSearchResponseDocument))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Datasource>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesTablesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Table>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesDataSourcesTablesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesMcpServerViewsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Space>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponsePeriod))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -528,17 +528,6 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesSearchResponseDocument))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Datasource>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesTablesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Table>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesDataSourcesTablesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesMcpServerViewsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Space>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponsePeriod))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponseFacets))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsResponse3))]
@@ -689,10 +678,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationForkPreparedEventType?), TypeInfoPropertyName = "NullablePrivateConversationForkPreparedEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateConversationTitleEventType?), TypeInfoPropertyName = "NullablePrivateConversationTitleEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateWakeUpUpdatedEventType?), TypeInfoPropertyName = "NullablePrivateWakeUpUpdatedEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationStatus?), TypeInfoPropertyName = "NullablePrivateSandboxFunctionInvocationStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1, global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2>?), TypeInfoPropertyName = "NullableOneOfPrivateFrameFunctionInvocationResponseOutcomeVariant1PrivateFrameFunctionInvocationResponseOutcomeVariant22")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1Status?), TypeInfoPropertyName = "NullablePrivateFrameFunctionInvocationResponseOutcomeVariant1Status2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2Status?), TypeInfoPropertyName = "NullablePrivateFrameFunctionInvocationResponseOutcomeVariant2Status2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationEvent?), TypeInfoPropertyName = "NullablePrivateSandboxFunctionInvocationEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType?), TypeInfoPropertyName = "NullablePrivateSandboxFunctionInvocationEventDiscriminatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSandboxFunctionInvocationCreatedEventType?), TypeInfoPropertyName = "NullablePrivateSandboxFunctionInvocationCreatedEventType2")]
@@ -924,7 +909,6 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.PrivateAgentMessageEventJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateUserMessage, global::Dust.PrivateAgentMessage, global::Dust.PrivateContentFragment, global::Dust.PrivateCompactionMessage>());
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateWakeUpScheduleConfigVariant1, global::Dust.PrivateWakeUpScheduleConfigVariant2>());
-            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1, global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2>());
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>());
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>());
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>());
@@ -1167,18 +1151,6 @@ namespace Dust
                     || typeToConvert == typeof(global::Dust.PrivateWakeUpUpdatedEventType)
 
                     || typeToConvert == typeof(global::Dust.PrivateWakeUpUpdatedEventType?)
-
-                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationStatus)
-
-                    || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationStatus?)
-
-                    || typeToConvert == typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1Status)
-
-                    || typeToConvert == typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1Status?)
-
-                    || typeToConvert == typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2Status)
-
-                    || typeToConvert == typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2Status?)
 
                     || typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType)
 
@@ -2085,36 +2057,6 @@ namespace Dust
                 if (typeToConvert == typeof(global::Dust.PrivateWakeUpUpdatedEventType?))
                 {
                     return new global::Dust.JsonConverters.PrivateWakeUpUpdatedEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationStatus))
-                {
-                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationStatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationStatus?))
-                {
-                    return new global::Dust.JsonConverters.PrivateSandboxFunctionInvocationStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1Status))
-                {
-                    return new global::Dust.JsonConverters.PrivateFrameFunctionInvocationResponseOutcomeVariant1StatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant1Status?))
-                {
-                    return new global::Dust.JsonConverters.PrivateFrameFunctionInvocationResponseOutcomeVariant1StatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2Status))
-                {
-                    return new global::Dust.JsonConverters.PrivateFrameFunctionInvocationResponseOutcomeVariant2StatusJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.PrivateFrameFunctionInvocationResponseOutcomeVariant2Status?))
-                {
-                    return new global::Dust.JsonConverters.PrivateFrameFunctionInvocationResponseOutcomeVariant2StatusNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Dust.PrivateSandboxFunctionInvocationEventDiscriminatorType))
