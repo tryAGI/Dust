@@ -19,9 +19,8 @@ namespace Dust
         /// Unix timestamp (milliseconds) when the wake-up should fire.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fireAt")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.UnixTimestampJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.DateTimeOffset FireAt { get; set; }
+        public required long FireAt { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -40,7 +39,7 @@ namespace Dust
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PrivateWakeUpScheduleConfigVariant1(
-            global::System.DateTimeOffset fireAt,
+            long fireAt,
             global::Dust.PrivateWakeUpScheduleConfigVariant1Type type)
         {
             this.Type = type;
