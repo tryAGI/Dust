@@ -122,6 +122,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>? FileAttachments { get; set; }
 
         /// <summary>
+        /// Whether the authenticated actor can read the skill's instructions, tools and files. False when they were redacted for a workspace admin who is not a member of every space the skill requires.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("canRead")]
+        public bool? CanRead { get; set; }
+
+        /// <summary>
         /// Whether the authenticated actor can edit the skill
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("canWrite")]
@@ -218,6 +224,9 @@ namespace Dust
         /// Subset of requestedSpaceIds that was selected by hand rather than derived from the skill's tools, knowledge or nested skills
         /// </param>
         /// <param name="fileAttachments"></param>
+        /// <param name="canRead">
+        /// Whether the authenticated actor can read the skill's instructions, tools and files. False when they were redacted for a workspace admin who is not a member of every space the skill requires.
+        /// </param>
         /// <param name="canWrite">
         /// Whether the authenticated actor can edit the skill
         /// </param>
@@ -251,6 +260,7 @@ namespace Dust
             global::System.Collections.Generic.IList<string>? requestedSpaceIds,
             global::System.Collections.Generic.IList<string>? manuallyRequestedSpaceIds,
             global::System.Collections.Generic.IList<global::Dust.SkillFileAttachment>? fileAttachments,
+            bool? canRead,
             bool? canWrite,
             global::Dust.SkillAvailability? availability,
             string? instructions,
@@ -273,6 +283,7 @@ namespace Dust
             this.RequestedSpaceIds = requestedSpaceIds;
             this.ManuallyRequestedSpaceIds = manuallyRequestedSpaceIds;
             this.FileAttachments = fileAttachments;
+            this.CanRead = canRead;
             this.CanWrite = canWrite;
             this.Availability = availability;
             this.Instructions = instructions;
