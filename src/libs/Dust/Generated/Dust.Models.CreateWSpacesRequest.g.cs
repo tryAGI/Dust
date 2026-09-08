@@ -31,24 +31,23 @@ namespace Dust
         public required global::Dust.CreateWSpacesRequestSpaceKind SpaceKind { get; set; }
 
         /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("managementMode")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dust.CreateWSpacesRequestManagementMode ManagementMode { get; set; }
-
-        /// <summary>
-        /// Required when managementMode is manual
+        /// The space's manual member list. Omitted or empty means the space starts with no manual member.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("memberIds")]
         public global::System.Collections.Generic.IList<string>? MemberIds { get; set; }
 
         /// <summary>
-        /// Required when managementMode is group
+        /// The groups given access to the space. Omitted or empty means no group has access to it.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("groupIds")]
         public global::System.Collections.Generic.IList<string>? GroupIds { get; set; }
+
+        /// <summary>
+        /// Deprecated and ignored. A space's members are its manual member list plus the members of the groups given access to it.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("managementMode")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter))]
+        public global::Dust.CreateWSpacesRequestManagementMode? ManagementMode { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -62,12 +61,14 @@ namespace Dust
         /// <param name="isRestricted"></param>
         /// <param name="name"></param>
         /// <param name="spaceKind"></param>
-        /// <param name="managementMode"></param>
         /// <param name="memberIds">
-        /// Required when managementMode is manual
+        /// The space's manual member list. Omitted or empty means the space starts with no manual member.
         /// </param>
         /// <param name="groupIds">
-        /// Required when managementMode is group
+        /// The groups given access to the space. Omitted or empty means no group has access to it.
+        /// </param>
+        /// <param name="managementMode">
+        /// Deprecated and ignored. A space's members are its manual member list plus the members of the groups given access to it.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -76,16 +77,16 @@ namespace Dust
             bool isRestricted,
             string name,
             global::Dust.CreateWSpacesRequestSpaceKind spaceKind,
-            global::Dust.CreateWSpacesRequestManagementMode managementMode,
             global::System.Collections.Generic.IList<string>? memberIds,
-            global::System.Collections.Generic.IList<string>? groupIds)
+            global::System.Collections.Generic.IList<string>? groupIds,
+            global::Dust.CreateWSpacesRequestManagementMode? managementMode)
         {
             this.IsRestricted = isRestricted;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SpaceKind = spaceKind;
-            this.ManagementMode = managementMode;
             this.MemberIds = memberIds;
             this.GroupIds = groupIds;
+            this.ManagementMode = managementMode;
         }
 
         /// <summary>
