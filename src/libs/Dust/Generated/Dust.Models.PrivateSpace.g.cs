@@ -31,7 +31,7 @@ namespace Dust
         public required global::Dust.PrivateSpaceKind Kind { get; set; }
 
         /// <summary>
-        ///
+        /// Deprecated. Derived from whether any group has access to the space; a space's members are its manual member list plus the members of those groups.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("managementMode")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter))]
@@ -62,7 +62,9 @@ namespace Dust
         /// <param name="sId"></param>
         /// <param name="name"></param>
         /// <param name="kind"></param>
-        /// <param name="managementMode"></param>
+        /// <param name="managementMode">
+        /// Deprecated. Derived from whether any group has access to the space; a space's members are its manual member list plus the members of those groups.
+        /// </param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER

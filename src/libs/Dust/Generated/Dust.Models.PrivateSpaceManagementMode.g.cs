@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    ///
+    /// Deprecated. Derived from whether any group has access to the space; a space's members are its manual member list plus the members of those groups.
     /// </summary>
     public enum PrivateSpaceManagementMode
     {

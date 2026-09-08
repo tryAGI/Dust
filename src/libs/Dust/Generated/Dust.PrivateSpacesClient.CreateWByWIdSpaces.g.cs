@@ -497,12 +497,14 @@ namespace Dust
         /// <param name="isRestricted"></param>
         /// <param name="name"></param>
         /// <param name="spaceKind"></param>
-        /// <param name="managementMode"></param>
         /// <param name="memberIds">
-        /// Required when managementMode is manual
+        /// The space's manual member list. Omitted or empty means the space starts with no manual member.
         /// </param>
         /// <param name="groupIds">
-        /// Required when managementMode is group
+        /// The groups given access to the space. Omitted or empty means no group has access to it.
+        /// </param>
+        /// <param name="managementMode">
+        /// Deprecated and ignored. A space's members are its manual member list plus the members of the groups given access to it.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -512,9 +514,9 @@ namespace Dust
             bool isRestricted,
             string name,
             global::Dust.CreateWSpacesRequestSpaceKind spaceKind,
-            global::Dust.CreateWSpacesRequestManagementMode managementMode,
             global::System.Collections.Generic.IList<string>? memberIds = default,
             global::System.Collections.Generic.IList<string>? groupIds = default,
+            global::Dust.CreateWSpacesRequestManagementMode? managementMode = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -523,9 +525,9 @@ namespace Dust
                 IsRestricted = isRestricted,
                 Name = name,
                 SpaceKind = spaceKind,
-                ManagementMode = managementMode,
                 MemberIds = memberIds,
                 GroupIds = groupIds,
+                ManagementMode = managementMode,
             };
 
             return await CreateWByWIdSpacesAsync(

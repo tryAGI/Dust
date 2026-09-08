@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    ///
+    /// Deprecated and ignored. A space's members are its manual member list plus the members of the groups given access to it.
     /// </summary>
     public enum CreateWSpacesRequestManagementMode
     {
