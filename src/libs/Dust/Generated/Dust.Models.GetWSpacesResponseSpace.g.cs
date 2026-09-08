@@ -57,6 +57,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<object>? Members { get; set; }
 
         /// <summary>
+        /// The groups given access to the space, with the role their grant confers.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("groups")]
+        public global::System.Collections.Generic.IList<global::Dust.GetWSpacesResponseSpaceGroup>? Groups { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
@@ -122,6 +128,9 @@ namespace Dust
         /// <param name="isMember"></param>
         /// <param name="isEditor"></param>
         /// <param name="members"></param>
+        /// <param name="groups">
+        /// The groups given access to the space, with the role their grant confers.
+        /// </param>
         /// <param name="description"></param>
         /// <param name="archivedAt"></param>
         /// <param name="todoGenerationEnabled">
@@ -154,6 +163,7 @@ namespace Dust
             bool? isMember,
             bool? isEditor,
             global::System.Collections.Generic.IList<object>? members,
+            global::System.Collections.Generic.IList<global::Dust.GetWSpacesResponseSpaceGroup>? groups,
             string? description,
             int? archivedAt,
             bool? todoGenerationEnabled,
@@ -171,6 +181,7 @@ namespace Dust
             this.IsMember = isMember;
             this.IsEditor = isEditor;
             this.Members = members;
+            this.Groups = groups;
             this.Description = description;
             this.ArchivedAt = archivedAt;
             this.TodoGenerationEnabled = todoGenerationEnabled;
