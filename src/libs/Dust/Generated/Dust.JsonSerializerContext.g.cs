@@ -299,6 +299,11 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewServerTool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewOAuthUseCase), TypeInfoPropertyName = "MCPServerViewOAuthUseCase2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewEditedByUser))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Trigger))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.TriggerKind), TypeInfoPropertyName = "TriggerKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.TriggerStatus), TypeInfoPropertyName = "TriggerStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.TriggerExecutionMode), TypeInfoPropertyName = "TriggerExecutionMode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.TriggerWebhookSource))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchUserRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantAgentConfigurationsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgent))]
@@ -425,6 +430,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsStatus), TypeInfoPropertyName = "GetWSkillsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsAvailabilityItem), TypeInfoPropertyName = "GetWSkillsAvailabilityItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWTriggersKind), TypeInfoPropertyName = "GetWTriggersKind2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsView2), TypeInfoPropertyName = "GetWAssistantAgentConfigurationsView22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsWithUsage), TypeInfoPropertyName = "GetWAssistantAgentConfigurationsWithUsage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors2), TypeInfoPropertyName = "GetWAssistantAgentConfigurationsWithAuthors22")]
@@ -508,12 +514,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesTablesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Table>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesDataSourcesTablesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesMcpServerViewsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Space>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponsePeriod))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -528,6 +528,15 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesMcpServerViewsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Space>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWTriggersResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWTriggersResponse2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Trigger>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponsePeriod))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAnalyticsConsumptionFacetsResponseFacets))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateConsumptionFacet>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsResponse3))]
@@ -596,6 +605,9 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Dust.GetWSpacesResponseSpaceCategories2>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponseSpaceCategories2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponseSpaceCategoriesUsage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWSpacesResponseSpaceGroup>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponseSpaceGroup))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponseSpaceGroupRole), TypeInfoPropertyName = "GetWSpacesResponseSpaceGroupRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWSpacesResponseSpaceFrameTab>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponseSpaceFrameTab))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesResponse))]
@@ -715,6 +727,9 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewServerType?), TypeInfoPropertyName = "NullableMCPServerViewServerType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewServerAuthorizationSupportedUseCase?), TypeInfoPropertyName = "NullableMCPServerViewServerAuthorizationSupportedUseCase2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.MCPServerViewOAuthUseCase?), TypeInfoPropertyName = "NullableMCPServerViewOAuthUseCase2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.TriggerKind?), TypeInfoPropertyName = "NullableTriggerKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.TriggerStatus?), TypeInfoPropertyName = "NullableTriggerStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.TriggerExecutionMode?), TypeInfoPropertyName = "NullableTriggerExecutionMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope?), TypeInfoPropertyName = "NullablePatchWAssistantAgentConfigurationsRequestAgentScope2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestTagKind?), TypeInfoPropertyName = "NullablePatchWAssistantAgentConfigurationsRequestTagKind2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestToolsetItemType?), TypeInfoPropertyName = "NullablePatchWAssistantAgentConfigurationsRequestToolsetItemType2")]
@@ -751,6 +766,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSearchViewType?), TypeInfoPropertyName = "NullableGetWSearchViewType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsStatus?), TypeInfoPropertyName = "NullableGetWSkillsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsAvailabilityItem?), TypeInfoPropertyName = "NullableGetWSkillsAvailabilityItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWTriggersKind?), TypeInfoPropertyName = "NullableGetWTriggersKind2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsView2?), TypeInfoPropertyName = "NullableGetWAssistantAgentConfigurationsView22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsWithUsage?), TypeInfoPropertyName = "NullableGetWAssistantAgentConfigurationsWithUsage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantAgentConfigurationsWithAuthors2?), TypeInfoPropertyName = "NullableGetWAssistantAgentConfigurationsWithAuthors22")]
@@ -774,6 +790,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWAssistantConversationsSelectableSpacesResponseSpace>?), TypeInfoPropertyName = "NullableAllOfPrivateSpaceGetWAssistantConversationsSelectableSpacesResponseSpace2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.CreateWAssistantConversationsSelectedSpacesResponseSelectedSpace>?), TypeInfoPropertyName = "NullableAllOfPrivateSpaceCreateWAssistantConversationsSelectedSpacesResponseSelectedSpace2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.AllOf<global::Dust.PrivateSpace, global::Dust.GetWSpacesResponseSpace>?), TypeInfoPropertyName = "NullableAllOfPrivateSpaceGetWSpacesResponseSpace2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponseSpaceGroupRole?), TypeInfoPropertyName = "NullableGetWSpacesResponseSpaceGroupRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference?), TypeInfoPropertyName = "NullableGetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference?), TypeInfoPropertyName = "NullablePatchWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>?), TypeInfoPropertyName = "NullableOneOfPrivateSpacePrivateProject2")]
@@ -847,6 +864,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Datasource>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Table>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Space>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Trigger>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateConsumptionFacet>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateLightAgentConfiguration>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateFeedback>))]
@@ -862,6 +880,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateConversation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateMentionSuggestion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.PrivateDataSourceView>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWSpacesResponseSpaceGroup>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWSpacesResponseSpaceFrameTab>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.PrivateSpace, global::Dust.PrivateProject?>>))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
@@ -1297,6 +1316,18 @@ namespace Dust
 
                     || typeToConvert == typeof(global::Dust.MCPServerViewOAuthUseCase?)
 
+                    || typeToConvert == typeof(global::Dust.TriggerKind)
+
+                    || typeToConvert == typeof(global::Dust.TriggerKind?)
+
+                    || typeToConvert == typeof(global::Dust.TriggerStatus)
+
+                    || typeToConvert == typeof(global::Dust.TriggerStatus?)
+
+                    || typeToConvert == typeof(global::Dust.TriggerExecutionMode)
+
+                    || typeToConvert == typeof(global::Dust.TriggerExecutionMode?)
+
                     || typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope)
 
                     || typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope?)
@@ -1429,6 +1460,10 @@ namespace Dust
 
                     || typeToConvert == typeof(global::Dust.GetWSkillsAvailabilityItem?)
 
+                    || typeToConvert == typeof(global::Dust.GetWTriggersKind)
+
+                    || typeToConvert == typeof(global::Dust.GetWTriggersKind?)
+
                     || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView2)
 
                     || typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView2?)
@@ -1500,6 +1535,10 @@ namespace Dust
                     || typeToConvert == typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus)
 
                     || typeToConvert == typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus?)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesResponseSpaceGroupRole)
+
+                    || typeToConvert == typeof(global::Dust.GetWSpacesResponseSpaceGroupRole?)
 
                     || typeToConvert == typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference)
 
@@ -2414,6 +2453,36 @@ namespace Dust
                     return new global::Dust.JsonConverters.MCPServerViewOAuthUseCaseNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Dust.TriggerKind))
+                {
+                    return new global::Dust.JsonConverters.TriggerKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.TriggerKind?))
+                {
+                    return new global::Dust.JsonConverters.TriggerKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.TriggerStatus))
+                {
+                    return new global::Dust.JsonConverters.TriggerStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.TriggerStatus?))
+                {
+                    return new global::Dust.JsonConverters.TriggerStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.TriggerExecutionMode))
+                {
+                    return new global::Dust.JsonConverters.TriggerExecutionModeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.TriggerExecutionMode?))
+                {
+                    return new global::Dust.JsonConverters.TriggerExecutionModeNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Dust.PatchWAssistantAgentConfigurationsRequestAgentScope))
                 {
                     return new global::Dust.JsonConverters.PatchWAssistantAgentConfigurationsRequestAgentScopeJsonConverter();
@@ -2744,6 +2813,16 @@ namespace Dust
                     return new global::Dust.JsonConverters.GetWSkillsAvailabilityItemNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Dust.GetWTriggersKind))
+                {
+                    return new global::Dust.JsonConverters.GetWTriggersKindJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWTriggersKind?))
+                {
+                    return new global::Dust.JsonConverters.GetWTriggersKindNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Dust.GetWAssistantAgentConfigurationsView2))
                 {
                     return new global::Dust.JsonConverters.GetWAssistantAgentConfigurationsView2JsonConverter();
@@ -2922,6 +3001,16 @@ namespace Dust
                 if (typeToConvert == typeof(global::Dust.GetWAssistantConversationsMessagesActionsResponseMessageStatus?))
                 {
                     return new global::Dust.JsonConverters.GetWAssistantConversationsMessagesActionsResponseMessageStatusNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesResponseSpaceGroupRole))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesResponseSpaceGroupRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWSpacesResponseSpaceGroupRole?))
+                {
+                    return new global::Dust.JsonConverters.GetWSpacesResponseSpaceGroupRoleNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Dust.GetWSpacesProjectNotificationPreferencesResponseUserProjectNotificationPreferencePreference))
