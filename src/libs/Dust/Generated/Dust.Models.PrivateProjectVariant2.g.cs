@@ -70,12 +70,6 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? TabsOrder { get; set; }
 
         /// <summary>
-        /// Whether workspace admins control membership and connected data for this Pod.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("isAdminControlled")]
-        public bool? IsAdminControlled { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -104,9 +98,6 @@ namespace Dust
         /// <param name="tabsOrder">
         /// Interleaved system tab ids and frame paths before Settings.
         /// </param>
-        /// <param name="isAdminControlled">
-        /// Whether workspace admins control membership and connected data for this Pod.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -120,8 +111,7 @@ namespace Dust
             global::System.DateTimeOffset? lastTodoAnalysisAt,
             string? pinnedFramePath,
             global::System.Collections.Generic.IList<global::Dust.PrivateProjectVariant2FrameTab>? frameTabs,
-            global::System.Collections.Generic.IList<string>? tabsOrder,
-            bool? isAdminControlled)
+            global::System.Collections.Generic.IList<string>? tabsOrder)
         {
             this.GroupIds = groupIds;
             this.IsRestricted = isRestricted;
@@ -133,7 +123,6 @@ namespace Dust
             this.PinnedFramePath = pinnedFramePath;
             this.FrameTabs = frameTabs;
             this.TabsOrder = tabsOrder;
-            this.IsAdminControlled = isAdminControlled;
         }
 
         /// <summary>
