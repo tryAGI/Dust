@@ -43,13 +43,6 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? GroupIds { get; set; }
 
         /// <summary>
-        /// Deprecated and ignored. A space's members are its manual member list plus the members of the groups given access to it.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("managementMode")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter))]
-        public global::Dust.CreateWSpacesRequestManagementMode? ManagementMode { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -67,9 +60,6 @@ namespace Dust
         /// <param name="groupIds">
         /// The groups given access to the space. Omitted or empty means no group has access to it.
         /// </param>
-        /// <param name="managementMode">
-        /// Deprecated and ignored. A space's members are its manual member list plus the members of the groups given access to it.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -78,15 +68,13 @@ namespace Dust
             string name,
             global::Dust.CreateWSpacesRequestSpaceKind spaceKind,
             global::System.Collections.Generic.IList<string>? memberIds,
-            global::System.Collections.Generic.IList<string>? groupIds,
-            global::Dust.CreateWSpacesRequestManagementMode? managementMode)
+            global::System.Collections.Generic.IList<string>? groupIds)
         {
             this.IsRestricted = isRestricted;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.SpaceKind = spaceKind;
             this.MemberIds = memberIds;
             this.GroupIds = groupIds;
-            this.ManagementMode = managementMode;
         }
 
         /// <summary>

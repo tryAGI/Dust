@@ -72,6 +72,11 @@ namespace Dust
         public AgentsClient Agents { get; }
 
         /// <summary>
+        ///
+        /// </summary>
+        public AnalyticsClient Analytics { get; }
+
+        /// <summary>
         /// Dust apps.
         /// </summary>
         public AppsClient Apps { get; }
@@ -195,11 +200,6 @@ namespace Dust
         /// Triggers.
         /// </summary>
         public TriggersClient Triggers { get; }
-
-        /// <summary>
-        /// Workspace.
-        /// </summary>
-        public WorkspaceClient Workspace { get; }
 
     }
 }

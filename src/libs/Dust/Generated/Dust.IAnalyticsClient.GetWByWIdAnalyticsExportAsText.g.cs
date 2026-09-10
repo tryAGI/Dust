@@ -2,7 +2,7 @@
 
 namespace Dust
 {
-    public partial interface IWorkspaceClient
+    public partial interface IAnalyticsClient
     {
         /// <summary>
         /// Export workspace analytics<br/>
