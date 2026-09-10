@@ -503,9 +503,6 @@ namespace Dust
         /// <param name="groupIds">
         /// The groups given access to the space. Omitted or empty means no group has access to it.
         /// </param>
-        /// <param name="managementMode">
-        /// Deprecated and ignored. A space's members are its manual member list plus the members of the groups given access to it.
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -516,7 +513,6 @@ namespace Dust
             global::Dust.CreateWSpacesRequestSpaceKind spaceKind,
             global::System.Collections.Generic.IList<string>? memberIds = default,
             global::System.Collections.Generic.IList<string>? groupIds = default,
-            global::Dust.CreateWSpacesRequestManagementMode? managementMode = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -527,7 +523,6 @@ namespace Dust
                 SpaceKind = spaceKind,
                 MemberIds = memberIds,
                 GroupIds = groupIds,
-                ManagementMode = managementMode,
             };
 
             return await CreateWByWIdSpacesAsync(

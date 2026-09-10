@@ -4,11 +4,10 @@
 namespace Dust
 {
     /// <summary>
-    /// Workspace<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
-    public sealed partial class WorkspaceClient : global::Dust.IWorkspaceClient, global::System.IDisposable
+    public sealed partial class AnalyticsClient : global::Dust.IAnalyticsClient, global::System.IDisposable
     {
         /// <summary>
         /// Dust.tt API (us-central1)
@@ -79,7 +78,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// Creates a new instance of the WorkspaceClient.
+        /// Creates a new instance of the AnalyticsClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -87,7 +86,7 @@ namespace Dust
         /// <param name="baseUri">The base URL for the API. If not provided, the default baseUri from OpenAPI spec will be used.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public WorkspaceClient(
+        public AnalyticsClient(
             global::System.Net.Http.HttpClient? httpClient = null,
             global::System.Uri? baseUri = null,
             global::System.Collections.Generic.List<global::Dust.EndPointAuthorization>? authorizations = null,
@@ -101,14 +100,14 @@ namespace Dust
         }
 
         /// <summary>
-        /// Creates a new instance of the WorkspaceClient with explicit options but no base URL override.
+        /// Creates a new instance of the AnalyticsClient with explicit options but no base URL override.
         /// Skips passing <c>baseUri</c> so the default base URL from the OpenAPI spec applies.
         /// </summary>
         /// <param name="httpClient">The HttpClient instance. If not provided, a new one will be created.</param>
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public WorkspaceClient(
+        public AnalyticsClient(
             global::System.Net.Http.HttpClient? httpClient,
             global::System.Collections.Generic.List<global::Dust.EndPointAuthorization>? authorizations,
             global::Dust.AutoSDKClientOptions? options,
@@ -122,7 +121,7 @@ namespace Dust
         }
 
         /// <summary>
-        /// Creates a new instance of the WorkspaceClient.
+        /// Creates a new instance of the AnalyticsClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
         /// </summary>
@@ -131,7 +130,7 @@ namespace Dust
         /// <param name="authorizations">The authorizations to use for the requests.</param>
         /// <param name="options">Client-wide request defaults such as headers, query parameters, retries, and timeout.</param>
         /// <param name="disposeHttpClient">Dispose the HttpClient when the instance is disposed. True by default.</param>
-        public WorkspaceClient(
+        public AnalyticsClient(
             global::System.Net.Http.HttpClient? httpClient,
             global::System.Uri? baseUri,
             global::System.Collections.Generic.List<global::Dust.EndPointAuthorization>? authorizations,

@@ -31,14 +31,6 @@ namespace Dust
         public required global::Dust.PrivateSpaceKind Kind { get; set; }
 
         /// <summary>
-        /// Deprecated. Derived from whether any group has access to the space; a space's members are its manual member list plus the members of those groups.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("managementMode")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Dust.PrivateSpaceManagementMode ManagementMode { get; set; }
-
-        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
@@ -62,9 +54,6 @@ namespace Dust
         /// <param name="sId"></param>
         /// <param name="name"></param>
         /// <param name="kind"></param>
-        /// <param name="managementMode">
-        /// Deprecated. Derived from whether any group has access to the space; a space's members are its manual member list plus the members of those groups.
-        /// </param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
@@ -74,14 +63,12 @@ namespace Dust
             string sId,
             string name,
             global::Dust.PrivateSpaceKind kind,
-            global::Dust.PrivateSpaceManagementMode managementMode,
             int? createdAt,
             int? updatedAt)
         {
             this.SId = sId ?? throw new global::System.ArgumentNullException(nameof(sId));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Kind = kind;
-            this.ManagementMode = managementMode;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
         }

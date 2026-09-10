@@ -126,7 +126,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFileWithUploadUrlUseCase), TypeInfoPropertyName = "PrivateFileWithUploadUrlUseCase2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSpace))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSpaceKind), TypeInfoPropertyName = "PrivateSpaceKind2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSpaceManagementMode), TypeInfoPropertyName = "PrivateSpaceManagementMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateProject), TypeInfoPropertyName = "PrivateProject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateProjectVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.PrivateProjectVariant2FrameTab>))]
@@ -413,7 +412,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference), TypeInfoPropertyName = "PatchWSpacesProjectNotificationPreferencesRequestPreference2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesRequestSpaceKind), TypeInfoPropertyName = "CreateWSpacesRequestSpaceKind2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesRequestManagementMode), TypeInfoPropertyName = "CreateWSpacesRequestManagementMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWorkosAuthenticateRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType), TypeInfoPropertyName = "CreateWorkosAuthenticateRequestGrantType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWorkosRevokeSessionRequest))]
@@ -514,6 +512,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesTablesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Table>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesDataSourcesTablesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesMcpServerViewsResponse))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -528,8 +528,6 @@ namespace Dust
         })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_c4fb3fa444308b4c")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant12, global::Dust.PatchWAssistantConversationsRequestVariant22, global::Dust.PatchWAssistantConversationsRequestVariant3, global::Dust.PatchWAssistantConversationsRequestVariant4>?), TypeInfoPropertyName = "PatchWAssistantConversationsRequestVariant4_2edd0c100c08755a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesDataSourcesResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesMcpServerViewsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Space>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWTriggersResponse))]
@@ -663,7 +661,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFileWithUploadUrlStatus?), TypeInfoPropertyName = "NullablePrivateFileWithUploadUrlStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateFileWithUploadUrlUseCase?), TypeInfoPropertyName = "NullablePrivateFileWithUploadUrlUseCase2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSpaceKind?), TypeInfoPropertyName = "NullablePrivateSpaceKind2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateSpaceManagementMode?), TypeInfoPropertyName = "NullablePrivateSpaceManagementMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateProject?), TypeInfoPropertyName = "NullablePrivateProject2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateDataSourceViewCategory?), TypeInfoPropertyName = "NullablePrivateDataSourceViewCategory2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PrivateDataSourceViewKind?), TypeInfoPropertyName = "NullablePrivateDataSourceViewKind2")]
@@ -754,7 +751,6 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWFilesRequestUseCase?), TypeInfoPropertyName = "NullableCreateWFilesRequestUseCase2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWSpacesProjectNotificationPreferencesRequestPreference?), TypeInfoPropertyName = "NullablePatchWSpacesProjectNotificationPreferencesRequestPreference2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesRequestSpaceKind?), TypeInfoPropertyName = "NullableCreateWSpacesRequestSpaceKind2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWSpacesRequestManagementMode?), TypeInfoPropertyName = "NullableCreateWSpacesRequestManagementMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType?), TypeInfoPropertyName = "NullableCreateWorkosAuthenticateRequestGrantType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAnalyticsExportTable?), TypeInfoPropertyName = "NullableGetWAnalyticsExportTable2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAnalyticsExportFormat?), TypeInfoPropertyName = "NullableGetWAnalyticsExportFormat2")]
@@ -1084,10 +1080,6 @@ namespace Dust
 
                     || typeToConvert == typeof(global::Dust.PrivateSpaceKind?)
 
-                    || typeToConvert == typeof(global::Dust.PrivateSpaceManagementMode)
-
-                    || typeToConvert == typeof(global::Dust.PrivateSpaceManagementMode?)
-
                     || typeToConvert == typeof(global::Dust.PrivateDataSourceViewCategory)
 
                     || typeToConvert == typeof(global::Dust.PrivateDataSourceViewCategory?)
@@ -1411,10 +1403,6 @@ namespace Dust
                     || typeToConvert == typeof(global::Dust.CreateWSpacesRequestSpaceKind)
 
                     || typeToConvert == typeof(global::Dust.CreateWSpacesRequestSpaceKind?)
-
-                    || typeToConvert == typeof(global::Dust.CreateWSpacesRequestManagementMode)
-
-                    || typeToConvert == typeof(global::Dust.CreateWSpacesRequestManagementMode?)
 
                     || typeToConvert == typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType)
 
@@ -1871,16 +1859,6 @@ namespace Dust
                 if (typeToConvert == typeof(global::Dust.PrivateSpaceKind?))
                 {
                     return new global::Dust.JsonConverters.PrivateSpaceKindNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.PrivateSpaceManagementMode))
-                {
-                    return new global::Dust.JsonConverters.PrivateSpaceManagementModeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.PrivateSpaceManagementMode?))
-                {
-                    return new global::Dust.JsonConverters.PrivateSpaceManagementModeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Dust.PrivateDataSourceViewCategory))
@@ -2691,16 +2669,6 @@ namespace Dust
                 if (typeToConvert == typeof(global::Dust.CreateWSpacesRequestSpaceKind?))
                 {
                     return new global::Dust.JsonConverters.CreateWSpacesRequestSpaceKindNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.CreateWSpacesRequestManagementMode))
-                {
-                    return new global::Dust.JsonConverters.CreateWSpacesRequestManagementModeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Dust.CreateWSpacesRequestManagementMode?))
-                {
-                    return new global::Dust.JsonConverters.CreateWSpacesRequestManagementModeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Dust.CreateWorkosAuthenticateRequestGrantType))
