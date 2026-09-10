@@ -116,6 +116,26 @@ namespace Dust
         public byte[]? Actions { get; set; }
 
         /// <summary>
+        /// Skills attached to the agent. Returned by the agent GET endpoints (list and single-agent) whatever the requested variant. Empty both for an agent with no skill and for an agent whose details were redacted for the caller (canRead false).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skills")]
+        public global::System.Collections.Generic.IList<global::Dust.AgentSkill>? Skills { get; set; }
+
+        /// <summary>
+        /// Tags attached to the agent
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.IList<global::Dust.AgentConfigurationTag>? Tags { get; set; }
+
+        /// <summary>
+        /// Identifiers of the spaces the agent needs access to<br/>
+        /// Example: [vlt_a1b2c3d4e5]
+        /// </summary>
+        /// <example>[vlt_a1b2c3d4e5]</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("requestedSpaceIds")]
+        public global::System.Collections.Generic.IList<string>? RequestedSpaceIds { get; set; }
+
+        /// <summary>
         /// Example: 10
         /// </summary>
         /// <example>10</example>
@@ -189,6 +209,16 @@ namespace Dust
         /// <param name="actions">
         /// Example: []
         /// </param>
+        /// <param name="skills">
+        /// Skills attached to the agent. Returned by the agent GET endpoints (list and single-agent) whatever the requested variant. Empty both for an agent with no skill and for an agent whose details were redacted for the caller (canRead false).
+        /// </param>
+        /// <param name="tags">
+        /// Tags attached to the agent
+        /// </param>
+        /// <param name="requestedSpaceIds">
+        /// Identifiers of the spaces the agent needs access to<br/>
+        /// Example: [vlt_a1b2c3d4e5]
+        /// </param>
         /// <param name="maxStepsPerRun">
         /// Example: 10
         /// </param>
@@ -214,6 +244,9 @@ namespace Dust
             bool? userFavorite,
             global::Dust.AgentConfigurationModel? model,
             byte[]? actions,
+            global::System.Collections.Generic.IList<global::Dust.AgentSkill>? skills,
+            global::System.Collections.Generic.IList<global::Dust.AgentConfigurationTag>? tags,
+            global::System.Collections.Generic.IList<string>? requestedSpaceIds,
             int? maxStepsPerRun,
             string? templateId)
         {
@@ -231,6 +264,9 @@ namespace Dust
             this.UserFavorite = userFavorite;
             this.Model = model;
             this.Actions = actions;
+            this.Skills = skills;
+            this.Tags = tags;
+            this.RequestedSpaceIds = requestedSpaceIds;
             this.MaxStepsPerRun = maxStepsPerRun;
             this.TemplateId = templateId;
         }

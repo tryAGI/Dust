@@ -15,6 +15,10 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
+        AnalyticsPanel,
+        /// <summary>
+        ///
+        /// </summary>
         Api,
         /// <summary>
         ///
@@ -119,6 +123,7 @@ namespace Dust
             return value switch
             {
                 PrivateUserMessageContextOrigin.AgentSidekick => "agent_sidekick",
+                PrivateUserMessageContextOrigin.AnalyticsPanel => "analytics_panel",
                 PrivateUserMessageContextOrigin.Api => "api",
                 PrivateUserMessageContextOrigin.Cli => "cli",
                 PrivateUserMessageContextOrigin.CliProgrammatic => "cli_programmatic",
@@ -153,6 +158,7 @@ namespace Dust
             return value switch
             {
                 "agent_sidekick" => PrivateUserMessageContextOrigin.AgentSidekick,
+                "analytics_panel" => PrivateUserMessageContextOrigin.AnalyticsPanel,
                 "api" => PrivateUserMessageContextOrigin.Api,
                 "cli" => PrivateUserMessageContextOrigin.Cli,
                 "cli_programmatic" => PrivateUserMessageContextOrigin.CliProgrammatic,
