@@ -72,7 +72,7 @@ namespace Dust
         public AgentsClient Agents { get; }
 
         /// <summary>
-        ///
+        /// Workspace analytics.
         /// </summary>
         public AnalyticsClient Analytics { get; }
 
@@ -110,71 +110,6 @@ namespace Dust
         /// Mentions.
         /// </summary>
         public MentionsClient Mentions { get; }
-
-        /// <summary>
-        /// Private API - Agent configurations.
-        /// </summary>
-        public PrivateAgentsClient PrivateAgents { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public PrivateAnalyticsClient PrivateAnalytics { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public PrivateAssistantClient PrivateAssistant { get; }
-
-        /// <summary>
-        /// Private API - Authentication (WorkOS).
-        /// </summary>
-        public PrivateAuthenticationClient PrivateAuthentication { get; }
-
-        /// <summary>
-        /// Private API - Conversations.
-        /// </summary>
-        public PrivateConversationsClient PrivateConversations { get; }
-
-        /// <summary>
-        /// Private API - SSE event streams.
-        /// </summary>
-        public PrivateEventsClient PrivateEvents { get; }
-
-        /// <summary>
-        /// Private API - Extension configuration.
-        /// </summary>
-        public PrivateExtensionClient PrivateExtension { get; }
-
-        /// <summary>
-        /// Private API - File uploads.
-        /// </summary>
-        public PrivateFilesClient PrivateFiles { get; }
-
-        /// <summary>
-        /// Private API - Mention suggestions.
-        /// </summary>
-        public PrivateMentionsClient PrivateMentions { get; }
-
-        /// <summary>
-        /// Private API - Messages.
-        /// </summary>
-        public PrivateMessagesClient PrivateMessages { get; }
-
-        /// <summary>
-        /// Private API - Spaces and data source views.
-        /// </summary>
-        public PrivateSpacesClient PrivateSpaces { get; }
-
-        /// <summary>
-        /// Private API - User.
-        /// </summary>
-        public PrivateUserClient PrivateUser { get; }
-
-        /// <summary>
-        /// Private API - Workspace settings.
-        /// </summary>
-        public PrivateWorkspaceClient PrivateWorkspace { get; }
 
         /// <summary>
         /// Search.
