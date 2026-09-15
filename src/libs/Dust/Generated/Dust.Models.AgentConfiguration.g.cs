@@ -16,6 +16,14 @@ namespace Dust
         public int? Id { get; set; }
 
         /// <summary>
+        /// Stable identifier of the agent across versions; null for global agents<br/>
+        /// Example: 6789
+        /// </summary>
+        /// <example>6789</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("agentModelId")]
+        public int? AgentModelId { get; set; }
+
+        /// <summary>
         /// Unique string identifier for the agent configuration<br/>
         /// Example: 7f3a9c2b1e
         /// </summary>
@@ -162,6 +170,10 @@ namespace Dust
         /// <param name="id">
         /// Example: 12345
         /// </param>
+        /// <param name="agentModelId">
+        /// Stable identifier of the agent across versions; null for global agents<br/>
+        /// Example: 6789
+        /// </param>
         /// <param name="sId">
         /// Unique string identifier for the agent configuration<br/>
         /// Example: 7f3a9c2b1e
@@ -231,6 +243,7 @@ namespace Dust
 #endif
         public AgentConfiguration(
             int? id,
+            int? agentModelId,
             string? sId,
             int? version,
             string? versionCreatedAt,
@@ -251,6 +264,7 @@ namespace Dust
             string? templateId)
         {
             this.Id = id;
+            this.AgentModelId = agentModelId;
             this.SId = sId;
             this.Version = version;
             this.VersionCreatedAt = versionCreatedAt;
