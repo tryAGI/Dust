@@ -9,7 +9,7 @@ namespace Dust
     public sealed partial class CreateWSkillsRequest
     {
         /// <summary>
-        /// Skill files or ZIP archives to import.
+        /// Skill files or ZIP archives to import. Skill names must be at most 256 characters.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("files")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -51,7 +51,7 @@ namespace Dust
         /// Initializes a new instance of the <see cref="CreateWSkillsRequest" /> class.
         /// </summary>
         /// <param name="files">
-        /// Skill files or ZIP archives to import.
+        /// Skill files or ZIP archives to import. Skill names must be at most 256 characters.
         /// </param>
         /// <param name="names">
         /// Optional skill names to import from the uploaded files.

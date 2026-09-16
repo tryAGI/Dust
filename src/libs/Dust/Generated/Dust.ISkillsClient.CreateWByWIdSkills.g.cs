@@ -40,7 +40,7 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="files">
-        /// Skill files or ZIP archives to import.
+        /// Skill files or ZIP archives to import. Skill names must be at most 256 characters.
         /// </param>
         /// <param name="names">
         /// Optional skill names to import from the uploaded files.
@@ -73,7 +73,7 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="files">
-        /// Skill files or ZIP archives to import.
+        /// Skill files or ZIP archives to import. Skill names must be at most 256 characters.
         /// </param>
         /// <param name="filesFileNames">
         /// Optional file names to use for the multipart 'files' file parts.
@@ -109,7 +109,7 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="files">
-        /// Skill files or ZIP archives to import.
+        /// Skill files or ZIP archives to import. Skill names must be at most 256 characters.
         /// </param>
         /// <param name="filesFileNames">
         /// Optional file names to use for the multipart 'files' file parts.
