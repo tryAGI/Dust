@@ -29,7 +29,7 @@ namespace Dust
         public global::Dust.CreateWSkillsRequestOnConflict? OnConflict { get; set; }
 
         /// <summary>
-        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace builders. Existing skills keep their current editors.
+        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace members. Existing skills keep their current editors.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("editors")]
         public global::System.Collections.Generic.IList<string>? Editors { get; set; }
@@ -60,7 +60,7 @@ namespace Dust
         /// Conflict handling strategy. Defaults to error.
         /// </param>
         /// <param name="editors">
-        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace builders. Existing skills keep their current editors.
+        /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace members. Existing skills keep their current editors.
         /// </param>
         /// <param name="availability">
         /// Optional availability to apply to imported or updated skills. editors is unpublished, workspace_users is published, and users_and_agents is discoverable. New skills default to editors and existing skills keep their current availability when omitted.

@@ -58,7 +58,8 @@ namespace Dust
         /// [Documentation](https://docs.dust.tt/docs/client-side-mcp-server)<br/>
         /// Server-Sent Events (SSE) endpoint that streams MCP tool requests for a workspace.<br/>
         /// This endpoint is used by client-side MCP servers to listen for tool requests in real-time.<br/>
-        /// The connection will remain open and events will be sent as new tool requests are made.
+        /// Events arrive as new tool requests are made. Reconnect with `lastEventId` after the stream closes to continue receiving events.<br/>
+        /// The stream starts with a named `dust-handshake` frame containing `data: {}`. Unnamed request frames carry JSON with `eventId` and `data` fields. A plain-text `data: done` frame ends the current connection; clients may reconnect with `lastEventId`.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="serverId"></param>

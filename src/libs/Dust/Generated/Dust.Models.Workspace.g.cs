@@ -37,7 +37,8 @@ namespace Dust
         /// </summary>
         /// <example>admin</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
-        public string? Role { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.WorkspaceRoleJsonConverter))]
+        public global::Dust.WorkspaceRole? Role { get; set; }
 
         /// <summary>
         /// Segmentation information for the workspace<br/>
@@ -138,7 +139,7 @@ namespace Dust
             int? id,
             string? sId,
             string? name,
-            string? role,
+            global::Dust.WorkspaceRole? role,
             string? segmentation,
             global::System.Collections.Generic.IList<string>? flags,
             bool? ssoEnforced,
