@@ -1,0 +1,19 @@
+
+#nullable enable
+
+namespace Dust
+{
+    /// <summary>
+    /// Agent message event discriminated by its type field.
+    /// </summary>
+    public sealed partial class GetWAssistantConversationsMessagesEventsResponseData
+    {
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+    }
+}

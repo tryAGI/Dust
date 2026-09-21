@@ -6,7 +6,7 @@ namespace Dust
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class GetWMcpRequestsResponse
+    public sealed partial class GetWAssistantConversationsEventsResponse
     {
         /// <summary>
         /// Redis stream ID used as the resume cursor.
@@ -16,7 +16,7 @@ namespace Dust
         public required string EventId { get; set; }
 
         /// <summary>
-        /// The tool request data
+        /// Conversation event discriminated by its type field.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -29,18 +29,18 @@ namespace Dust
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetWMcpRequestsResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetWAssistantConversationsEventsResponse" /> class.
         /// </summary>
         /// <param name="eventId">
         /// Redis stream ID used as the resume cursor.
         /// </param>
         /// <param name="data">
-        /// The tool request data
+        /// Conversation event discriminated by its type field.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public GetWMcpRequestsResponse(
+        public GetWAssistantConversationsEventsResponse(
             string eventId,
             object data)
         {
@@ -49,9 +49,9 @@ namespace Dust
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GetWMcpRequestsResponse" /> class.
+        /// Initializes a new instance of the <see cref="GetWAssistantConversationsEventsResponse" /> class.
         /// </summary>
-        public GetWMcpRequestsResponse()
+        public GetWAssistantConversationsEventsResponse()
         {
         }
 
