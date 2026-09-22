@@ -58,7 +58,7 @@ namespace Dust
         /// <summary>
         /// Get events for a message<br/>
         /// Stream events for a message in the workspace identified by {wId} using Server-Sent Events (SSE).<br/>
-        /// The stream starts with a named `dust-handshake` frame containing `data: {}`. Unnamed message frames carry JSON with `eventId` and `data` fields. A plain-text `data: done` frame ends the current connection; clients may reconnect with `lastEventId`.
+        /// The stream starts with a `:connect` comment. Message frames carry JSON with `eventId` and `data` fields. A plain-text `data: done` frame ends the current connection; clients may reconnect with `lastEventId`.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
