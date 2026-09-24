@@ -159,6 +159,14 @@ namespace Dust
         public string? TemplateId { get; set; }
 
         /// <summary>
+        /// Whether the agent keeps running past the workspace credit spend threshold alert<br/>
+        /// Example: false
+        /// </summary>
+        /// <example>false</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ignoreCreditSpendThresholdAlert")]
+        public bool? IgnoreCreditSpendThresholdAlert { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -238,6 +246,10 @@ namespace Dust
         /// ID of the template used for this configuration<br/>
         /// Example: b4e2f1a9c7
         /// </param>
+        /// <param name="ignoreCreditSpendThresholdAlert">
+        /// Whether the agent keeps running past the workspace credit spend threshold alert<br/>
+        /// Example: false
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -261,7 +273,8 @@ namespace Dust
             global::System.Collections.Generic.IList<global::Dust.AgentConfigurationTag>? tags,
             global::System.Collections.Generic.IList<string>? requestedSpaceIds,
             int? maxStepsPerRun,
-            string? templateId)
+            string? templateId,
+            bool? ignoreCreditSpendThresholdAlert)
         {
             this.Id = id;
             this.AgentModelId = agentModelId;
@@ -283,6 +296,7 @@ namespace Dust
             this.RequestedSpaceIds = requestedSpaceIds;
             this.MaxStepsPerRun = maxStepsPerRun;
             this.TemplateId = templateId;
+            this.IgnoreCreditSpendThresholdAlert = ignoreCreditSpendThresholdAlert;
         }
 
         /// <summary>
