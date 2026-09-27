@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// Optional reasoning effort. Honored only if the resolved model supports it.<br/>
+    /// Optional reasoning effort. Honored only if the resolved model supports it. `light` is a deprecated alias of `low`.<br/>
     /// Example: medium
     /// </summary>
     public enum ModelSelectionReasoningEffort
@@ -20,11 +20,27 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
+        Low,
+        /// <summary>
+        ///
+        /// </summary>
+        Maximal,
+        /// <summary>
+        ///
+        /// </summary>
         Medium,
         /// <summary>
         ///
         /// </summary>
+        Minimal,
+        /// <summary>
+        ///
+        /// </summary>
         None,
+        /// <summary>
+        ///
+        /// </summary>
+        Xhigh,
     }
 
     /// <summary>
@@ -41,8 +57,12 @@ namespace Dust
             {
                 ModelSelectionReasoningEffort.High => "high",
                 ModelSelectionReasoningEffort.Light => "light",
+                ModelSelectionReasoningEffort.Low => "low",
+                ModelSelectionReasoningEffort.Maximal => "maximal",
                 ModelSelectionReasoningEffort.Medium => "medium",
+                ModelSelectionReasoningEffort.Minimal => "minimal",
                 ModelSelectionReasoningEffort.None => "none",
+                ModelSelectionReasoningEffort.Xhigh => "xhigh",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -55,8 +75,12 @@ namespace Dust
             {
                 "high" => ModelSelectionReasoningEffort.High,
                 "light" => ModelSelectionReasoningEffort.Light,
+                "low" => ModelSelectionReasoningEffort.Low,
+                "maximal" => ModelSelectionReasoningEffort.Maximal,
                 "medium" => ModelSelectionReasoningEffort.Medium,
+                "minimal" => ModelSelectionReasoningEffort.Minimal,
                 "none" => ModelSelectionReasoningEffort.None,
+                "xhigh" => ModelSelectionReasoningEffort.Xhigh,
                 _ => null,
             };
         }

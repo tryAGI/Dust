@@ -32,7 +32,7 @@ namespace Dust
         public required string ModelId { get; set; }
 
         /// <summary>
-        /// Optional reasoning effort. Honored only if the resolved model supports it.<br/>
+        /// Optional reasoning effort. Honored only if the resolved model supports it. `light` is a deprecated alias of `low`.<br/>
         /// Example: medium
         /// </summary>
         /// <example>medium</example>
@@ -58,7 +58,7 @@ namespace Dust
         /// Example: claude-sonnet-4-20250514
         /// </param>
         /// <param name="reasoningEffort">
-        /// Optional reasoning effort. Honored only if the resolved model supports it.<br/>
+        /// Optional reasoning effort. Honored only if the resolved model supports it. `light` is a deprecated alias of `low`.<br/>
         /// Example: medium
         /// </param>
 #if NET7_0_OR_GREATER
