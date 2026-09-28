@@ -220,7 +220,7 @@ namespace Dust
                                 defaultBaseUrl: "https://dust.tt/"));
                             __pathBuilder
                                 .AddRequiredParameter("query", query)
-                                .AddRequiredParameter("top_k", topK.ToString()!)
+                                .AddRequiredParameter("top_k", topK.ToString() ?? throw new global::System.InvalidOperationException("A required query parameter returned null from ToString()."))
                                 .AddRequiredParameter("full_text", fullText.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("target_document_tokens", targetDocumentTokens?.ToString())
                                 .AddOptionalParameter("timestamp_gt", timestampGt?.ToString())
@@ -270,12 +270,12 @@ namespace Dust
                 PrepareGetWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSearchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!,
-                    spaceId: spaceId!,
-                    dsvId: dsvId!,
-                    query: query!,
-                    topK: topK!,
-                    fullText: fullText!,
+                    wId: wId,
+                    spaceId: spaceId,
+                    dsvId: dsvId,
+                    query: query,
+                    topK: topK,
+                    fullText: fullText,
                     targetDocumentTokens: targetDocumentTokens,
                     timestampGt: timestampGt,
                     timestampLt: timestampLt,
@@ -304,7 +304,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -338,7 +338,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -379,7 +379,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -427,7 +427,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -449,7 +449,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

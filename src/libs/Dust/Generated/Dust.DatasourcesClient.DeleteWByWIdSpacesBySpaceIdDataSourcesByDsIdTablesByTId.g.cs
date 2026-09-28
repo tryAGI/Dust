@@ -179,10 +179,10 @@ namespace Dust
                 PrepareDeleteWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesByTIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!,
-                    spaceId: spaceId!,
-                    dsId: dsId!,
-                    tId: tId!);
+                    wId: wId,
+                    spaceId: spaceId,
+                    dsId: dsId,
+                    tId: tId);
 
                 return __httpRequest;
             }
@@ -204,7 +204,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables/{tId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -238,7 +238,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables/{tId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -279,7 +279,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables/{tId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -327,7 +327,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables/{tId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -349,7 +349,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables/{tId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

@@ -178,9 +178,9 @@ namespace Dust
                 PrepareGetWByWIdSpacesBySpaceIdDataSourcesByDsIdTablesRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!,
-                    spaceId: spaceId!,
-                    dsId: dsId!);
+                    wId: wId,
+                    spaceId: spaceId,
+                    dsId: dsId);
 
                 return __httpRequest;
             }
@@ -202,7 +202,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -236,7 +236,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -277,7 +277,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -325,7 +325,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -347,7 +347,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_sources/{dsId}/tables\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
