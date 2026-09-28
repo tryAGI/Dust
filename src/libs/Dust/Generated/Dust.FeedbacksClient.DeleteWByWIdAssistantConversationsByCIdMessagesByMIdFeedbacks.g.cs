@@ -180,9 +180,9 @@ namespace Dust
                 PrepareDeleteWByWIdAssistantConversationsByCIdMessagesByMIdFeedbacksRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!,
-                    cId: cId!,
-                    mId: mId!);
+                    wId: wId,
+                    cId: cId,
+                    mId: mId);
 
                 return __httpRequest;
             }
@@ -204,7 +204,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/messages/{mId}/feedbacks\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -238,7 +238,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/messages/{mId}/feedbacks\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -279,7 +279,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/messages/{mId}/feedbacks\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -327,7 +327,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/messages/{mId}/feedbacks\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -349,7 +349,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/messages/{mId}/feedbacks\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

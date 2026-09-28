@@ -184,9 +184,9 @@ namespace Dust
                 PrepareGetWByWIdAssistantConversationsByCIdFilesByRelRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!,
-                    cId: cId!,
-                    rel: rel!);
+                    wId: wId,
+                    cId: cId,
+                    rel: rel);
 
                 return __httpRequest;
             }
@@ -208,7 +208,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -242,7 +242,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -283,7 +283,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -331,7 +331,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -353,7 +353,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -608,9 +608,9 @@ namespace Dust
                 PrepareGetWByWIdAssistantConversationsByCIdFilesByRelRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!,
-                    cId: cId!,
-                    rel: rel!);
+                    wId: wId,
+                    cId: cId,
+                    rel: rel);
 
                 return __httpRequest;
             }
@@ -632,7 +632,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -666,7 +666,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -707,7 +707,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -755,7 +755,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -777,7 +777,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/conversations/{cId}/files/{rel}\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

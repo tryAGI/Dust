@@ -181,7 +181,7 @@ namespace Dust
                 PrepareCreateWByWIdAssistantAgentConfigurationsImportRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!,
+                    wId: wId,
                     request: request);
 
                 return __httpRequest;
@@ -204,7 +204,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/import\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -238,7 +238,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/import\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -279,7 +279,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/import\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -327,7 +327,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/import\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -349,7 +349,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/import\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

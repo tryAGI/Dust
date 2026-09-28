@@ -173,8 +173,8 @@ namespace Dust
                 PrepareGetWByWIdAssistantAgentConfigurationsSearchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    wId: wId!,
-                    q: q!);
+                    wId: wId,
+                    q: q);
 
                 return __httpRequest;
             }
@@ -196,7 +196,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -230,7 +230,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -271,7 +271,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -319,7 +319,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -341,7 +341,7 @@ namespace Dust
                                 pathTemplate: "$\"/api/v1/w/{wId}/assistant/agent_configurations/search\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
