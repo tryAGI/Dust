@@ -167,12 +167,12 @@ namespace Dust
         public bool? IgnoreCreditSpendThresholdAlert { get; set; }
 
         /// <summary>
-        /// Whether the private fields (instructions, skills, tools) were redacted because the caller cannot view the agent's content<br/>
+        /// Whether the caller can view the agent's private fields (instructions, skills, tools); they are redacted when false<br/>
         /// Example: false
         /// </summary>
         /// <example>false</example>
-        [global::System.Text.Json.Serialization.JsonPropertyName("isRedacted")]
-        public bool? IsRedacted { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("canViewContent")]
+        public bool? CanViewContent { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -258,8 +258,8 @@ namespace Dust
         /// Whether the agent keeps running past the workspace credit spend threshold alert<br/>
         /// Example: false
         /// </param>
-        /// <param name="isRedacted">
-        /// Whether the private fields (instructions, skills, tools) were redacted because the caller cannot view the agent's content<br/>
+        /// <param name="canViewContent">
+        /// Whether the caller can view the agent's private fields (instructions, skills, tools); they are redacted when false<br/>
         /// Example: false
         /// </param>
 #if NET7_0_OR_GREATER
@@ -287,7 +287,7 @@ namespace Dust
             int? maxStepsPerRun,
             string? templateId,
             bool? ignoreCreditSpendThresholdAlert,
-            bool? isRedacted)
+            bool? canViewContent)
         {
             this.Id = id;
             this.AgentModelId = agentModelId;
@@ -310,7 +310,7 @@ namespace Dust
             this.MaxStepsPerRun = maxStepsPerRun;
             this.TemplateId = templateId;
             this.IgnoreCreditSpendThresholdAlert = ignoreCreditSpendThresholdAlert;
-            this.IsRedacted = isRedacted;
+            this.CanViewContent = canViewContent;
         }
 
         /// <summary>
