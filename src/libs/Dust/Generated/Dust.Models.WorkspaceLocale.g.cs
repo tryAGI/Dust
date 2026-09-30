@@ -12,6 +12,10 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
+        EnGb,
+        /// <summary>
+        ///
+        /// </summary>
         EnUs,
         /// <summary>
         ///
@@ -31,6 +35,7 @@ namespace Dust
         {
             return value switch
             {
+                WorkspaceLocale.EnGb => "en-GB",
                 WorkspaceLocale.EnUs => "en-US",
                 WorkspaceLocale.FrFr => "fr-FR",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -43,6 +48,7 @@ namespace Dust
         {
             return value switch
             {
+                "en-GB" => WorkspaceLocale.EnGb,
                 "en-US" => WorkspaceLocale.EnUs,
                 "fr-FR" => WorkspaceLocale.FrFr,
                 _ => null,
