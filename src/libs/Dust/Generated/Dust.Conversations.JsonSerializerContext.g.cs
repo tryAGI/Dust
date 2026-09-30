@@ -20,6 +20,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.WorkspaceRole), TypeInfoPropertyName = "WorkspaceRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.WorkspaceLocale), TypeInfoPropertyName = "WorkspaceLocale2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Context))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContextAgenticMessageData))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContextAgenticMessageDataType), TypeInfoPropertyName = "ContextAgenticMessageDataType2")]
@@ -76,6 +77,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.WorkspaceRole?), TypeInfoPropertyName = "NullableWorkspaceRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.WorkspaceLocale?), TypeInfoPropertyName = "NullableWorkspaceLocale2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContextAgenticMessageDataType?), TypeInfoPropertyName = "NullableContextAgenticMessageDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.AgentConfigurationTagKind?), TypeInfoPropertyName = "NullableAgentConfigurationTagKind2")]
@@ -167,6 +169,10 @@ namespace Dust
 
                     || typeToConvert == typeof(global::Dust.WorkspaceRole?)
 
+                    || typeToConvert == typeof(global::Dust.WorkspaceLocale)
+
+                    || typeToConvert == typeof(global::Dust.WorkspaceLocale?)
+
                     || typeToConvert == typeof(global::Dust.ContextAgenticMessageDataType)
 
                     || typeToConvert == typeof(global::Dust.ContextAgenticMessageDataType?)
@@ -192,6 +198,16 @@ namespace Dust
                 if (typeToConvert == typeof(global::Dust.WorkspaceRole?))
                 {
                     return new global::Dust.JsonConverters.WorkspaceRoleNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.WorkspaceLocale))
+                {
+                    return new global::Dust.JsonConverters.WorkspaceLocaleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.WorkspaceLocale?))
+                {
+                    return new global::Dust.JsonConverters.WorkspaceLocaleNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Dust.ContextAgenticMessageDataType))
