@@ -87,6 +87,15 @@ namespace Dust
         public string? DefaultEmbeddingProvider { get; set; }
 
         /// <summary>
+        /// Default language of the product UI for the workspace members<br/>
+        /// Example: en-US
+        /// </summary>
+        /// <example>en-US</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("locale")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Dust.JsonConverters.WorkspaceLocaleJsonConverter))]
+        public global::Dust.WorkspaceLocale? Locale { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -131,6 +140,10 @@ namespace Dust
         /// Default provider for embeddings in the workspace<br/>
         /// Example: openai
         /// </param>
+        /// <param name="locale">
+        /// Default language of the product UI for the workspace members<br/>
+        /// Example: en-US
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -144,7 +157,8 @@ namespace Dust
             global::System.Collections.Generic.IList<string>? flags,
             bool? ssoEnforced,
             global::System.Collections.Generic.IList<string>? whiteListedProviders,
-            string? defaultEmbeddingProvider)
+            string? defaultEmbeddingProvider,
+            global::Dust.WorkspaceLocale? locale)
         {
             this.Id = id;
             this.SId = sId;
@@ -156,6 +170,7 @@ namespace Dust
             this.RegionalModelsOnly = regionalModelsOnly;
             this.WhiteListedProviders = whiteListedProviders;
             this.DefaultEmbeddingProvider = defaultEmbeddingProvider;
+            this.Locale = locale;
         }
 
         /// <summary>
