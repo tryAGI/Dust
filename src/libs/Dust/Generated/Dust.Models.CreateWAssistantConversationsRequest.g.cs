@@ -46,6 +46,14 @@ namespace Dust
         public bool? Blocking { get; set; }
 
         /// <summary>
+        /// The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)<br/>
+        /// Example: 0
+        /// </summary>
+        /// <example>0</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("depth")]
+        public int? Depth { get; set; }
+
+        /// <summary>
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
         /// </summary>
@@ -78,6 +86,10 @@ namespace Dust
         /// Whether to wait for the agent to generate the initial message. If true the query will wait for the agent's answer. If false (default), the API will return a conversation ID directly and you will need to use streaming events to get the messages.<br/>
         /// Example: true
         /// </param>
+        /// <param name="depth">
+        /// The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)<br/>
+        /// Example: 0
+        /// </param>
         /// <param name="spaceId">
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
@@ -91,6 +103,7 @@ namespace Dust
             string? title,
             bool? skipToolsValidation,
             bool? blocking,
+            int? depth,
             string? spaceId)
         {
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
@@ -98,6 +111,7 @@ namespace Dust
             this.Title = title;
             this.SkipToolsValidation = skipToolsValidation;
             this.Blocking = blocking;
+            this.Depth = depth;
             this.SpaceId = spaceId;
         }
 
