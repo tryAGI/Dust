@@ -55,6 +55,10 @@ namespace Dust
         /// Whether to wait for the agent to generate the initial message. If true the query will wait for the agent's answer. If false (default), the API will return a conversation ID directly and you will need to use streaming events to get the messages.<br/>
         /// Example: true
         /// </param>
+        /// <param name="depth">
+        /// The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)<br/>
+        /// Example: 0
+        /// </param>
         /// <param name="spaceId">
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
@@ -69,6 +73,7 @@ namespace Dust
             string? title = default,
             bool? skipToolsValidation = default,
             bool? blocking = default,
+            int? depth = default,
             string? spaceId = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
