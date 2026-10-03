@@ -72,9 +72,9 @@ namespace Dust
         public required bool RegionalModelsOnly { get; set; }
 
         /// <summary>
-        /// Example: [google, github]
+        /// Example: [openai, zai]
         /// </summary>
-        /// <example>[google, github]</example>
+        /// <example>[openai, zai]</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("whiteListedProviders")]
         public global::System.Collections.Generic.IList<string>? WhiteListedProviders { get; set; }
 
@@ -134,7 +134,7 @@ namespace Dust
         /// Example: true
         /// </param>
         /// <param name="whiteListedProviders">
-        /// Example: [google, github]
+        /// Example: [openai, zai]
         /// </param>
         /// <param name="defaultEmbeddingProvider">
         /// Default provider for embeddings in the workspace<br/>
