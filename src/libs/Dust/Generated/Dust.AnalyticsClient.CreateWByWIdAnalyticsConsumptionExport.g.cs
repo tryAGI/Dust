@@ -63,7 +63,11 @@ namespace Dust
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
-        /// Results are streamed, if an error occurs, an error message is appended and the stream is closed.
+        /// Results are streamed, if an error occurs, an error message is appended and the stream is closed.<br/>
+        /// An admin API key can export the whole workspace. Any other API key must filter on `groups`, and<br/>
+        /// must be allowed to read the analytics of every group listed. The rows then cover the messages of<br/>
+        /// the users who were members of those groups when the message was sent, and the `userGroupIds`<br/>
+        /// and `userGroupNames` columns only list the requested groups.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
@@ -94,7 +98,11 @@ namespace Dust
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
-        /// Results are streamed, if an error occurs, an error message is appended and the stream is closed.
+        /// Results are streamed, if an error occurs, an error message is appended and the stream is closed.<br/>
+        /// An admin API key can export the whole workspace. Any other API key must filter on `groups`, and<br/>
+        /// must be allowed to read the analytics of every group listed. The rows then cover the messages of<br/>
+        /// the users who were members of those groups when the message was sent, and the `userGroupIds`<br/>
+        /// and `userGroupNames` columns only list the requested groups.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
@@ -570,7 +578,11 @@ namespace Dust
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
-        /// Results are streamed, if an error occurs, an error message is appended and the stream is closed.
+        /// Results are streamed, if an error occurs, an error message is appended and the stream is closed.<br/>
+        /// An admin API key can export the whole workspace. Any other API key must filter on `groups`, and<br/>
+        /// must be allowed to read the analytics of every group listed. The rows then cover the messages of<br/>
+        /// the users who were members of those groups when the message was sent, and the `userGroupIds`<br/>
+        /// and `userGroupNames` columns only list the requested groups.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="startDate">
