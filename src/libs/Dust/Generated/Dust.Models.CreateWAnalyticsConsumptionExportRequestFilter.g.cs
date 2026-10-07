@@ -28,7 +28,8 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? ApiKeys { get; set; }
 
         /// <summary>
-        /// Group IDs to filter on
+        /// Group IDs to filter on. Required, with at least one non-empty value, unless the<br/>
+        /// API key has admin scope.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("groups")]
         public global::System.Collections.Generic.IList<string>? Groups { get; set; }
@@ -82,7 +83,8 @@ namespace Dust
         /// API key names to filter on
         /// </param>
         /// <param name="groups">
-        /// Group IDs to filter on
+        /// Group IDs to filter on. Required, with at least one non-empty value, unless the<br/>
+        /// API key has admin scope.
         /// </param>
         /// <param name="models">
         /// Model IDs to filter on
