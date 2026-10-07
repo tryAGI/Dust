@@ -19,7 +19,7 @@ namespace Dust
             string wId,
             string cId,
             int? limit = default,
-            string? lastValue = default,
+            int? lastValue = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
@@ -37,7 +37,7 @@ namespace Dust
             string wId,
             string cId,
             int? limit = default,
-            string? lastValue = default,
+            int? lastValue = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

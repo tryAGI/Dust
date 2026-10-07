@@ -43,14 +43,14 @@ namespace Dust
             ref string wId,
             ref string cId,
             ref int? limit,
-            ref string? lastValue);
+            ref int? lastValue);
         partial void PrepareGetWByWIdAssistantConversationsByCIdRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
             string cId,
             int? limit,
-            string? lastValue);
+            int? lastValue);
         partial void ProcessGetWByWIdAssistantConversationsByCIdResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -75,7 +75,7 @@ namespace Dust
             string wId,
             string cId,
             int? limit = default,
-            string? lastValue = default,
+            int? lastValue = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -105,7 +105,7 @@ namespace Dust
             string wId,
             string cId,
             int? limit = default,
-            string? lastValue = default,
+            int? lastValue = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -148,7 +148,7 @@ namespace Dust
                                 defaultBaseUrl: "https://dust.tt/"));
                             __pathBuilder
                                 .AddOptionalParameter("limit", limit?.ToString())
-                                .AddOptionalParameter("lastValue", lastValue)
+                                .AddOptionalParameter("lastValue", lastValue?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
