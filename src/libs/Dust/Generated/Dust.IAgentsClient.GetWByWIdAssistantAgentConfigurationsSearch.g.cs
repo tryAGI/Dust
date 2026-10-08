@@ -6,7 +6,7 @@ namespace Dust
     {
         /// <summary>
         /// Search agents by name<br/>
-        /// Search for agent configurations by name in the workspace identified by {wId}.
+        /// Search for agent configurations by name in the workspace identified by {wId}. Returns the global agents and the published agents the caller can access whose name contains the query, case-insensitively.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="q"></param>
@@ -20,7 +20,7 @@ namespace Dust
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Search agents by name<br/>
-        /// Search for agent configurations by name in the workspace identified by {wId}.
+        /// Search for agent configurations by name in the workspace identified by {wId}. Returns the global agents and the published agents the caller can access whose name contains the query, case-insensitively.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="q"></param>
