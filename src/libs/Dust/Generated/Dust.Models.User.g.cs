@@ -87,6 +87,14 @@ namespace Dust
         public string? Image { get; set; }
 
         /// <summary>
+        /// User's pronouns, as entered by the user<br/>
+        /// Example: they/them
+        /// </summary>
+        /// <example>they/them</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("pronouns")]
+        public string? Pronouns { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -133,6 +141,10 @@ namespace Dust
         /// URL of the user's profile image<br/>
         /// Example: https://example.com/profile/johndoe.jpg
         /// </param>
+        /// <param name="pronouns">
+        /// User's pronouns, as entered by the user<br/>
+        /// Example: they/them
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -146,7 +158,8 @@ namespace Dust
             string? lastName,
             string? fullName,
             string? provider,
-            string? image)
+            string? image,
+            string? pronouns)
         {
             this.SId = sId;
             this.Id = id;
@@ -158,6 +171,7 @@ namespace Dust
             this.FullName = fullName;
             this.Provider = provider;
             this.Image = image;
+            this.Pronouns = pronouns;
         }
 
         /// <summary>
