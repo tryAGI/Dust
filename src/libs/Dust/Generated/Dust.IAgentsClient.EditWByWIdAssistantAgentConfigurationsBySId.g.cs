@@ -44,7 +44,9 @@ namespace Dust
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="sId"></param>
-        /// <param name="userFavorite"></param>
+        /// <param name="userFavorite">
+        /// Favorites the agent for the calling user. Requires a user; rejected with 400 when authenticated with a workspace API key.
+        /// </param>
         /// <param name="agent"></param>
         /// <param name="instructions"></param>
         /// <param name="generationSettings"></param>
