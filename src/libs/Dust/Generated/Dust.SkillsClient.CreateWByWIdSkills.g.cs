@@ -610,7 +610,7 @@ namespace Dust
         /// Optional skill names to import from the uploaded files.
         /// </param>
         /// <param name="onConflict">
-        /// Conflict handling strategy. Defaults to error.
+        /// Strategy applied when a skill with the same name already exists in the workspace. error rejects the whole import, skip skips the skill and reports it in skipped, override updates the existing skill. Defaults to error.
         /// </param>
         /// <param name="editors">
         /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace members. Existing skills keep their current editors.
@@ -662,7 +662,7 @@ namespace Dust
         /// Optional skill names to import from the uploaded files.
         /// </param>
         /// <param name="onConflict">
-        /// Conflict handling strategy. Defaults to error.
+        /// Strategy applied when a skill with the same name already exists in the workspace. error rejects the whole import, skip skips the skill and reports it in skipped, override updates the existing skill. Defaults to error.
         /// </param>
         /// <param name="editors">
         /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace members. Existing skills keep their current editors.
@@ -1231,7 +1231,7 @@ namespace Dust
         /// Optional skill names to import from the uploaded files.
         /// </param>
         /// <param name="onConflict">
-        /// Conflict handling strategy. Defaults to error.
+        /// Strategy applied when a skill with the same name already exists in the workspace. error rejects the whole import, skip skips the skill and reports it in skipped, override updates the existing skill. Defaults to error.
         /// </param>
         /// <param name="editors">
         /// Optional editor email addresses to add to imported or updated skills. Editors must be active workspace members. Existing skills keep their current editors.
