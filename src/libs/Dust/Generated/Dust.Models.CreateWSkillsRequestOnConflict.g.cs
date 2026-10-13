@@ -4,7 +4,7 @@
 namespace Dust
 {
     /// <summary>
-    /// Conflict handling strategy. Defaults to error.
+    /// Strategy applied when a skill with the same name already exists in the workspace. error rejects the whole import, skip skips the skill and reports it in skipped, override updates the existing skill. Defaults to error.
     /// </summary>
     public enum CreateWSkillsRequestOnConflict
     {
