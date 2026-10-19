@@ -12,6 +12,10 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
+        DeDe,
+        /// <summary>
+        ///
+        /// </summary>
         EnGb,
         /// <summary>
         ///
@@ -35,6 +39,7 @@ namespace Dust
         {
             return value switch
             {
+                WorkspaceLocale.DeDe => "de-DE",
                 WorkspaceLocale.EnGb => "en-GB",
                 WorkspaceLocale.EnUs => "en-US",
                 WorkspaceLocale.FrFr => "fr-FR",
@@ -48,6 +53,7 @@ namespace Dust
         {
             return value switch
             {
+                "de-DE" => WorkspaceLocale.DeDe,
                 "en-GB" => WorkspaceLocale.EnGb,
                 "en-US" => WorkspaceLocale.EnUs,
                 "fr-FR" => WorkspaceLocale.FrFr,
