@@ -57,6 +57,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? SelectedSpaceIds { get; set; }
 
         /// <summary>
+        /// Data source tags to exclude from retrieval for this run, as opaque `key:value` strings.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("excludedRetrievalTags")]
+        public global::System.Collections.Generic.IList<string>? ExcludedRetrievalTags { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agenticMessageData")]
@@ -92,6 +98,9 @@ namespace Dust
         /// Example: https://example.com/profiles/johndoe123.jpg
         /// </param>
         /// <param name="selectedSpaceIds"></param>
+        /// <param name="excludedRetrievalTags">
+        /// Data source tags to exclude from retrieval for this run, as opaque `key:value` strings.
+        /// </param>
         /// <param name="agenticMessageData"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -103,6 +112,7 @@ namespace Dust
             string? email,
             string? profilePictureUrl,
             global::System.Collections.Generic.IList<string>? selectedSpaceIds,
+            global::System.Collections.Generic.IList<string>? excludedRetrievalTags,
             global::Dust.ContextAgenticMessageData? agenticMessageData)
         {
             this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
@@ -111,6 +121,7 @@ namespace Dust
             this.Email = email;
             this.ProfilePictureUrl = profilePictureUrl;
             this.SelectedSpaceIds = selectedSpaceIds;
+            this.ExcludedRetrievalTags = excludedRetrievalTags;
             this.AgenticMessageData = agenticMessageData;
         }
 
