@@ -63,6 +63,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? ExcludedRetrievalTags { get; set; }
 
         /// <summary>
+        /// What the user had selected in the app hosting Dust when sending the message, e.g. `Sheet1!C5:D6` in Excel. Stored with the message and shown to the agent in that message's metadata.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hostSelection")]
+        public string? HostSelection { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("agenticMessageData")]
@@ -101,6 +107,9 @@ namespace Dust
         /// <param name="excludedRetrievalTags">
         /// Data source tags to exclude from retrieval for this run, as opaque `key:value` strings.
         /// </param>
+        /// <param name="hostSelection">
+        /// What the user had selected in the app hosting Dust when sending the message, e.g. `Sheet1!C5:D6` in Excel. Stored with the message and shown to the agent in that message's metadata.
+        /// </param>
         /// <param name="agenticMessageData"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -113,6 +122,7 @@ namespace Dust
             string? profilePictureUrl,
             global::System.Collections.Generic.IList<string>? selectedSpaceIds,
             global::System.Collections.Generic.IList<string>? excludedRetrievalTags,
+            string? hostSelection,
             global::Dust.ContextAgenticMessageData? agenticMessageData)
         {
             this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
@@ -122,6 +132,7 @@ namespace Dust
             this.ProfilePictureUrl = profilePictureUrl;
             this.SelectedSpaceIds = selectedSpaceIds;
             this.ExcludedRetrievalTags = excludedRetrievalTags;
+            this.HostSelection = hostSelection;
             this.AgenticMessageData = agenticMessageData;
         }
 
