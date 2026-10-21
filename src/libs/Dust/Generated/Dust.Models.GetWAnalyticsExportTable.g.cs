@@ -21,7 +21,7 @@ namespace Dust
         /// </summary>
         Feedback,
         /// <summary>
-        /// Detailed message-level logs, including comma-separated lists of tools (as "server__tool") and skills used per message, and the cost in credits of each message. The time range must not exceed 90 days.
+        /// Detailed message-level logs, including the ID and name of the space (such as a pod) the conversation belongs to, comma-separated lists of tools (as "server__tool") and skills used per message, and the cost in credits of each message. The time range must not exceed 90 days.
         /// </summary>
         Messages,
         /// <summary>
