@@ -2626,6 +2626,11 @@
                     "description": "The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)",
                     "example": 0
                   },
+                  "parentConversationId": {
+                    "type": "string",
+                    "description": "The sId of the conversation whose agent spawns this sub-conversation (optional, system keys only). When set, depth must be the parent's depth plus one",
+                    "example": "conv_abc123"
+                  },
                   "spaceId": {
                     "type": "string",
                     "description": "The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects",
@@ -2652,6 +2657,9 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden. Only system keys can set parentConversationId."
           },
           "429": {
             "description": "Rate limit exceeded."

@@ -426,6 +426,38 @@ namespace Dust
                                         h => h.Value));
                             }
                             //
+                            if ((int)__response.StatusCode == 403)
+                            {
+                                string? __content_403 = null;
+                                global::System.Exception? __exception_403 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                    else
+                                    {
+                                        __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_403 = __ex;
+                                }
+
+
+                                throw global::Dust.ApiException.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_403,
+                                    responseBody: __content_403,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            //
                             if ((int)__response.StatusCode == 429)
                             {
                                 string? __content_429 = null;
@@ -610,6 +642,10 @@ namespace Dust
         /// The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)<br/>
         /// Example: 0
         /// </param>
+        /// <param name="parentConversationId">
+        /// The sId of the conversation whose agent spawns this sub-conversation (optional, system keys only). When set, depth must be the parent's depth plus one<br/>
+        /// Example: conv_abc123
+        /// </param>
         /// <param name="spaceId">
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
@@ -625,6 +661,7 @@ namespace Dust
             bool? skipToolsValidation = default,
             bool? blocking = default,
             int? depth = default,
+            string? parentConversationId = default,
             string? spaceId = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -637,6 +674,7 @@ namespace Dust
                 SkipToolsValidation = skipToolsValidation,
                 Blocking = blocking,
                 Depth = depth,
+                ParentConversationId = parentConversationId,
                 SpaceId = spaceId,
             };
 
