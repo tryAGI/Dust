@@ -59,6 +59,10 @@ namespace Dust
         /// The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)<br/>
         /// Example: 0
         /// </param>
+        /// <param name="parentConversationId">
+        /// The sId of the conversation whose agent spawns this sub-conversation (optional, system keys only). When set, depth must be the parent's depth plus one<br/>
+        /// Example: conv_abc123
+        /// </param>
         /// <param name="spaceId">
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
@@ -74,6 +78,7 @@ namespace Dust
             bool? skipToolsValidation = default,
             bool? blocking = default,
             int? depth = default,
+            string? parentConversationId = default,
             string? spaceId = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);

@@ -54,6 +54,14 @@ namespace Dust
         public int? Depth { get; set; }
 
         /// <summary>
+        /// The sId of the conversation whose agent spawns this sub-conversation (optional, system keys only). When set, depth must be the parent's depth plus one<br/>
+        /// Example: conv_abc123
+        /// </summary>
+        /// <example>conv_abc123</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("parentConversationId")]
+        public string? ParentConversationId { get; set; }
+
+        /// <summary>
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
         /// </summary>
@@ -90,6 +98,10 @@ namespace Dust
         /// The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)<br/>
         /// Example: 0
         /// </param>
+        /// <param name="parentConversationId">
+        /// The sId of the conversation whose agent spawns this sub-conversation (optional, system keys only). When set, depth must be the parent's depth plus one<br/>
+        /// Example: conv_abc123
+        /// </param>
         /// <param name="spaceId">
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
@@ -104,6 +116,7 @@ namespace Dust
             bool? skipToolsValidation,
             bool? blocking,
             int? depth,
+            string? parentConversationId,
             string? spaceId)
         {
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
@@ -112,6 +125,7 @@ namespace Dust
             this.SkipToolsValidation = skipToolsValidation;
             this.Blocking = blocking;
             this.Depth = depth;
+            this.ParentConversationId = parentConversationId;
             this.SpaceId = spaceId;
         }
 
