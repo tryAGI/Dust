@@ -15,7 +15,7 @@ fetch_spec() {
 install_autosdk_cli
 rm -rf Generated
 
-openapi_url="https://raw.githubusercontent.com/dust-tt/dust/main/front-api/public/swagger.json"
+openapi_url="https://dust.tt/api/doc"
 openapi_tmp="$(mktemp)"
 trap 'rm -f "$openapi_tmp"' EXIT
 
