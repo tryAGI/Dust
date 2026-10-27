@@ -55,6 +55,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationConversation1ContentItemItemActionGeneratedFile))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ConversationConversation1ContentItemItemRawContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationConversation1ContentItemItemRawContent))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChange))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangePermission), TypeInfoPropertyName = "ConversationSharingChangePermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Message))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ModelSelection))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ModelSelectionReasoningEffort), TypeInfoPropertyName = "ModelSelectionReasoningEffort2")]
@@ -71,6 +73,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.CreateWAssistantConversationsMessagesEditRequestMention>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesEditRequestMention))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesValidateActionRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsSharingRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ConversationSharingChange>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ContentFragment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWFilesRequest))]
@@ -81,6 +85,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesEditResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsMessagesEventsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesValidateActionResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsSharingResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWFilesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWFilesResponseFile))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
@@ -90,6 +95,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.WorkspaceLocale?), TypeInfoPropertyName = "NullableWorkspaceLocale2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContextAgenticMessageDataType?), TypeInfoPropertyName = "NullableContextAgenticMessageDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.AgentConfigurationTagKind?), TypeInfoPropertyName = "NullableAgentConfigurationTagKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangePermission?), TypeInfoPropertyName = "NullableConversationSharingChangePermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ModelSelectionReasoningEffort?), TypeInfoPropertyName = "NullableModelSelectionReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>?), TypeInfoPropertyName = "NullableOneOfPatchWAssistantConversationsRequestVariant1PatchWAssistantConversationsRequestVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ConversationConsumptionToolDetails>))]
@@ -106,6 +112,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ConversationConversation1ContentItemItemRawContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<int>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWAssistantConversationsMessagesEditRequestMention>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ConversationSharingChange>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ContentFragment>))]
     internal sealed partial class ConversationsSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -193,6 +200,10 @@ namespace Dust
 
                     || typeToConvert == typeof(global::Dust.AgentConfigurationTagKind?)
 
+                    || typeToConvert == typeof(global::Dust.ConversationSharingChangePermission)
+
+                    || typeToConvert == typeof(global::Dust.ConversationSharingChangePermission?)
+
                     || typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort)
 
                     || typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort?);
@@ -240,6 +251,16 @@ namespace Dust
                 if (typeToConvert == typeof(global::Dust.AgentConfigurationTagKind?))
                 {
                     return new global::Dust.JsonConverters.AgentConfigurationTagKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.ConversationSharingChangePermission))
+                {
+                    return new global::Dust.JsonConverters.ConversationSharingChangePermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.ConversationSharingChangePermission?))
+                {
+                    return new global::Dust.JsonConverters.ConversationSharingChangePermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort))

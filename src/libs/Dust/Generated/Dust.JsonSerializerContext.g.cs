@@ -27,6 +27,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.AgentConfigurationTagKindNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.ConversationSharingChangePermissionJsonConverter),
+
+            typeof(global::Dust.JsonConverters.ConversationSharingChangePermissionNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.RichMentionTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.RichMentionTypeNullableJsonConverter),
@@ -238,6 +242,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationConversation1ContentItemItemActionGeneratedFile))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ConversationConversation1ContentItemItemRawContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationConversation1ContentItemItemRawContent))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChange))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangePermission), TypeInfoPropertyName = "ConversationSharingChangePermission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.RichMention))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.RichMentionType), TypeInfoPropertyName = "RichMentionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Message))]
@@ -327,6 +333,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection), TypeInfoPropertyName = "CreateWAssistantConversationsMessagesFeedbacksRequestThumbDirection2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesValidateActionRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsSharingRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ConversationSharingChange>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ContentFragment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantMentionsParseRequest))]
@@ -396,6 +404,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesValidateActionResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsSharingResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantMentionsParseResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantMentionsSuggestionsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWFilesResponse))]
@@ -467,6 +476,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWAssistantAgentConfigurationsImportRequestToolsetItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<int>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWAssistantConversationsMessagesEditRequestMention>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ConversationSharingChange>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ContentFragment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<byte[]>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRow>))]
