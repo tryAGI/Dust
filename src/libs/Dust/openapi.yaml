@@ -2728,6 +2728,16 @@
                     "type": "string",
                     "description": "The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects",
                     "example": "space_abc123"
+                  },
+                  "sharedWithEmails": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 100,
+                    "description": "Emails of the workspace members to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects",
+                    "items": {
+                      "type": "string",
+                      "format": "email"
+                    }
                   }
                 }
               }
@@ -2752,7 +2762,13 @@
             "description": "Unauthorized"
           },
           "403": {
-            "description": "Forbidden. Only system keys can set parentConversationId."
+            "description": "Forbidden. Only system keys can set parentConversationId, or sharedWithEmails was set while conversation sharing is not enabled for the workspace.\n"
+          },
+          "404": {
+            "description": "Space or parent conversation not found, or no user with one of sharedWithEmails."
+          },
+          "409": {
+            "description": "The conversation can't be shared yet."
           },
           "429": {
             "description": "Rate limit exceeded."

@@ -67,6 +67,9 @@ namespace Dust
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
         /// </param>
+        /// <param name="sharedWithEmails">
+        /// Emails of the workspace members to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -80,6 +83,7 @@ namespace Dust
             int? depth = default,
             string? parentConversationId = default,
             string? spaceId = default,
+            global::System.Collections.Generic.IList<string>? sharedWithEmails = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
