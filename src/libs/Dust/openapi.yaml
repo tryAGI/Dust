@@ -2562,6 +2562,99 @@
         }
       }
     },
+    "/api/v1/w/{wId}/assistant/conversations/{cId}/sharing": {
+      "patch": {
+        "summary": "Update conversation sharing",
+        "description": "Gives members of the workspace, by email, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.\n",
+        "tags": [
+          "Conversations"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "wId",
+            "required": true,
+            "description": "ID of the workspace",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "cId",
+            "required": true,
+            "description": "ID of the conversation",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "changes"
+                ],
+                "properties": {
+                  "changes": {
+                    "type": "array",
+                    "minItems": 1,
+                    "maxItems": 100,
+                    "description": "A user listed more than once gets their last change.",
+                    "items": {
+                      "$ref": "#/components/schemas/ConversationSharingChange"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Sharing updated successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "success": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request. Invalid parameters, a user who isn't a member of the workspace, the conversation's owner, or a conversation in a project.\n"
+          },
+          "401": {
+            "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "Forbidden. Conversation sharing is not enabled for the workspace, or the caller can't write to the conversation.\n"
+          },
+          "404": {
+            "description": "Conversation not found, or no user with one of the emails."
+          },
+          "409": {
+            "description": "The conversation can't be shared yet."
+          },
+          "500": {
+            "description": "Internal Server Error."
+          }
+        }
+      }
+    },
     "/api/v1/w/{wId}/assistant/conversations": {
       "post": {
         "summary": "Create a new conversation",
@@ -7231,6 +7324,30 @@
                 }
               }
             }
+          }
+        }
+      },
+      "ConversationSharingChange": {
+        "type": "object",
+        "required": [
+          "email",
+          "permission"
+        ],
+        "properties": {
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "Email of a member of the workspace",
+            "example": "jane@example.com"
+          },
+          "permission": {
+            "type": "string",
+            "enum": [
+              "write",
+              "none"
+            ],
+            "description": "Write access, or `none` to remove it",
+            "example": "write"
           }
         }
       },
