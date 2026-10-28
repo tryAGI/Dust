@@ -51,12 +51,6 @@ namespace Dust
         public string? ProfilePictureUrl { get; set; }
 
         /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("selectedSpaceIds")]
-        public global::System.Collections.Generic.IList<string>? SelectedSpaceIds { get; set; }
-
-        /// <summary>
         /// Data source tags to exclude from retrieval for this run, as opaque `key:value` strings.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("excludedRetrievalTags")]
@@ -103,7 +97,6 @@ namespace Dust
         /// URL of the user's profile picture<br/>
         /// Example: https://example.com/profiles/johndoe123.jpg
         /// </param>
-        /// <param name="selectedSpaceIds"></param>
         /// <param name="excludedRetrievalTags">
         /// Data source tags to exclude from retrieval for this run, as opaque `key:value` strings.
         /// </param>
@@ -120,7 +113,6 @@ namespace Dust
             string? fullName,
             string? email,
             string? profilePictureUrl,
-            global::System.Collections.Generic.IList<string>? selectedSpaceIds,
             global::System.Collections.Generic.IList<string>? excludedRetrievalTags,
             string? hostSelection,
             global::Dust.ContextAgenticMessageData? agenticMessageData)
@@ -130,7 +122,6 @@ namespace Dust
             this.FullName = fullName;
             this.Email = email;
             this.ProfilePictureUrl = profilePictureUrl;
-            this.SelectedSpaceIds = selectedSpaceIds;
             this.ExcludedRetrievalTags = excludedRetrievalTags;
             this.HostSelection = hostSelection;
             this.AgenticMessageData = agenticMessageData;

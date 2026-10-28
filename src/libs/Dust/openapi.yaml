@@ -2635,7 +2635,7 @@
             }
           },
           "400": {
-            "description": "Bad Request. Invalid parameters, a user who isn't a member of the workspace, the conversation's owner, or a conversation in a project.\n"
+            "description": "Bad Request. Invalid parameters, a user who isn't a member of the workspace, the conversation's owner, a conversation in a project, or a sub-agent conversation.\n"
           },
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
@@ -6953,12 +6953,6 @@
             "description": "URL of the user's profile picture",
             "example": "https://example.com/profiles/johndoe123.jpg"
           },
-          "selectedSpaceIds": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "excludedRetrievalTags": {
             "type": "array",
             "nullable": true,
@@ -8280,6 +8274,11 @@
                           }
                         }
                       }
+                    },
+                    "readOnlyHint": {
+                      "type": "boolean",
+                      "description": "Set to true when the remote MCP server annotates the tool as read-only. Absent otherwise.",
+                      "example": true
                     }
                   }
                 }
