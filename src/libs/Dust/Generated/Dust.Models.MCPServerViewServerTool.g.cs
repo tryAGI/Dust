@@ -33,6 +33,14 @@ namespace Dust
         public object? InputSchema { get; set; }
 
         /// <summary>
+        /// Set to true when the remote MCP server annotates the tool as read-only. Absent otherwise.<br/>
+        /// Example: true
+        /// </summary>
+        /// <example>true</example>
+        [global::System.Text.Json.Serialization.JsonPropertyName("readOnlyHint")]
+        public bool? ReadOnlyHint { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -53,17 +61,23 @@ namespace Dust
         /// JSON Schema for the tool's input parameters<br/>
         /// Example: {"type":"object","properties":{"customerId":{"type":"string"}}}
         /// </param>
+        /// <param name="readOnlyHint">
+        /// Set to true when the remote MCP server annotates the tool as read-only. Absent otherwise.<br/>
+        /// Example: true
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public MCPServerViewServerTool(
             string? name,
             string? description,
-            object? inputSchema)
+            object? inputSchema,
+            bool? readOnlyHint)
         {
             this.Name = name;
             this.Description = description;
             this.InputSchema = inputSchema;
+            this.ReadOnlyHint = readOnlyHint;
         }
 
         /// <summary>
