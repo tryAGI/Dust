@@ -2563,6 +2563,70 @@
       }
     },
     "/api/v1/w/{wId}/assistant/conversations/{cId}/sharing": {
+      "get": {
+        "summary": "Get conversation sharing",
+        "description": "Returns who a conversation is shared with: its owner, the members of the workspace, the groups, and the API keys.\n",
+        "tags": [
+          "Conversations"
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "wId",
+            "required": true,
+            "description": "ID of the workspace",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "in": "path",
+            "name": "cId",
+            "required": true,
+            "description": "ID of the conversation",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The sharing of the conversation.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "sharing": {
+                      "$ref": "#/components/schemas/ConversationSharing"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The conversation is in a project or is a sub-agent conversation."
+          },
+          "401": {
+            "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "Forbidden. Conversation sharing is not enabled for the workspace."
+          },
+          "404": {
+            "description": "Conversation not found."
+          },
+          "500": {
+            "description": "Internal Server Error."
+          }
+        }
+      },
       "patch": {
         "summary": "Update conversation sharing",
         "description": "Gives members of the workspace, by email, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.\n",
@@ -7358,6 +7422,105 @@
             ],
             "description": "Write access, or `none` to remove it",
             "example": "write"
+          }
+        }
+      },
+      "ConversationSharing": {
+        "type": "object",
+        "required": [
+          "owner",
+          "members",
+          "groups",
+          "keys"
+        ],
+        "properties": {
+          "owner": {
+            "type": "object",
+            "nullable": true,
+            "description": "The conversation's creator, whose access can't be changed",
+            "required": [
+              "id",
+              "email"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "ID of the user",
+                "example": "usr_abc123"
+              },
+              "email": {
+                "type": "string",
+                "format": "email",
+                "example": "john@example.com"
+              }
+            }
+          },
+          "members": {
+            "type": "array",
+            "description": "The members of the workspace with write access to the conversation, the owner excluded",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "email"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "ID of the user",
+                  "example": "usr_def456"
+                },
+                "email": {
+                  "type": "string",
+                  "format": "email",
+                  "example": "jane@example.com"
+                }
+              }
+            }
+          },
+          "groups": {
+            "type": "array",
+            "description": "The groups with write access to the conversation",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "ID of the group",
+                  "example": "grp_abc123"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Engineering"
+                }
+              }
+            }
+          },
+          "keys": {
+            "type": "array",
+            "description": "The API keys with write access to the conversation",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "ID of the API key",
+                  "example": "key_abc123"
+                },
+                "name": {
+                  "type": "string",
+                  "example": "Support bot"
+                }
+              }
+            }
           }
         }
       },
