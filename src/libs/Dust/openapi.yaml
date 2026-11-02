@@ -2468,6 +2468,13 @@
                   "properties": {
                     "success": {
                       "type": "boolean"
+                    },
+                    "resolvedActionIds": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Action ids this decision moved out of awaiting validation. Includes the validated action, plus matching pending siblings cleared by an always-allow. Optional for older clients.\n"
                     }
                   }
                 }
@@ -2629,7 +2636,7 @@
       },
       "patch": {
         "summary": "Update conversation sharing",
-        "description": "Gives members of the workspace, by email, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.\n",
+        "description": "Gives members of the workspace, by email, or groups, by name, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.\n",
         "tags": [
           "Conversations"
         ],
@@ -2672,7 +2679,7 @@
                     "type": "array",
                     "minItems": 1,
                     "maxItems": 100,
-                    "description": "A user listed more than once gets their last change.",
+                    "description": "A user or group listed more than once gets its last change.",
                     "items": {
                       "$ref": "#/components/schemas/ConversationSharingChange"
                     }
@@ -2708,7 +2715,7 @@
             "description": "Forbidden. Conversation sharing is not enabled for the workspace, or the caller can't write to the conversation.\n"
           },
           "404": {
-            "description": "Conversation not found, or no user with one of the emails."
+            "description": "Conversation not found, no user with one of the emails, or no group with one of the names.\n"
           },
           "409": {
             "description": "The conversation can't be shared yet."
@@ -2793,14 +2800,41 @@
                     "description": "The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects",
                     "example": "space_abc123"
                   },
-                  "sharedWithEmails": {
+                  "sharedWith": {
                     "type": "array",
                     "minItems": 1,
                     "maxItems": 100,
-                    "description": "Emails of the workspace members to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects",
+                    "description": "Workspace members, by email, and groups, by name, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects",
                     "items": {
-                      "type": "string",
-                      "format": "email"
+                      "oneOf": [
+                        {
+                          "type": "object",
+                          "required": [
+                            "email"
+                          ],
+                          "properties": {
+                            "email": {
+                              "type": "string",
+                              "format": "email",
+                              "description": "Email of a member of the workspace",
+                              "example": "jane@example.com"
+                            }
+                          }
+                        },
+                        {
+                          "type": "object",
+                          "required": [
+                            "groupName"
+                          ],
+                          "properties": {
+                            "groupName": {
+                              "type": "string",
+                              "description": "Exact name of a group of the workspace, such as \"Workspace\" for all its members\n",
+                              "example": "Engineering"
+                            }
+                          }
+                        }
+                      ]
                     }
                   }
                 }
@@ -2826,10 +2860,10 @@
             "description": "Unauthorized"
           },
           "403": {
-            "description": "Forbidden. Only system keys can set parentConversationId, or sharedWithEmails was set while conversation sharing is not enabled for the workspace.\n"
+            "description": "Forbidden. Only system keys can set parentConversationId, or sharedWith was set while conversation sharing is not enabled for the workspace.\n"
           },
           "404": {
-            "description": "Space or parent conversation not found, or no user with one of sharedWithEmails."
+            "description": "Space or parent conversation not found, or no user or group with one of the emails or names of sharedWith.\n"
           },
           "409": {
             "description": "The conversation can't be shared yet."
@@ -7402,28 +7436,55 @@
         }
       },
       "ConversationSharingChange": {
-        "type": "object",
-        "required": [
-          "email",
-          "permission"
-        ],
-        "properties": {
-          "email": {
-            "type": "string",
-            "format": "email",
-            "description": "Email of a member of the workspace",
-            "example": "jane@example.com"
-          },
-          "permission": {
-            "type": "string",
-            "enum": [
-              "write",
-              "none"
+        "oneOf": [
+          {
+            "type": "object",
+            "required": [
+              "email",
+              "permission"
             ],
-            "description": "Write access, or `none` to remove it",
-            "example": "write"
+            "properties": {
+              "email": {
+                "type": "string",
+                "format": "email",
+                "description": "Email of a member of the workspace",
+                "example": "jane@example.com"
+              },
+              "permission": {
+                "type": "string",
+                "enum": [
+                  "write",
+                  "none"
+                ],
+                "description": "Write access, or `none` to remove it",
+                "example": "write"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": [
+              "groupName",
+              "permission"
+            ],
+            "properties": {
+              "groupName": {
+                "type": "string",
+                "description": "Exact name of a group of the workspace, such as \"Workspace\" for all its members\n",
+                "example": "Engineering"
+              },
+              "permission": {
+                "type": "string",
+                "enum": [
+                  "write",
+                  "none"
+                ],
+                "description": "Write access, or `none` to remove it",
+                "example": "write"
+              }
+            }
           }
-        }
+        ]
       },
       "ConversationSharing": {
         "type": "object",

@@ -60,7 +60,7 @@ namespace Dust
 
         /// <summary>
         /// Update conversation sharing<br/>
-        /// Gives members of the workspace, by email, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.
+        /// Gives members of the workspace, by email, or groups, by name, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -89,7 +89,7 @@ namespace Dust
         }
         /// <summary>
         /// Update conversation sharing<br/>
-        /// Gives members of the workspace, by email, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.
+        /// Gives members of the workspace, by email, or groups, by name, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -660,12 +660,12 @@ namespace Dust
         }
         /// <summary>
         /// Update conversation sharing<br/>
-        /// Gives members of the workspace, by email, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.
+        /// Gives members of the workspace, by email, or groups, by name, write access to a conversation, or removes it with `none`. Requires write access to the conversation. The access of the conversation's owner can't be changed.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
         /// <param name="changes">
-        /// A user listed more than once gets their last change.
+        /// A user or group listed more than once gets its last change.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

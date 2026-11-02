@@ -70,10 +70,10 @@ namespace Dust
         public string? SpaceId { get; set; }
 
         /// <summary>
-        /// Emails of the workspace members to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
+        /// Workspace members, by email, and groups, by name, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("sharedWithEmails")]
-        public global::System.Collections.Generic.IList<string>? SharedWithEmails { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("sharedWith")]
+        public global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>>? SharedWith { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -112,8 +112,8 @@ namespace Dust
         /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
         /// </param>
-        /// <param name="sharedWithEmails">
-        /// Emails of the workspace members to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
+        /// <param name="sharedWith">
+        /// Workspace members, by email, and groups, by name, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -127,7 +127,7 @@ namespace Dust
             int? depth,
             string? parentConversationId,
             string? spaceId,
-            global::System.Collections.Generic.IList<string>? sharedWithEmails)
+            global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>>? sharedWith)
         {
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.ContentFragments = contentFragments;
@@ -137,7 +137,7 @@ namespace Dust
             this.Depth = depth;
             this.ParentConversationId = parentConversationId;
             this.SpaceId = spaceId;
-            this.SharedWithEmails = sharedWithEmails;
+            this.SharedWith = sharedWith;
         }
 
         /// <summary>
