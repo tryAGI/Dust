@@ -3,10 +3,10 @@
 namespace Dust.JsonConverters
 {
     /// <inheritdoc />
-    public sealed class ConversationSharingChangePermissionJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Dust.ConversationSharingChangePermission>
+    public sealed class ConversationSharingChangeVariant1PermissionJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Dust.ConversationSharingChangeVariant1Permission>
     {
         /// <inheritdoc />
-        public override global::Dust.ConversationSharingChangePermission Read(
+        public override global::Dust.ConversationSharingChangeVariant1Permission Read(
             ref global::System.Text.Json.Utf8JsonReader reader,
             global::System.Type typeToConvert,
             global::System.Text.Json.JsonSerializerOptions options)
@@ -18,7 +18,7 @@ namespace Dust.JsonConverters
                     var stringValue = reader.GetString();
                     if (stringValue != null)
                     {
-                        return global::Dust.ConversationSharingChangePermissionExtensions.ToEnum(stringValue) ?? default;
+                        return global::Dust.ConversationSharingChangeVariant1PermissionExtensions.ToEnum(stringValue) ?? default;
                     }
 
                     break;
@@ -26,11 +26,11 @@ namespace Dust.JsonConverters
                 case global::System.Text.Json.JsonTokenType.Number:
                 {
                     var numValue = reader.GetInt32();
-                    return (global::Dust.ConversationSharingChangePermission)numValue;
+                    return (global::Dust.ConversationSharingChangeVariant1Permission)numValue;
                 }
                 case global::System.Text.Json.JsonTokenType.Null:
                 {
-                    return default(global::Dust.ConversationSharingChangePermission);
+                    return default(global::Dust.ConversationSharingChangeVariant1Permission);
                 }
                 default:
                     throw new global::System.ArgumentOutOfRangeException(nameof(reader));
@@ -42,12 +42,12 @@ namespace Dust.JsonConverters
         /// <inheritdoc />
         public override void Write(
             global::System.Text.Json.Utf8JsonWriter writer,
-            global::Dust.ConversationSharingChangePermission value,
+            global::Dust.ConversationSharingChangeVariant1Permission value,
             global::System.Text.Json.JsonSerializerOptions options)
         {
             writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
 
-            writer.WriteStringValue(global::Dust.ConversationSharingChangePermissionExtensions.ToValueString(value));
+            writer.WriteStringValue(global::Dust.ConversationSharingChangeVariant1PermissionExtensions.ToValueString(value));
         }
     }
 }

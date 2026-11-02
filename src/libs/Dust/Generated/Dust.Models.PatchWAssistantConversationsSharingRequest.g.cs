@@ -9,7 +9,7 @@ namespace Dust
     public sealed partial class PatchWAssistantConversationsSharingRequest
     {
         /// <summary>
-        /// A user listed more than once gets their last change.
+        /// A user or group listed more than once gets its last change.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("changes")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -25,7 +25,7 @@ namespace Dust
         /// Initializes a new instance of the <see cref="PatchWAssistantConversationsSharingRequest" /> class.
         /// </summary>
         /// <param name="changes">
-        /// A user listed more than once gets their last change.
+        /// A user or group listed more than once gets its last change.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

@@ -2,7 +2,7 @@
 
 namespace Dust
 {
-    public sealed partial class ConversationSharingChange
+    public readonly partial struct ConversationSharingChange
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -54,7 +54,7 @@ namespace Dust
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
                 typeof(global::Dust.ConversationSharingChange),
-                jsonSerializerContext) as global::Dust.ConversationSharingChange;
+                jsonSerializerContext) as global::Dust.ConversationSharingChange?;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Dust
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
                 typeof(global::Dust.ConversationSharingChange),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Dust.ConversationSharingChange;
+                jsonSerializerContext).ConfigureAwait(false)) as global::Dust.ConversationSharingChange?;
         }
 
         /// <summary>
