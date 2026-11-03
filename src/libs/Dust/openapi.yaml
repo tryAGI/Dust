@@ -1268,6 +1268,9 @@
           },
           "400": {
             "description": "Invalid request (invalid query parameters or request body)"
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           }
         }
       }
@@ -1322,7 +1325,7 @@
             "description": "Invalid or missing authentication credentials."
           },
           "403": {
-            "description": "The workspace plan does not allow API access."
+            "description": "The workspace plan does not allow API access, or the conversation isn't shared with the caller."
           },
           "404": {
             "description": "Workspace or conversation not found, deleted, or not accessible to the caller."
@@ -1391,6 +1394,9 @@
           },
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           },
           "500": {
             "description": "Internal Server Error."
@@ -1469,6 +1475,9 @@
           },
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           },
           "404": {
             "description": "Conversation not found."
@@ -1580,7 +1589,7 @@
             "description": "Unauthorized"
           },
           "403": {
-            "description": "Forbidden"
+            "description": "Forbidden, or the conversation isn't shared with the caller"
           },
           "404": {
             "description": "Conversation not found"
@@ -1648,7 +1657,7 @@
             "description": "Missing or invalid path parameters (e.g. missing or wrong scope prefix)."
           },
           "403": {
-            "description": "Resolved path is outside the conversation scope."
+            "description": "Resolved path is outside the conversation scope, or the conversation isn't shared with the caller."
           },
           "404": {
             "description": "Conversation or file not found."
@@ -1722,6 +1731,9 @@
           },
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           },
           "404": {
             "description": "Conversation not found."
@@ -1817,6 +1829,9 @@
           },
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           },
           "404": {
             "description": "Conversation not found."
@@ -1917,6 +1932,9 @@
           },
           "401": {
             "description": "Unauthorized. Invalid or missing authentication token."
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           },
           "404": {
             "description": "Conversation not found."
@@ -2022,7 +2040,7 @@
             "description": "Invalid request body or action not blocked"
           },
           "403": {
-            "description": "User not authorized to answer this question"
+            "description": "User not authorized to answer this question, or the conversation isn't shared with the caller"
           },
           "404": {
             "description": "Conversation, message, or action not found"
@@ -2137,6 +2155,9 @@
           },
           "400": {
             "description": "Invalid request (message not found or not a user message)"
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           }
         }
       }
@@ -2221,6 +2242,9 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           },
           "404": {
             "description": "Not Found"
@@ -2325,6 +2349,9 @@
           "401": {
             "description": "Unauthorized"
           },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
+          },
           "404": {
             "description": "Conversation or message not found"
           }
@@ -2391,6 +2418,9 @@
           },
           "401": {
             "description": "Unauthorized"
+          },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
           },
           "404": {
             "description": "Conversation, message or feedback not found"
@@ -2484,6 +2514,9 @@
           "400": {
             "description": "Invalid request body"
           },
+          "403": {
+            "description": "The conversation isn't shared with the caller."
+          },
           "404": {
             "description": "Conversation, message, or workspace not found"
           },
@@ -2558,7 +2591,7 @@
             "description": "Unauthorized. Invalid or missing authentication token."
           },
           "403": {
-            "description": "Forbidden. Workspace or usage limits exceeded, or access denied."
+            "description": "Forbidden. Workspace or usage limits exceeded, access denied, or the conversation isn't shared with the caller."
           },
           "429": {
             "description": "Rate limit exceeded."
@@ -2624,7 +2657,7 @@
             "description": "Unauthorized. Invalid or missing authentication token."
           },
           "403": {
-            "description": "Forbidden. Conversation sharing is not enabled for the workspace."
+            "description": "Forbidden. Conversation sharing is not enabled for the workspace, or the conversation isn't shared with the caller.\n"
           },
           "404": {
             "description": "Conversation not found."
@@ -2712,7 +2745,7 @@
             "description": "Unauthorized. Invalid or missing authentication token."
           },
           "403": {
-            "description": "Forbidden. Conversation sharing is not enabled for the workspace, or the caller can't write to the conversation.\n"
+            "description": "Forbidden. Conversation sharing is not enabled for the workspace, the conversation isn't shared with the caller, or the caller can't write to it.\n"
           },
           "404": {
             "description": "Conversation not found, no user with one of the emails, or no group with one of the names.\n"
