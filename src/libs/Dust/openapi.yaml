@@ -2657,7 +2657,7 @@
             "description": "Unauthorized. Invalid or missing authentication token."
           },
           "403": {
-            "description": "Forbidden. Conversation sharing is not enabled for the workspace, or the conversation isn't shared with the caller.\n"
+            "description": "Forbidden. The conversation isn't shared with the caller."
           },
           "404": {
             "description": "Conversation not found."
@@ -2745,7 +2745,7 @@
             "description": "Unauthorized. Invalid or missing authentication token."
           },
           "403": {
-            "description": "Forbidden. Conversation sharing is not enabled for the workspace, the conversation isn't shared with the caller, or the caller can't write to it.\n"
+            "description": "Forbidden. The conversation isn't shared with the caller, or the caller can't write to it.\n"
           },
           "404": {
             "description": "Conversation not found, no user with one of the emails, or no group with one of the names.\n"
@@ -2893,7 +2893,7 @@
             "description": "Unauthorized"
           },
           "403": {
-            "description": "Forbidden. Only system keys can set parentConversationId, or sharedWith was set while conversation sharing is not enabled for the workspace.\n"
+            "description": "Forbidden. Only system keys can set parentConversationId."
           },
           "404": {
             "description": "Space or parent conversation not found, or no user or group with one of the emails or names of sharedWith.\n"
