@@ -57,10 +57,17 @@ namespace Dust
         public global::System.Collections.Generic.IList<string>? ExcludedRetrievalTags { get; set; }
 
         /// <summary>
-        /// What the user had selected in the app hosting Dust when sending the message, e.g. `Sheet1!C5:D6` in Excel. Stored with the message and shown to the agent in that message's metadata.
+        /// What the user had selected in the app hosting Dust when sending the message, e.g. `Sheet1!C5:D6` in Excel, or, as JSON, a selection in a document open next to the conversation. Stored with the message and shown to the agent in that message's metadata.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("hostSelection")]
         public string? HostSelection { get; set; }
+
+        /// <summary>
+        /// The auth method the message was sent with, e.g. `oauth` for a member's personal login or `api_key`. A sub-agent message reports the one of the message that started it. Set by Dust; ignored when sent.<br/>
+        /// Included only in responses
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("authMethod")]
+        public string? AuthMethod { get; set; }
 
         /// <summary>
         ///
@@ -101,7 +108,11 @@ namespace Dust
         /// Data source tags to exclude from retrieval for this run, as opaque `key:value` strings.
         /// </param>
         /// <param name="hostSelection">
-        /// What the user had selected in the app hosting Dust when sending the message, e.g. `Sheet1!C5:D6` in Excel. Stored with the message and shown to the agent in that message's metadata.
+        /// What the user had selected in the app hosting Dust when sending the message, e.g. `Sheet1!C5:D6` in Excel, or, as JSON, a selection in a document open next to the conversation. Stored with the message and shown to the agent in that message's metadata.
+        /// </param>
+        /// <param name="authMethod">
+        /// The auth method the message was sent with, e.g. `oauth` for a member's personal login or `api_key`. A sub-agent message reports the one of the message that started it. Set by Dust; ignored when sent.<br/>
+        /// Included only in responses
         /// </param>
         /// <param name="agenticMessageData"></param>
 #if NET7_0_OR_GREATER
@@ -115,6 +126,7 @@ namespace Dust
             string? profilePictureUrl,
             global::System.Collections.Generic.IList<string>? excludedRetrievalTags,
             string? hostSelection,
+            string? authMethod,
             global::Dust.ContextAgenticMessageData? agenticMessageData)
         {
             this.Username = username ?? throw new global::System.ArgumentNullException(nameof(username));
@@ -124,6 +136,7 @@ namespace Dust
             this.ProfilePictureUrl = profilePictureUrl;
             this.ExcludedRetrievalTags = excludedRetrievalTags;
             this.HostSelection = hostSelection;
+            this.AuthMethod = authMethod;
             this.AgenticMessageData = agenticMessageData;
         }
 
