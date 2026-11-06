@@ -21,6 +21,10 @@ namespace Dust
         /// </summary>
         Feedback,
         /// <summary>
+        /// Frames with Frame App hosting spend, with their name, description, Pod id, credits and number of function runs.
+        /// </summary>
+        Frames,
+        /// <summary>
         /// Detailed message-level logs, including the ID and name of the space (such as a pod) the conversation belongs to, comma-separated lists of tools (as "server__tool") and skills used per message, and the cost in credits of each message. The time range must not exceed 90 days.
         /// </summary>
         Messages,
@@ -65,6 +69,7 @@ namespace Dust
                 GetWAnalyticsExportTable.ActiveUsers => "active_users",
                 GetWAnalyticsExportTable.Agents => "agents",
                 GetWAnalyticsExportTable.Feedback => "feedback",
+                GetWAnalyticsExportTable.Frames => "frames",
                 GetWAnalyticsExportTable.Messages => "messages",
                 GetWAnalyticsExportTable.SkillUsage => "skill_usage",
                 GetWAnalyticsExportTable.Skills => "skills",
@@ -85,6 +90,7 @@ namespace Dust
                 "active_users" => GetWAnalyticsExportTable.ActiveUsers,
                 "agents" => GetWAnalyticsExportTable.Agents,
                 "feedback" => GetWAnalyticsExportTable.Feedback,
+                "frames" => GetWAnalyticsExportTable.Frames,
                 "messages" => GetWAnalyticsExportTable.Messages,
                 "skill_usage" => GetWAnalyticsExportTable.SkillUsage,
                 "skills" => GetWAnalyticsExportTable.Skills,
