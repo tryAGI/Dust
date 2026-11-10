@@ -7,8 +7,10 @@ namespace Dust
         /// <summary>
         /// Export consumption analytics<br/>
         /// Export per-call consumption analytics for the workspace identified by {wId}.<br/>
-        /// Each row represents one unit of billed credit consumption (an LLM call, a tool call or a Frame App charge).<br/>
-        /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the Frame's owner when it has one.<br/>
+        /// Each row represents one unit of billed credit consumption (an LLM call, a tool call, a Frame App charge or an inference hook charge).<br/>
+        /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the user the charge is billed to, empty for workspace pool charges.<br/>
+        /// Inference hook charge rows fill the agent, message and conversation columns from the Guardrails request of the hook, leave the<br/>
+        /// message and conversation columns empty when that message no longer exists, and leave the user and space columns empty.<br/>
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
@@ -16,8 +18,8 @@ namespace Dust
         /// An admin API key can export the whole workspace. Any other API key must filter on `groups`, and<br/>
         /// must be allowed to read the analytics of every group listed. The rows then cover the messages of<br/>
         /// the users who were members of those groups when the message was sent, and the `userGroupIds`<br/>
-        /// and `userGroupNames` columns only list the requested groups. Frame App charges belong to no message,<br/>
-        /// so a `groups` filtered export never includes them.
+        /// and `userGroupNames` columns only list the requested groups. Frame App and inference hook charges are not<br/>
+        /// indexed with a message, so a `groups` filtered export never includes them.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
@@ -33,8 +35,10 @@ namespace Dust
         /// <summary>
         /// Export consumption analytics<br/>
         /// Export per-call consumption analytics for the workspace identified by {wId}.<br/>
-        /// Each row represents one unit of billed credit consumption (an LLM call, a tool call or a Frame App charge).<br/>
-        /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the Frame's owner when it has one.<br/>
+        /// Each row represents one unit of billed credit consumption (an LLM call, a tool call, a Frame App charge or an inference hook charge).<br/>
+        /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the user the charge is billed to, empty for workspace pool charges.<br/>
+        /// Inference hook charge rows fill the agent, message and conversation columns from the Guardrails request of the hook, leave the<br/>
+        /// message and conversation columns empty when that message no longer exists, and leave the user and space columns empty.<br/>
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
@@ -42,8 +46,8 @@ namespace Dust
         /// An admin API key can export the whole workspace. Any other API key must filter on `groups`, and<br/>
         /// must be allowed to read the analytics of every group listed. The rows then cover the messages of<br/>
         /// the users who were members of those groups when the message was sent, and the `userGroupIds`<br/>
-        /// and `userGroupNames` columns only list the requested groups. Frame App charges belong to no message,<br/>
-        /// so a `groups` filtered export never includes them.
+        /// and `userGroupNames` columns only list the requested groups. Frame App and inference hook charges are not<br/>
+        /// indexed with a message, so a `groups` filtered export never includes them.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="request"></param>
@@ -59,8 +63,10 @@ namespace Dust
         /// <summary>
         /// Export consumption analytics<br/>
         /// Export per-call consumption analytics for the workspace identified by {wId}.<br/>
-        /// Each row represents one unit of billed credit consumption (an LLM call, a tool call or a Frame App charge).<br/>
-        /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the Frame's owner when it has one.<br/>
+        /// Each row represents one unit of billed credit consumption (an LLM call, a tool call, a Frame App charge or an inference hook charge).<br/>
+        /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the user the charge is billed to, empty for workspace pool charges.<br/>
+        /// Inference hook charge rows fill the agent, message and conversation columns from the Guardrails request of the hook, leave the<br/>
+        /// message and conversation columns empty when that message no longer exists, and leave the user and space columns empty.<br/>
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
@@ -68,8 +74,8 @@ namespace Dust
         /// An admin API key can export the whole workspace. Any other API key must filter on `groups`, and<br/>
         /// must be allowed to read the analytics of every group listed. The rows then cover the messages of<br/>
         /// the users who were members of those groups when the message was sent, and the `userGroupIds`<br/>
-        /// and `userGroupNames` columns only list the requested groups. Frame App charges belong to no message,<br/>
-        /// so a `groups` filtered export never includes them.
+        /// and `userGroupNames` columns only list the requested groups. Frame App and inference hook charges are not<br/>
+        /// indexed with a message, so a `groups` filtered export never includes them.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="startDate">
