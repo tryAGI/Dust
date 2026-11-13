@@ -63,6 +63,12 @@ namespace Dust
         public string? HostSelection { get; set; }
 
         /// <summary>
+        /// The file open in the app hosting Dust when sending the message, e.g. `Budget.xlsx` in Excel.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("hostDocument")]
+        public global::Dust.ContextHostDocument? HostDocument { get; set; }
+
+        /// <summary>
         /// The auth method the message was sent with, e.g. `oauth` for a member's personal login or `api_key`. A sub-agent message reports the one of the message that started it. Set by Dust; ignored when sent.<br/>
         /// Included only in responses
         /// </summary>
@@ -110,6 +116,9 @@ namespace Dust
         /// <param name="hostSelection">
         /// What the user had selected in the app hosting Dust when sending the message, e.g. `Sheet1!C5:D6` in Excel, or, as JSON, a selection in a document open next to the conversation. Stored with the message and shown to the agent in that message's metadata.
         /// </param>
+        /// <param name="hostDocument">
+        /// The file open in the app hosting Dust when sending the message, e.g. `Budget.xlsx` in Excel.
+        /// </param>
         /// <param name="authMethod">
         /// The auth method the message was sent with, e.g. `oauth` for a member's personal login or `api_key`. A sub-agent message reports the one of the message that started it. Set by Dust; ignored when sent.<br/>
         /// Included only in responses
@@ -126,6 +135,7 @@ namespace Dust
             string? profilePictureUrl,
             global::System.Collections.Generic.IList<string>? excludedRetrievalTags,
             string? hostSelection,
+            global::Dust.ContextHostDocument? hostDocument,
             string? authMethod,
             global::Dust.ContextAgenticMessageData? agenticMessageData)
         {
@@ -136,6 +146,7 @@ namespace Dust
             this.ProfilePictureUrl = profilePictureUrl;
             this.ExcludedRetrievalTags = excludedRetrievalTags;
             this.HostSelection = hostSelection;
+            this.HostDocument = hostDocument;
             this.AuthMethod = authMethod;
             this.AgenticMessageData = agenticMessageData;
         }
