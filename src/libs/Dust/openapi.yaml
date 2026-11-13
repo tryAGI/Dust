@@ -3526,6 +3526,182 @@
         }
       }
     },
+    "/api/v1/w/{wId}/pods/{podId}/files/{filePath}": {
+      "post": {
+        "tags": [
+          "Spaces"
+        ],
+        "summary": "Upload a file into a pod",
+        "description": "Upload the request body as a file in the pod. `filePath` is the path inside the pod,\nincluding subfolders (`reports/q3.txt`). The body is the raw file bytes. `Content-Type`\nis the file type (parameters such as charset are ignored) and `Content-Length` is required.\nThe API key must be allowed to write the pod.\n\nThe path is checked with the same normalization as other file paths. A path that leaves\nthe pod is rejected and nothing is written.\n",
+        "parameters": [
+          {
+            "name": "wId",
+            "in": "path",
+            "required": true,
+            "description": "ID of the workspace",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "podId",
+            "in": "path",
+            "required": true,
+            "description": "ID of the pod",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "filePath",
+            "in": "path",
+            "required": true,
+            "description": "Relative path inside the pod. Slashes are subfolders (`reports/q3.txt`).\n",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/octet-stream": {
+              "schema": {
+                "type": "string",
+                "format": "binary"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "The file was written into the pod.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "file"
+                  ],
+                  "properties": {
+                    "file": {
+                      "type": "object",
+                      "required": [
+                        "sId",
+                        "fileName",
+                        "path",
+                        "contentType",
+                        "status"
+                      ],
+                      "properties": {
+                        "sId": {
+                          "type": "string"
+                        },
+                        "fileName": {
+                          "type": "string",
+                          "description": "The file's name, without its folders."
+                        },
+                        "path": {
+                          "type": "string",
+                          "description": "Scoped path inside the pod, including subfolders."
+                        },
+                        "contentType": {
+                          "type": "string"
+                        },
+                        "status": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "The path, content type, or content length is not accepted."
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "The pod does not exist or the key cannot write it."
+          },
+          "429": {
+            "description": "Rate limit exceeded"
+          }
+        }
+      }
+    },
+    "/api/v1/w/{wId}/pods/{podId}/files": {
+      "get": {
+        "tags": [
+          "Spaces"
+        ],
+        "summary": "List the files in a pod",
+        "description": "List the relative paths of the files already in the pod. The response has no file bytes.\nThe API key must be allowed to write the pod. A missing pod and a pod the key cannot\nwrite are both reported as not found.\n",
+        "parameters": [
+          {
+            "name": "wId",
+            "in": "path",
+            "required": true,
+            "description": "ID of the workspace",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "podId",
+            "in": "path",
+            "required": true,
+            "description": "ID of the pod",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "security": [
+          {
+            "BearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The paths of the files already in the pod.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": [
+                    "files"
+                  ],
+                  "properties": {
+                    "files": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      },
+                      "description": "Relative paths inside the pod, the same paths accepted by the upload\nendpoint (`reports/q3.txt`).\n"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "The pod does not exist or the key cannot write it."
+          }
+        }
+      }
+    },
     "/api/v1/w/{wId}/search": {
       "get": {
         "summary": "Search for nodes in the workspace (streaming)",
@@ -7097,6 +7273,23 @@
             "type": "string",
             "nullable": true,
             "description": "What the user had selected in the app hosting Dust when sending the message, e.g. `Sheet1!C5:D6` in Excel, or, as JSON, a selection in a document open next to the conversation. Stored with the message and shown to the agent in that message's metadata."
+          },
+          "hostDocument": {
+            "type": "object",
+            "nullable": true,
+            "description": "The file open in the app hosting Dust when sending the message, e.g. `Budget.xlsx` in Excel.",
+            "required": [
+              "name"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string",
+                "description": "The http(s) link of the file, e.g. on SharePoint. Absent for a file on the user's computer."
+              }
+            }
           },
           "authMethod": {
             "type": "string",

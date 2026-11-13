@@ -36,6 +36,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.WorkspaceLocale), TypeInfoPropertyName = "WorkspaceLocale2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Context))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContextHostDocument))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContextAgenticMessageData))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ContextAgenticMessageDataType), TypeInfoPropertyName = "ContextAgenticMessageDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.AgentConfiguration))]
