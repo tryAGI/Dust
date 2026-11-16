@@ -17,7 +17,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.GetWSpacesDataSourcesDocumentsResponse2> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsAsync(
+        global::System.Threading.Tasks.Task<global::Dust.GetWSpacesDataSourcesDocumentsResponse> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -39,7 +39,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesDocumentsResponse2>> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesDocumentsResponse>> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsAsResponseAsync(
             string wId,
             string spaceId,
             string dsId,

@@ -19,7 +19,7 @@ namespace Dust
         /// Null when no messages have positive billed credits or any billed message lacks complete attribution.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("details")]
-        public global::Dust.ConversationConsumptionDetails2? Details { get; set; }
+        public global::Dust.ConversationConsumptionDetails? Details { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -41,7 +41,7 @@ namespace Dust
 #endif
         public ConversationConsumption(
             double billedCredits,
-            global::Dust.ConversationConsumptionDetails2? details)
+            global::Dust.ConversationConsumptionDetails? details)
         {
             this.BilledCredits = billedCredits;
             this.Details = details;

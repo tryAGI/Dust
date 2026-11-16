@@ -11,14 +11,8 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("documents")]
-        public global::System.Collections.Generic.IList<global::Dust.Document>? Documents { get; set; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("total")]
-        public int? Total { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("document")]
+        public global::Dust.Document? Document { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,17 +23,14 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWSpacesDataSourcesDocumentsResponse2" /> class.
         /// </summary>
-        /// <param name="documents"></param>
-        /// <param name="total"></param>
+        /// <param name="document"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetWSpacesDataSourcesDocumentsResponse2(
-            global::System.Collections.Generic.IList<global::Dust.Document>? documents,
-            int? total)
+            global::Dust.Document? document)
         {
-            this.Documents = documents;
-            this.Total = total;
+            this.Document = document;
         }
 
         /// <summary>

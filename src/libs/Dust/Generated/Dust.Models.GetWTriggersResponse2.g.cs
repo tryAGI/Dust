@@ -11,8 +11,8 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("triggers")]
-        public global::System.Collections.Generic.IList<global::Dust.Trigger>? Triggers { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("trigger")]
+        public global::Dust.Trigger? Trigger { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -23,14 +23,14 @@ namespace Dust
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWTriggersResponse2" /> class.
         /// </summary>
-        /// <param name="triggers"></param>
+        /// <param name="trigger"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetWTriggersResponse2(
-            global::System.Collections.Generic.IList<global::Dust.Trigger>? triggers)
+            global::Dust.Trigger? trigger)
         {
-            this.Triggers = triggers;
+            this.Trigger = trigger;
         }
 
         /// <summary>
