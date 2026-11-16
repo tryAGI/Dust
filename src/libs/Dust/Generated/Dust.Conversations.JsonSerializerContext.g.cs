@@ -21,7 +21,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationConsumption))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationConsumptionDetails2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationConsumptionDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ConversationConsumptionToolDetails>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationConsumptionToolDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ConversationConsumptionModelDetails>))]

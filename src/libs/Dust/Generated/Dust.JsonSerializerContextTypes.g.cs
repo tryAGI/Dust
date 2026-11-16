@@ -58,7 +58,7 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
-        public global::Dust.ConversationConsumptionDetails2? Type5 { get; set; }
+        public global::Dust.ConversationConsumptionDetails? Type5 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -1030,7 +1030,7 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
-        public global::Dust.GetWSpacesDataSourcesDocumentsResponse? Type248 { get; set; }
+        public global::Dust.GetWSpacesDataSourcesDocumentsResponse2? Type248 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -1046,7 +1046,7 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
-        public global::Dust.GetWSpacesDataSourcesDocumentsResponse2? Type252 { get; set; }
+        public global::Dust.GetWSpacesDataSourcesDocumentsResponse? Type252 { get; set; }
         /// <summary>
         ///
         /// </summary>
@@ -1098,11 +1098,11 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
-        public global::Dust.GetWTriggersResponse? Type265 { get; set; }
+        public global::Dust.GetWTriggersResponse2? Type265 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Dust.GetWTriggersResponse2? Type266 { get; set; }
+        public global::Dust.GetWTriggersResponse? Type266 { get; set; }
         /// <summary>
         ///
         /// </summary>

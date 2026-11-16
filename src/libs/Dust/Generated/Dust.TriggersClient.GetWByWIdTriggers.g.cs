@@ -72,7 +72,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.GetWTriggersResponse2> GetWByWIdTriggersAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.GetWTriggersResponse> GetWByWIdTriggersAsync(
             string wId,
             global::Dust.GetWTriggersKind? kind = default,
             int? limit = default,
@@ -103,7 +103,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWTriggersResponse2>> GetWByWIdTriggersAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWTriggersResponse>> GetWByWIdTriggersAsResponseAsync(
             string wId,
             global::Dust.GetWTriggersKind? kind = default,
             int? limit = default,
@@ -525,9 +525,9 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dust.GetWTriggersResponse2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dust.GetWTriggersResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWTriggersResponse2>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWTriggersResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -557,9 +557,9 @@ namespace Dust
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Dust.GetWTriggersResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dust.GetWTriggersResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWTriggersResponse2>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWTriggersResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

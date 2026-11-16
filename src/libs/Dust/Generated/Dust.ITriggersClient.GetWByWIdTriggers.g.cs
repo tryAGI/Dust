@@ -16,7 +16,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.GetWTriggersResponse2> GetWByWIdTriggersAsync(
+        global::System.Threading.Tasks.Task<global::Dust.GetWTriggersResponse> GetWByWIdTriggersAsync(
             string wId,
             global::Dust.GetWTriggersKind? kind = default,
             int? limit = default,
@@ -35,7 +35,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWTriggersResponse2>> GetWByWIdTriggersAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWTriggersResponse>> GetWByWIdTriggersAsResponseAsync(
             string wId,
             global::Dust.GetWTriggersKind? kind = default,
             int? limit = default,

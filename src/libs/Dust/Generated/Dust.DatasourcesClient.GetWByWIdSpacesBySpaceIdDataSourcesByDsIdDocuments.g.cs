@@ -77,7 +77,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.GetWSpacesDataSourcesDocumentsResponse2> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.GetWSpacesDataSourcesDocumentsResponse> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -113,7 +113,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesDocumentsResponse2>> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesDocumentsResponse>> GetWByWIdSpacesBySpaceIdDataSourcesByDsIdDocumentsAsResponseAsync(
             string wId,
             string spaceId,
             string dsId,
@@ -445,9 +445,9 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dust.GetWSpacesDataSourcesDocumentsResponse2.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dust.GetWSpacesDataSourcesDocumentsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesDocumentsResponse2>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesDocumentsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -477,9 +477,9 @@ namespace Dust
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Dust.GetWSpacesDataSourcesDocumentsResponse2.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dust.GetWSpacesDataSourcesDocumentsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesDocumentsResponse2>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWSpacesDataSourcesDocumentsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

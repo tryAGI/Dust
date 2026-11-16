@@ -6,7 +6,7 @@ namespace Dust
     /// <summary>
     /// Attribution reconciled to the bill through model input rows. Agent work plus tool attributed credits partition the bill; models and agents are alternative groupings, not additional charges.
     /// </summary>
-    public sealed partial class ConversationConsumptionDetails2
+    public sealed partial class ConversationConsumptionDetails
     {
         /// <summary>
         /// Credits attributed to agent work rather than visible tools.
@@ -43,7 +43,7 @@ namespace Dust
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationConsumptionDetails2" /> class.
+        /// Initializes a new instance of the <see cref="ConversationConsumptionDetails" /> class.
         /// </summary>
         /// <param name="agentWorkCredits">
         /// Credits attributed to agent work rather than visible tools.
@@ -54,7 +54,7 @@ namespace Dust
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public ConversationConsumptionDetails2(
+        public ConversationConsumptionDetails(
             double agentWorkCredits,
             global::System.Collections.Generic.IList<global::Dust.ConversationConsumptionToolDetails> tools,
             global::System.Collections.Generic.IList<global::Dust.ConversationConsumptionModelDetails> models,
@@ -67,9 +67,9 @@ namespace Dust
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationConsumptionDetails2" /> class.
+        /// Initializes a new instance of the <see cref="ConversationConsumptionDetails" /> class.
         /// </summary>
-        public ConversationConsumptionDetails2()
+        public ConversationConsumptionDetails()
         {
         }
 
