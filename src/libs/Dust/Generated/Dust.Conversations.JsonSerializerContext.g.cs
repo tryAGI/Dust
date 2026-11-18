@@ -9,10 +9,10 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
         DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
     )]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>>), TypeInfoPropertyName = "CreateWAssistantConversationsRequestSharedWithItemVariant2_7077fa6a54d70266")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>), TypeInfoPropertyName = "CreateWAssistantConversationsRequestSharedWithItemVariant2_d5d3b54fbb58271a")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>?), TypeInfoPropertyName = "CreateWAssistantConversationsRequestSharedWithItemVariant2_c6f8129f14ad2fe7")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>>), TypeInfoPropertyName = "CreateWAssistantConversationsRequestSharedWithItemVariant2_b542431317d37a89")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>>), TypeInfoPropertyName = "CreateWAssistantConversationsRequestSharedWithItemVariant3_9fa157fd18ab22e3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>), TypeInfoPropertyName = "CreateWAssistantConversationsRequestSharedWithItemVariant3_4ff2a32246ec0070")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>?), TypeInfoPropertyName = "CreateWAssistantConversationsRequestSharedWithItemVariant3_0df85799b7cefc5a")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>>), TypeInfoPropertyName = "CreateWAssistantConversationsRequestSharedWithItemVariant3_ba18a38ad2e0bff0")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, object>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<object>), TypeInfoPropertyName = "SystemCollectionsGeneric_ObjectList")]
@@ -65,6 +65,8 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangeVariant1Permission), TypeInfoPropertyName = "ConversationSharingChangeVariant1Permission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangeVariant2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangeVariant2Permission), TypeInfoPropertyName = "ConversationSharingChangeVariant2Permission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangeVariant3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangeVariant3Permission), TypeInfoPropertyName = "ConversationSharingChangeVariant3Permission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharing))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingOwner))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ConversationSharingMember>))]
@@ -95,6 +97,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.ContentFragment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWFilesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsCancelResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsEventsResponse))]
@@ -117,6 +120,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChange?), TypeInfoPropertyName = "NullableConversationSharingChange2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangeVariant1Permission?), TypeInfoPropertyName = "NullableConversationSharingChangeVariant1Permission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangeVariant2Permission?), TypeInfoPropertyName = "NullableConversationSharingChangeVariant2Permission2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ConversationSharingChangeVariant3Permission?), TypeInfoPropertyName = "NullableConversationSharingChangeVariant3Permission2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.ModelSelectionReasoningEffort?), TypeInfoPropertyName = "NullableModelSelectionReasoningEffort2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>?), TypeInfoPropertyName = "NullableOneOfPatchWAssistantConversationsRequestVariant1PatchWAssistantConversationsRequestVariant22")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.ConversationConsumptionToolDetails>))]
@@ -187,7 +191,7 @@ namespace Dust
         {
             options.Converters.Add(new global::Dust.JsonConverters.ConversationSharingChangeJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>());
-            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>());
             options.Converters.Add(new global::Dust.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
@@ -233,6 +237,10 @@ namespace Dust
                     || typeToConvert == typeof(global::Dust.ConversationSharingChangeVariant2Permission)
 
                     || typeToConvert == typeof(global::Dust.ConversationSharingChangeVariant2Permission?)
+
+                    || typeToConvert == typeof(global::Dust.ConversationSharingChangeVariant3Permission)
+
+                    || typeToConvert == typeof(global::Dust.ConversationSharingChangeVariant3Permission?)
 
                     || typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort)
 
@@ -301,6 +309,16 @@ namespace Dust
                 if (typeToConvert == typeof(global::Dust.ConversationSharingChangeVariant2Permission?))
                 {
                     return new global::Dust.JsonConverters.ConversationSharingChangeVariant2PermissionNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.ConversationSharingChangeVariant3Permission))
+                {
+                    return new global::Dust.JsonConverters.ConversationSharingChangeVariant3PermissionJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.ConversationSharingChangeVariant3Permission?))
+                {
+                    return new global::Dust.JsonConverters.ConversationSharingChangeVariant3PermissionNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Dust.ModelSelectionReasoningEffort))
