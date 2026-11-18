@@ -711,11 +711,11 @@ namespace Dust
         /// Example: conv_abc123
         /// </param>
         /// <param name="spaceId">
-        /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
+        /// The sId of the space (project) in which to create the conversation (optional). Must be a project space. If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
         /// </param>
         /// <param name="sharedWith">
-        /// Workspace members, by email, and groups, by name, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
+        /// Workspace members, by email, groups, by name, and API keys, by ID, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
@@ -730,7 +730,7 @@ namespace Dust
             int? depth = default,
             string? parentConversationId = default,
             string? spaceId = default,
-            global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>>? sharedWith = default,
+            global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>>? sharedWith = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {

@@ -33,13 +33,18 @@ namespace Dust.JsonConverters
             var __score1 = 0;
             if (__jsonProps.Contains("groupName")) __score1++;
             if (__jsonProps.Contains("permission")) __score1++;
+            var __score2 = 0;
+            if (__jsonProps.Contains("keyId")) __score2++;
+            if (__jsonProps.Contains("permission")) __score2++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
+            if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
 
             global::Dust.ConversationSharingChangeVariant1? conversationSharingChangeVariant1 = default;
             global::Dust.ConversationSharingChangeVariant2? conversationSharingChangeVariant2 = default;
+            global::Dust.ConversationSharingChangeVariant3? conversationSharingChangeVariant3 = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -80,9 +85,28 @@ namespace Dust.JsonConverters
                         // Legacy enum converters signal an incompatible JSON token with this exception.
                     }
                 }
+                else if (__bestIndex == 2)
+                {
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.ConversationSharingChangeVariant3), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.ConversationSharingChangeVariant3> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.ConversationSharingChangeVariant3).Name}");
+                        conversationSharingChangeVariant3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                    catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+                    {
+                        // Legacy enum converters signal an incompatible JSON token with this exception.
+                    }
+                }
             }
 
-            if (conversationSharingChangeVariant1 == null && conversationSharingChangeVariant2 == null)
+            if (conversationSharingChangeVariant1 == null && conversationSharingChangeVariant2 == null && conversationSharingChangeVariant3 == null)
             {
                 try
                 {
@@ -103,7 +127,7 @@ namespace Dust.JsonConverters
                 }
             }
 
-            if (conversationSharingChangeVariant1 == null && conversationSharingChangeVariant2 == null)
+            if (conversationSharingChangeVariant1 == null && conversationSharingChangeVariant2 == null && conversationSharingChangeVariant3 == null)
             {
                 try
                 {
@@ -124,10 +148,33 @@ namespace Dust.JsonConverters
                 }
             }
 
+            if (conversationSharingChangeVariant1 == null && conversationSharingChangeVariant2 == null && conversationSharingChangeVariant3 == null)
+            {
+                try
+                {
+
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.ConversationSharingChangeVariant3), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.ConversationSharingChangeVariant3> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.ConversationSharingChangeVariant3).Name}");
+                    conversationSharingChangeVariant3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+                catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+                {
+                    // Legacy enum converters signal an incompatible JSON token with this exception.
+                }
+            }
+
             var __value = new global::Dust.ConversationSharingChange(
                 conversationSharingChangeVariant1,
 
-                conversationSharingChangeVariant2
+                conversationSharingChangeVariant2,
+
+                conversationSharingChangeVariant3
                 );
 
             return __value;
@@ -153,6 +200,12 @@ namespace Dust.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.ConversationSharingChangeVariant2), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.ConversationSharingChangeVariant2?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.ConversationSharingChangeVariant2).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickConversationSharingChangeVariant2(), typeInfo);
+            }
+            else if (value.IsConversationSharingChangeVariant3)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Dust.ConversationSharingChangeVariant3), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Dust.ConversationSharingChangeVariant3?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Dust.ConversationSharingChangeVariant3).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickConversationSharingChangeVariant3(), typeInfo);
             }
         }
     }

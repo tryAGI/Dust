@@ -62,7 +62,7 @@ namespace Dust
         public string? ParentConversationId { get; set; }
 
         /// <summary>
-        /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
+        /// The sId of the space (project) in which to create the conversation (optional). Must be a project space. If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
         /// </summary>
         /// <example>space_abc123</example>
@@ -70,10 +70,10 @@ namespace Dust
         public string? SpaceId { get; set; }
 
         /// <summary>
-        /// Workspace members, by email, and groups, by name, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
+        /// Workspace members, by email, groups, by name, and API keys, by ID, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("sharedWith")]
-        public global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>>? SharedWith { get; set; }
+        public global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>>? SharedWith { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -109,11 +109,11 @@ namespace Dust
         /// Example: conv_abc123
         /// </param>
         /// <param name="spaceId">
-        /// The sId of the space (project) in which to create the conversation (optional). If not provided, the conversation is created outside projects<br/>
+        /// The sId of the space (project) in which to create the conversation (optional). Must be a project space. If not provided, the conversation is created outside projects<br/>
         /// Example: space_abc123
         /// </param>
         /// <param name="sharedWith">
-        /// Workspace members, by email, and groups, by name, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
+        /// Workspace members, by email, groups, by name, and API keys, by ID, to give write access to the conversation once created, as `PATCH /api/v1/w/{wId}/assistant/conversations/{cId}/sharing` does (optional). Not supported for conversations in projects
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -127,7 +127,7 @@ namespace Dust
             int? depth,
             string? parentConversationId,
             string? spaceId,
-            global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2>>? sharedWith)
+            global::System.Collections.Generic.IList<global::Dust.OneOf<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>>? sharedWith)
         {
             this.Message = message ?? throw new global::System.ArgumentNullException(nameof(message));
             this.ContentFragments = contentFragments;

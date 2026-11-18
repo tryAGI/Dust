@@ -82,6 +82,43 @@ namespace Dust
         public global::Dust.ConversationSharingChangeVariant2 PickConversationSharingChangeVariant2() => ConversationSharingChangeVariant2 is { } value
             ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ConversationSharingChangeVariant2' but the value was {ToString()}.");
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Dust.ConversationSharingChangeVariant3? ConversationSharingChangeVariant3 { get; init; }
+#else
+        public global::Dust.ConversationSharingChangeVariant3? ConversationSharingChangeVariant3 { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ConversationSharingChangeVariant3))]
+#endif
+        public bool IsConversationSharingChangeVariant3 => ConversationSharingChangeVariant3 != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickConversationSharingChangeVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Dust.ConversationSharingChangeVariant3? value)
+        {
+            value = ConversationSharingChangeVariant3;
+            return IsConversationSharingChangeVariant3;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Dust.ConversationSharingChangeVariant3 PickConversationSharingChangeVariant3() => ConversationSharingChangeVariant3 is { } value
+            ? value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ConversationSharingChangeVariant3' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
@@ -131,19 +168,45 @@ namespace Dust
         /// <summary>
         ///
         /// </summary>
+        public static implicit operator ConversationSharingChange(global::Dust.ConversationSharingChangeVariant3 value) => new ConversationSharingChange((global::Dust.ConversationSharingChangeVariant3?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator global::Dust.ConversationSharingChangeVariant3?(ConversationSharingChange @this) => @this.ConversationSharingChangeVariant3;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public ConversationSharingChange(global::Dust.ConversationSharingChangeVariant3? value)
+        {
+            ConversationSharingChangeVariant3 = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static ConversationSharingChange FromConversationSharingChangeVariant3(global::Dust.ConversationSharingChangeVariant3? value) => new ConversationSharingChange(value);
+
+        /// <summary>
+        ///
+        /// </summary>
         public ConversationSharingChange(
             global::Dust.ConversationSharingChangeVariant1? conversationSharingChangeVariant1,
-            global::Dust.ConversationSharingChangeVariant2? conversationSharingChangeVariant2
+            global::Dust.ConversationSharingChangeVariant2? conversationSharingChangeVariant2,
+            global::Dust.ConversationSharingChangeVariant3? conversationSharingChangeVariant3
             )
         {
             ConversationSharingChangeVariant1 = conversationSharingChangeVariant1;
             ConversationSharingChangeVariant2 = conversationSharingChangeVariant2;
+            ConversationSharingChangeVariant3 = conversationSharingChangeVariant3;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
+            ConversationSharingChangeVariant3 as object ??
             ConversationSharingChangeVariant2 as object ??
             ConversationSharingChangeVariant1 as object
             ;
@@ -153,7 +216,8 @@ namespace Dust
         /// </summary>
         public override string? ToString() =>
             ConversationSharingChangeVariant1?.ToString() ??
-            ConversationSharingChangeVariant2?.ToString()
+            ConversationSharingChangeVariant2?.ToString() ??
+            ConversationSharingChangeVariant3?.ToString()
             ;
 
         /// <summary>
@@ -161,7 +225,7 @@ namespace Dust
         /// </summary>
         public bool Validate()
         {
-            return IsConversationSharingChangeVariant1 && !IsConversationSharingChangeVariant2 || !IsConversationSharingChangeVariant1 && IsConversationSharingChangeVariant2;
+            return IsConversationSharingChangeVariant1 && !IsConversationSharingChangeVariant2 && !IsConversationSharingChangeVariant3 || !IsConversationSharingChangeVariant1 && IsConversationSharingChangeVariant2 && !IsConversationSharingChangeVariant3 || !IsConversationSharingChangeVariant1 && !IsConversationSharingChangeVariant2 && IsConversationSharingChangeVariant3;
         }
 
         /// <summary>
@@ -170,6 +234,7 @@ namespace Dust
         public TResult? Match<TResult>(
             global::System.Func<global::Dust.ConversationSharingChangeVariant1, TResult>? conversationSharingChangeVariant1 = null,
             global::System.Func<global::Dust.ConversationSharingChangeVariant2, TResult>? conversationSharingChangeVariant2 = null,
+            global::System.Func<global::Dust.ConversationSharingChangeVariant3, TResult>? conversationSharingChangeVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -185,6 +250,10 @@ namespace Dust
             {
                 return conversationSharingChangeVariant2(__value1);
             }
+            else if (ConversationSharingChangeVariant3 is { } __value2 && conversationSharingChangeVariant3 != null)
+            {
+                return conversationSharingChangeVariant3(__value2);
+            }
 
             return default(TResult);
         }
@@ -196,6 +265,8 @@ namespace Dust
             global::System.Action<global::Dust.ConversationSharingChangeVariant1>? conversationSharingChangeVariant1 = null,
 
             global::System.Action<global::Dust.ConversationSharingChangeVariant2>? conversationSharingChangeVariant2 = null,
+
+            global::System.Action<global::Dust.ConversationSharingChangeVariant3>? conversationSharingChangeVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -210,6 +281,10 @@ namespace Dust
             else if (ConversationSharingChangeVariant2 is { } __value1)
             {
                 conversationSharingChangeVariant2?.Invoke(__value1);
+            }
+            else if (ConversationSharingChangeVariant3 is { } __value2)
+            {
+                conversationSharingChangeVariant3?.Invoke(__value2);
             }
         }
 
@@ -219,6 +294,7 @@ namespace Dust
         public void Switch(
             global::System.Action<global::Dust.ConversationSharingChangeVariant1>? conversationSharingChangeVariant1 = null,
             global::System.Action<global::Dust.ConversationSharingChangeVariant2>? conversationSharingChangeVariant2 = null,
+            global::System.Action<global::Dust.ConversationSharingChangeVariant3>? conversationSharingChangeVariant3 = null,
             bool validate = true)
         {
             if (validate)
@@ -233,6 +309,10 @@ namespace Dust
             else if (ConversationSharingChangeVariant2 is { } __value1)
             {
                 conversationSharingChangeVariant2?.Invoke(__value1);
+            }
+            else if (ConversationSharingChangeVariant3 is { } __value2)
+            {
+                conversationSharingChangeVariant3?.Invoke(__value2);
             }
         }
 
@@ -247,6 +327,8 @@ namespace Dust
                 typeof(global::Dust.ConversationSharingChangeVariant1),
                 ConversationSharingChangeVariant2,
                 typeof(global::Dust.ConversationSharingChangeVariant2),
+                ConversationSharingChangeVariant3,
+                typeof(global::Dust.ConversationSharingChangeVariant3),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -264,7 +346,8 @@ namespace Dust
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Dust.ConversationSharingChangeVariant1?>.Default.Equals(ConversationSharingChangeVariant1, other.ConversationSharingChangeVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Dust.ConversationSharingChangeVariant2?>.Default.Equals(ConversationSharingChangeVariant2, other.ConversationSharingChangeVariant2)
+                global::System.Collections.Generic.EqualityComparer<global::Dust.ConversationSharingChangeVariant2?>.Default.Equals(ConversationSharingChangeVariant2, other.ConversationSharingChangeVariant2) &&
+                global::System.Collections.Generic.EqualityComparer<global::Dust.ConversationSharingChangeVariant3?>.Default.Equals(ConversationSharingChangeVariant3, other.ConversationSharingChangeVariant3)
                 ;
         }
 
