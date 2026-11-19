@@ -2821,7 +2821,7 @@
                   "depth": {
                     "type": "integer",
                     "minimum": 0,
-                    "description": "The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)",
+                    "description": "The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0). A depth greater than 0 requires parentConversationId",
                     "example": 0
                   },
                   "parentConversationId": {
