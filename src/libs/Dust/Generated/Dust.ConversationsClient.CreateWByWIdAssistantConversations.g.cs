@@ -703,7 +703,7 @@ namespace Dust
         /// Example: true
         /// </param>
         /// <param name="depth">
-        /// The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0)<br/>
+        /// The depth of the conversation in a chain of sub-agent conversations (optional, defaults to 0). A depth greater than 0 requires parentConversationId<br/>
         /// Example: 0
         /// </param>
         /// <param name="parentConversationId">
