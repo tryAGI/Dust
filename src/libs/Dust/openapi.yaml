@@ -4264,6 +4264,26 @@
                           }
                         }
                       }
+                    },
+                    "skippedAttachments": {
+                      "type": "array",
+                      "description": "Files of imported or updated skills that were not stored as skill attachments, for example because their file type is not supported.",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "name": {
+                            "type": "string",
+                            "description": "Name of the skill the file belongs to."
+                          },
+                          "path": {
+                            "type": "string",
+                            "description": "Path of the file relative to the skill directory."
+                          },
+                          "message": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     }
                   }
                 }

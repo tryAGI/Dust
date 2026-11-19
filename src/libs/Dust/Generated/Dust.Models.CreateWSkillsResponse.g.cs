@@ -27,6 +27,12 @@ namespace Dust
         public global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedItem>? Skipped { get; set; }
 
         /// <summary>
+        /// Files of imported or updated skills that were not stored as skill attachments, for example because their file type is not supported.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("skippedAttachments")]
+        public global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedAttachment>? SkippedAttachments { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -38,17 +44,22 @@ namespace Dust
         /// <param name="imported"></param>
         /// <param name="updated"></param>
         /// <param name="skipped"></param>
+        /// <param name="skippedAttachments">
+        /// Files of imported or updated skills that were not stored as skill attachments, for example because their file type is not supported.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public CreateWSkillsResponse(
             global::System.Collections.Generic.IList<global::Dust.Skill>? imported,
             global::System.Collections.Generic.IList<global::Dust.Skill>? updated,
-            global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedItem>? skipped)
+            global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedItem>? skipped,
+            global::System.Collections.Generic.IList<global::Dust.CreateWSkillsResponseSkippedAttachment>? skippedAttachments)
         {
             this.Imported = imported;
             this.Updated = updated;
             this.Skipped = skipped;
+            this.SkippedAttachments = skippedAttachments;
         }
 
         /// <summary>
