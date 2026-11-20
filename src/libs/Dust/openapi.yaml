@@ -1644,7 +1644,7 @@
         ],
         "responses": {
           "200": {
-            "description": "File content streamed directly.",
+            "description": "File content streamed directly, with the file's stored content type. A file stored\nwithout a type is served as an attachment, with `text/html` for `.html` and the\ncurrent Office types for `.docx` and `.pptx`, unless the request's `Accept` header is\nexactly `application/octet-stream`. Any other extension stays\n`application/octet-stream`.\n",
             "content": {
               "application/octet-stream": {
                 "schema": {
@@ -2907,7 +2907,7 @@
             "description": "Unauthorized"
           },
           "403": {
-            "description": "Forbidden. Only system keys can set parentConversationId."
+            "description": "Forbidden. Only system keys can set parentConversationId, and the caller must be allowed to create the conversation where it goes.\n"
           },
           "404": {
             "description": "Space or parent conversation not found, or no user, group or API key with one of the emails, names or IDs of sharedWith.\n"
