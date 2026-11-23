@@ -9,8 +9,8 @@ namespace Dust
         /// Export per-call consumption analytics for the workspace identified by {wId}.<br/>
         /// Each row represents one unit of billed credit consumption (an LLM call, a tool call, a Frame App charge or an inference hook charge).<br/>
         /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the user the charge is billed to, empty for workspace pool charges.<br/>
-        /// Inference hook charge rows fill the agent, message and conversation columns from the Guardrails request of the hook, leave the<br/>
-        /// message and conversation columns empty when that message no longer exists, and leave the user and space columns empty.<br/>
+        /// Inference hook charge rows fill the agent, message and conversation columns from the hook checkpoint the charge names, leave<br/>
+        /// them empty when that message no longer exists, and leave the user and space columns empty.<br/>
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
@@ -37,8 +37,8 @@ namespace Dust
         /// Export per-call consumption analytics for the workspace identified by {wId}.<br/>
         /// Each row represents one unit of billed credit consumption (an LLM call, a tool call, a Frame App charge or an inference hook charge).<br/>
         /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the user the charge is billed to, empty for workspace pool charges.<br/>
-        /// Inference hook charge rows fill the agent, message and conversation columns from the Guardrails request of the hook, leave the<br/>
-        /// message and conversation columns empty when that message no longer exists, and leave the user and space columns empty.<br/>
+        /// Inference hook charge rows fill the agent, message and conversation columns from the hook checkpoint the charge names, leave<br/>
+        /// them empty when that message no longer exists, and leave the user and space columns empty.<br/>
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
@@ -65,8 +65,8 @@ namespace Dust
         /// Export per-call consumption analytics for the workspace identified by {wId}.<br/>
         /// Each row represents one unit of billed credit consumption (an LLM call, a tool call, a Frame App charge or an inference hook charge).<br/>
         /// Frame App charge rows leave the agent and message columns empty, and fill the user columns with the user the charge is billed to, empty for workspace pool charges.<br/>
-        /// Inference hook charge rows fill the agent, message and conversation columns from the Guardrails request of the hook, leave the<br/>
-        /// message and conversation columns empty when that message no longer exists, and leave the user and space columns empty.<br/>
+        /// Inference hook charge rows fill the agent, message and conversation columns from the hook checkpoint the charge names, leave<br/>
+        /// them empty when that message no longer exists, and leave the user and space columns empty.<br/>
         /// The export can be filtered by various dimensions (agents, users, API keys, groups, models, tools, skills, sources, tags).<br/>
         /// The export is limited to a maximum of 30 days per request and times out after 10 seconds: reduce the time range<br/>
         /// or apply filters to reduce the number of rows if you encounter a timeout.<br/>
