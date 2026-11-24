@@ -60,7 +60,7 @@ namespace Dust
 
         /// <summary>
         /// Update agent configuration<br/>
-        /// Update the agent configuration identified by {sId} in the workspace identified by {wId}.
+        /// Update the agent configuration identified by {sId} in the workspace identified by {wId}. Requires a workspace admin API key, or an access token of a workspace admin.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="sId"></param>
@@ -89,7 +89,7 @@ namespace Dust
         }
         /// <summary>
         /// Update agent configuration<br/>
-        /// Update the agent configuration identified by {sId} in the workspace identified by {wId}.
+        /// Update the agent configuration identified by {sId} in the workspace identified by {wId}. Requires a workspace admin API key, or an access token of a workspace admin.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="sId"></param>
@@ -628,7 +628,7 @@ namespace Dust
         }
         /// <summary>
         /// Update agent configuration<br/>
-        /// Update the agent configuration identified by {sId} in the workspace identified by {wId}.
+        /// Update the agent configuration identified by {sId} in the workspace identified by {wId}. Requires a workspace admin API key, or an access token of a workspace admin.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="sId"></param>

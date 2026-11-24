@@ -3,10 +3,10 @@
 
 namespace Dust
 {
-    public partial class DatasourceViewsClient
+    public partial class SpacesClient
     {
 
-        private static readonly global::Dust.AutoSDKServer[] s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdServers = new global::Dust.AutoSDKServer[]
+        private static readonly global::Dust.AutoSDKServer[] s_GetWByWIdPodsExportServers = new global::Dust.AutoSDKServer[]
         {            new global::Dust.AutoSDKServer(
                 id: "https-dust-tt",
                 name: "Dust.tt API (us-central1)",
@@ -20,7 +20,7 @@ namespace Dust
         };
 
 
-        private static readonly global::Dust.EndPointSecurityRequirement s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirement0 =
+        private static readonly global::Dust.EndPointSecurityRequirement s_GetWByWIdPodsExportSecurityRequirement0 =
             new global::Dust.EndPointSecurityRequirement
             {
                 Authorizations = new global::Dust.EndPointAuthorizationRequirement[]
@@ -34,78 +34,83 @@ namespace Dust
                     },
                 },
             };
-        private static readonly global::Dust.EndPointSecurityRequirement[] s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirements =
+        private static readonly global::Dust.EndPointSecurityRequirement[] s_GetWByWIdPodsExportSecurityRequirements =
             new global::Dust.EndPointSecurityRequirement[]
-            {                s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirement0,
+            {                s_GetWByWIdPodsExportSecurityRequirement0,
             };
-        partial void PrepareDeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdArguments(
+        partial void PrepareGetWByWIdPodsExportArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string wId,
-            ref string spaceId,
-            ref string dsvId);
-        partial void PrepareDeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdRequest(
+            ref global::Dust.GetWPodsExportFormat? format);
+        partial void PrepareGetWByWIdPodsExportRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string wId,
-            string spaceId,
-            string dsvId);
-        partial void ProcessDeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdResponse(
+            global::Dust.GetWPodsExportFormat? format);
+        partial void ProcessGetWByWIdPodsExportResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
+        partial void ProcessGetWByWIdPodsExportResponseContent(
+            global::System.Net.Http.HttpClient httpClient,
+            global::System.Net.Http.HttpResponseMessage httpResponseMessage,
+            ref string content);
+
         /// <summary>
-        /// Delete a data source view
+        /// Export the list of pods<br/>
+        /// Export every pod of the workspace identified by {wId}, restricted and archived ones<br/>
+        /// included, in CSV or JSON format. Deleted pods are not listed. Use the pod ID to map the `spaceId` of other<br/>
+        /// exports (such as the `messages` analytics table) to the pod name and description.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="spaceId"></param>
-        /// <param name="dsvId"></param>
+        /// <param name="format"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.GetWPodsExportResponse> GetWByWIdPodsExportAsync(
             string wId,
-            string spaceId,
-            string dsvId,
+            global::Dust.GetWPodsExportFormat? format = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            await DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsResponseAsync(
+            var __response = await GetWByWIdPodsExportAsResponseAsync(
                 wId: wId,
-                spaceId: spaceId,
-                dsvId: dsvId,
+                format: format,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
+
+            return __response.Body;
         }
         /// <summary>
-        /// Delete a data source view
+        /// Export the list of pods<br/>
+        /// Export every pod of the workspace identified by {wId}, restricted and archived ones<br/>
+        /// included, in CSV or JSON format. Deleted pods are not listed. Use the pod ID to map the `spaceId` of other<br/>
+        /// exports (such as the `messages` analytics table) to the pod name and description.
         /// </summary>
         /// <param name="wId"></param>
-        /// <param name="spaceId"></param>
-        /// <param name="dsvId"></param>
+        /// <param name="format"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse> DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.GetWPodsExportResponse>> GetWByWIdPodsExportAsResponseAsync(
             string wId,
-            string spaceId,
-            string dsvId,
+            global::Dust.GetWPodsExportFormat? format = default,
             global::Dust.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareDeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdArguments(
+            PrepareGetWByWIdPodsExportArguments(
                 httpClient: HttpClient,
                 wId: ref wId,
-                spaceId: ref spaceId,
-                dsvId: ref dsvId);
+                format: ref format);
 
 
             var __authorizations = global::Dust.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdSecurityRequirements,
-                operationName: "DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync");
+                securityRequirements: s_GetWByWIdPodsExportSecurityRequirements,
+                operationName: "GetWByWIdPodsExportAsync");
 
             using var __timeoutCancellationTokenSource = global::Dust.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -125,22 +130,29 @@ namespace Dust
             {
 
                             var __pathBuilder = new global::Dust.PathBuilder(
-                                path: $"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}",
+                                path: $"/api/v1/w/{wId}/pods/export",
                                 baseUri: ResolveBaseUri(
-                                servers: s_DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdServers,
+                                servers: s_GetWByWIdPodsExportServers,
                                 defaultBaseUrl: "https://dust.tt/"));
+                            __pathBuilder
+                                .AddOptionalParameter("format", format?.ToValueString())
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Dust.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Delete,
+                    method: global::System.Net.Http.HttpMethod.Get,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
                 __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
+
+                __httpRequest.Headers.TryAddWithoutValidation(
+                    "Accept",
+                    "application/json");
 
             foreach (var __authorization in __authorizations)
             {
@@ -166,12 +178,11 @@ namespace Dust
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareDeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdRequest(
+                PrepareGetWByWIdPodsExportRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     wId: wId,
-                    spaceId: spaceId,
-                    dsvId: dsvId);
+                    format: format);
 
                 return __httpRequest;
             }
@@ -188,10 +199,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "deleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvId",
-                                methodName: "DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync",
-                                pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "getWByWIdPodsExport",
+                                methodName: "GetWByWIdPodsExportAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/pods/export\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
@@ -222,10 +233,10 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "deleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvId",
-                                methodName: "DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync",
-                                pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "getWByWIdPodsExport",
+                                methodName: "GetWByWIdPodsExportAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/pods/export\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
@@ -263,10 +274,10 @@ namespace Dust
                         await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "deleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvId",
-                                methodName: "DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync",
-                                pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "getWByWIdPodsExport",
+                                methodName: "GetWByWIdPodsExportAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/pods/export\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -303,7 +314,7 @@ namespace Dust
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessDeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdResponse(
+                ProcessGetWByWIdPodsExportResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -311,10 +322,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "deleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvId",
-                                methodName: "DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync",
-                                pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "getWByWIdPodsExport",
+                                methodName: "GetWByWIdPodsExportAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/pods/export\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -333,10 +344,10 @@ namespace Dust
                     await global::Dust.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Dust.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "deleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvId",
-                                methodName: "DeleteWByWIdSpacesBySpaceIdDataSourceViewsByDsvIdAsync",
-                                pathTemplate: "$\"/api/v1/w/{wId}/spaces/{spaceId}/data_source_views/{dsvId}\"",
-                                httpMethod: "DELETE",
+                                operationId: "getWByWIdPodsExport",
+                                methodName: "GetWByWIdPodsExportAsync",
+                                pathTemplate: "$\"/api/v1/w/{wId}/pods/export\"",
+                                httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
@@ -351,32 +362,32 @@ namespace Dust
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             //
-                            if ((int)__response.StatusCode == 401)
+                            if ((int)__response.StatusCode == 400)
                             {
-                                string? __content_401 = null;
-                                global::System.Exception? __exception_401 = null;
+                                string? __content_400 = null;
+                                global::System.Exception? __exception_400 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
-                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
                                     }
                                     else
                                     {
-                                        __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    __exception_401 = __ex;
+                                    __exception_400 = __ex;
                                 }
 
 
                                 throw global::Dust.ApiException.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_401 is { Length: > 0 } ? __content_401 : __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_401,
-                                    responseBody: __content_401,
+                                    message: __content_400 is { Length: > 0 } ? __content_400 : __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_400,
+                                    responseBody: __content_400,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -415,32 +426,32 @@ namespace Dust
                                         h => h.Value));
                             }
                             //
-                            if ((int)__response.StatusCode == 404)
+                            if ((int)__response.StatusCode == 429)
                             {
-                                string? __content_404 = null;
-                                global::System.Exception? __exception_404 = null;
+                                string? __content_429 = null;
+                                global::System.Exception? __exception_429 = null;
                                 try
                                 {
                                     if (__effectiveReadResponseAsString)
                                     {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
                                     }
                                     else
                                     {
-                                        __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
                                 {
-                                    __exception_404 = __ex;
+                                    __exception_429 = __ex;
                                 }
 
 
                                 throw global::Dust.ApiException.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_404 is { Length: > 0 } ? __content_404 : __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_404,
-                                    responseBody: __content_404,
+                                    message: __content_429 is { Length: > 0 } ? __content_429 : __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_429,
+                                    responseBody: __content_429,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,
@@ -459,15 +470,22 @@ namespace Dust
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
+                                ProcessGetWByWIdPodsExportResponseContent(
+                                    httpClient: HttpClient,
+                                    httpResponseMessage: __response,
+                                    content: ref __content);
 
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                return new global::Dust.AutoSDKHttpResponse(
+                                    var __value = global::Dust.GetWPodsExportResponse.FromJson(__content, JsonSerializerContext) ??
+                                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWPodsExportResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -487,10 +505,19 @@ namespace Dust
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
-                                    return new global::Dust.AutoSDKHttpResponse(
+                                    using var __content = await __response.Content.ReadAsStreamAsync(
+                #if NET5_0_OR_GREATER
+                                        __effectiveCancellationToken
+                #endif
+                                    ).ConfigureAwait(false);
+
+                                    var __value = await global::Dust.GetWPodsExportResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                        throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.GetWPodsExportResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
-                                        requestUri: __response.RequestMessage?.RequestUri);
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

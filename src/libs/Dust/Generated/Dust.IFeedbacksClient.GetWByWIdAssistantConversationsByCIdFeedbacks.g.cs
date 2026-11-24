@@ -7,7 +7,7 @@ namespace Dust
         /// <summary>
         /// Get feedbacks for a conversation<br/>
         /// Retrieves all feedback entries for a specific conversation.<br/>
-        /// Requires authentication and read:conversation scope.
+        /// Requires a user access token: workspace API keys are not tied to a user and get a 401.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>
@@ -22,7 +22,7 @@ namespace Dust
         /// <summary>
         /// Get feedbacks for a conversation<br/>
         /// Retrieves all feedback entries for a specific conversation.<br/>
-        /// Requires authentication and read:conversation scope.
+        /// Requires a user access token: workspace API keys are not tied to a user and get a 401.
         /// </summary>
         /// <param name="wId"></param>
         /// <param name="cId"></param>

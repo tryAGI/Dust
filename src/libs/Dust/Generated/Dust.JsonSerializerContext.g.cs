@@ -175,6 +175,10 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.GetWAssistantMentionsSuggestionsSelectItemNullableJsonConverter),
 
+            typeof(global::Dust.JsonConverters.GetWPodsExportFormatJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWPodsExportFormatNullableJsonConverter),
+
             typeof(global::Dust.JsonConverters.GetWSearchViewTypeJsonConverter),
 
             typeof(global::Dust.JsonConverters.GetWSearchViewTypeNullableJsonConverter),
@@ -194,6 +198,14 @@ namespace Dust
             typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionJsonConverter),
 
             typeof(global::Dust.JsonConverters.GetWAssistantConversationsFeedbacksResponseFeedbackThumbDirectionNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWPodsExportResponsePodAccessJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWPodsExportResponsePodAccessNullableJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWPodsExportResponsePodStatusJsonConverter),
+
+            typeof(global::Dust.JsonConverters.GetWPodsExportResponsePodStatusNullableJsonConverter),
 
             typeof(global::Dust.JsonConverters.ConversationSharingChangeJsonConverter),
 
@@ -404,6 +416,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsMentionsSuggestionsSelectItem), TypeInfoPropertyName = "GetWAssistantConversationsMentionsSuggestionsSelectItem2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWAssistantMentionsSuggestionsSelectItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantMentionsSuggestionsSelectItem), TypeInfoPropertyName = "GetWAssistantMentionsSuggestionsSelectItem2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportFormat), TypeInfoPropertyName = "GetWPodsExportFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSearchViewType), TypeInfoPropertyName = "GetWSearchViewType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsStatus), TypeInfoPropertyName = "GetWSkillsStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWSkillsAvailabilityItem>))]
@@ -435,6 +448,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesFeedbacksResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWAssistantConversationsMessagesFeedbacksResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesValidateActionResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantConversationsMessagesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWAssistantConversationsSharingResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.PatchWAssistantConversationsSharingResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWAssistantMentionsParseResponse))]
@@ -447,6 +461,11 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWPodsFilesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWPodsFilesResponseFile))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsFilesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWPodsExportResponsePod>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePod))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodAccess), TypeInfoPropertyName = "GetWPodsExportResponsePodAccess2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodStatus), TypeInfoPropertyName = "GetWPodsExportResponsePodStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWSkillsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Skill>))]
@@ -530,6 +549,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWAssistantAgentConfigurationsImportResponseSkippedAction>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWAssistantConversationsFeedbacksResponseFeedback>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.RichMention>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWPodsExportResponsePod>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Skill>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWSkillsResponseSkippedItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.CreateWSkillsResponseSkippedAttachment>))]

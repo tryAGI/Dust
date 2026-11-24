@@ -68,7 +68,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.Message> CreateWByWIdAssistantConversationsByCIdMessagesAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantConversationsMessagesResponse> CreateWByWIdAssistantConversationsByCIdMessagesAsync(
             string wId,
             string cId,
 
@@ -97,7 +97,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Dust.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.Message>> CreateWByWIdAssistantConversationsByCIdMessagesAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.AutoSDKHttpResponse<global::Dust.CreateWAssistantConversationsMessagesResponse>> CreateWByWIdAssistantConversationsByCIdMessagesAsResponseAsync(
             string wId,
             string cId,
 
@@ -552,9 +552,9 @@ namespace Dust
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Dust.Message.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Dust.CreateWAssistantConversationsMessagesResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.Message>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.CreateWAssistantConversationsMessagesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -584,9 +584,9 @@ namespace Dust
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Dust.Message.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Dust.CreateWAssistantConversationsMessagesResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.Message>(
+                                    return new global::Dust.AutoSDKHttpResponse<global::Dust.CreateWAssistantConversationsMessagesResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Dust.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -651,7 +651,7 @@ namespace Dust
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Dust.Message> CreateWByWIdAssistantConversationsByCIdMessagesAsync(
+        public async global::System.Threading.Tasks.Task<global::Dust.CreateWAssistantConversationsMessagesResponse> CreateWByWIdAssistantConversationsByCIdMessagesAsync(
             string wId,
             string cId,
             string content,
