@@ -20,14 +20,24 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(byte[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Space))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SpaceKind), TypeInfoPropertyName = "SpaceKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportFormat), TypeInfoPropertyName = "GetWPodsExportFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWPodsFilesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWPodsFilesResponseFile))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsFilesResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.GetWPodsExportResponsePod>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePod))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodAccess), TypeInfoPropertyName = "GetWPodsExportResponsePodAccess2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodStatus), TypeInfoPropertyName = "GetWPodsExportResponsePodStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Space>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SpaceKind?), TypeInfoPropertyName = "NullableSpaceKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportFormat?), TypeInfoPropertyName = "NullableGetWPodsExportFormat2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodAccess?), TypeInfoPropertyName = "NullableGetWPodsExportResponsePodAccess2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodStatus?), TypeInfoPropertyName = "NullableGetWPodsExportResponsePodStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWPodsExportResponsePod>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Space>))]
     internal sealed partial class SpacesSourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -100,7 +110,19 @@ namespace Dust
                 return
                     typeToConvert == typeof(global::Dust.SpaceKind)
 
-                    || typeToConvert == typeof(global::Dust.SpaceKind?);
+                    || typeToConvert == typeof(global::Dust.SpaceKind?)
+
+                    || typeToConvert == typeof(global::Dust.GetWPodsExportFormat)
+
+                    || typeToConvert == typeof(global::Dust.GetWPodsExportFormat?)
+
+                    || typeToConvert == typeof(global::Dust.GetWPodsExportResponsePodAccess)
+
+                    || typeToConvert == typeof(global::Dust.GetWPodsExportResponsePodAccess?)
+
+                    || typeToConvert == typeof(global::Dust.GetWPodsExportResponsePodStatus)
+
+                    || typeToConvert == typeof(global::Dust.GetWPodsExportResponsePodStatus?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -115,6 +137,36 @@ namespace Dust
                 if (typeToConvert == typeof(global::Dust.SpaceKind?))
                 {
                     return new global::Dust.JsonConverters.SpaceKindNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWPodsExportFormat))
+                {
+                    return new global::Dust.JsonConverters.GetWPodsExportFormatJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWPodsExportFormat?))
+                {
+                    return new global::Dust.JsonConverters.GetWPodsExportFormatNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWPodsExportResponsePodAccess))
+                {
+                    return new global::Dust.JsonConverters.GetWPodsExportResponsePodAccessJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWPodsExportResponsePodAccess?))
+                {
+                    return new global::Dust.JsonConverters.GetWPodsExportResponsePodAccessNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWPodsExportResponsePodStatus))
+                {
+                    return new global::Dust.JsonConverters.GetWPodsExportResponsePodStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Dust.GetWPodsExportResponsePodStatus?))
+                {
+                    return new global::Dust.JsonConverters.GetWPodsExportResponsePodStatusNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }
