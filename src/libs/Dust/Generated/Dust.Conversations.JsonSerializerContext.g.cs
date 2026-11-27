@@ -194,6 +194,7 @@ namespace Dust
             options.Converters.Add(new global::Dust.JsonConverters.ConversationSharingChangeJsonConverter());
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWAssistantConversationsRequestVariant1, global::Dust.PatchWAssistantConversationsRequestVariant2>());
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant1, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant2, global::Dust.CreateWAssistantConversationsRequestSharedWithItemVariant3>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
             options.Converters.Add(new global::Dust.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }

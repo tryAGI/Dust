@@ -72,6 +72,7 @@ namespace Dust
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
             options.Converters.Add(new global::Dust.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }

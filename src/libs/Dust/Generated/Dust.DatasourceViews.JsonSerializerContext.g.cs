@@ -90,6 +90,7 @@ namespace Dust
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<global::Dust.PatchWSpacesDataSourceViewsRequestVariant1, global::Dust.PatchWSpacesDataSourceViewsRequestVariant2>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
             options.Converters.Add(new global::Dust.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }

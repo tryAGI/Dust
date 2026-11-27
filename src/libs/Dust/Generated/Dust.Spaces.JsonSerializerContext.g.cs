@@ -15,11 +15,13 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Text.Json.JsonElement?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(string))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(byte[]))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.Space))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SpaceKind), TypeInfoPropertyName = "SpaceKind2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportFormat), TypeInfoPropertyName = "GetWPodsExportFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWPodsFilesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.CreateWPodsFilesResponseFile))]
@@ -29,13 +31,16 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePod))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodAccess), TypeInfoPropertyName = "GetWPodsExportResponsePodAccess2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodStatus), TypeInfoPropertyName = "GetWPodsExportResponsePodStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<string, double?, bool?>), TypeInfoPropertyName = "OneOfStringDoubleBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSpacesResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Space>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.SpaceKind?), TypeInfoPropertyName = "NullableSpaceKind2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportFormat?), TypeInfoPropertyName = "NullableGetWPodsExportFormat2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodAccess?), TypeInfoPropertyName = "NullableGetWPodsExportResponsePodAccess2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodStatus?), TypeInfoPropertyName = "NullableGetWPodsExportResponsePodStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<string, double?, bool?>?), TypeInfoPropertyName = "NullableOneOfStringDoubleBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.GetWPodsExportResponsePod>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Dust.Space>))]
@@ -86,6 +91,7 @@ namespace Dust
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
             options.Converters.Add(new global::Dust.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
