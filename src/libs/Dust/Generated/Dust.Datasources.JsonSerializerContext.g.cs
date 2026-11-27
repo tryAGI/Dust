@@ -115,6 +115,7 @@ namespace Dust
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
             options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>());
+            options.Converters.Add(new global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?>());
             options.Converters.Add(new global::Dust.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }

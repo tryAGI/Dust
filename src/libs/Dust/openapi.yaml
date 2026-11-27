@@ -3766,7 +3766,7 @@
         ],
         "responses": {
           "200": {
-            "description": "The pods, sorted by name. Dates are UTC, formatted as `YYYY-MM-DD HH:mm:ss`, and empty when not set.",
+            "description": "The pods, sorted by name. Dates are UTC, formatted as `YYYY-MM-DD HH:mm:ss`, and empty when not set.\nWhen Pod custom properties are enabled, the CSV has one more column per property (named after it,\nwith ` (custom property)` added when it matches a base column) and the JSON has `customProperties`.\n",
             "content": {
               "text/csv": {
                 "schema": {
@@ -3813,6 +3813,24 @@
                           },
                           "url": {
                             "type": "string"
+                          },
+                          "customProperties": {
+                            "type": "object",
+                            "description": "Only when Pod custom properties are enabled. The pod's value of each custom property, keyed by property name, null when not set.\n",
+                            "additionalProperties": {
+                              "oneOf": [
+                                {
+                                  "type": "string",
+                                  "nullable": true
+                                },
+                                {
+                                  "type": "number"
+                                },
+                                {
+                                  "type": "boolean"
+                                }
+                              ]
+                            }
                           }
                         }
                       }

@@ -217,6 +217,8 @@ namespace Dust
 
             typeof(global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?, global::Dust.CreateWSpacesDataSourcesTablesRowsRequestRowValue2>),
 
+            typeof(global::Dust.JsonConverters.OneOfJsonConverter<string, double?, bool?>),
+
             typeof(global::Dust.JsonConverters.UnixTimestampJsonConverter),
         })]
     #pragma warning restore CS3016
@@ -466,6 +468,7 @@ namespace Dust
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePod))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodAccess), TypeInfoPropertyName = "GetWPodsExportResponsePodAccess2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWPodsExportResponsePodStatus), TypeInfoPropertyName = "GetWPodsExportResponsePodStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.OneOf<string, double?, bool?>), TypeInfoPropertyName = "OneOfStringDoubleBoolean2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.DeleteWSkillsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Dust.GetWSkillsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Dust.Skill>))]

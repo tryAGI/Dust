@@ -59,6 +59,12 @@ namespace Dust
         public string? Url { get; set; }
 
         /// <summary>
+        /// Only when Pod custom properties are enabled. The pod's value of each custom property, keyed by property name, null when not set.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("customProperties")]
+        public object? CustomProperties { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -75,6 +81,9 @@ namespace Dust
         /// <param name="createdAt"></param>
         /// <param name="archivedAt"></param>
         /// <param name="url"></param>
+        /// <param name="customProperties">
+        /// Only when Pod custom properties are enabled. The pod's value of each custom property, keyed by property name, null when not set.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -86,7 +95,8 @@ namespace Dust
             global::Dust.GetWPodsExportResponsePodStatus? status,
             string? createdAt,
             string? archivedAt,
-            string? url)
+            string? url,
+            object? customProperties)
         {
             this.PodId = podId;
             this.Name = name;
@@ -96,6 +106,7 @@ namespace Dust
             this.CreatedAt = createdAt;
             this.ArchivedAt = archivedAt;
             this.Url = url;
+            this.CustomProperties = customProperties;
         }
 
         /// <summary>
